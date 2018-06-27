@@ -1,0 +1,17 @@
+{
+  "name": "wks_mongoose",
+  "description": "mongoose implementation with integrated schema loader",
+  "version": "0.0.1b",
+  "author": "Christoph Hoffmann <nondef@nondef.net>",
+  "main": "runner.js",
+  "contributors": [],
+  "dependencies": {
+    "body-parser": "^1.4.3",
+    "express": "= 4.4.5",
+    "method-override":"= 2.3.7",
+    "mongoose":"^5.0.0",
+    "express-restify-mongoose":"^5.0.0",
+    "mongoose-schema-jsonschema":"^1.1.15",
+    "mongoose-gen":"= 2.1.1"
+  }
+}
