@@ -1,0 +1,62 @@
+{
+  "title":{
+    "type":"String",
+    "required": true
+  },
+  "inventory":{
+    "type":"ObjectID",
+    "ref":"inventory",
+    "required": true
+  },
+  "representsobject":{
+    "type":"ObjectID",
+    "ref":"object"
+  },
+  "artist":{
+    "type":"ObjectID",
+    "ref":"agent"
+  },
+  "originaltitle":{
+    "type":"String"
+  },
+  "transscription":{
+    "type":"String"
+  },
+  "material":{
+    "type":"ObjectID",
+    "ref":"descriptor"
+  },
+  "dimensions": [{
+    "aspect": { "type":"ObjectID", "ref": "descriptor" },
+    "unit": { "type":"ObjectID", "ref": "descriptor" }
+  }],
+  "date": {
+    "type": "Date"
+  },
+  "acquisition":{
+    "type":"ObjectID",
+    "ref":"transaction"
+  },
+  "classification":[{
+    "aspect": { "type":"ObjectID", "ref": "descriptor" },
+    "descriptor": { "type":"ObjectID", "ref": "descriptor" }
+  }],
+  "images":[{
+      "name":{
+        "type":"String",
+        "required":true
+      },
+      "reference":{
+        "type":"ObjectID",
+        "ref":"assetref",
+        "required":true
+      }
+  }],
+  "references":[{
+    "type":"ObjectID",
+    "ref":"bibref"
+  }],
+  "comments":[{
+      "type":"String"
+  }]
+}

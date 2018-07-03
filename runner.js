@@ -7,24 +7,32 @@ const app = express();
 const router = express.Router();
 const fs = require('fs');
 const http = require('https');
-var generator = require('mongoose-gen');
+const generator = require('mongoose-gen');
+
+
+const CONFIG =  require('./config.json');
+
+
 
 
 app.use(bodyParser.json());
 app.use(methodOverride());
 
-
+var me = [];
 var schf = JSON.parse(fs.readFileSync('schemas.json', 'utf8'));
-mongoose.connect('mongodb://wks_dev:6tDDUdAH8KtX@helios.arz.oeaw.ac.at/wks_dev?authSource=test')
+mongoose.connect(`mongodb://${CONFIG.db.user}:${CONFIG.db.pass}@${CONFIG.db.server}/${CONFIG.db.db}?authSource=test`)
 // create API for each schema in schemas JSON
 schf.forEach(function(s){
-  console.log(s);
+  //console.log(s);
   if(s.properties != ""){
     var schm = generator.convert(s.properties);
     schema = new mongoose.Schema(schm);
+    me.push(schema);
     restify.serve(router, mongoose.model(s.title, schema));
   }
 });
+fs.writeFile('mongoose.json', JSON.stringify(me,null,2));
+
 app.use(router);
 app.listen(3001, () => {
   console.log('Express server listening on port 3001')

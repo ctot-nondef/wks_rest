@@ -7,10 +7,12 @@
         "required": true
       },
       "publisher":{
-          "type": "ObjectID"
+          "type": "ObjectID",
+          "ref": "wks_person"
       },
       "place":{
-        "type": "ObjectID"
+        "type": "ObjectID",
+        "ref":"wks_place"
       },
       "pagecount":{
         "type": "Number",
@@ -29,6 +31,7 @@
           },
           "reference":{
             "type":"ObjectID",
+            "ref":"wks_media",
             "required":true
           }
       }],
@@ -49,13 +52,16 @@
       },
       "inventory":{
         "type":"ObjectID",
+        "ref":"wks_inventory",
         "required": true
       },
       "representsobject":{
-        "type":"ObjectID"
+        "type":"ObjectID",
+        "ref":"wks_object"
       },
       "artist":{
-        "type":"ObjectID"
+        "type":"ObjectID",
+        "ref":"wks_person"
       },
       "originaltitle":{
         "type":"String"
@@ -64,7 +70,8 @@
         "type":"String"
       },
       "material":{
-        "type":"ObjectID"
+        "type":"ObjectID",
+        "ref":"wks_material"
       },
       "dimensions": {
         "type": "object",

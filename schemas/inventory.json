@@ -1,0 +1,42 @@
+{
+  "title":{
+    "type": "String",
+    "required": true
+  },
+  "publisher":{
+      "type": "ObjectID",
+      "ref": "agent"
+  },
+  "place":{
+    "type": "ObjectID",
+    "ref":"place"
+  },
+  "pagecount":{
+    "type": "Number",
+    "min": 0
+  },
+  "startdate":{
+    "type": "Date"
+  },
+  "enddate":{
+    "type": "Date"
+  },
+  "images":[{
+      "name":{
+        "type":"String",
+        "required":true
+      },
+      "reference":{
+        "type":"ObjectID",
+        "ref":"assetref",
+        "required":true
+      }
+  }],
+  "references":[{
+    "type":"ObjectID",
+    "ref":"bibref"
+  }],
+  "comments":[{
+      "type":"String"
+  }]
+}

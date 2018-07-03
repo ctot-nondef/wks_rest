@@ -1,0 +1,17 @@
+{
+  "name":{
+    "type": "String",
+    "required": true
+  },
+  "collector": {
+    "type": "ObjectID",
+    "ref":"agent"
+  },
+  "references":[{
+    "type":"ObjectID",
+    "ref":"bibref"
+  }],
+  "comments":[{
+      "type":"String"
+  }]
+}

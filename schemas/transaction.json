@@ -1,0 +1,19 @@
+{
+  "person": {
+    "type": "ObjectID"
+  },
+  "date": {
+    "type": "Date"
+  },
+  "price": {
+    "type": "object",
+    "properties": {
+      "amount":{
+        "type":"Number"
+      },
+      "currency":{
+        "type":"ObjectID"
+      }
+    }
+  }
+}
