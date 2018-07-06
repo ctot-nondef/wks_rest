@@ -1,0 +1,12 @@
+{
+  "name":{"type":"String"},
+  "identifier":{"type":"String","match":""},
+  "Level":{
+    "type":"String",
+    "enum":["Country",""]
+  },
+  "authrec":{
+    "type":"ObjectID",
+    "ref":"authrec"
+  }
+}

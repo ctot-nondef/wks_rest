@@ -85,6 +85,7 @@
           "height": {
             "type": "number"
           }
+
         }
       },
       "date": {
@@ -163,7 +164,7 @@
         "type":"String",
         "required": true
       },
-      "ccollection":{
+      "collection":{
         "type":"ObjectID",
         "required": true
       },
