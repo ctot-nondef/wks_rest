@@ -1,0 +1,26 @@
+{
+  "prefLabel":[{
+      "lang":{"type":"String"},
+      "label":{"type":"String"}
+  }],
+  "identifier":{
+    "type":"String",
+    "match":""
+  },
+  "sameAs":[{
+    "type":"String",
+    "match":""
+  }],
+  "broader":{
+    "type":"ObjectID",
+    "ref":"descriptor"
+  },
+  "narrower":[{
+    "type":"ObjectID",
+    "ref":"descriptor"
+  }],
+  "authrec":[{
+    "type":"ObjectID",
+    "ref":"authrec"
+  }]
+}
