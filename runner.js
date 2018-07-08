@@ -5,38 +5,34 @@ const mongoose = require('mongoose');
 const restify = require('express-restify-mongoose');
 const app = express();
 const router = express.Router();
-const fs = require('fs');
 const http = require('https');
-const generator = require('mongoose-gen');
-
 
 const CONFIG =  require('./config.json');
 
-
+const SCHEMA = require('./lib/schema.js');
 
 
 app.use(bodyParser.json());
 app.use(methodOverride());
 
-var me = [];
-var schf = JSON.parse(fs.readFileSync('schemas.json', 'utf8'));
+
+
 mongoose.connect(`mongodb://${CONFIG.db.user}:${CONFIG.db.pass}@${CONFIG.db.server}/${CONFIG.db.db}?authSource=test`)
 // create API for each schema in schemas JSON
-schf.forEach(function(s){
-  //console.log(s);
-  if(s.properties != ""){
-    var schm = generator.convert(s.properties);
-    schema = new mongoose.Schema(schm);
-    me.push(schema);
-    restify.serve(router, mongoose.model(s.title, schema));
-  }
-});
-fs.writeFile('mongoose.json', JSON.stringify(me,null,2));
+
+SCHEMA.fetchSchemas();
+for (i = 0; i < SCHEMA.schemas.length; i ++) {
+  console.log(SCHEMA.names[i]);
+  restify.serve(router, mongoose.model(SCHEMA.names[i], SCHEMA.schemas[i]));
+};
 
 app.use(router);
 app.listen(3001, () => {
   console.log('Express server listening on port 3001')
 });
+
+
+
 
 
 // ** setup with dynamic schema from different endpoint

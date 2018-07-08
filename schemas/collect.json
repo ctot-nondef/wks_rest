@@ -10,7 +10,7 @@
   "institution": {
     "type":"ObjectID",
     "ref":"corporation"
-  }
+  },
   "references":[{
     "type":"ObjectID",
     "ref":"bibref"

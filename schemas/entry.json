@@ -14,7 +14,7 @@
   },
   "creator":[{
     "person":{"type":"ObjectID","ref":"person"},
-    "role":{"type":"ObjectID","ref":"descriptor"},
+    "role":{"type":"ObjectID","ref":"descriptor"}
   }],
   "originalTitle":{
     "type":"String"
