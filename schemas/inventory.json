@@ -38,5 +38,9 @@
   }],
   "comments":[{
       "type":"String"
-  }]
+  }],
+  "partOf":{
+    "type":"ObjectID",
+    "ref":"coll"
+  }
 }

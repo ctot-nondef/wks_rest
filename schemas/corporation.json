@@ -8,6 +8,10 @@
     "type":"ObjectID",
     "ref":"place"
   },
+  "memberOf":{
+    "type":"ObjectID",
+    "ref":"corporation"
+  }
   "authrec":{
     "type":"ObjectID",
     "ref":"authrec"

@@ -5,8 +5,12 @@
   },
   "collector": {
     "type": "ObjectID",
-    "ref":"agent"
+    "ref":"person"
   },
+  "institution": {
+    "type":"ObjectID",
+    "ref":"corporation"
+  }
   "references":[{
     "type":"ObjectID",
     "ref":"bibref"

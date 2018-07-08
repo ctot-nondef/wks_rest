@@ -10,5 +10,13 @@
         "type":"ObjectID",
         "ref":"unit"
       }
-  }]
+  }],
+  "vendor":{
+    "type":"ObjectID",
+    "ref":"person"
+  },
+  "buyer":{
+    "type":"ObjectID",
+    "ref":"person"
+  }
 }

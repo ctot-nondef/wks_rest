@@ -27,6 +27,7 @@
     "ref":"descriptor"
   },
   "dimensions": [{
+    "amount": { "type":"number" },
     "aspect": { "type":"ObjectID", "ref": "descriptor" },
     "unit": { "type":"ObjectID", "ref": "descriptor" }
   }],

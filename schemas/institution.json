@@ -1,0 +1,8 @@
+{
+  "name":{"type":"String"},
+  "identifier":{"type":"String","match":""},
+  "authrec":{
+    "type":"ObjectID",
+    "ref":"authrec"
+  }
+}
