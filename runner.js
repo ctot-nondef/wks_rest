@@ -22,7 +22,9 @@ mongoose.connect(`mongodb://${CONFIG.db.user}:${CONFIG.db.pass}@${CONFIG.db.serv
 
 SCHEMA.fetchSchemas();
 for (i = 0; i < SCHEMA.schemas.length; i ++) {
-  restify.serve(router, mongoose.model(SCHEMA.names[i], SCHEMA.schemas[i]));
+  if(!/adm_.*/.test(SCHEMA.names[i])) {
+    restify.serve(router, mongoose.model(SCHEMA.names[i], SCHEMA.schemas[i]));
+  }
 };
 
 app.use(router);
