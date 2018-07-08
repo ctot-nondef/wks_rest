@@ -1,0 +1,9 @@
+{
+  "name":{
+    "type":"String"
+  },
+  "convertsTo":[{
+    "unit":{"type":"ObjectID","ref":"unit"},
+    "rate":{"type":"Number"}
+  }]
+}

@@ -8,15 +8,15 @@
     "ref":"inventory",
     "required": true
   },
-  "representsobject":{
+  "representsObject":{
     "type":"ObjectID",
     "ref":"object"
   },
-  "artist":{
-    "type":"ObjectID",
-    "ref":"agent"
-  },
-  "originaltitle":{
+  "creator":[{
+    "person":{"type":"ObjectID","ref":"person"},
+    "role":{"type":"ObjectID","ref":"descriptor"},
+  }],
+  "originalTitle":{
     "type":"String"
   },
   "transscription":{
@@ -31,10 +31,14 @@
     "aspect": { "type":"ObjectID", "ref": "descriptor" },
     "unit": { "type":"ObjectID", "ref": "descriptor" }
   }],
-  "date": {
+  "created": {
     "type": "Date"
   },
   "acquisition":{
+    "type":"ObjectID",
+    "ref":"transaction"
+  },
+  "divestiture":{
     "type":"ObjectID",
     "ref":"transaction"
   },

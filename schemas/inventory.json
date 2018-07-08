@@ -5,7 +5,7 @@
   },
   "publisher":{
       "type": "ObjectID",
-      "ref": "agent"
+      "ref": "person"
   },
   "place":{
     "type": "ObjectID",

@@ -3,29 +3,22 @@
     "type":"String",
     "required": true
   },
-  "coll":{
-    "type":"ObjectID",
-    "ref":"coll",
-    "required": true
-  },
   "institution":{
     "type":"ObjectID",
-    "ref":"agent"
+    "ref":"corporation"
   },
   "artist":{
     "type":"ObjectID",
-    "ref":"agent"
+    "ref":"person"
   },
   "originaltitle":{
-    "type":"String"
-  },
-  "transscription":{
     "type":"String"
   },
   "material":{
     "type":"ObjectID"
   },
   "dimensions": [{
+    "amount": {"type":"Number"},
     "aspect": { "type":"ObjectID", "ref": "descriptor" },
     "unit": { "type":"ObjectID", "ref": "descriptor" }
   }],

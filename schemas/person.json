@@ -4,12 +4,13 @@
   "firstName":{"type":"String"},
   "lastName":{"type":"String"},
   "title":{"type":"String"},
+  "alternativeNames":[{"type":"String"}],
   "birth":{"type":"Date"},
   "death":{"type":"Date"},
-  "memberOf":{
+  "memberOf":[{
     "type":"ObjectID",
     "ref":"corporation"
-  },
+  }],
   "authrec":{
     "type":"ObjectID",
     "ref":"authrec"

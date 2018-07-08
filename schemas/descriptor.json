@@ -3,6 +3,9 @@
       "lang":{"type":"String"},
       "label":{"type":"String"}
   }],
+  "description":{
+    "type":"String"
+  },
   "identifier":{
     "type":"String",
     "match":""

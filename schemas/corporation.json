@@ -8,7 +8,7 @@
     "type":"ObjectID",
     "ref":"place"
   },
-  "memberOf":{
+  "partOf":{
     "type":"ObjectID",
     "ref":"corporation"
   }
