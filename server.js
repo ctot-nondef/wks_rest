@@ -39,7 +39,11 @@ app.use(session({
 SCHEMA.fetchSchemas();
 for (i = 0; i < SCHEMA.schemas.length; i ++) {
   if(!/adm_.*/.test(SCHEMA.names[i])) {
-    restify.serve(router, mongoose.model(SCHEMA.names[i], SCHEMA.schemas[i]));
+    restify.serve(router, mongoose.model(SCHEMA.names[i], SCHEMA.schemas[i]), {
+      preCreate: AUTH.chkSession,
+      preUpdate: AUTH.chkSession,
+      preDelete: AUTH.chkSession
+    });
   }
 };
 
