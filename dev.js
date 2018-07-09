@@ -8,4 +8,3 @@ nodemon({
   this.stdout.pipe(fs.createWriteStream('output.txt'));
   this.stderr.pipe(fs.createWriteStream('err.txt'));
 });
- 
