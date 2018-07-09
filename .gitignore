@@ -1,3 +1,5 @@
 .ftpconfig
 config.json
 node_modules
+err.txt
+output.txt

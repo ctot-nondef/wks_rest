@@ -25,6 +25,7 @@ for (i = 0; i < SCHEMA.schemas.length; i ++) {
   if(!/adm_.*/.test(SCHEMA.names[i])) {
     restify.serve(router, mongoose.model(SCHEMA.names[i], SCHEMA.schemas[i]));
   }
+  console.log(SCHEMA.names);
 };
 
 app.use(router);
