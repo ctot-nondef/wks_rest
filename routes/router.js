@@ -37,7 +37,7 @@ router.post('/api/v1/register', function (req, res, next) {
     });
 
   } else {
-    var err = new Error('All fields required.');
+    var err = new Error('Username, Password and Email required.');
     err.status = 400;
     return next(err);
   }
@@ -57,7 +57,7 @@ router.post('/api/v1/login', function (req, res, next) {
       }
     });
   } else {
-    var err = new Error('All fields required.');
+    var err = new Error('Username and Password required.');
     err.status = 400;
     return next(err);
   }
