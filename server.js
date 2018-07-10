@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const restify = require('express-restify-mongoose');
 const app = express();
 const http = require('https');
+const cors = require('cors');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 
@@ -20,6 +21,7 @@ const AUTH = require('./lib/auth.js');
 
 app.use(bodyParser.json());
 app.use(methodOverride());
+app.use(cors());
 
 // init mongodb
 mongoose.connect(`mongodb://${CONFIG.db.user}:${CONFIG.db.pass}@${CONFIG.db.server}/${CONFIG.db.db}?authSource=test`)
