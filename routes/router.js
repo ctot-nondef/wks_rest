@@ -4,7 +4,7 @@ var User = require('../lib/auth.js');
 
 
 User.initUser();
-console.log(User.UserSchema);
+
 //POST route for registration
 router.post('/api/v1/register', function (req, res, next) {
   // confirm that user typed same password twice
@@ -32,7 +32,6 @@ router.post('/api/v1/register', function (req, res, next) {
         return next(error);
       } else {
         req.session.userId = user._id;
-        console.log(JSON.stringify(req.session));
         res.send(JSON.stringify(req.session));
       }
     });
@@ -46,10 +45,10 @@ router.post('/api/v1/register', function (req, res, next) {
 
 //POST route for login
 router.post('/api/v1/login', function (req, res, next) {
-  if (req.body.logemail && req.body.logpassword) {
-    User.User.authenticate(req.body.logemail, req.body.logpassword, function (error, user) {
+  if (req.body.username && req.body.password) {
+    User.User.authenticate(req.body.username, req.body.password, function (error, user) {
       if (error || !user) {
-        var err = new Error('Wrong email or password.');
+        var err = new Error('Wrong username or password.');
         err.status = 401;
         return next(err);
       } else {
