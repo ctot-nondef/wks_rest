@@ -35,8 +35,7 @@ app.use(session({
   })
 }));
 
-// create API for each schema in schemas JSON
-SCHEMA.fetchSchemas();
+// create API for each schema in schema Folder
 for (i = 0; i < SCHEMA.schemas.length; i ++) {
   if(!/adm_.*/.test(SCHEMA.names[i])) {
     restify.serve(router, mongoose.model(SCHEMA.names[i], SCHEMA.schemas[i]), {

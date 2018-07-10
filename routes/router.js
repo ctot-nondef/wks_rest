@@ -1,18 +1,17 @@
 var express = require('express');
 var router = express.Router();
-var User = require('../lib/auth.js');
+var USER = require('../lib/auth.js');
+var SCHEMA = require('../lib/schema.js');
 
 
-User.initUser();
+USER.initUser();
+SCHEMA.initSchemas();
 
 //POST route for registration
 router.post('/api/v1/register', function (req, res, next) {
   // confirm that user typed same password twice
   if (req.body.password !== req.body.passwordConf) {
-    var err = new Error('Passwords do not match.');
-    err.status = 400;
-    res.send("passwords dont match");
-    return next(err);
+    res.status(400).json({'error':'The Passwords don\'t match'});
   }
 
   if (req.body.email &&
@@ -27,39 +26,34 @@ router.post('/api/v1/register', function (req, res, next) {
       passwordConf: req.body.passwordConf,
     }
 
-    User.User.create(userData, function (error, user) {
+    USER.User.create(userData, function (error, user) {
       if (error) {
         return next(error);
       } else {
         req.session.userId = user._id;
-        res.send(JSON.stringify(req.session));
+        res.JSON(req.session);
+        console.log('user', req.body.username, 'created');
       }
     });
 
   } else {
-    var err = new Error('Username, Password and Email required.');
-    err.status = 400;
-    return next(err);
+    res.status(400).json({'error':'Username, Email and Password required.'});
   }
 })
 
 //POST route for login
 router.post('/api/v1/login', function (req, res, next) {
   if (req.body.username && req.body.password) {
-    User.User.authenticate(req.body.username, req.body.password, function (error, user) {
+    USER.User.authenticate(req.body.username, req.body.password, function (error, user) {
       if (error || !user) {
-        var err = new Error('Wrong username or password.');
-        err.status = 401;
-        return next(err);
+        res.status(401).json({'error':'Wrong Username or Password.'});
       } else {
         req.session.userId = user._id;
         return res.send(JSON.stringify({"user":req.session.userId,"session": req.sessionID}));
       }
     });
   } else {
-    var err = new Error('Username and Password required.');
-    err.status = 400;
-    return next(err);
+    res.status(400).json({'error':'Username and Password required.'});
   }
 })
 
@@ -71,30 +65,23 @@ router.get('/api/v1/logout', function (req, res, next) {
       if (err) {
         return next(err);
       } else {
-        return res.redirect('/');
+        res.json({'res':'Logout successfull.'})
       }
     });
   }
 });
 
-// // GET route after registering
-// router.get('/profile', function (req, res, next) {
-//   User.findById(req.session.userId)
-//     .exec(function (error, user) {
-//       if (error) {
-//         return next(error);
-//       } else {
-//         if (user === null) {
-//           var err = new Error('Not authorized! Go back!');
-//           err.status = 400;
-//           return next(err);
-//         } else {
-//           return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="/logout">Logout</a>')
-//         }
-//       }
-//     });
-// });
-
-
+router.get('/api/v1/jsonschema/:name', function(req, res, next) {
+  if (req.params.name) {
+    let s = SCHEMA.jsonSchemaByName(req.params.name);
+    if (s) {
+        res.json(s);
+    } else {
+        res.status(404).json({'error':`'${req.params.name}' is not known as a Schema`});
+    }
+  } else {
+    res.status(400).json({'error':'Schema name required.'});
+  }
+});
 
 module.exports = router;
