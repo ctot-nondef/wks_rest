@@ -78,8 +78,8 @@ router.get('/api/v1/logout', function (req, res, next) {
 //GET route for API Route/Map
 router.get('/api/v1/', function (req, res, next) {
   res.json({
-    'data':{},
-    'meta':CONFIG.meta, 
+    'data':SCHEMA.names,
+    'meta':CONFIG.meta,
     'version':CONFIG.version
   })
 });
