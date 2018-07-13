@@ -1,8 +1,8 @@
-var express = require('express');
-var router = express.Router();
-var USER = require('../lib/auth.js');
-var SCHEMA = require('../lib/schema.js');
-
+const express = require('express');
+const router = express.Router();
+const USER = require('../lib/auth.js');
+const SCHEMA = require('../lib/schema.js');
+const CONFIG =  require('../config.json');
 
 USER.initUser();
 SCHEMA.initSchemas();
@@ -75,8 +75,13 @@ router.get('/api/v1/logout', function (req, res, next) {
   }
 });
 
+//GET route for API Route/Map
 router.get('/api/v1/', function (req, res, next) {
-
+  res.json({
+    'data':{},
+    'meta':CONFIG.meta, 
+    'version':CONFIG.version
+  })
 });
 
 router.get('/api/v1/jsonschema/:name', function(req, res, next) {

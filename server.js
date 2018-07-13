@@ -6,13 +6,13 @@ const restify = require('express-restify-mongoose');
 const app = express();
 const http = require('https');
 const cors = require('cors');
-var session = require('express-session');
-var MongoStore = require('connect-mongo')(session);
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
 
 // loading config
 const CONFIG =  require('./config.json');
 
-const router = require('./routes/router.js');
+const ROUTER = require('./routes/router.js');
 
 
 // loading internal libs
@@ -38,11 +38,11 @@ app.use(session({
     mongooseConnection: db
   })
 }));
-
+ 
 // create API for each schema in schema Folder
 for (i = 0; i < SCHEMA.schemas.length; i ++) {
   if(!/adm_.*/.test(SCHEMA.names[i])) {
-    restify.serve(router, mongoose.model(SCHEMA.names[i], SCHEMA.schemas[i]), {
+    restify.serve(ROUTER, mongoose.model(SCHEMA.names[i], SCHEMA.schemas[i]), {
       preCreate: AUTH.chkSession,
       preUpdate: AUTH.chkSession,
       preDelete: AUTH.chkSession
@@ -51,7 +51,7 @@ for (i = 0; i < SCHEMA.schemas.length; i ++) {
 };
 
 // serve and listen
-app.use(router);
+app.use(ROUTER);
 app.listen(3001, () => {
   console.log('Express server listening on port 3001')
 });
