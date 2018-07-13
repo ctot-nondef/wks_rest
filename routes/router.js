@@ -7,7 +7,12 @@ var SCHEMA = require('../lib/schema.js');
 USER.initUser();
 SCHEMA.initSchemas();
 
-//POST route for registration
+//POST route for registration, to be shout off for prduction
+//TODO: this will not be a public route for now, in order for this to be
+// a documented route, we would need to add
+// * a check if the username exists
+// * a workflow for assigning appropriate rights after signup
+// (right now it's full rights)
 router.post('/api/v1/register', function (req, res, next) {
   // confirm that user typed same password twice
   if (req.body.password !== req.body.passwordConf) {
@@ -22,8 +27,7 @@ router.post('/api/v1/register', function (req, res, next) {
     var userData = {
       email: req.body.email,
       username: req.body.username,
-      password: req.body.password,
-      passwordConf: req.body.passwordConf,
+      password: req.body.password
     }
 
     USER.User.create(userData, function (error, user) {
@@ -57,7 +61,7 @@ router.post('/api/v1/login', function (req, res, next) {
   }
 })
 
-// POST route for logout
+//GET route for logout
 router.get('/api/v1/logout', function (req, res, next) {
   if (req.session) {
     // delete session object
@@ -69,6 +73,10 @@ router.get('/api/v1/logout', function (req, res, next) {
       }
     });
   }
+});
+
+router.get('/api/v1/', function (req, res, next) {
+
 });
 
 router.get('/api/v1/jsonschema/:name', function(req, res, next) {
