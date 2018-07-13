@@ -31,7 +31,7 @@ router.post('/api/v1/register', function (req, res, next) {
         return next(error);
       } else {
         req.session.userId = user._id;
-        res.JSON(req.session);
+        res.json(req.session);
         console.log('user', req.body.username, 'created');
       }
     });
@@ -49,7 +49,7 @@ router.post('/api/v1/login', function (req, res, next) {
         res.status(401).json({'error':'Wrong Username or Password.'});
       } else {
         req.session.userId = user._id;
-        return res.send(JSON.stringify({"user":req.session.userId,"session": req.sessionID}));
+        return res.json({"user":req.session.userId,"session": req.sessionID});
       }
     });
   } else {

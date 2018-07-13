@@ -24,7 +24,9 @@ app.use(methodOverride());
 app.use(cors());
 
 // init mongodb
-mongoose.connect(`mongodb://${CONFIG.db.user}:${CONFIG.db.pass}@${CONFIG.db.server}/${CONFIG.db.db}?authSource=test`)
+mongoose.connect(`mongodb://${CONFIG.db.user}:${CONFIG.db.pass}@${CONFIG.db.server}/${CONFIG.db.db}?authSource=test`, function(error) {
+  console.log(error);
+});
 var db = mongoose.connection;
 
 //use sessions for tracking logins
