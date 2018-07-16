@@ -7,6 +7,96 @@ const CONFIG =  require('../config.json');
 USER.initUser();
 SCHEMA.initSchemas();
 
+
+
+router.get('/api/v1/swagger.json', function(req, res, next) {
+  res.json(SCHEMA.swaggerSpec);
+});
+
+/**
+ * @swagger
+ * /api/v1/:
+ *   get:
+ *     description: API root. Returns JSON Object of Metadata and available Entities
+ *     produces:
+ *       - application/json
+ *     responses:
+ *       200:
+ *         description: Metadata on API
+ */
+router.get('/api/v1/', function (req, res, next) {
+  res.json({
+    'data':SCHEMA.names,
+    'meta':CONFIG.meta,
+    'version':CONFIG.version
+  })
+});
+
+/**
+ * @swagger
+ * /api/v1/login:
+ *   post:
+ *     description: Login to the application
+ *     produces:
+ *       - application/json
+ *     accepts:
+ *       - application/json
+ *     parameters:
+ *       - username: username
+ *         description: Username to use for login.
+ *         required: true
+ *         type: string
+ *       - name: password
+ *         description: User's password.
+ *         required: true
+ *         type: string
+ *     responses:
+ *       200:
+ *         description: login
+ *       400:
+ *         description: malformed input
+ *       401:
+ *         description: invalid credentials
+*/
+router.post('/api/v1/login', function (req, res, next) {
+  if (req.body.username && req.body.password) {
+    USER.User.authenticate(req.body.username, req.body.password, function (error, user) {
+      if (error || !user) {
+        res.status(401).json({'error':'Wrong Username or Password.'});
+      } else {
+        req.session.userId = user._id;
+        return res.json({"user":req.session.userId,"session": req.sessionID});
+      }
+    });
+  } else {
+    res.status(400).json({'error':'Username and Password required.'});
+  }
+})
+
+/**
+ * @swagger
+ * /api/v1/logout:
+ *   get:
+ *     description: Logout of the application
+ *     produces:
+ *       - application/json
+ *     responses:
+ *       200:
+ *         description: login successfull
+ */
+router.get('/api/v1/logout', function (req, res, next) {
+  if (req.session) {
+    // delete session object
+    req.session.destroy(function (err) {
+      if (err) {
+        return next(err);
+      } else {
+        res.json({'res':'Logout successfull.'})
+      }
+    });
+  }
+});
+
 //POST route for registration, to be shout off for prduction
 //TODO: this will not be a public route for now, in order for this to be
 // a documented route, we would need to add
@@ -43,46 +133,8 @@ router.post('/api/v1/register', function (req, res, next) {
   } else {
     res.status(400).json({'error':'Username, Email and Password required.'});
   }
-})
-
-//POST route for login
-router.post('/api/v1/login', function (req, res, next) {
-  if (req.body.username && req.body.password) {
-    USER.User.authenticate(req.body.username, req.body.password, function (error, user) {
-      if (error || !user) {
-        res.status(401).json({'error':'Wrong Username or Password.'});
-      } else {
-        req.session.userId = user._id;
-        return res.json({"user":req.session.userId,"session": req.sessionID});
-      }
-    });
-  } else {
-    res.status(400).json({'error':'Username and Password required.'});
-  }
-})
-
-//GET route for logout
-router.get('/api/v1/logout', function (req, res, next) {
-  if (req.session) {
-    // delete session object
-    req.session.destroy(function (err) {
-      if (err) {
-        return next(err);
-      } else {
-        res.json({'res':'Logout successfull.'})
-      }
-    });
-  }
 });
 
-//GET route for API Route/Map
-router.get('/api/v1/', function (req, res, next) {
-  res.json({
-    'data':SCHEMA.names,
-    'meta':CONFIG.meta,
-    'version':CONFIG.version
-  })
-});
 
 router.get('/api/v1/jsonschema/:name', function(req, res, next) {
   if (req.params.name) {

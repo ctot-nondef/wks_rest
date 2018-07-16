@@ -18,6 +18,6 @@
     "mongoose-schema-jsonschema": "^1.1.15",
     "nodemon": "^1.17.5",
     "cors": "2.8.4",
-    "swagger-parser":"5.0.0"
+    "swagger-jsdoc":"1.9.7"
   }
 }
