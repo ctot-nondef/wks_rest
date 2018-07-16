@@ -38,10 +38,10 @@ app.use(session({
     mongooseConnection: db
   })
 }));
- 
+
 // create API for each schema in schema Folder
 for (i = 0; i < SCHEMA.schemas.length; i ++) {
-  if(!/adm_.*/.test(SCHEMA.names[i])) {
+  if(!/_.*/.test(SCHEMA.names[i])) {
     restify.serve(ROUTER, mongoose.model(SCHEMA.names[i], SCHEMA.schemas[i]), {
       preCreate: AUTH.chkSession,
       preUpdate: AUTH.chkSession,
