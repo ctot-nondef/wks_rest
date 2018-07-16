@@ -1,13 +1,18 @@
-var express = require('express');
-var router = express.Router();
-var USER = require('../lib/auth.js');
-var SCHEMA = require('../lib/schema.js');
-
+const express = require('express');
+const router = express.Router();
+const USER = require('../lib/auth.js');
+const SCHEMA = require('../lib/schema.js');
+const CONFIG =  require('../config.json');
 
 USER.initUser();
 SCHEMA.initSchemas();
 
-//POST route for registration
+//POST route for registration, to be shout off for prduction
+//TODO: this will not be a public route for now, in order for this to be
+// a documented route, we would need to add
+// * a check if the username exists
+// * a workflow for assigning appropriate rights after signup
+// (right now it's full rights)
 router.post('/api/v1/register', function (req, res, next) {
   // confirm that user typed same password twice
   if (req.body.password !== req.body.passwordConf) {
@@ -22,8 +27,7 @@ router.post('/api/v1/register', function (req, res, next) {
     var userData = {
       email: req.body.email,
       username: req.body.username,
-      password: req.body.password,
-      passwordConf: req.body.passwordConf,
+      password: req.body.password
     }
 
     USER.User.create(userData, function (error, user) {
@@ -31,7 +35,7 @@ router.post('/api/v1/register', function (req, res, next) {
         return next(error);
       } else {
         req.session.userId = user._id;
-        res.JSON(req.session);
+        res.json(req.session);
         console.log('user', req.body.username, 'created');
       }
     });
@@ -49,7 +53,7 @@ router.post('/api/v1/login', function (req, res, next) {
         res.status(401).json({'error':'Wrong Username or Password.'});
       } else {
         req.session.userId = user._id;
-        return res.send(JSON.stringify({"user":req.session.userId,"session": req.sessionID}));
+        return res.json({"user":req.session.userId,"session": req.sessionID});
       }
     });
   } else {
@@ -57,7 +61,7 @@ router.post('/api/v1/login', function (req, res, next) {
   }
 })
 
-// POST route for logout
+//GET route for logout
 router.get('/api/v1/logout', function (req, res, next) {
   if (req.session) {
     // delete session object
@@ -69,6 +73,15 @@ router.get('/api/v1/logout', function (req, res, next) {
       }
     });
   }
+});
+
+//GET route for API Route/Map
+router.get('/api/v1/', function (req, res, next) {
+  res.json({
+    'data':SCHEMA.names,
+    'meta':CONFIG.meta,
+    'version':CONFIG.version
+  })
 });
 
 router.get('/api/v1/jsonschema/:name', function(req, res, next) {
