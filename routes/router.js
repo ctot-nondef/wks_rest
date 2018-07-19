@@ -129,8 +129,31 @@ router.get('/api/v1/logout', function (req, res, next) {
 // * a check if the username exists
 // * a workflow for assigning appropriate rights after signup
 // (right now it's full rights)
+
+/**
+ * @swagger
+ * /api/v1/register:
+ *   post:
+ *     description: New User Registration
+ *     produces:
+ *       - application/json
+ *     consumes:
+ *       - application/json
+ *     parameters:
+ *       - name: user
+ *         description: Login Data.
+ *         in: body
+ *         required: true
+ *         schema: {
+ *            "$ref":"#/definitions/NewUser"
+ *          }
+ *     responses:
+ *       200:
+ *         description: Registration and Login
+ *       400:
+ *         description: malformed input
+*/
 router.post('/api/v1/register', function (req, res, next) {
-  // confirm that user typed same password twice
   if (req.body.password !== req.body.passwordConf) {
     res.status(400).json({'error':'The Passwords don\'t match'});
   }
@@ -161,7 +184,27 @@ router.post('/api/v1/register', function (req, res, next) {
   }
 });
 
-
+/**
+ * @swagger
+ * /api/v1/jsonschema/{name}:
+ *   get:
+ *     description: Serves an Entities JSONSchema by Name
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - in: path
+ *         name: name
+ *         description: Schema Name.
+ *         required: true
+ *         type: string
+ *     responses:
+ *       200:
+ *         description: The JSONSchema as requested
+ *       400:
+ *         description: malformed input
+ *       404:
+ *         description: Schema Name is not known
+*/
 router.get('/api/v1/jsonschema/:name', function(req, res, next) {
   if (req.params.name) {
     let s = SCHEMA.jsonSchemaByName(req.params.name);
