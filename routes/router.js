@@ -7,7 +7,34 @@ const CONFIG =  require('../config.json');
 USER.initUser();
 SCHEMA.initSchemas();
 
-
+/**
+ * @swagger
+ * definitions:
+ *   UserLogin:
+ *     type: object
+ *     required:
+ *       - username
+ *       - password
+ *     properties:
+ *       username:
+ *         type: string
+ *       password:
+ *         type: string
+ *         format: password
+ *   NewUser:
+ *     allOf:
+ *       - $ref: '#/definitions/UserLogin'
+ *       - required:
+ *         - email
+ *         - passwordConf
+ *       - properties:
+ *           email:
+ *             type: string
+ *             format: email
+ *           passwordConf:
+ *             type: string
+ *             format: password
+ */
 
 router.get('/api/v1/swagger.json', function(req, res, next) {
   res.json(SCHEMA.swaggerSpec);
@@ -22,7 +49,7 @@ router.get('/api/v1/swagger.json', function(req, res, next) {
  *       - application/json
  *     responses:
  *       200:
- *         description: Metadata on API
+ *         description: Metadata on A
  */
 router.get('/api/v1/', function (req, res, next) {
   res.json({
@@ -39,17 +66,16 @@ router.get('/api/v1/', function (req, res, next) {
  *     description: Login to the application
  *     produces:
  *       - application/json
- *     accepts:
+ *     consumes:
  *       - application/json
  *     parameters:
- *       - username: username
- *         description: Username to use for login.
+ *       - name: user
+ *         description: Login Data.
+ *         in: body
  *         required: true
- *         type: string
- *       - name: password
- *         description: User's password.
- *         required: true
- *         type: string
+ *         schema: {
+ *            "$ref":"#/definitions/UserLogin"
+ *          }
  *     responses:
  *       200:
  *         description: login
