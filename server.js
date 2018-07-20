@@ -52,7 +52,7 @@ for (i = 0; i < SCHEMA.schemas.length; i ++) {
     });
   }
 };
- 
+
 // let opt = {
 //   swagger: SCHEMA.swaggerSpec,
 //   moduleName: 'api',

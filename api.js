@@ -31,15 +31,15 @@ export const request = (method, url, body, queryParameters, form, config) => {
  ==========================================================*/
 /**
  * API root. Returns JSON Object of Metadata and available Entities
- * request: getApiV1
- * url: getApiV1URL
- * method: getApiV1_TYPE
- * raw_url: getApiV1_RAW_URL
+ * request: get
+ * url: getURL
+ * method: get_TYPE
+ * raw_url: get_RAW_URL
  */
-export const getApiV1 = function(parameters = {}) {
+export const get = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/'
+  let path = '/'
   let body
   let queryParameters = {}
   let form = {}
@@ -50,16 +50,16 @@ export const getApiV1 = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1_RAW_URL = function() {
-  return '/api/v1/'
+export const get_RAW_URL = function() {
+  return '/'
 }
-export const getApiV1_TYPE = function() {
+export const get_TYPE = function() {
   return 'get'
 }
-export const getApiV1URL = function(parameters = {}) {
+export const getURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/'
+  let path = '/'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -70,16 +70,16 @@ export const getApiV1URL = function(parameters = {}) {
 }
 /**
  * Login to the application
- * request: postApiV1Login
- * url: postApiV1LoginURL
- * method: postApiV1Login_TYPE
- * raw_url: postApiV1Login_RAW_URL
+ * request: postLogin
+ * url: postLoginURL
+ * method: postLogin_TYPE
+ * raw_url: postLogin_RAW_URL
  * @param user - Login Data.
  */
-export const postApiV1Login = function(parameters = {}) {
+export const postLogin = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/login'
+  let path = '/login'
   let body
   let queryParameters = {}
   let form = {}
@@ -96,16 +96,16 @@ export const postApiV1Login = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1Login_RAW_URL = function() {
-  return '/api/v1/login'
+export const postLogin_RAW_URL = function() {
+  return '/login'
 }
-export const postApiV1Login_TYPE = function() {
+export const postLogin_TYPE = function() {
   return 'post'
 }
-export const postApiV1LoginURL = function(parameters = {}) {
+export const postLoginURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/login'
+  let path = '/login'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -116,15 +116,15 @@ export const postApiV1LoginURL = function(parameters = {}) {
 }
 /**
  * Logout of the application
- * request: getApiV1Logout
- * url: getApiV1LogoutURL
- * method: getApiV1Logout_TYPE
- * raw_url: getApiV1Logout_RAW_URL
+ * request: getLogout
+ * url: getLogoutURL
+ * method: getLogout_TYPE
+ * raw_url: getLogout_RAW_URL
  */
-export const getApiV1Logout = function(parameters = {}) {
+export const getLogout = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/logout'
+  let path = '/logout'
   let body
   let queryParameters = {}
   let form = {}
@@ -135,16 +135,16 @@ export const getApiV1Logout = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1Logout_RAW_URL = function() {
-  return '/api/v1/logout'
+export const getLogout_RAW_URL = function() {
+  return '/logout'
 }
-export const getApiV1Logout_TYPE = function() {
+export const getLogout_TYPE = function() {
   return 'get'
 }
-export const getApiV1LogoutURL = function(parameters = {}) {
+export const getLogoutURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/logout'
+  let path = '/logout'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -155,16 +155,16 @@ export const getApiV1LogoutURL = function(parameters = {}) {
 }
 /**
  * New User Registration
- * request: postApiV1Register
- * url: postApiV1RegisterURL
- * method: postApiV1Register_TYPE
- * raw_url: postApiV1Register_RAW_URL
+ * request: postRegister
+ * url: postRegisterURL
+ * method: postRegister_TYPE
+ * raw_url: postRegister_RAW_URL
  * @param user - Login Data.
  */
-export const postApiV1Register = function(parameters = {}) {
+export const postRegister = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/register'
+  let path = '/register'
   let body
   let queryParameters = {}
   let form = {}
@@ -181,16 +181,16 @@ export const postApiV1Register = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1Register_RAW_URL = function() {
-  return '/api/v1/register'
+export const postRegister_RAW_URL = function() {
+  return '/register'
 }
-export const postApiV1Register_TYPE = function() {
+export const postRegister_TYPE = function() {
   return 'post'
 }
-export const postApiV1RegisterURL = function(parameters = {}) {
+export const postRegisterURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/register'
+  let path = '/register'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -201,16 +201,16 @@ export const postApiV1RegisterURL = function(parameters = {}) {
 }
 /**
  * Serves an Entities JSONSchema by Name
- * request: getApiV1JsonschemaByName
- * url: getApiV1JsonschemaByNameURL
- * method: getApiV1JsonschemaByName_TYPE
- * raw_url: getApiV1JsonschemaByName_RAW_URL
+ * request: getJsonschemaByName
+ * url: getJsonschemaByNameURL
+ * method: getJsonschemaByName_TYPE
+ * raw_url: getJsonschemaByName_RAW_URL
  * @param name - Schema Name.
  */
-export const getApiV1JsonschemaByName = function(parameters = {}) {
+export const getJsonschemaByName = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/jsonschema/{name}'
+  let path = '/jsonschema/{name}'
   let body
   let queryParameters = {}
   let form = {}
@@ -225,16 +225,16 @@ export const getApiV1JsonschemaByName = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1JsonschemaByName_RAW_URL = function() {
-  return '/api/v1/jsonschema/{name}'
+export const getJsonschemaByName_RAW_URL = function() {
+  return '/jsonschema/{name}'
 }
-export const getApiV1JsonschemaByName_TYPE = function() {
+export const getJsonschemaByName_TYPE = function() {
   return 'get'
 }
-export const getApiV1JsonschemaByNameURL = function(parameters = {}) {
+export const getJsonschemaByNameURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/jsonschema/{name}'
+  let path = '/jsonschema/{name}'
   path = path.replace('{name}', `${parameters['name']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -246,15 +246,15 @@ export const getApiV1JsonschemaByNameURL = function(parameters = {}) {
 }
 /**
  * Returns the number of documents of type assetref
- * request: getApiV1AssetrefCount
- * url: getApiV1AssetrefCountURL
- * method: getApiV1AssetrefCount_TYPE
- * raw_url: getApiV1AssetrefCount_RAW_URL
+ * request: getAssetrefCount
+ * url: getAssetrefCountURL
+ * method: getAssetrefCount_TYPE
+ * raw_url: getAssetrefCount_RAW_URL
  */
-export const getApiV1AssetrefCount = function(parameters = {}) {
+export const getAssetrefCount = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/assetref/count'
+  let path = '/assetref/count'
   let body
   let queryParameters = {}
   let form = {}
@@ -265,16 +265,16 @@ export const getApiV1AssetrefCount = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1AssetrefCount_RAW_URL = function() {
-  return '/api/v1/assetref/count'
+export const getAssetrefCount_RAW_URL = function() {
+  return '/assetref/count'
 }
-export const getApiV1AssetrefCount_TYPE = function() {
+export const getAssetrefCount_TYPE = function() {
   return 'get'
 }
-export const getApiV1AssetrefCountURL = function(parameters = {}) {
+export const getAssetrefCountURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/assetref/count'
+  let path = '/assetref/count'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -285,20 +285,20 @@ export const getApiV1AssetrefCountURL = function(parameters = {}) {
 }
 /**
  * Returns a List of assetrefs
- * request: getApiV1Assetref
- * url: getApiV1AssetrefURL
- * method: getApiV1Assetref_TYPE
- * raw_url: getApiV1Assetref_RAW_URL
+ * request: getAssetref
+ * url: getAssetrefURL
+ * method: getAssetref_TYPE
+ * raw_url: getAssetref_RAW_URL
  * @param sort - Key Name to Sort by, preceded by '-' for descending, default: _id
  * @param skip - Number of records to skip from start, default: 0
  * @param limit - Number of records to return, default: 10
  * @param query - MongoDB Query as a well formed JSON String, ie {"name":"Bob"}
  * @param populate - Path to a MongoDB reference to populate, ie [{"path":"customer"},{"path":"products"}]
  */
-export const getApiV1Assetref = function(parameters = {}) {
+export const getAssetref = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/assetref'
+  let path = '/assetref'
   let body
   let queryParameters = {}
   let form = {}
@@ -324,16 +324,16 @@ export const getApiV1Assetref = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1Assetref_RAW_URL = function() {
-  return '/api/v1/assetref'
+export const getAssetref_RAW_URL = function() {
+  return '/assetref'
 }
-export const getApiV1Assetref_TYPE = function() {
+export const getAssetref_TYPE = function() {
   return 'get'
 }
-export const getApiV1AssetrefURL = function(parameters = {}) {
+export const getAssetrefURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/assetref'
+  let path = '/assetref'
   if (parameters['sort'] !== undefined) {
     queryParameters['sort'] = parameters['sort']
   }
@@ -359,16 +359,16 @@ export const getApiV1AssetrefURL = function(parameters = {}) {
 }
 /**
  * Creates a new instance of assetref
- * request: postApiV1Assetref
- * url: postApiV1AssetrefURL
- * method: postApiV1Assetref_TYPE
- * raw_url: postApiV1Assetref_RAW_URL
+ * request: postAssetref
+ * url: postAssetrefURL
+ * method: postAssetref_TYPE
+ * raw_url: postAssetref_RAW_URL
  * @param assetref - 
  */
-export const postApiV1Assetref = function(parameters = {}) {
+export const postAssetref = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/assetref'
+  let path = '/assetref'
   let body
   let queryParameters = {}
   let form = {}
@@ -385,16 +385,16 @@ export const postApiV1Assetref = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1Assetref_RAW_URL = function() {
-  return '/api/v1/assetref'
+export const postAssetref_RAW_URL = function() {
+  return '/assetref'
 }
-export const postApiV1Assetref_TYPE = function() {
+export const postAssetref_TYPE = function() {
   return 'post'
 }
-export const postApiV1AssetrefURL = function(parameters = {}) {
+export const postAssetrefURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/assetref'
+  let path = '/assetref'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -405,15 +405,15 @@ export const postApiV1AssetrefURL = function(parameters = {}) {
 }
 /**
  * Deletes the entire contents of collection assetref
- * request: deleteApiV1Assetref
- * url: deleteApiV1AssetrefURL
- * method: deleteApiV1Assetref_TYPE
- * raw_url: deleteApiV1Assetref_RAW_URL
+ * request: deleteAssetref
+ * url: deleteAssetrefURL
+ * method: deleteAssetref_TYPE
+ * raw_url: deleteAssetref_RAW_URL
  */
-export const deleteApiV1Assetref = function(parameters = {}) {
+export const deleteAssetref = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/assetref'
+  let path = '/assetref'
   let body
   let queryParameters = {}
   let form = {}
@@ -424,16 +424,16 @@ export const deleteApiV1Assetref = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1Assetref_RAW_URL = function() {
-  return '/api/v1/assetref'
+export const deleteAssetref_RAW_URL = function() {
+  return '/assetref'
 }
-export const deleteApiV1Assetref_TYPE = function() {
+export const deleteAssetref_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1AssetrefURL = function(parameters = {}) {
+export const deleteAssetrefURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/assetref'
+  let path = '/assetref'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -444,16 +444,16 @@ export const deleteApiV1AssetrefURL = function(parameters = {}) {
 }
 /**
  * Returns a List of assetrefs
- * request: getApiV1AssetrefById
- * url: getApiV1AssetrefByIdURL
- * method: getApiV1AssetrefById_TYPE
- * raw_url: getApiV1AssetrefById_RAW_URL
+ * request: getAssetrefById
+ * url: getAssetrefByIdURL
+ * method: getAssetrefById_TYPE
+ * raw_url: getAssetrefById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const getApiV1AssetrefById = function(parameters = {}) {
+export const getAssetrefById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/assetref/{id}'
+  let path = '/assetref/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -468,16 +468,16 @@ export const getApiV1AssetrefById = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1AssetrefById_RAW_URL = function() {
-  return '/api/v1/assetref/{id}'
+export const getAssetrefById_RAW_URL = function() {
+  return '/assetref/{id}'
 }
-export const getApiV1AssetrefById_TYPE = function() {
+export const getAssetrefById_TYPE = function() {
   return 'get'
 }
-export const getApiV1AssetrefByIdURL = function(parameters = {}) {
+export const getAssetrefByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/assetref/{id}'
+  let path = '/assetref/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -489,17 +489,17 @@ export const getApiV1AssetrefByIdURL = function(parameters = {}) {
 }
 /**
  * Updates the document with the given ID
- * request: postApiV1AssetrefById
- * url: postApiV1AssetrefByIdURL
- * method: postApiV1AssetrefById_TYPE
- * raw_url: postApiV1AssetrefById_RAW_URL
+ * request: postAssetrefById
+ * url: postAssetrefByIdURL
+ * method: postAssetrefById_TYPE
+ * raw_url: postAssetrefById_RAW_URL
  * @param id - MongoDB document _id
  * @param assetref - 
  */
-export const postApiV1AssetrefById = function(parameters = {}) {
+export const postAssetrefById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/assetref/{id}'
+  let path = '/assetref/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -520,16 +520,16 @@ export const postApiV1AssetrefById = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1AssetrefById_RAW_URL = function() {
-  return '/api/v1/assetref/{id}'
+export const postAssetrefById_RAW_URL = function() {
+  return '/assetref/{id}'
 }
-export const postApiV1AssetrefById_TYPE = function() {
+export const postAssetrefById_TYPE = function() {
   return 'post'
 }
-export const postApiV1AssetrefByIdURL = function(parameters = {}) {
+export const postAssetrefByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/assetref/{id}'
+  let path = '/assetref/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -541,16 +541,16 @@ export const postApiV1AssetrefByIdURL = function(parameters = {}) {
 }
 /**
  * Deletes the document with the given ID
- * request: deleteApiV1AssetrefById
- * url: deleteApiV1AssetrefByIdURL
- * method: deleteApiV1AssetrefById_TYPE
- * raw_url: deleteApiV1AssetrefById_RAW_URL
+ * request: deleteAssetrefById
+ * url: deleteAssetrefByIdURL
+ * method: deleteAssetrefById_TYPE
+ * raw_url: deleteAssetrefById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const deleteApiV1AssetrefById = function(parameters = {}) {
+export const deleteAssetrefById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/assetref/{id}'
+  let path = '/assetref/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -565,16 +565,16 @@ export const deleteApiV1AssetrefById = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1AssetrefById_RAW_URL = function() {
-  return '/api/v1/assetref/{id}'
+export const deleteAssetrefById_RAW_URL = function() {
+  return '/assetref/{id}'
 }
-export const deleteApiV1AssetrefById_TYPE = function() {
+export const deleteAssetrefById_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1AssetrefByIdURL = function(parameters = {}) {
+export const deleteAssetrefByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/assetref/{id}'
+  let path = '/assetref/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -586,15 +586,15 @@ export const deleteApiV1AssetrefByIdURL = function(parameters = {}) {
 }
 /**
  * Returns the number of documents of type authrec
- * request: getApiV1AuthrecCount
- * url: getApiV1AuthrecCountURL
- * method: getApiV1AuthrecCount_TYPE
- * raw_url: getApiV1AuthrecCount_RAW_URL
+ * request: getAuthrecCount
+ * url: getAuthrecCountURL
+ * method: getAuthrecCount_TYPE
+ * raw_url: getAuthrecCount_RAW_URL
  */
-export const getApiV1AuthrecCount = function(parameters = {}) {
+export const getAuthrecCount = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/authrec/count'
+  let path = '/authrec/count'
   let body
   let queryParameters = {}
   let form = {}
@@ -605,16 +605,16 @@ export const getApiV1AuthrecCount = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1AuthrecCount_RAW_URL = function() {
-  return '/api/v1/authrec/count'
+export const getAuthrecCount_RAW_URL = function() {
+  return '/authrec/count'
 }
-export const getApiV1AuthrecCount_TYPE = function() {
+export const getAuthrecCount_TYPE = function() {
   return 'get'
 }
-export const getApiV1AuthrecCountURL = function(parameters = {}) {
+export const getAuthrecCountURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/authrec/count'
+  let path = '/authrec/count'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -625,20 +625,20 @@ export const getApiV1AuthrecCountURL = function(parameters = {}) {
 }
 /**
  * Returns a List of authrecs
- * request: getApiV1Authrec
- * url: getApiV1AuthrecURL
- * method: getApiV1Authrec_TYPE
- * raw_url: getApiV1Authrec_RAW_URL
+ * request: getAuthrec
+ * url: getAuthrecURL
+ * method: getAuthrec_TYPE
+ * raw_url: getAuthrec_RAW_URL
  * @param sort - Key Name to Sort by, preceded by '-' for descending, default: _id
  * @param skip - Number of records to skip from start, default: 0
  * @param limit - Number of records to return, default: 10
  * @param query - MongoDB Query as a well formed JSON String, ie {"name":"Bob"}
  * @param populate - Path to a MongoDB reference to populate, ie [{"path":"customer"},{"path":"products"}]
  */
-export const getApiV1Authrec = function(parameters = {}) {
+export const getAuthrec = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/authrec'
+  let path = '/authrec'
   let body
   let queryParameters = {}
   let form = {}
@@ -664,16 +664,16 @@ export const getApiV1Authrec = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1Authrec_RAW_URL = function() {
-  return '/api/v1/authrec'
+export const getAuthrec_RAW_URL = function() {
+  return '/authrec'
 }
-export const getApiV1Authrec_TYPE = function() {
+export const getAuthrec_TYPE = function() {
   return 'get'
 }
-export const getApiV1AuthrecURL = function(parameters = {}) {
+export const getAuthrecURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/authrec'
+  let path = '/authrec'
   if (parameters['sort'] !== undefined) {
     queryParameters['sort'] = parameters['sort']
   }
@@ -699,16 +699,16 @@ export const getApiV1AuthrecURL = function(parameters = {}) {
 }
 /**
  * Creates a new instance of authrec
- * request: postApiV1Authrec
- * url: postApiV1AuthrecURL
- * method: postApiV1Authrec_TYPE
- * raw_url: postApiV1Authrec_RAW_URL
+ * request: postAuthrec
+ * url: postAuthrecURL
+ * method: postAuthrec_TYPE
+ * raw_url: postAuthrec_RAW_URL
  * @param authrec - 
  */
-export const postApiV1Authrec = function(parameters = {}) {
+export const postAuthrec = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/authrec'
+  let path = '/authrec'
   let body
   let queryParameters = {}
   let form = {}
@@ -725,16 +725,16 @@ export const postApiV1Authrec = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1Authrec_RAW_URL = function() {
-  return '/api/v1/authrec'
+export const postAuthrec_RAW_URL = function() {
+  return '/authrec'
 }
-export const postApiV1Authrec_TYPE = function() {
+export const postAuthrec_TYPE = function() {
   return 'post'
 }
-export const postApiV1AuthrecURL = function(parameters = {}) {
+export const postAuthrecURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/authrec'
+  let path = '/authrec'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -745,15 +745,15 @@ export const postApiV1AuthrecURL = function(parameters = {}) {
 }
 /**
  * Deletes the entire contents of collection authrec
- * request: deleteApiV1Authrec
- * url: deleteApiV1AuthrecURL
- * method: deleteApiV1Authrec_TYPE
- * raw_url: deleteApiV1Authrec_RAW_URL
+ * request: deleteAuthrec
+ * url: deleteAuthrecURL
+ * method: deleteAuthrec_TYPE
+ * raw_url: deleteAuthrec_RAW_URL
  */
-export const deleteApiV1Authrec = function(parameters = {}) {
+export const deleteAuthrec = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/authrec'
+  let path = '/authrec'
   let body
   let queryParameters = {}
   let form = {}
@@ -764,16 +764,16 @@ export const deleteApiV1Authrec = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1Authrec_RAW_URL = function() {
-  return '/api/v1/authrec'
+export const deleteAuthrec_RAW_URL = function() {
+  return '/authrec'
 }
-export const deleteApiV1Authrec_TYPE = function() {
+export const deleteAuthrec_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1AuthrecURL = function(parameters = {}) {
+export const deleteAuthrecURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/authrec'
+  let path = '/authrec'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -784,16 +784,16 @@ export const deleteApiV1AuthrecURL = function(parameters = {}) {
 }
 /**
  * Returns a List of authrecs
- * request: getApiV1AuthrecById
- * url: getApiV1AuthrecByIdURL
- * method: getApiV1AuthrecById_TYPE
- * raw_url: getApiV1AuthrecById_RAW_URL
+ * request: getAuthrecById
+ * url: getAuthrecByIdURL
+ * method: getAuthrecById_TYPE
+ * raw_url: getAuthrecById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const getApiV1AuthrecById = function(parameters = {}) {
+export const getAuthrecById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/authrec/{id}'
+  let path = '/authrec/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -808,16 +808,16 @@ export const getApiV1AuthrecById = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1AuthrecById_RAW_URL = function() {
-  return '/api/v1/authrec/{id}'
+export const getAuthrecById_RAW_URL = function() {
+  return '/authrec/{id}'
 }
-export const getApiV1AuthrecById_TYPE = function() {
+export const getAuthrecById_TYPE = function() {
   return 'get'
 }
-export const getApiV1AuthrecByIdURL = function(parameters = {}) {
+export const getAuthrecByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/authrec/{id}'
+  let path = '/authrec/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -829,17 +829,17 @@ export const getApiV1AuthrecByIdURL = function(parameters = {}) {
 }
 /**
  * Updates the document with the given ID
- * request: postApiV1AuthrecById
- * url: postApiV1AuthrecByIdURL
- * method: postApiV1AuthrecById_TYPE
- * raw_url: postApiV1AuthrecById_RAW_URL
+ * request: postAuthrecById
+ * url: postAuthrecByIdURL
+ * method: postAuthrecById_TYPE
+ * raw_url: postAuthrecById_RAW_URL
  * @param id - MongoDB document _id
  * @param authrec - 
  */
-export const postApiV1AuthrecById = function(parameters = {}) {
+export const postAuthrecById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/authrec/{id}'
+  let path = '/authrec/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -860,16 +860,16 @@ export const postApiV1AuthrecById = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1AuthrecById_RAW_URL = function() {
-  return '/api/v1/authrec/{id}'
+export const postAuthrecById_RAW_URL = function() {
+  return '/authrec/{id}'
 }
-export const postApiV1AuthrecById_TYPE = function() {
+export const postAuthrecById_TYPE = function() {
   return 'post'
 }
-export const postApiV1AuthrecByIdURL = function(parameters = {}) {
+export const postAuthrecByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/authrec/{id}'
+  let path = '/authrec/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -881,16 +881,16 @@ export const postApiV1AuthrecByIdURL = function(parameters = {}) {
 }
 /**
  * Deletes the document with the given ID
- * request: deleteApiV1AuthrecById
- * url: deleteApiV1AuthrecByIdURL
- * method: deleteApiV1AuthrecById_TYPE
- * raw_url: deleteApiV1AuthrecById_RAW_URL
+ * request: deleteAuthrecById
+ * url: deleteAuthrecByIdURL
+ * method: deleteAuthrecById_TYPE
+ * raw_url: deleteAuthrecById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const deleteApiV1AuthrecById = function(parameters = {}) {
+export const deleteAuthrecById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/authrec/{id}'
+  let path = '/authrec/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -905,16 +905,16 @@ export const deleteApiV1AuthrecById = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1AuthrecById_RAW_URL = function() {
-  return '/api/v1/authrec/{id}'
+export const deleteAuthrecById_RAW_URL = function() {
+  return '/authrec/{id}'
 }
-export const deleteApiV1AuthrecById_TYPE = function() {
+export const deleteAuthrecById_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1AuthrecByIdURL = function(parameters = {}) {
+export const deleteAuthrecByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/authrec/{id}'
+  let path = '/authrec/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -926,15 +926,15 @@ export const deleteApiV1AuthrecByIdURL = function(parameters = {}) {
 }
 /**
  * Returns the number of documents of type bibref
- * request: getApiV1BibrefCount
- * url: getApiV1BibrefCountURL
- * method: getApiV1BibrefCount_TYPE
- * raw_url: getApiV1BibrefCount_RAW_URL
+ * request: getBibrefCount
+ * url: getBibrefCountURL
+ * method: getBibrefCount_TYPE
+ * raw_url: getBibrefCount_RAW_URL
  */
-export const getApiV1BibrefCount = function(parameters = {}) {
+export const getBibrefCount = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/bibref/count'
+  let path = '/bibref/count'
   let body
   let queryParameters = {}
   let form = {}
@@ -945,16 +945,16 @@ export const getApiV1BibrefCount = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1BibrefCount_RAW_URL = function() {
-  return '/api/v1/bibref/count'
+export const getBibrefCount_RAW_URL = function() {
+  return '/bibref/count'
 }
-export const getApiV1BibrefCount_TYPE = function() {
+export const getBibrefCount_TYPE = function() {
   return 'get'
 }
-export const getApiV1BibrefCountURL = function(parameters = {}) {
+export const getBibrefCountURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/bibref/count'
+  let path = '/bibref/count'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -965,20 +965,20 @@ export const getApiV1BibrefCountURL = function(parameters = {}) {
 }
 /**
  * Returns a List of bibrefs
- * request: getApiV1Bibref
- * url: getApiV1BibrefURL
- * method: getApiV1Bibref_TYPE
- * raw_url: getApiV1Bibref_RAW_URL
+ * request: getBibref
+ * url: getBibrefURL
+ * method: getBibref_TYPE
+ * raw_url: getBibref_RAW_URL
  * @param sort - Key Name to Sort by, preceded by '-' for descending, default: _id
  * @param skip - Number of records to skip from start, default: 0
  * @param limit - Number of records to return, default: 10
  * @param query - MongoDB Query as a well formed JSON String, ie {"name":"Bob"}
  * @param populate - Path to a MongoDB reference to populate, ie [{"path":"customer"},{"path":"products"}]
  */
-export const getApiV1Bibref = function(parameters = {}) {
+export const getBibref = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/bibref'
+  let path = '/bibref'
   let body
   let queryParameters = {}
   let form = {}
@@ -1004,16 +1004,16 @@ export const getApiV1Bibref = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1Bibref_RAW_URL = function() {
-  return '/api/v1/bibref'
+export const getBibref_RAW_URL = function() {
+  return '/bibref'
 }
-export const getApiV1Bibref_TYPE = function() {
+export const getBibref_TYPE = function() {
   return 'get'
 }
-export const getApiV1BibrefURL = function(parameters = {}) {
+export const getBibrefURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/bibref'
+  let path = '/bibref'
   if (parameters['sort'] !== undefined) {
     queryParameters['sort'] = parameters['sort']
   }
@@ -1039,16 +1039,16 @@ export const getApiV1BibrefURL = function(parameters = {}) {
 }
 /**
  * Creates a new instance of bibref
- * request: postApiV1Bibref
- * url: postApiV1BibrefURL
- * method: postApiV1Bibref_TYPE
- * raw_url: postApiV1Bibref_RAW_URL
+ * request: postBibref
+ * url: postBibrefURL
+ * method: postBibref_TYPE
+ * raw_url: postBibref_RAW_URL
  * @param bibref - 
  */
-export const postApiV1Bibref = function(parameters = {}) {
+export const postBibref = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/bibref'
+  let path = '/bibref'
   let body
   let queryParameters = {}
   let form = {}
@@ -1065,16 +1065,16 @@ export const postApiV1Bibref = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1Bibref_RAW_URL = function() {
-  return '/api/v1/bibref'
+export const postBibref_RAW_URL = function() {
+  return '/bibref'
 }
-export const postApiV1Bibref_TYPE = function() {
+export const postBibref_TYPE = function() {
   return 'post'
 }
-export const postApiV1BibrefURL = function(parameters = {}) {
+export const postBibrefURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/bibref'
+  let path = '/bibref'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -1085,15 +1085,15 @@ export const postApiV1BibrefURL = function(parameters = {}) {
 }
 /**
  * Deletes the entire contents of collection bibref
- * request: deleteApiV1Bibref
- * url: deleteApiV1BibrefURL
- * method: deleteApiV1Bibref_TYPE
- * raw_url: deleteApiV1Bibref_RAW_URL
+ * request: deleteBibref
+ * url: deleteBibrefURL
+ * method: deleteBibref_TYPE
+ * raw_url: deleteBibref_RAW_URL
  */
-export const deleteApiV1Bibref = function(parameters = {}) {
+export const deleteBibref = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/bibref'
+  let path = '/bibref'
   let body
   let queryParameters = {}
   let form = {}
@@ -1104,16 +1104,16 @@ export const deleteApiV1Bibref = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1Bibref_RAW_URL = function() {
-  return '/api/v1/bibref'
+export const deleteBibref_RAW_URL = function() {
+  return '/bibref'
 }
-export const deleteApiV1Bibref_TYPE = function() {
+export const deleteBibref_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1BibrefURL = function(parameters = {}) {
+export const deleteBibrefURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/bibref'
+  let path = '/bibref'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -1124,16 +1124,16 @@ export const deleteApiV1BibrefURL = function(parameters = {}) {
 }
 /**
  * Returns a List of bibrefs
- * request: getApiV1BibrefById
- * url: getApiV1BibrefByIdURL
- * method: getApiV1BibrefById_TYPE
- * raw_url: getApiV1BibrefById_RAW_URL
+ * request: getBibrefById
+ * url: getBibrefByIdURL
+ * method: getBibrefById_TYPE
+ * raw_url: getBibrefById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const getApiV1BibrefById = function(parameters = {}) {
+export const getBibrefById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/bibref/{id}'
+  let path = '/bibref/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -1148,16 +1148,16 @@ export const getApiV1BibrefById = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1BibrefById_RAW_URL = function() {
-  return '/api/v1/bibref/{id}'
+export const getBibrefById_RAW_URL = function() {
+  return '/bibref/{id}'
 }
-export const getApiV1BibrefById_TYPE = function() {
+export const getBibrefById_TYPE = function() {
   return 'get'
 }
-export const getApiV1BibrefByIdURL = function(parameters = {}) {
+export const getBibrefByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/bibref/{id}'
+  let path = '/bibref/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -1169,17 +1169,17 @@ export const getApiV1BibrefByIdURL = function(parameters = {}) {
 }
 /**
  * Updates the document with the given ID
- * request: postApiV1BibrefById
- * url: postApiV1BibrefByIdURL
- * method: postApiV1BibrefById_TYPE
- * raw_url: postApiV1BibrefById_RAW_URL
+ * request: postBibrefById
+ * url: postBibrefByIdURL
+ * method: postBibrefById_TYPE
+ * raw_url: postBibrefById_RAW_URL
  * @param id - MongoDB document _id
  * @param bibref - 
  */
-export const postApiV1BibrefById = function(parameters = {}) {
+export const postBibrefById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/bibref/{id}'
+  let path = '/bibref/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -1200,16 +1200,16 @@ export const postApiV1BibrefById = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1BibrefById_RAW_URL = function() {
-  return '/api/v1/bibref/{id}'
+export const postBibrefById_RAW_URL = function() {
+  return '/bibref/{id}'
 }
-export const postApiV1BibrefById_TYPE = function() {
+export const postBibrefById_TYPE = function() {
   return 'post'
 }
-export const postApiV1BibrefByIdURL = function(parameters = {}) {
+export const postBibrefByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/bibref/{id}'
+  let path = '/bibref/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -1221,16 +1221,16 @@ export const postApiV1BibrefByIdURL = function(parameters = {}) {
 }
 /**
  * Deletes the document with the given ID
- * request: deleteApiV1BibrefById
- * url: deleteApiV1BibrefByIdURL
- * method: deleteApiV1BibrefById_TYPE
- * raw_url: deleteApiV1BibrefById_RAW_URL
+ * request: deleteBibrefById
+ * url: deleteBibrefByIdURL
+ * method: deleteBibrefById_TYPE
+ * raw_url: deleteBibrefById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const deleteApiV1BibrefById = function(parameters = {}) {
+export const deleteBibrefById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/bibref/{id}'
+  let path = '/bibref/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -1245,16 +1245,16 @@ export const deleteApiV1BibrefById = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1BibrefById_RAW_URL = function() {
-  return '/api/v1/bibref/{id}'
+export const deleteBibrefById_RAW_URL = function() {
+  return '/bibref/{id}'
 }
-export const deleteApiV1BibrefById_TYPE = function() {
+export const deleteBibrefById_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1BibrefByIdURL = function(parameters = {}) {
+export const deleteBibrefByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/bibref/{id}'
+  let path = '/bibref/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -1266,15 +1266,15 @@ export const deleteApiV1BibrefByIdURL = function(parameters = {}) {
 }
 /**
  * Returns the number of documents of type collect
- * request: getApiV1CollectCount
- * url: getApiV1CollectCountURL
- * method: getApiV1CollectCount_TYPE
- * raw_url: getApiV1CollectCount_RAW_URL
+ * request: getCollectCount
+ * url: getCollectCountURL
+ * method: getCollectCount_TYPE
+ * raw_url: getCollectCount_RAW_URL
  */
-export const getApiV1CollectCount = function(parameters = {}) {
+export const getCollectCount = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/collect/count'
+  let path = '/collect/count'
   let body
   let queryParameters = {}
   let form = {}
@@ -1285,16 +1285,16 @@ export const getApiV1CollectCount = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1CollectCount_RAW_URL = function() {
-  return '/api/v1/collect/count'
+export const getCollectCount_RAW_URL = function() {
+  return '/collect/count'
 }
-export const getApiV1CollectCount_TYPE = function() {
+export const getCollectCount_TYPE = function() {
   return 'get'
 }
-export const getApiV1CollectCountURL = function(parameters = {}) {
+export const getCollectCountURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/collect/count'
+  let path = '/collect/count'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -1305,20 +1305,20 @@ export const getApiV1CollectCountURL = function(parameters = {}) {
 }
 /**
  * Returns a List of collects
- * request: getApiV1Collect
- * url: getApiV1CollectURL
- * method: getApiV1Collect_TYPE
- * raw_url: getApiV1Collect_RAW_URL
+ * request: getCollect
+ * url: getCollectURL
+ * method: getCollect_TYPE
+ * raw_url: getCollect_RAW_URL
  * @param sort - Key Name to Sort by, preceded by '-' for descending, default: _id
  * @param skip - Number of records to skip from start, default: 0
  * @param limit - Number of records to return, default: 10
  * @param query - MongoDB Query as a well formed JSON String, ie {"name":"Bob"}
  * @param populate - Path to a MongoDB reference to populate, ie [{"path":"customer"},{"path":"products"}]
  */
-export const getApiV1Collect = function(parameters = {}) {
+export const getCollect = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/collect'
+  let path = '/collect'
   let body
   let queryParameters = {}
   let form = {}
@@ -1344,16 +1344,16 @@ export const getApiV1Collect = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1Collect_RAW_URL = function() {
-  return '/api/v1/collect'
+export const getCollect_RAW_URL = function() {
+  return '/collect'
 }
-export const getApiV1Collect_TYPE = function() {
+export const getCollect_TYPE = function() {
   return 'get'
 }
-export const getApiV1CollectURL = function(parameters = {}) {
+export const getCollectURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/collect'
+  let path = '/collect'
   if (parameters['sort'] !== undefined) {
     queryParameters['sort'] = parameters['sort']
   }
@@ -1379,16 +1379,16 @@ export const getApiV1CollectURL = function(parameters = {}) {
 }
 /**
  * Creates a new instance of collect
- * request: postApiV1Collect
- * url: postApiV1CollectURL
- * method: postApiV1Collect_TYPE
- * raw_url: postApiV1Collect_RAW_URL
+ * request: postCollect
+ * url: postCollectURL
+ * method: postCollect_TYPE
+ * raw_url: postCollect_RAW_URL
  * @param collect - 
  */
-export const postApiV1Collect = function(parameters = {}) {
+export const postCollect = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/collect'
+  let path = '/collect'
   let body
   let queryParameters = {}
   let form = {}
@@ -1405,16 +1405,16 @@ export const postApiV1Collect = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1Collect_RAW_URL = function() {
-  return '/api/v1/collect'
+export const postCollect_RAW_URL = function() {
+  return '/collect'
 }
-export const postApiV1Collect_TYPE = function() {
+export const postCollect_TYPE = function() {
   return 'post'
 }
-export const postApiV1CollectURL = function(parameters = {}) {
+export const postCollectURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/collect'
+  let path = '/collect'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -1425,15 +1425,15 @@ export const postApiV1CollectURL = function(parameters = {}) {
 }
 /**
  * Deletes the entire contents of collection collect
- * request: deleteApiV1Collect
- * url: deleteApiV1CollectURL
- * method: deleteApiV1Collect_TYPE
- * raw_url: deleteApiV1Collect_RAW_URL
+ * request: deleteCollect
+ * url: deleteCollectURL
+ * method: deleteCollect_TYPE
+ * raw_url: deleteCollect_RAW_URL
  */
-export const deleteApiV1Collect = function(parameters = {}) {
+export const deleteCollect = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/collect'
+  let path = '/collect'
   let body
   let queryParameters = {}
   let form = {}
@@ -1444,16 +1444,16 @@ export const deleteApiV1Collect = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1Collect_RAW_URL = function() {
-  return '/api/v1/collect'
+export const deleteCollect_RAW_URL = function() {
+  return '/collect'
 }
-export const deleteApiV1Collect_TYPE = function() {
+export const deleteCollect_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1CollectURL = function(parameters = {}) {
+export const deleteCollectURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/collect'
+  let path = '/collect'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -1464,16 +1464,16 @@ export const deleteApiV1CollectURL = function(parameters = {}) {
 }
 /**
  * Returns a List of collects
- * request: getApiV1CollectById
- * url: getApiV1CollectByIdURL
- * method: getApiV1CollectById_TYPE
- * raw_url: getApiV1CollectById_RAW_URL
+ * request: getCollectById
+ * url: getCollectByIdURL
+ * method: getCollectById_TYPE
+ * raw_url: getCollectById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const getApiV1CollectById = function(parameters = {}) {
+export const getCollectById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/collect/{id}'
+  let path = '/collect/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -1488,16 +1488,16 @@ export const getApiV1CollectById = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1CollectById_RAW_URL = function() {
-  return '/api/v1/collect/{id}'
+export const getCollectById_RAW_URL = function() {
+  return '/collect/{id}'
 }
-export const getApiV1CollectById_TYPE = function() {
+export const getCollectById_TYPE = function() {
   return 'get'
 }
-export const getApiV1CollectByIdURL = function(parameters = {}) {
+export const getCollectByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/collect/{id}'
+  let path = '/collect/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -1509,17 +1509,17 @@ export const getApiV1CollectByIdURL = function(parameters = {}) {
 }
 /**
  * Updates the document with the given ID
- * request: postApiV1CollectById
- * url: postApiV1CollectByIdURL
- * method: postApiV1CollectById_TYPE
- * raw_url: postApiV1CollectById_RAW_URL
+ * request: postCollectById
+ * url: postCollectByIdURL
+ * method: postCollectById_TYPE
+ * raw_url: postCollectById_RAW_URL
  * @param id - MongoDB document _id
  * @param collect - 
  */
-export const postApiV1CollectById = function(parameters = {}) {
+export const postCollectById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/collect/{id}'
+  let path = '/collect/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -1540,16 +1540,16 @@ export const postApiV1CollectById = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1CollectById_RAW_URL = function() {
-  return '/api/v1/collect/{id}'
+export const postCollectById_RAW_URL = function() {
+  return '/collect/{id}'
 }
-export const postApiV1CollectById_TYPE = function() {
+export const postCollectById_TYPE = function() {
   return 'post'
 }
-export const postApiV1CollectByIdURL = function(parameters = {}) {
+export const postCollectByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/collect/{id}'
+  let path = '/collect/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -1561,16 +1561,16 @@ export const postApiV1CollectByIdURL = function(parameters = {}) {
 }
 /**
  * Deletes the document with the given ID
- * request: deleteApiV1CollectById
- * url: deleteApiV1CollectByIdURL
- * method: deleteApiV1CollectById_TYPE
- * raw_url: deleteApiV1CollectById_RAW_URL
+ * request: deleteCollectById
+ * url: deleteCollectByIdURL
+ * method: deleteCollectById_TYPE
+ * raw_url: deleteCollectById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const deleteApiV1CollectById = function(parameters = {}) {
+export const deleteCollectById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/collect/{id}'
+  let path = '/collect/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -1585,16 +1585,16 @@ export const deleteApiV1CollectById = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1CollectById_RAW_URL = function() {
-  return '/api/v1/collect/{id}'
+export const deleteCollectById_RAW_URL = function() {
+  return '/collect/{id}'
 }
-export const deleteApiV1CollectById_TYPE = function() {
+export const deleteCollectById_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1CollectByIdURL = function(parameters = {}) {
+export const deleteCollectByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/collect/{id}'
+  let path = '/collect/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -1606,15 +1606,15 @@ export const deleteApiV1CollectByIdURL = function(parameters = {}) {
 }
 /**
  * Returns the number of documents of type corporation
- * request: getApiV1CorporationCount
- * url: getApiV1CorporationCountURL
- * method: getApiV1CorporationCount_TYPE
- * raw_url: getApiV1CorporationCount_RAW_URL
+ * request: getCorporationCount
+ * url: getCorporationCountURL
+ * method: getCorporationCount_TYPE
+ * raw_url: getCorporationCount_RAW_URL
  */
-export const getApiV1CorporationCount = function(parameters = {}) {
+export const getCorporationCount = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/corporation/count'
+  let path = '/corporation/count'
   let body
   let queryParameters = {}
   let form = {}
@@ -1625,16 +1625,16 @@ export const getApiV1CorporationCount = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1CorporationCount_RAW_URL = function() {
-  return '/api/v1/corporation/count'
+export const getCorporationCount_RAW_URL = function() {
+  return '/corporation/count'
 }
-export const getApiV1CorporationCount_TYPE = function() {
+export const getCorporationCount_TYPE = function() {
   return 'get'
 }
-export const getApiV1CorporationCountURL = function(parameters = {}) {
+export const getCorporationCountURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/corporation/count'
+  let path = '/corporation/count'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -1645,20 +1645,20 @@ export const getApiV1CorporationCountURL = function(parameters = {}) {
 }
 /**
  * Returns a List of corporations
- * request: getApiV1Corporation
- * url: getApiV1CorporationURL
- * method: getApiV1Corporation_TYPE
- * raw_url: getApiV1Corporation_RAW_URL
+ * request: getCorporation
+ * url: getCorporationURL
+ * method: getCorporation_TYPE
+ * raw_url: getCorporation_RAW_URL
  * @param sort - Key Name to Sort by, preceded by '-' for descending, default: _id
  * @param skip - Number of records to skip from start, default: 0
  * @param limit - Number of records to return, default: 10
  * @param query - MongoDB Query as a well formed JSON String, ie {"name":"Bob"}
  * @param populate - Path to a MongoDB reference to populate, ie [{"path":"customer"},{"path":"products"}]
  */
-export const getApiV1Corporation = function(parameters = {}) {
+export const getCorporation = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/corporation'
+  let path = '/corporation'
   let body
   let queryParameters = {}
   let form = {}
@@ -1684,16 +1684,16 @@ export const getApiV1Corporation = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1Corporation_RAW_URL = function() {
-  return '/api/v1/corporation'
+export const getCorporation_RAW_URL = function() {
+  return '/corporation'
 }
-export const getApiV1Corporation_TYPE = function() {
+export const getCorporation_TYPE = function() {
   return 'get'
 }
-export const getApiV1CorporationURL = function(parameters = {}) {
+export const getCorporationURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/corporation'
+  let path = '/corporation'
   if (parameters['sort'] !== undefined) {
     queryParameters['sort'] = parameters['sort']
   }
@@ -1719,16 +1719,16 @@ export const getApiV1CorporationURL = function(parameters = {}) {
 }
 /**
  * Creates a new instance of corporation
- * request: postApiV1Corporation
- * url: postApiV1CorporationURL
- * method: postApiV1Corporation_TYPE
- * raw_url: postApiV1Corporation_RAW_URL
+ * request: postCorporation
+ * url: postCorporationURL
+ * method: postCorporation_TYPE
+ * raw_url: postCorporation_RAW_URL
  * @param corporation - 
  */
-export const postApiV1Corporation = function(parameters = {}) {
+export const postCorporation = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/corporation'
+  let path = '/corporation'
   let body
   let queryParameters = {}
   let form = {}
@@ -1745,16 +1745,16 @@ export const postApiV1Corporation = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1Corporation_RAW_URL = function() {
-  return '/api/v1/corporation'
+export const postCorporation_RAW_URL = function() {
+  return '/corporation'
 }
-export const postApiV1Corporation_TYPE = function() {
+export const postCorporation_TYPE = function() {
   return 'post'
 }
-export const postApiV1CorporationURL = function(parameters = {}) {
+export const postCorporationURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/corporation'
+  let path = '/corporation'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -1765,15 +1765,15 @@ export const postApiV1CorporationURL = function(parameters = {}) {
 }
 /**
  * Deletes the entire contents of collection corporation
- * request: deleteApiV1Corporation
- * url: deleteApiV1CorporationURL
- * method: deleteApiV1Corporation_TYPE
- * raw_url: deleteApiV1Corporation_RAW_URL
+ * request: deleteCorporation
+ * url: deleteCorporationURL
+ * method: deleteCorporation_TYPE
+ * raw_url: deleteCorporation_RAW_URL
  */
-export const deleteApiV1Corporation = function(parameters = {}) {
+export const deleteCorporation = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/corporation'
+  let path = '/corporation'
   let body
   let queryParameters = {}
   let form = {}
@@ -1784,16 +1784,16 @@ export const deleteApiV1Corporation = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1Corporation_RAW_URL = function() {
-  return '/api/v1/corporation'
+export const deleteCorporation_RAW_URL = function() {
+  return '/corporation'
 }
-export const deleteApiV1Corporation_TYPE = function() {
+export const deleteCorporation_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1CorporationURL = function(parameters = {}) {
+export const deleteCorporationURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/corporation'
+  let path = '/corporation'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -1804,16 +1804,16 @@ export const deleteApiV1CorporationURL = function(parameters = {}) {
 }
 /**
  * Returns a List of corporations
- * request: getApiV1CorporationById
- * url: getApiV1CorporationByIdURL
- * method: getApiV1CorporationById_TYPE
- * raw_url: getApiV1CorporationById_RAW_URL
+ * request: getCorporationById
+ * url: getCorporationByIdURL
+ * method: getCorporationById_TYPE
+ * raw_url: getCorporationById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const getApiV1CorporationById = function(parameters = {}) {
+export const getCorporationById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/corporation/{id}'
+  let path = '/corporation/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -1828,16 +1828,16 @@ export const getApiV1CorporationById = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1CorporationById_RAW_URL = function() {
-  return '/api/v1/corporation/{id}'
+export const getCorporationById_RAW_URL = function() {
+  return '/corporation/{id}'
 }
-export const getApiV1CorporationById_TYPE = function() {
+export const getCorporationById_TYPE = function() {
   return 'get'
 }
-export const getApiV1CorporationByIdURL = function(parameters = {}) {
+export const getCorporationByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/corporation/{id}'
+  let path = '/corporation/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -1849,17 +1849,17 @@ export const getApiV1CorporationByIdURL = function(parameters = {}) {
 }
 /**
  * Updates the document with the given ID
- * request: postApiV1CorporationById
- * url: postApiV1CorporationByIdURL
- * method: postApiV1CorporationById_TYPE
- * raw_url: postApiV1CorporationById_RAW_URL
+ * request: postCorporationById
+ * url: postCorporationByIdURL
+ * method: postCorporationById_TYPE
+ * raw_url: postCorporationById_RAW_URL
  * @param id - MongoDB document _id
  * @param corporation - 
  */
-export const postApiV1CorporationById = function(parameters = {}) {
+export const postCorporationById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/corporation/{id}'
+  let path = '/corporation/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -1880,16 +1880,16 @@ export const postApiV1CorporationById = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1CorporationById_RAW_URL = function() {
-  return '/api/v1/corporation/{id}'
+export const postCorporationById_RAW_URL = function() {
+  return '/corporation/{id}'
 }
-export const postApiV1CorporationById_TYPE = function() {
+export const postCorporationById_TYPE = function() {
   return 'post'
 }
-export const postApiV1CorporationByIdURL = function(parameters = {}) {
+export const postCorporationByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/corporation/{id}'
+  let path = '/corporation/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -1901,16 +1901,16 @@ export const postApiV1CorporationByIdURL = function(parameters = {}) {
 }
 /**
  * Deletes the document with the given ID
- * request: deleteApiV1CorporationById
- * url: deleteApiV1CorporationByIdURL
- * method: deleteApiV1CorporationById_TYPE
- * raw_url: deleteApiV1CorporationById_RAW_URL
+ * request: deleteCorporationById
+ * url: deleteCorporationByIdURL
+ * method: deleteCorporationById_TYPE
+ * raw_url: deleteCorporationById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const deleteApiV1CorporationById = function(parameters = {}) {
+export const deleteCorporationById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/corporation/{id}'
+  let path = '/corporation/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -1925,16 +1925,16 @@ export const deleteApiV1CorporationById = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1CorporationById_RAW_URL = function() {
-  return '/api/v1/corporation/{id}'
+export const deleteCorporationById_RAW_URL = function() {
+  return '/corporation/{id}'
 }
-export const deleteApiV1CorporationById_TYPE = function() {
+export const deleteCorporationById_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1CorporationByIdURL = function(parameters = {}) {
+export const deleteCorporationByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/corporation/{id}'
+  let path = '/corporation/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -1946,15 +1946,15 @@ export const deleteApiV1CorporationByIdURL = function(parameters = {}) {
 }
 /**
  * Returns the number of documents of type currency
- * request: getApiV1CurrencyCount
- * url: getApiV1CurrencyCountURL
- * method: getApiV1CurrencyCount_TYPE
- * raw_url: getApiV1CurrencyCount_RAW_URL
+ * request: getCurrencyCount
+ * url: getCurrencyCountURL
+ * method: getCurrencyCount_TYPE
+ * raw_url: getCurrencyCount_RAW_URL
  */
-export const getApiV1CurrencyCount = function(parameters = {}) {
+export const getCurrencyCount = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/currency/count'
+  let path = '/currency/count'
   let body
   let queryParameters = {}
   let form = {}
@@ -1965,16 +1965,16 @@ export const getApiV1CurrencyCount = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1CurrencyCount_RAW_URL = function() {
-  return '/api/v1/currency/count'
+export const getCurrencyCount_RAW_URL = function() {
+  return '/currency/count'
 }
-export const getApiV1CurrencyCount_TYPE = function() {
+export const getCurrencyCount_TYPE = function() {
   return 'get'
 }
-export const getApiV1CurrencyCountURL = function(parameters = {}) {
+export const getCurrencyCountURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/currency/count'
+  let path = '/currency/count'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -1985,20 +1985,20 @@ export const getApiV1CurrencyCountURL = function(parameters = {}) {
 }
 /**
  * Returns a List of currencys
- * request: getApiV1Currency
- * url: getApiV1CurrencyURL
- * method: getApiV1Currency_TYPE
- * raw_url: getApiV1Currency_RAW_URL
+ * request: getCurrency
+ * url: getCurrencyURL
+ * method: getCurrency_TYPE
+ * raw_url: getCurrency_RAW_URL
  * @param sort - Key Name to Sort by, preceded by '-' for descending, default: _id
  * @param skip - Number of records to skip from start, default: 0
  * @param limit - Number of records to return, default: 10
  * @param query - MongoDB Query as a well formed JSON String, ie {"name":"Bob"}
  * @param populate - Path to a MongoDB reference to populate, ie [{"path":"customer"},{"path":"products"}]
  */
-export const getApiV1Currency = function(parameters = {}) {
+export const getCurrency = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/currency'
+  let path = '/currency'
   let body
   let queryParameters = {}
   let form = {}
@@ -2024,16 +2024,16 @@ export const getApiV1Currency = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1Currency_RAW_URL = function() {
-  return '/api/v1/currency'
+export const getCurrency_RAW_URL = function() {
+  return '/currency'
 }
-export const getApiV1Currency_TYPE = function() {
+export const getCurrency_TYPE = function() {
   return 'get'
 }
-export const getApiV1CurrencyURL = function(parameters = {}) {
+export const getCurrencyURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/currency'
+  let path = '/currency'
   if (parameters['sort'] !== undefined) {
     queryParameters['sort'] = parameters['sort']
   }
@@ -2059,16 +2059,16 @@ export const getApiV1CurrencyURL = function(parameters = {}) {
 }
 /**
  * Creates a new instance of currency
- * request: postApiV1Currency
- * url: postApiV1CurrencyURL
- * method: postApiV1Currency_TYPE
- * raw_url: postApiV1Currency_RAW_URL
+ * request: postCurrency
+ * url: postCurrencyURL
+ * method: postCurrency_TYPE
+ * raw_url: postCurrency_RAW_URL
  * @param currency - 
  */
-export const postApiV1Currency = function(parameters = {}) {
+export const postCurrency = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/currency'
+  let path = '/currency'
   let body
   let queryParameters = {}
   let form = {}
@@ -2085,16 +2085,16 @@ export const postApiV1Currency = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1Currency_RAW_URL = function() {
-  return '/api/v1/currency'
+export const postCurrency_RAW_URL = function() {
+  return '/currency'
 }
-export const postApiV1Currency_TYPE = function() {
+export const postCurrency_TYPE = function() {
   return 'post'
 }
-export const postApiV1CurrencyURL = function(parameters = {}) {
+export const postCurrencyURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/currency'
+  let path = '/currency'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -2105,15 +2105,15 @@ export const postApiV1CurrencyURL = function(parameters = {}) {
 }
 /**
  * Deletes the entire contents of collection currency
- * request: deleteApiV1Currency
- * url: deleteApiV1CurrencyURL
- * method: deleteApiV1Currency_TYPE
- * raw_url: deleteApiV1Currency_RAW_URL
+ * request: deleteCurrency
+ * url: deleteCurrencyURL
+ * method: deleteCurrency_TYPE
+ * raw_url: deleteCurrency_RAW_URL
  */
-export const deleteApiV1Currency = function(parameters = {}) {
+export const deleteCurrency = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/currency'
+  let path = '/currency'
   let body
   let queryParameters = {}
   let form = {}
@@ -2124,16 +2124,16 @@ export const deleteApiV1Currency = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1Currency_RAW_URL = function() {
-  return '/api/v1/currency'
+export const deleteCurrency_RAW_URL = function() {
+  return '/currency'
 }
-export const deleteApiV1Currency_TYPE = function() {
+export const deleteCurrency_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1CurrencyURL = function(parameters = {}) {
+export const deleteCurrencyURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/currency'
+  let path = '/currency'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -2144,16 +2144,16 @@ export const deleteApiV1CurrencyURL = function(parameters = {}) {
 }
 /**
  * Returns a List of currencys
- * request: getApiV1CurrencyById
- * url: getApiV1CurrencyByIdURL
- * method: getApiV1CurrencyById_TYPE
- * raw_url: getApiV1CurrencyById_RAW_URL
+ * request: getCurrencyById
+ * url: getCurrencyByIdURL
+ * method: getCurrencyById_TYPE
+ * raw_url: getCurrencyById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const getApiV1CurrencyById = function(parameters = {}) {
+export const getCurrencyById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/currency/{id}'
+  let path = '/currency/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -2168,16 +2168,16 @@ export const getApiV1CurrencyById = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1CurrencyById_RAW_URL = function() {
-  return '/api/v1/currency/{id}'
+export const getCurrencyById_RAW_URL = function() {
+  return '/currency/{id}'
 }
-export const getApiV1CurrencyById_TYPE = function() {
+export const getCurrencyById_TYPE = function() {
   return 'get'
 }
-export const getApiV1CurrencyByIdURL = function(parameters = {}) {
+export const getCurrencyByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/currency/{id}'
+  let path = '/currency/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -2189,17 +2189,17 @@ export const getApiV1CurrencyByIdURL = function(parameters = {}) {
 }
 /**
  * Updates the document with the given ID
- * request: postApiV1CurrencyById
- * url: postApiV1CurrencyByIdURL
- * method: postApiV1CurrencyById_TYPE
- * raw_url: postApiV1CurrencyById_RAW_URL
+ * request: postCurrencyById
+ * url: postCurrencyByIdURL
+ * method: postCurrencyById_TYPE
+ * raw_url: postCurrencyById_RAW_URL
  * @param id - MongoDB document _id
  * @param currency - 
  */
-export const postApiV1CurrencyById = function(parameters = {}) {
+export const postCurrencyById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/currency/{id}'
+  let path = '/currency/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -2220,16 +2220,16 @@ export const postApiV1CurrencyById = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1CurrencyById_RAW_URL = function() {
-  return '/api/v1/currency/{id}'
+export const postCurrencyById_RAW_URL = function() {
+  return '/currency/{id}'
 }
-export const postApiV1CurrencyById_TYPE = function() {
+export const postCurrencyById_TYPE = function() {
   return 'post'
 }
-export const postApiV1CurrencyByIdURL = function(parameters = {}) {
+export const postCurrencyByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/currency/{id}'
+  let path = '/currency/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -2241,16 +2241,16 @@ export const postApiV1CurrencyByIdURL = function(parameters = {}) {
 }
 /**
  * Deletes the document with the given ID
- * request: deleteApiV1CurrencyById
- * url: deleteApiV1CurrencyByIdURL
- * method: deleteApiV1CurrencyById_TYPE
- * raw_url: deleteApiV1CurrencyById_RAW_URL
+ * request: deleteCurrencyById
+ * url: deleteCurrencyByIdURL
+ * method: deleteCurrencyById_TYPE
+ * raw_url: deleteCurrencyById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const deleteApiV1CurrencyById = function(parameters = {}) {
+export const deleteCurrencyById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/currency/{id}'
+  let path = '/currency/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -2265,16 +2265,16 @@ export const deleteApiV1CurrencyById = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1CurrencyById_RAW_URL = function() {
-  return '/api/v1/currency/{id}'
+export const deleteCurrencyById_RAW_URL = function() {
+  return '/currency/{id}'
 }
-export const deleteApiV1CurrencyById_TYPE = function() {
+export const deleteCurrencyById_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1CurrencyByIdURL = function(parameters = {}) {
+export const deleteCurrencyByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/currency/{id}'
+  let path = '/currency/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -2286,15 +2286,15 @@ export const deleteApiV1CurrencyByIdURL = function(parameters = {}) {
 }
 /**
  * Returns the number of documents of type descriptor
- * request: getApiV1DescriptorCount
- * url: getApiV1DescriptorCountURL
- * method: getApiV1DescriptorCount_TYPE
- * raw_url: getApiV1DescriptorCount_RAW_URL
+ * request: getDescriptorCount
+ * url: getDescriptorCountURL
+ * method: getDescriptorCount_TYPE
+ * raw_url: getDescriptorCount_RAW_URL
  */
-export const getApiV1DescriptorCount = function(parameters = {}) {
+export const getDescriptorCount = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/descriptor/count'
+  let path = '/descriptor/count'
   let body
   let queryParameters = {}
   let form = {}
@@ -2305,16 +2305,16 @@ export const getApiV1DescriptorCount = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1DescriptorCount_RAW_URL = function() {
-  return '/api/v1/descriptor/count'
+export const getDescriptorCount_RAW_URL = function() {
+  return '/descriptor/count'
 }
-export const getApiV1DescriptorCount_TYPE = function() {
+export const getDescriptorCount_TYPE = function() {
   return 'get'
 }
-export const getApiV1DescriptorCountURL = function(parameters = {}) {
+export const getDescriptorCountURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/descriptor/count'
+  let path = '/descriptor/count'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -2325,20 +2325,20 @@ export const getApiV1DescriptorCountURL = function(parameters = {}) {
 }
 /**
  * Returns a List of descriptors
- * request: getApiV1Descriptor
- * url: getApiV1DescriptorURL
- * method: getApiV1Descriptor_TYPE
- * raw_url: getApiV1Descriptor_RAW_URL
+ * request: getDescriptor
+ * url: getDescriptorURL
+ * method: getDescriptor_TYPE
+ * raw_url: getDescriptor_RAW_URL
  * @param sort - Key Name to Sort by, preceded by '-' for descending, default: _id
  * @param skip - Number of records to skip from start, default: 0
  * @param limit - Number of records to return, default: 10
  * @param query - MongoDB Query as a well formed JSON String, ie {"name":"Bob"}
  * @param populate - Path to a MongoDB reference to populate, ie [{"path":"customer"},{"path":"products"}]
  */
-export const getApiV1Descriptor = function(parameters = {}) {
+export const getDescriptor = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/descriptor'
+  let path = '/descriptor'
   let body
   let queryParameters = {}
   let form = {}
@@ -2364,16 +2364,16 @@ export const getApiV1Descriptor = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1Descriptor_RAW_URL = function() {
-  return '/api/v1/descriptor'
+export const getDescriptor_RAW_URL = function() {
+  return '/descriptor'
 }
-export const getApiV1Descriptor_TYPE = function() {
+export const getDescriptor_TYPE = function() {
   return 'get'
 }
-export const getApiV1DescriptorURL = function(parameters = {}) {
+export const getDescriptorURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/descriptor'
+  let path = '/descriptor'
   if (parameters['sort'] !== undefined) {
     queryParameters['sort'] = parameters['sort']
   }
@@ -2399,16 +2399,16 @@ export const getApiV1DescriptorURL = function(parameters = {}) {
 }
 /**
  * Creates a new instance of descriptor
- * request: postApiV1Descriptor
- * url: postApiV1DescriptorURL
- * method: postApiV1Descriptor_TYPE
- * raw_url: postApiV1Descriptor_RAW_URL
+ * request: postDescriptor
+ * url: postDescriptorURL
+ * method: postDescriptor_TYPE
+ * raw_url: postDescriptor_RAW_URL
  * @param descriptor - 
  */
-export const postApiV1Descriptor = function(parameters = {}) {
+export const postDescriptor = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/descriptor'
+  let path = '/descriptor'
   let body
   let queryParameters = {}
   let form = {}
@@ -2425,16 +2425,16 @@ export const postApiV1Descriptor = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1Descriptor_RAW_URL = function() {
-  return '/api/v1/descriptor'
+export const postDescriptor_RAW_URL = function() {
+  return '/descriptor'
 }
-export const postApiV1Descriptor_TYPE = function() {
+export const postDescriptor_TYPE = function() {
   return 'post'
 }
-export const postApiV1DescriptorURL = function(parameters = {}) {
+export const postDescriptorURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/descriptor'
+  let path = '/descriptor'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -2445,15 +2445,15 @@ export const postApiV1DescriptorURL = function(parameters = {}) {
 }
 /**
  * Deletes the entire contents of collection descriptor
- * request: deleteApiV1Descriptor
- * url: deleteApiV1DescriptorURL
- * method: deleteApiV1Descriptor_TYPE
- * raw_url: deleteApiV1Descriptor_RAW_URL
+ * request: deleteDescriptor
+ * url: deleteDescriptorURL
+ * method: deleteDescriptor_TYPE
+ * raw_url: deleteDescriptor_RAW_URL
  */
-export const deleteApiV1Descriptor = function(parameters = {}) {
+export const deleteDescriptor = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/descriptor'
+  let path = '/descriptor'
   let body
   let queryParameters = {}
   let form = {}
@@ -2464,16 +2464,16 @@ export const deleteApiV1Descriptor = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1Descriptor_RAW_URL = function() {
-  return '/api/v1/descriptor'
+export const deleteDescriptor_RAW_URL = function() {
+  return '/descriptor'
 }
-export const deleteApiV1Descriptor_TYPE = function() {
+export const deleteDescriptor_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1DescriptorURL = function(parameters = {}) {
+export const deleteDescriptorURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/descriptor'
+  let path = '/descriptor'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -2484,16 +2484,16 @@ export const deleteApiV1DescriptorURL = function(parameters = {}) {
 }
 /**
  * Returns a List of descriptors
- * request: getApiV1DescriptorById
- * url: getApiV1DescriptorByIdURL
- * method: getApiV1DescriptorById_TYPE
- * raw_url: getApiV1DescriptorById_RAW_URL
+ * request: getDescriptorById
+ * url: getDescriptorByIdURL
+ * method: getDescriptorById_TYPE
+ * raw_url: getDescriptorById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const getApiV1DescriptorById = function(parameters = {}) {
+export const getDescriptorById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/descriptor/{id}'
+  let path = '/descriptor/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -2508,16 +2508,16 @@ export const getApiV1DescriptorById = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1DescriptorById_RAW_URL = function() {
-  return '/api/v1/descriptor/{id}'
+export const getDescriptorById_RAW_URL = function() {
+  return '/descriptor/{id}'
 }
-export const getApiV1DescriptorById_TYPE = function() {
+export const getDescriptorById_TYPE = function() {
   return 'get'
 }
-export const getApiV1DescriptorByIdURL = function(parameters = {}) {
+export const getDescriptorByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/descriptor/{id}'
+  let path = '/descriptor/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -2529,17 +2529,17 @@ export const getApiV1DescriptorByIdURL = function(parameters = {}) {
 }
 /**
  * Updates the document with the given ID
- * request: postApiV1DescriptorById
- * url: postApiV1DescriptorByIdURL
- * method: postApiV1DescriptorById_TYPE
- * raw_url: postApiV1DescriptorById_RAW_URL
+ * request: postDescriptorById
+ * url: postDescriptorByIdURL
+ * method: postDescriptorById_TYPE
+ * raw_url: postDescriptorById_RAW_URL
  * @param id - MongoDB document _id
  * @param descriptor - 
  */
-export const postApiV1DescriptorById = function(parameters = {}) {
+export const postDescriptorById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/descriptor/{id}'
+  let path = '/descriptor/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -2560,16 +2560,16 @@ export const postApiV1DescriptorById = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1DescriptorById_RAW_URL = function() {
-  return '/api/v1/descriptor/{id}'
+export const postDescriptorById_RAW_URL = function() {
+  return '/descriptor/{id}'
 }
-export const postApiV1DescriptorById_TYPE = function() {
+export const postDescriptorById_TYPE = function() {
   return 'post'
 }
-export const postApiV1DescriptorByIdURL = function(parameters = {}) {
+export const postDescriptorByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/descriptor/{id}'
+  let path = '/descriptor/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -2581,16 +2581,16 @@ export const postApiV1DescriptorByIdURL = function(parameters = {}) {
 }
 /**
  * Deletes the document with the given ID
- * request: deleteApiV1DescriptorById
- * url: deleteApiV1DescriptorByIdURL
- * method: deleteApiV1DescriptorById_TYPE
- * raw_url: deleteApiV1DescriptorById_RAW_URL
+ * request: deleteDescriptorById
+ * url: deleteDescriptorByIdURL
+ * method: deleteDescriptorById_TYPE
+ * raw_url: deleteDescriptorById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const deleteApiV1DescriptorById = function(parameters = {}) {
+export const deleteDescriptorById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/descriptor/{id}'
+  let path = '/descriptor/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -2605,16 +2605,16 @@ export const deleteApiV1DescriptorById = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1DescriptorById_RAW_URL = function() {
-  return '/api/v1/descriptor/{id}'
+export const deleteDescriptorById_RAW_URL = function() {
+  return '/descriptor/{id}'
 }
-export const deleteApiV1DescriptorById_TYPE = function() {
+export const deleteDescriptorById_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1DescriptorByIdURL = function(parameters = {}) {
+export const deleteDescriptorByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/descriptor/{id}'
+  let path = '/descriptor/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -2626,15 +2626,15 @@ export const deleteApiV1DescriptorByIdURL = function(parameters = {}) {
 }
 /**
  * Returns the number of documents of type entry
- * request: getApiV1EntryCount
- * url: getApiV1EntryCountURL
- * method: getApiV1EntryCount_TYPE
- * raw_url: getApiV1EntryCount_RAW_URL
+ * request: getEntryCount
+ * url: getEntryCountURL
+ * method: getEntryCount_TYPE
+ * raw_url: getEntryCount_RAW_URL
  */
-export const getApiV1EntryCount = function(parameters = {}) {
+export const getEntryCount = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/entry/count'
+  let path = '/entry/count'
   let body
   let queryParameters = {}
   let form = {}
@@ -2645,16 +2645,16 @@ export const getApiV1EntryCount = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1EntryCount_RAW_URL = function() {
-  return '/api/v1/entry/count'
+export const getEntryCount_RAW_URL = function() {
+  return '/entry/count'
 }
-export const getApiV1EntryCount_TYPE = function() {
+export const getEntryCount_TYPE = function() {
   return 'get'
 }
-export const getApiV1EntryCountURL = function(parameters = {}) {
+export const getEntryCountURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/entry/count'
+  let path = '/entry/count'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -2665,20 +2665,20 @@ export const getApiV1EntryCountURL = function(parameters = {}) {
 }
 /**
  * Returns a List of entrys
- * request: getApiV1Entry
- * url: getApiV1EntryURL
- * method: getApiV1Entry_TYPE
- * raw_url: getApiV1Entry_RAW_URL
+ * request: getEntry
+ * url: getEntryURL
+ * method: getEntry_TYPE
+ * raw_url: getEntry_RAW_URL
  * @param sort - Key Name to Sort by, preceded by '-' for descending, default: _id
  * @param skip - Number of records to skip from start, default: 0
  * @param limit - Number of records to return, default: 10
  * @param query - MongoDB Query as a well formed JSON String, ie {"name":"Bob"}
  * @param populate - Path to a MongoDB reference to populate, ie [{"path":"customer"},{"path":"products"}]
  */
-export const getApiV1Entry = function(parameters = {}) {
+export const getEntry = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/entry'
+  let path = '/entry'
   let body
   let queryParameters = {}
   let form = {}
@@ -2704,16 +2704,16 @@ export const getApiV1Entry = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1Entry_RAW_URL = function() {
-  return '/api/v1/entry'
+export const getEntry_RAW_URL = function() {
+  return '/entry'
 }
-export const getApiV1Entry_TYPE = function() {
+export const getEntry_TYPE = function() {
   return 'get'
 }
-export const getApiV1EntryURL = function(parameters = {}) {
+export const getEntryURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/entry'
+  let path = '/entry'
   if (parameters['sort'] !== undefined) {
     queryParameters['sort'] = parameters['sort']
   }
@@ -2739,16 +2739,16 @@ export const getApiV1EntryURL = function(parameters = {}) {
 }
 /**
  * Creates a new instance of entry
- * request: postApiV1Entry
- * url: postApiV1EntryURL
- * method: postApiV1Entry_TYPE
- * raw_url: postApiV1Entry_RAW_URL
+ * request: postEntry
+ * url: postEntryURL
+ * method: postEntry_TYPE
+ * raw_url: postEntry_RAW_URL
  * @param entry - 
  */
-export const postApiV1Entry = function(parameters = {}) {
+export const postEntry = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/entry'
+  let path = '/entry'
   let body
   let queryParameters = {}
   let form = {}
@@ -2765,16 +2765,16 @@ export const postApiV1Entry = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1Entry_RAW_URL = function() {
-  return '/api/v1/entry'
+export const postEntry_RAW_URL = function() {
+  return '/entry'
 }
-export const postApiV1Entry_TYPE = function() {
+export const postEntry_TYPE = function() {
   return 'post'
 }
-export const postApiV1EntryURL = function(parameters = {}) {
+export const postEntryURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/entry'
+  let path = '/entry'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -2785,15 +2785,15 @@ export const postApiV1EntryURL = function(parameters = {}) {
 }
 /**
  * Deletes the entire contents of collection entry
- * request: deleteApiV1Entry
- * url: deleteApiV1EntryURL
- * method: deleteApiV1Entry_TYPE
- * raw_url: deleteApiV1Entry_RAW_URL
+ * request: deleteEntry
+ * url: deleteEntryURL
+ * method: deleteEntry_TYPE
+ * raw_url: deleteEntry_RAW_URL
  */
-export const deleteApiV1Entry = function(parameters = {}) {
+export const deleteEntry = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/entry'
+  let path = '/entry'
   let body
   let queryParameters = {}
   let form = {}
@@ -2804,16 +2804,16 @@ export const deleteApiV1Entry = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1Entry_RAW_URL = function() {
-  return '/api/v1/entry'
+export const deleteEntry_RAW_URL = function() {
+  return '/entry'
 }
-export const deleteApiV1Entry_TYPE = function() {
+export const deleteEntry_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1EntryURL = function(parameters = {}) {
+export const deleteEntryURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/entry'
+  let path = '/entry'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -2824,16 +2824,16 @@ export const deleteApiV1EntryURL = function(parameters = {}) {
 }
 /**
  * Returns a List of entrys
- * request: getApiV1EntryById
- * url: getApiV1EntryByIdURL
- * method: getApiV1EntryById_TYPE
- * raw_url: getApiV1EntryById_RAW_URL
+ * request: getEntryById
+ * url: getEntryByIdURL
+ * method: getEntryById_TYPE
+ * raw_url: getEntryById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const getApiV1EntryById = function(parameters = {}) {
+export const getEntryById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/entry/{id}'
+  let path = '/entry/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -2848,16 +2848,16 @@ export const getApiV1EntryById = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1EntryById_RAW_URL = function() {
-  return '/api/v1/entry/{id}'
+export const getEntryById_RAW_URL = function() {
+  return '/entry/{id}'
 }
-export const getApiV1EntryById_TYPE = function() {
+export const getEntryById_TYPE = function() {
   return 'get'
 }
-export const getApiV1EntryByIdURL = function(parameters = {}) {
+export const getEntryByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/entry/{id}'
+  let path = '/entry/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -2869,17 +2869,17 @@ export const getApiV1EntryByIdURL = function(parameters = {}) {
 }
 /**
  * Updates the document with the given ID
- * request: postApiV1EntryById
- * url: postApiV1EntryByIdURL
- * method: postApiV1EntryById_TYPE
- * raw_url: postApiV1EntryById_RAW_URL
+ * request: postEntryById
+ * url: postEntryByIdURL
+ * method: postEntryById_TYPE
+ * raw_url: postEntryById_RAW_URL
  * @param id - MongoDB document _id
  * @param entry - 
  */
-export const postApiV1EntryById = function(parameters = {}) {
+export const postEntryById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/entry/{id}'
+  let path = '/entry/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -2900,16 +2900,16 @@ export const postApiV1EntryById = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1EntryById_RAW_URL = function() {
-  return '/api/v1/entry/{id}'
+export const postEntryById_RAW_URL = function() {
+  return '/entry/{id}'
 }
-export const postApiV1EntryById_TYPE = function() {
+export const postEntryById_TYPE = function() {
   return 'post'
 }
-export const postApiV1EntryByIdURL = function(parameters = {}) {
+export const postEntryByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/entry/{id}'
+  let path = '/entry/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -2921,16 +2921,16 @@ export const postApiV1EntryByIdURL = function(parameters = {}) {
 }
 /**
  * Deletes the document with the given ID
- * request: deleteApiV1EntryById
- * url: deleteApiV1EntryByIdURL
- * method: deleteApiV1EntryById_TYPE
- * raw_url: deleteApiV1EntryById_RAW_URL
+ * request: deleteEntryById
+ * url: deleteEntryByIdURL
+ * method: deleteEntryById_TYPE
+ * raw_url: deleteEntryById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const deleteApiV1EntryById = function(parameters = {}) {
+export const deleteEntryById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/entry/{id}'
+  let path = '/entry/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -2945,16 +2945,16 @@ export const deleteApiV1EntryById = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1EntryById_RAW_URL = function() {
-  return '/api/v1/entry/{id}'
+export const deleteEntryById_RAW_URL = function() {
+  return '/entry/{id}'
 }
-export const deleteApiV1EntryById_TYPE = function() {
+export const deleteEntryById_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1EntryByIdURL = function(parameters = {}) {
+export const deleteEntryByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/entry/{id}'
+  let path = '/entry/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -2966,15 +2966,15 @@ export const deleteApiV1EntryByIdURL = function(parameters = {}) {
 }
 /**
  * Returns the number of documents of type inventory
- * request: getApiV1InventoryCount
- * url: getApiV1InventoryCountURL
- * method: getApiV1InventoryCount_TYPE
- * raw_url: getApiV1InventoryCount_RAW_URL
+ * request: getInventoryCount
+ * url: getInventoryCountURL
+ * method: getInventoryCount_TYPE
+ * raw_url: getInventoryCount_RAW_URL
  */
-export const getApiV1InventoryCount = function(parameters = {}) {
+export const getInventoryCount = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/inventory/count'
+  let path = '/inventory/count'
   let body
   let queryParameters = {}
   let form = {}
@@ -2985,16 +2985,16 @@ export const getApiV1InventoryCount = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1InventoryCount_RAW_URL = function() {
-  return '/api/v1/inventory/count'
+export const getInventoryCount_RAW_URL = function() {
+  return '/inventory/count'
 }
-export const getApiV1InventoryCount_TYPE = function() {
+export const getInventoryCount_TYPE = function() {
   return 'get'
 }
-export const getApiV1InventoryCountURL = function(parameters = {}) {
+export const getInventoryCountURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/inventory/count'
+  let path = '/inventory/count'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -3005,20 +3005,20 @@ export const getApiV1InventoryCountURL = function(parameters = {}) {
 }
 /**
  * Returns a List of inventorys
- * request: getApiV1Inventory
- * url: getApiV1InventoryURL
- * method: getApiV1Inventory_TYPE
- * raw_url: getApiV1Inventory_RAW_URL
+ * request: getInventory
+ * url: getInventoryURL
+ * method: getInventory_TYPE
+ * raw_url: getInventory_RAW_URL
  * @param sort - Key Name to Sort by, preceded by '-' for descending, default: _id
  * @param skip - Number of records to skip from start, default: 0
  * @param limit - Number of records to return, default: 10
  * @param query - MongoDB Query as a well formed JSON String, ie {"name":"Bob"}
  * @param populate - Path to a MongoDB reference to populate, ie [{"path":"customer"},{"path":"products"}]
  */
-export const getApiV1Inventory = function(parameters = {}) {
+export const getInventory = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/inventory'
+  let path = '/inventory'
   let body
   let queryParameters = {}
   let form = {}
@@ -3044,16 +3044,16 @@ export const getApiV1Inventory = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1Inventory_RAW_URL = function() {
-  return '/api/v1/inventory'
+export const getInventory_RAW_URL = function() {
+  return '/inventory'
 }
-export const getApiV1Inventory_TYPE = function() {
+export const getInventory_TYPE = function() {
   return 'get'
 }
-export const getApiV1InventoryURL = function(parameters = {}) {
+export const getInventoryURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/inventory'
+  let path = '/inventory'
   if (parameters['sort'] !== undefined) {
     queryParameters['sort'] = parameters['sort']
   }
@@ -3079,16 +3079,16 @@ export const getApiV1InventoryURL = function(parameters = {}) {
 }
 /**
  * Creates a new instance of inventory
- * request: postApiV1Inventory
- * url: postApiV1InventoryURL
- * method: postApiV1Inventory_TYPE
- * raw_url: postApiV1Inventory_RAW_URL
+ * request: postInventory
+ * url: postInventoryURL
+ * method: postInventory_TYPE
+ * raw_url: postInventory_RAW_URL
  * @param inventory - 
  */
-export const postApiV1Inventory = function(parameters = {}) {
+export const postInventory = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/inventory'
+  let path = '/inventory'
   let body
   let queryParameters = {}
   let form = {}
@@ -3105,16 +3105,16 @@ export const postApiV1Inventory = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1Inventory_RAW_URL = function() {
-  return '/api/v1/inventory'
+export const postInventory_RAW_URL = function() {
+  return '/inventory'
 }
-export const postApiV1Inventory_TYPE = function() {
+export const postInventory_TYPE = function() {
   return 'post'
 }
-export const postApiV1InventoryURL = function(parameters = {}) {
+export const postInventoryURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/inventory'
+  let path = '/inventory'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -3125,15 +3125,15 @@ export const postApiV1InventoryURL = function(parameters = {}) {
 }
 /**
  * Deletes the entire contents of collection inventory
- * request: deleteApiV1Inventory
- * url: deleteApiV1InventoryURL
- * method: deleteApiV1Inventory_TYPE
- * raw_url: deleteApiV1Inventory_RAW_URL
+ * request: deleteInventory
+ * url: deleteInventoryURL
+ * method: deleteInventory_TYPE
+ * raw_url: deleteInventory_RAW_URL
  */
-export const deleteApiV1Inventory = function(parameters = {}) {
+export const deleteInventory = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/inventory'
+  let path = '/inventory'
   let body
   let queryParameters = {}
   let form = {}
@@ -3144,16 +3144,16 @@ export const deleteApiV1Inventory = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1Inventory_RAW_URL = function() {
-  return '/api/v1/inventory'
+export const deleteInventory_RAW_URL = function() {
+  return '/inventory'
 }
-export const deleteApiV1Inventory_TYPE = function() {
+export const deleteInventory_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1InventoryURL = function(parameters = {}) {
+export const deleteInventoryURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/inventory'
+  let path = '/inventory'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -3164,16 +3164,16 @@ export const deleteApiV1InventoryURL = function(parameters = {}) {
 }
 /**
  * Returns a List of inventorys
- * request: getApiV1InventoryById
- * url: getApiV1InventoryByIdURL
- * method: getApiV1InventoryById_TYPE
- * raw_url: getApiV1InventoryById_RAW_URL
+ * request: getInventoryById
+ * url: getInventoryByIdURL
+ * method: getInventoryById_TYPE
+ * raw_url: getInventoryById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const getApiV1InventoryById = function(parameters = {}) {
+export const getInventoryById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/inventory/{id}'
+  let path = '/inventory/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -3188,16 +3188,16 @@ export const getApiV1InventoryById = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1InventoryById_RAW_URL = function() {
-  return '/api/v1/inventory/{id}'
+export const getInventoryById_RAW_URL = function() {
+  return '/inventory/{id}'
 }
-export const getApiV1InventoryById_TYPE = function() {
+export const getInventoryById_TYPE = function() {
   return 'get'
 }
-export const getApiV1InventoryByIdURL = function(parameters = {}) {
+export const getInventoryByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/inventory/{id}'
+  let path = '/inventory/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -3209,17 +3209,17 @@ export const getApiV1InventoryByIdURL = function(parameters = {}) {
 }
 /**
  * Updates the document with the given ID
- * request: postApiV1InventoryById
- * url: postApiV1InventoryByIdURL
- * method: postApiV1InventoryById_TYPE
- * raw_url: postApiV1InventoryById_RAW_URL
+ * request: postInventoryById
+ * url: postInventoryByIdURL
+ * method: postInventoryById_TYPE
+ * raw_url: postInventoryById_RAW_URL
  * @param id - MongoDB document _id
  * @param inventory - 
  */
-export const postApiV1InventoryById = function(parameters = {}) {
+export const postInventoryById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/inventory/{id}'
+  let path = '/inventory/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -3240,16 +3240,16 @@ export const postApiV1InventoryById = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1InventoryById_RAW_URL = function() {
-  return '/api/v1/inventory/{id}'
+export const postInventoryById_RAW_URL = function() {
+  return '/inventory/{id}'
 }
-export const postApiV1InventoryById_TYPE = function() {
+export const postInventoryById_TYPE = function() {
   return 'post'
 }
-export const postApiV1InventoryByIdURL = function(parameters = {}) {
+export const postInventoryByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/inventory/{id}'
+  let path = '/inventory/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -3261,16 +3261,16 @@ export const postApiV1InventoryByIdURL = function(parameters = {}) {
 }
 /**
  * Deletes the document with the given ID
- * request: deleteApiV1InventoryById
- * url: deleteApiV1InventoryByIdURL
- * method: deleteApiV1InventoryById_TYPE
- * raw_url: deleteApiV1InventoryById_RAW_URL
+ * request: deleteInventoryById
+ * url: deleteInventoryByIdURL
+ * method: deleteInventoryById_TYPE
+ * raw_url: deleteInventoryById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const deleteApiV1InventoryById = function(parameters = {}) {
+export const deleteInventoryById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/inventory/{id}'
+  let path = '/inventory/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -3285,16 +3285,16 @@ export const deleteApiV1InventoryById = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1InventoryById_RAW_URL = function() {
-  return '/api/v1/inventory/{id}'
+export const deleteInventoryById_RAW_URL = function() {
+  return '/inventory/{id}'
 }
-export const deleteApiV1InventoryById_TYPE = function() {
+export const deleteInventoryById_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1InventoryByIdURL = function(parameters = {}) {
+export const deleteInventoryByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/inventory/{id}'
+  let path = '/inventory/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -3306,15 +3306,15 @@ export const deleteApiV1InventoryByIdURL = function(parameters = {}) {
 }
 /**
  * Returns the number of documents of type object
- * request: getApiV1ObjectCount
- * url: getApiV1ObjectCountURL
- * method: getApiV1ObjectCount_TYPE
- * raw_url: getApiV1ObjectCount_RAW_URL
+ * request: getObjectCount
+ * url: getObjectCountURL
+ * method: getObjectCount_TYPE
+ * raw_url: getObjectCount_RAW_URL
  */
-export const getApiV1ObjectCount = function(parameters = {}) {
+export const getObjectCount = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/object/count'
+  let path = '/object/count'
   let body
   let queryParameters = {}
   let form = {}
@@ -3325,16 +3325,16 @@ export const getApiV1ObjectCount = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1ObjectCount_RAW_URL = function() {
-  return '/api/v1/object/count'
+export const getObjectCount_RAW_URL = function() {
+  return '/object/count'
 }
-export const getApiV1ObjectCount_TYPE = function() {
+export const getObjectCount_TYPE = function() {
   return 'get'
 }
-export const getApiV1ObjectCountURL = function(parameters = {}) {
+export const getObjectCountURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/object/count'
+  let path = '/object/count'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -3345,20 +3345,20 @@ export const getApiV1ObjectCountURL = function(parameters = {}) {
 }
 /**
  * Returns a List of objects
- * request: getApiV1Object
- * url: getApiV1ObjectURL
- * method: getApiV1Object_TYPE
- * raw_url: getApiV1Object_RAW_URL
+ * request: getObject
+ * url: getObjectURL
+ * method: getObject_TYPE
+ * raw_url: getObject_RAW_URL
  * @param sort - Key Name to Sort by, preceded by '-' for descending, default: _id
  * @param skip - Number of records to skip from start, default: 0
  * @param limit - Number of records to return, default: 10
  * @param query - MongoDB Query as a well formed JSON String, ie {"name":"Bob"}
  * @param populate - Path to a MongoDB reference to populate, ie [{"path":"customer"},{"path":"products"}]
  */
-export const getApiV1Object = function(parameters = {}) {
+export const getObject = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/object'
+  let path = '/object'
   let body
   let queryParameters = {}
   let form = {}
@@ -3384,16 +3384,16 @@ export const getApiV1Object = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1Object_RAW_URL = function() {
-  return '/api/v1/object'
+export const getObject_RAW_URL = function() {
+  return '/object'
 }
-export const getApiV1Object_TYPE = function() {
+export const getObject_TYPE = function() {
   return 'get'
 }
-export const getApiV1ObjectURL = function(parameters = {}) {
+export const getObjectURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/object'
+  let path = '/object'
   if (parameters['sort'] !== undefined) {
     queryParameters['sort'] = parameters['sort']
   }
@@ -3419,16 +3419,16 @@ export const getApiV1ObjectURL = function(parameters = {}) {
 }
 /**
  * Creates a new instance of object
- * request: postApiV1Object
- * url: postApiV1ObjectURL
- * method: postApiV1Object_TYPE
- * raw_url: postApiV1Object_RAW_URL
+ * request: postObject
+ * url: postObjectURL
+ * method: postObject_TYPE
+ * raw_url: postObject_RAW_URL
  * @param object - 
  */
-export const postApiV1Object = function(parameters = {}) {
+export const postObject = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/object'
+  let path = '/object'
   let body
   let queryParameters = {}
   let form = {}
@@ -3445,16 +3445,16 @@ export const postApiV1Object = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1Object_RAW_URL = function() {
-  return '/api/v1/object'
+export const postObject_RAW_URL = function() {
+  return '/object'
 }
-export const postApiV1Object_TYPE = function() {
+export const postObject_TYPE = function() {
   return 'post'
 }
-export const postApiV1ObjectURL = function(parameters = {}) {
+export const postObjectURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/object'
+  let path = '/object'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -3465,15 +3465,15 @@ export const postApiV1ObjectURL = function(parameters = {}) {
 }
 /**
  * Deletes the entire contents of collection object
- * request: deleteApiV1Object
- * url: deleteApiV1ObjectURL
- * method: deleteApiV1Object_TYPE
- * raw_url: deleteApiV1Object_RAW_URL
+ * request: deleteObject
+ * url: deleteObjectURL
+ * method: deleteObject_TYPE
+ * raw_url: deleteObject_RAW_URL
  */
-export const deleteApiV1Object = function(parameters = {}) {
+export const deleteObject = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/object'
+  let path = '/object'
   let body
   let queryParameters = {}
   let form = {}
@@ -3484,16 +3484,16 @@ export const deleteApiV1Object = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1Object_RAW_URL = function() {
-  return '/api/v1/object'
+export const deleteObject_RAW_URL = function() {
+  return '/object'
 }
-export const deleteApiV1Object_TYPE = function() {
+export const deleteObject_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1ObjectURL = function(parameters = {}) {
+export const deleteObjectURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/object'
+  let path = '/object'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -3504,16 +3504,16 @@ export const deleteApiV1ObjectURL = function(parameters = {}) {
 }
 /**
  * Returns a List of objects
- * request: getApiV1ObjectById
- * url: getApiV1ObjectByIdURL
- * method: getApiV1ObjectById_TYPE
- * raw_url: getApiV1ObjectById_RAW_URL
+ * request: getObjectById
+ * url: getObjectByIdURL
+ * method: getObjectById_TYPE
+ * raw_url: getObjectById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const getApiV1ObjectById = function(parameters = {}) {
+export const getObjectById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/object/{id}'
+  let path = '/object/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -3528,16 +3528,16 @@ export const getApiV1ObjectById = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1ObjectById_RAW_URL = function() {
-  return '/api/v1/object/{id}'
+export const getObjectById_RAW_URL = function() {
+  return '/object/{id}'
 }
-export const getApiV1ObjectById_TYPE = function() {
+export const getObjectById_TYPE = function() {
   return 'get'
 }
-export const getApiV1ObjectByIdURL = function(parameters = {}) {
+export const getObjectByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/object/{id}'
+  let path = '/object/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -3549,17 +3549,17 @@ export const getApiV1ObjectByIdURL = function(parameters = {}) {
 }
 /**
  * Updates the document with the given ID
- * request: postApiV1ObjectById
- * url: postApiV1ObjectByIdURL
- * method: postApiV1ObjectById_TYPE
- * raw_url: postApiV1ObjectById_RAW_URL
+ * request: postObjectById
+ * url: postObjectByIdURL
+ * method: postObjectById_TYPE
+ * raw_url: postObjectById_RAW_URL
  * @param id - MongoDB document _id
  * @param object - 
  */
-export const postApiV1ObjectById = function(parameters = {}) {
+export const postObjectById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/object/{id}'
+  let path = '/object/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -3580,16 +3580,16 @@ export const postApiV1ObjectById = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1ObjectById_RAW_URL = function() {
-  return '/api/v1/object/{id}'
+export const postObjectById_RAW_URL = function() {
+  return '/object/{id}'
 }
-export const postApiV1ObjectById_TYPE = function() {
+export const postObjectById_TYPE = function() {
   return 'post'
 }
-export const postApiV1ObjectByIdURL = function(parameters = {}) {
+export const postObjectByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/object/{id}'
+  let path = '/object/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -3601,16 +3601,16 @@ export const postApiV1ObjectByIdURL = function(parameters = {}) {
 }
 /**
  * Deletes the document with the given ID
- * request: deleteApiV1ObjectById
- * url: deleteApiV1ObjectByIdURL
- * method: deleteApiV1ObjectById_TYPE
- * raw_url: deleteApiV1ObjectById_RAW_URL
+ * request: deleteObjectById
+ * url: deleteObjectByIdURL
+ * method: deleteObjectById_TYPE
+ * raw_url: deleteObjectById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const deleteApiV1ObjectById = function(parameters = {}) {
+export const deleteObjectById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/object/{id}'
+  let path = '/object/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -3625,16 +3625,16 @@ export const deleteApiV1ObjectById = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1ObjectById_RAW_URL = function() {
-  return '/api/v1/object/{id}'
+export const deleteObjectById_RAW_URL = function() {
+  return '/object/{id}'
 }
-export const deleteApiV1ObjectById_TYPE = function() {
+export const deleteObjectById_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1ObjectByIdURL = function(parameters = {}) {
+export const deleteObjectByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/object/{id}'
+  let path = '/object/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -3646,15 +3646,15 @@ export const deleteApiV1ObjectByIdURL = function(parameters = {}) {
 }
 /**
  * Returns the number of documents of type person
- * request: getApiV1PersonCount
- * url: getApiV1PersonCountURL
- * method: getApiV1PersonCount_TYPE
- * raw_url: getApiV1PersonCount_RAW_URL
+ * request: getPersonCount
+ * url: getPersonCountURL
+ * method: getPersonCount_TYPE
+ * raw_url: getPersonCount_RAW_URL
  */
-export const getApiV1PersonCount = function(parameters = {}) {
+export const getPersonCount = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/person/count'
+  let path = '/person/count'
   let body
   let queryParameters = {}
   let form = {}
@@ -3665,16 +3665,16 @@ export const getApiV1PersonCount = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1PersonCount_RAW_URL = function() {
-  return '/api/v1/person/count'
+export const getPersonCount_RAW_URL = function() {
+  return '/person/count'
 }
-export const getApiV1PersonCount_TYPE = function() {
+export const getPersonCount_TYPE = function() {
   return 'get'
 }
-export const getApiV1PersonCountURL = function(parameters = {}) {
+export const getPersonCountURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/person/count'
+  let path = '/person/count'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -3685,20 +3685,20 @@ export const getApiV1PersonCountURL = function(parameters = {}) {
 }
 /**
  * Returns a List of persons
- * request: getApiV1Person
- * url: getApiV1PersonURL
- * method: getApiV1Person_TYPE
- * raw_url: getApiV1Person_RAW_URL
+ * request: getPerson
+ * url: getPersonURL
+ * method: getPerson_TYPE
+ * raw_url: getPerson_RAW_URL
  * @param sort - Key Name to Sort by, preceded by '-' for descending, default: _id
  * @param skip - Number of records to skip from start, default: 0
  * @param limit - Number of records to return, default: 10
  * @param query - MongoDB Query as a well formed JSON String, ie {"name":"Bob"}
  * @param populate - Path to a MongoDB reference to populate, ie [{"path":"customer"},{"path":"products"}]
  */
-export const getApiV1Person = function(parameters = {}) {
+export const getPerson = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/person'
+  let path = '/person'
   let body
   let queryParameters = {}
   let form = {}
@@ -3724,16 +3724,16 @@ export const getApiV1Person = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1Person_RAW_URL = function() {
-  return '/api/v1/person'
+export const getPerson_RAW_URL = function() {
+  return '/person'
 }
-export const getApiV1Person_TYPE = function() {
+export const getPerson_TYPE = function() {
   return 'get'
 }
-export const getApiV1PersonURL = function(parameters = {}) {
+export const getPersonURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/person'
+  let path = '/person'
   if (parameters['sort'] !== undefined) {
     queryParameters['sort'] = parameters['sort']
   }
@@ -3759,16 +3759,16 @@ export const getApiV1PersonURL = function(parameters = {}) {
 }
 /**
  * Creates a new instance of person
- * request: postApiV1Person
- * url: postApiV1PersonURL
- * method: postApiV1Person_TYPE
- * raw_url: postApiV1Person_RAW_URL
+ * request: postPerson
+ * url: postPersonURL
+ * method: postPerson_TYPE
+ * raw_url: postPerson_RAW_URL
  * @param person - 
  */
-export const postApiV1Person = function(parameters = {}) {
+export const postPerson = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/person'
+  let path = '/person'
   let body
   let queryParameters = {}
   let form = {}
@@ -3785,16 +3785,16 @@ export const postApiV1Person = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1Person_RAW_URL = function() {
-  return '/api/v1/person'
+export const postPerson_RAW_URL = function() {
+  return '/person'
 }
-export const postApiV1Person_TYPE = function() {
+export const postPerson_TYPE = function() {
   return 'post'
 }
-export const postApiV1PersonURL = function(parameters = {}) {
+export const postPersonURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/person'
+  let path = '/person'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -3805,15 +3805,15 @@ export const postApiV1PersonURL = function(parameters = {}) {
 }
 /**
  * Deletes the entire contents of collection person
- * request: deleteApiV1Person
- * url: deleteApiV1PersonURL
- * method: deleteApiV1Person_TYPE
- * raw_url: deleteApiV1Person_RAW_URL
+ * request: deletePerson
+ * url: deletePersonURL
+ * method: deletePerson_TYPE
+ * raw_url: deletePerson_RAW_URL
  */
-export const deleteApiV1Person = function(parameters = {}) {
+export const deletePerson = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/person'
+  let path = '/person'
   let body
   let queryParameters = {}
   let form = {}
@@ -3824,16 +3824,16 @@ export const deleteApiV1Person = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1Person_RAW_URL = function() {
-  return '/api/v1/person'
+export const deletePerson_RAW_URL = function() {
+  return '/person'
 }
-export const deleteApiV1Person_TYPE = function() {
+export const deletePerson_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1PersonURL = function(parameters = {}) {
+export const deletePersonURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/person'
+  let path = '/person'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -3844,16 +3844,16 @@ export const deleteApiV1PersonURL = function(parameters = {}) {
 }
 /**
  * Returns a List of persons
- * request: getApiV1PersonById
- * url: getApiV1PersonByIdURL
- * method: getApiV1PersonById_TYPE
- * raw_url: getApiV1PersonById_RAW_URL
+ * request: getPersonById
+ * url: getPersonByIdURL
+ * method: getPersonById_TYPE
+ * raw_url: getPersonById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const getApiV1PersonById = function(parameters = {}) {
+export const getPersonById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/person/{id}'
+  let path = '/person/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -3868,16 +3868,16 @@ export const getApiV1PersonById = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1PersonById_RAW_URL = function() {
-  return '/api/v1/person/{id}'
+export const getPersonById_RAW_URL = function() {
+  return '/person/{id}'
 }
-export const getApiV1PersonById_TYPE = function() {
+export const getPersonById_TYPE = function() {
   return 'get'
 }
-export const getApiV1PersonByIdURL = function(parameters = {}) {
+export const getPersonByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/person/{id}'
+  let path = '/person/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -3889,17 +3889,17 @@ export const getApiV1PersonByIdURL = function(parameters = {}) {
 }
 /**
  * Updates the document with the given ID
- * request: postApiV1PersonById
- * url: postApiV1PersonByIdURL
- * method: postApiV1PersonById_TYPE
- * raw_url: postApiV1PersonById_RAW_URL
+ * request: postPersonById
+ * url: postPersonByIdURL
+ * method: postPersonById_TYPE
+ * raw_url: postPersonById_RAW_URL
  * @param id - MongoDB document _id
  * @param person - 
  */
-export const postApiV1PersonById = function(parameters = {}) {
+export const postPersonById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/person/{id}'
+  let path = '/person/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -3920,16 +3920,16 @@ export const postApiV1PersonById = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1PersonById_RAW_URL = function() {
-  return '/api/v1/person/{id}'
+export const postPersonById_RAW_URL = function() {
+  return '/person/{id}'
 }
-export const postApiV1PersonById_TYPE = function() {
+export const postPersonById_TYPE = function() {
   return 'post'
 }
-export const postApiV1PersonByIdURL = function(parameters = {}) {
+export const postPersonByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/person/{id}'
+  let path = '/person/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -3941,16 +3941,16 @@ export const postApiV1PersonByIdURL = function(parameters = {}) {
 }
 /**
  * Deletes the document with the given ID
- * request: deleteApiV1PersonById
- * url: deleteApiV1PersonByIdURL
- * method: deleteApiV1PersonById_TYPE
- * raw_url: deleteApiV1PersonById_RAW_URL
+ * request: deletePersonById
+ * url: deletePersonByIdURL
+ * method: deletePersonById_TYPE
+ * raw_url: deletePersonById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const deleteApiV1PersonById = function(parameters = {}) {
+export const deletePersonById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/person/{id}'
+  let path = '/person/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -3965,16 +3965,16 @@ export const deleteApiV1PersonById = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1PersonById_RAW_URL = function() {
-  return '/api/v1/person/{id}'
+export const deletePersonById_RAW_URL = function() {
+  return '/person/{id}'
 }
-export const deleteApiV1PersonById_TYPE = function() {
+export const deletePersonById_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1PersonByIdURL = function(parameters = {}) {
+export const deletePersonByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/person/{id}'
+  let path = '/person/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -3986,15 +3986,15 @@ export const deleteApiV1PersonByIdURL = function(parameters = {}) {
 }
 /**
  * Returns the number of documents of type place
- * request: getApiV1PlaceCount
- * url: getApiV1PlaceCountURL
- * method: getApiV1PlaceCount_TYPE
- * raw_url: getApiV1PlaceCount_RAW_URL
+ * request: getPlaceCount
+ * url: getPlaceCountURL
+ * method: getPlaceCount_TYPE
+ * raw_url: getPlaceCount_RAW_URL
  */
-export const getApiV1PlaceCount = function(parameters = {}) {
+export const getPlaceCount = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/place/count'
+  let path = '/place/count'
   let body
   let queryParameters = {}
   let form = {}
@@ -4005,16 +4005,16 @@ export const getApiV1PlaceCount = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1PlaceCount_RAW_URL = function() {
-  return '/api/v1/place/count'
+export const getPlaceCount_RAW_URL = function() {
+  return '/place/count'
 }
-export const getApiV1PlaceCount_TYPE = function() {
+export const getPlaceCount_TYPE = function() {
   return 'get'
 }
-export const getApiV1PlaceCountURL = function(parameters = {}) {
+export const getPlaceCountURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/place/count'
+  let path = '/place/count'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -4025,20 +4025,20 @@ export const getApiV1PlaceCountURL = function(parameters = {}) {
 }
 /**
  * Returns a List of places
- * request: getApiV1Place
- * url: getApiV1PlaceURL
- * method: getApiV1Place_TYPE
- * raw_url: getApiV1Place_RAW_URL
+ * request: getPlace
+ * url: getPlaceURL
+ * method: getPlace_TYPE
+ * raw_url: getPlace_RAW_URL
  * @param sort - Key Name to Sort by, preceded by '-' for descending, default: _id
  * @param skip - Number of records to skip from start, default: 0
  * @param limit - Number of records to return, default: 10
  * @param query - MongoDB Query as a well formed JSON String, ie {"name":"Bob"}
  * @param populate - Path to a MongoDB reference to populate, ie [{"path":"customer"},{"path":"products"}]
  */
-export const getApiV1Place = function(parameters = {}) {
+export const getPlace = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/place'
+  let path = '/place'
   let body
   let queryParameters = {}
   let form = {}
@@ -4064,16 +4064,16 @@ export const getApiV1Place = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1Place_RAW_URL = function() {
-  return '/api/v1/place'
+export const getPlace_RAW_URL = function() {
+  return '/place'
 }
-export const getApiV1Place_TYPE = function() {
+export const getPlace_TYPE = function() {
   return 'get'
 }
-export const getApiV1PlaceURL = function(parameters = {}) {
+export const getPlaceURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/place'
+  let path = '/place'
   if (parameters['sort'] !== undefined) {
     queryParameters['sort'] = parameters['sort']
   }
@@ -4099,16 +4099,16 @@ export const getApiV1PlaceURL = function(parameters = {}) {
 }
 /**
  * Creates a new instance of place
- * request: postApiV1Place
- * url: postApiV1PlaceURL
- * method: postApiV1Place_TYPE
- * raw_url: postApiV1Place_RAW_URL
+ * request: postPlace
+ * url: postPlaceURL
+ * method: postPlace_TYPE
+ * raw_url: postPlace_RAW_URL
  * @param place - 
  */
-export const postApiV1Place = function(parameters = {}) {
+export const postPlace = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/place'
+  let path = '/place'
   let body
   let queryParameters = {}
   let form = {}
@@ -4125,16 +4125,16 @@ export const postApiV1Place = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1Place_RAW_URL = function() {
-  return '/api/v1/place'
+export const postPlace_RAW_URL = function() {
+  return '/place'
 }
-export const postApiV1Place_TYPE = function() {
+export const postPlace_TYPE = function() {
   return 'post'
 }
-export const postApiV1PlaceURL = function(parameters = {}) {
+export const postPlaceURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/place'
+  let path = '/place'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -4145,15 +4145,15 @@ export const postApiV1PlaceURL = function(parameters = {}) {
 }
 /**
  * Deletes the entire contents of collection place
- * request: deleteApiV1Place
- * url: deleteApiV1PlaceURL
- * method: deleteApiV1Place_TYPE
- * raw_url: deleteApiV1Place_RAW_URL
+ * request: deletePlace
+ * url: deletePlaceURL
+ * method: deletePlace_TYPE
+ * raw_url: deletePlace_RAW_URL
  */
-export const deleteApiV1Place = function(parameters = {}) {
+export const deletePlace = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/place'
+  let path = '/place'
   let body
   let queryParameters = {}
   let form = {}
@@ -4164,16 +4164,16 @@ export const deleteApiV1Place = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1Place_RAW_URL = function() {
-  return '/api/v1/place'
+export const deletePlace_RAW_URL = function() {
+  return '/place'
 }
-export const deleteApiV1Place_TYPE = function() {
+export const deletePlace_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1PlaceURL = function(parameters = {}) {
+export const deletePlaceURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/place'
+  let path = '/place'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -4184,16 +4184,16 @@ export const deleteApiV1PlaceURL = function(parameters = {}) {
 }
 /**
  * Returns a List of places
- * request: getApiV1PlaceById
- * url: getApiV1PlaceByIdURL
- * method: getApiV1PlaceById_TYPE
- * raw_url: getApiV1PlaceById_RAW_URL
+ * request: getPlaceById
+ * url: getPlaceByIdURL
+ * method: getPlaceById_TYPE
+ * raw_url: getPlaceById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const getApiV1PlaceById = function(parameters = {}) {
+export const getPlaceById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/place/{id}'
+  let path = '/place/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -4208,16 +4208,16 @@ export const getApiV1PlaceById = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1PlaceById_RAW_URL = function() {
-  return '/api/v1/place/{id}'
+export const getPlaceById_RAW_URL = function() {
+  return '/place/{id}'
 }
-export const getApiV1PlaceById_TYPE = function() {
+export const getPlaceById_TYPE = function() {
   return 'get'
 }
-export const getApiV1PlaceByIdURL = function(parameters = {}) {
+export const getPlaceByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/place/{id}'
+  let path = '/place/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -4229,17 +4229,17 @@ export const getApiV1PlaceByIdURL = function(parameters = {}) {
 }
 /**
  * Updates the document with the given ID
- * request: postApiV1PlaceById
- * url: postApiV1PlaceByIdURL
- * method: postApiV1PlaceById_TYPE
- * raw_url: postApiV1PlaceById_RAW_URL
+ * request: postPlaceById
+ * url: postPlaceByIdURL
+ * method: postPlaceById_TYPE
+ * raw_url: postPlaceById_RAW_URL
  * @param id - MongoDB document _id
  * @param place - 
  */
-export const postApiV1PlaceById = function(parameters = {}) {
+export const postPlaceById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/place/{id}'
+  let path = '/place/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -4260,16 +4260,16 @@ export const postApiV1PlaceById = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1PlaceById_RAW_URL = function() {
-  return '/api/v1/place/{id}'
+export const postPlaceById_RAW_URL = function() {
+  return '/place/{id}'
 }
-export const postApiV1PlaceById_TYPE = function() {
+export const postPlaceById_TYPE = function() {
   return 'post'
 }
-export const postApiV1PlaceByIdURL = function(parameters = {}) {
+export const postPlaceByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/place/{id}'
+  let path = '/place/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -4281,16 +4281,16 @@ export const postApiV1PlaceByIdURL = function(parameters = {}) {
 }
 /**
  * Deletes the document with the given ID
- * request: deleteApiV1PlaceById
- * url: deleteApiV1PlaceByIdURL
- * method: deleteApiV1PlaceById_TYPE
- * raw_url: deleteApiV1PlaceById_RAW_URL
+ * request: deletePlaceById
+ * url: deletePlaceByIdURL
+ * method: deletePlaceById_TYPE
+ * raw_url: deletePlaceById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const deleteApiV1PlaceById = function(parameters = {}) {
+export const deletePlaceById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/place/{id}'
+  let path = '/place/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -4305,16 +4305,16 @@ export const deleteApiV1PlaceById = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1PlaceById_RAW_URL = function() {
-  return '/api/v1/place/{id}'
+export const deletePlaceById_RAW_URL = function() {
+  return '/place/{id}'
 }
-export const deleteApiV1PlaceById_TYPE = function() {
+export const deletePlaceById_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1PlaceByIdURL = function(parameters = {}) {
+export const deletePlaceByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/place/{id}'
+  let path = '/place/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -4326,15 +4326,15 @@ export const deleteApiV1PlaceByIdURL = function(parameters = {}) {
 }
 /**
  * Returns the number of documents of type proplabel
- * request: getApiV1ProplabelCount
- * url: getApiV1ProplabelCountURL
- * method: getApiV1ProplabelCount_TYPE
- * raw_url: getApiV1ProplabelCount_RAW_URL
+ * request: getProplabelCount
+ * url: getProplabelCountURL
+ * method: getProplabelCount_TYPE
+ * raw_url: getProplabelCount_RAW_URL
  */
-export const getApiV1ProplabelCount = function(parameters = {}) {
+export const getProplabelCount = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/proplabel/count'
+  let path = '/proplabel/count'
   let body
   let queryParameters = {}
   let form = {}
@@ -4345,16 +4345,16 @@ export const getApiV1ProplabelCount = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1ProplabelCount_RAW_URL = function() {
-  return '/api/v1/proplabel/count'
+export const getProplabelCount_RAW_URL = function() {
+  return '/proplabel/count'
 }
-export const getApiV1ProplabelCount_TYPE = function() {
+export const getProplabelCount_TYPE = function() {
   return 'get'
 }
-export const getApiV1ProplabelCountURL = function(parameters = {}) {
+export const getProplabelCountURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/proplabel/count'
+  let path = '/proplabel/count'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -4365,20 +4365,20 @@ export const getApiV1ProplabelCountURL = function(parameters = {}) {
 }
 /**
  * Returns a List of proplabels
- * request: getApiV1Proplabel
- * url: getApiV1ProplabelURL
- * method: getApiV1Proplabel_TYPE
- * raw_url: getApiV1Proplabel_RAW_URL
+ * request: getProplabel
+ * url: getProplabelURL
+ * method: getProplabel_TYPE
+ * raw_url: getProplabel_RAW_URL
  * @param sort - Key Name to Sort by, preceded by '-' for descending, default: _id
  * @param skip - Number of records to skip from start, default: 0
  * @param limit - Number of records to return, default: 10
  * @param query - MongoDB Query as a well formed JSON String, ie {"name":"Bob"}
  * @param populate - Path to a MongoDB reference to populate, ie [{"path":"customer"},{"path":"products"}]
  */
-export const getApiV1Proplabel = function(parameters = {}) {
+export const getProplabel = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/proplabel'
+  let path = '/proplabel'
   let body
   let queryParameters = {}
   let form = {}
@@ -4404,16 +4404,16 @@ export const getApiV1Proplabel = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1Proplabel_RAW_URL = function() {
-  return '/api/v1/proplabel'
+export const getProplabel_RAW_URL = function() {
+  return '/proplabel'
 }
-export const getApiV1Proplabel_TYPE = function() {
+export const getProplabel_TYPE = function() {
   return 'get'
 }
-export const getApiV1ProplabelURL = function(parameters = {}) {
+export const getProplabelURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/proplabel'
+  let path = '/proplabel'
   if (parameters['sort'] !== undefined) {
     queryParameters['sort'] = parameters['sort']
   }
@@ -4439,16 +4439,16 @@ export const getApiV1ProplabelURL = function(parameters = {}) {
 }
 /**
  * Creates a new instance of proplabel
- * request: postApiV1Proplabel
- * url: postApiV1ProplabelURL
- * method: postApiV1Proplabel_TYPE
- * raw_url: postApiV1Proplabel_RAW_URL
+ * request: postProplabel
+ * url: postProplabelURL
+ * method: postProplabel_TYPE
+ * raw_url: postProplabel_RAW_URL
  * @param proplabel - 
  */
-export const postApiV1Proplabel = function(parameters = {}) {
+export const postProplabel = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/proplabel'
+  let path = '/proplabel'
   let body
   let queryParameters = {}
   let form = {}
@@ -4465,16 +4465,16 @@ export const postApiV1Proplabel = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1Proplabel_RAW_URL = function() {
-  return '/api/v1/proplabel'
+export const postProplabel_RAW_URL = function() {
+  return '/proplabel'
 }
-export const postApiV1Proplabel_TYPE = function() {
+export const postProplabel_TYPE = function() {
   return 'post'
 }
-export const postApiV1ProplabelURL = function(parameters = {}) {
+export const postProplabelURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/proplabel'
+  let path = '/proplabel'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -4485,15 +4485,15 @@ export const postApiV1ProplabelURL = function(parameters = {}) {
 }
 /**
  * Deletes the entire contents of collection proplabel
- * request: deleteApiV1Proplabel
- * url: deleteApiV1ProplabelURL
- * method: deleteApiV1Proplabel_TYPE
- * raw_url: deleteApiV1Proplabel_RAW_URL
+ * request: deleteProplabel
+ * url: deleteProplabelURL
+ * method: deleteProplabel_TYPE
+ * raw_url: deleteProplabel_RAW_URL
  */
-export const deleteApiV1Proplabel = function(parameters = {}) {
+export const deleteProplabel = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/proplabel'
+  let path = '/proplabel'
   let body
   let queryParameters = {}
   let form = {}
@@ -4504,16 +4504,16 @@ export const deleteApiV1Proplabel = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1Proplabel_RAW_URL = function() {
-  return '/api/v1/proplabel'
+export const deleteProplabel_RAW_URL = function() {
+  return '/proplabel'
 }
-export const deleteApiV1Proplabel_TYPE = function() {
+export const deleteProplabel_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1ProplabelURL = function(parameters = {}) {
+export const deleteProplabelURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/proplabel'
+  let path = '/proplabel'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -4524,16 +4524,16 @@ export const deleteApiV1ProplabelURL = function(parameters = {}) {
 }
 /**
  * Returns a List of proplabels
- * request: getApiV1ProplabelById
- * url: getApiV1ProplabelByIdURL
- * method: getApiV1ProplabelById_TYPE
- * raw_url: getApiV1ProplabelById_RAW_URL
+ * request: getProplabelById
+ * url: getProplabelByIdURL
+ * method: getProplabelById_TYPE
+ * raw_url: getProplabelById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const getApiV1ProplabelById = function(parameters = {}) {
+export const getProplabelById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/proplabel/{id}'
+  let path = '/proplabel/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -4548,16 +4548,16 @@ export const getApiV1ProplabelById = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1ProplabelById_RAW_URL = function() {
-  return '/api/v1/proplabel/{id}'
+export const getProplabelById_RAW_URL = function() {
+  return '/proplabel/{id}'
 }
-export const getApiV1ProplabelById_TYPE = function() {
+export const getProplabelById_TYPE = function() {
   return 'get'
 }
-export const getApiV1ProplabelByIdURL = function(parameters = {}) {
+export const getProplabelByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/proplabel/{id}'
+  let path = '/proplabel/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -4569,17 +4569,17 @@ export const getApiV1ProplabelByIdURL = function(parameters = {}) {
 }
 /**
  * Updates the document with the given ID
- * request: postApiV1ProplabelById
- * url: postApiV1ProplabelByIdURL
- * method: postApiV1ProplabelById_TYPE
- * raw_url: postApiV1ProplabelById_RAW_URL
+ * request: postProplabelById
+ * url: postProplabelByIdURL
+ * method: postProplabelById_TYPE
+ * raw_url: postProplabelById_RAW_URL
  * @param id - MongoDB document _id
  * @param proplabel - 
  */
-export const postApiV1ProplabelById = function(parameters = {}) {
+export const postProplabelById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/proplabel/{id}'
+  let path = '/proplabel/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -4600,16 +4600,16 @@ export const postApiV1ProplabelById = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1ProplabelById_RAW_URL = function() {
-  return '/api/v1/proplabel/{id}'
+export const postProplabelById_RAW_URL = function() {
+  return '/proplabel/{id}'
 }
-export const postApiV1ProplabelById_TYPE = function() {
+export const postProplabelById_TYPE = function() {
   return 'post'
 }
-export const postApiV1ProplabelByIdURL = function(parameters = {}) {
+export const postProplabelByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/proplabel/{id}'
+  let path = '/proplabel/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -4621,16 +4621,16 @@ export const postApiV1ProplabelByIdURL = function(parameters = {}) {
 }
 /**
  * Deletes the document with the given ID
- * request: deleteApiV1ProplabelById
- * url: deleteApiV1ProplabelByIdURL
- * method: deleteApiV1ProplabelById_TYPE
- * raw_url: deleteApiV1ProplabelById_RAW_URL
+ * request: deleteProplabelById
+ * url: deleteProplabelByIdURL
+ * method: deleteProplabelById_TYPE
+ * raw_url: deleteProplabelById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const deleteApiV1ProplabelById = function(parameters = {}) {
+export const deleteProplabelById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/proplabel/{id}'
+  let path = '/proplabel/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -4645,16 +4645,16 @@ export const deleteApiV1ProplabelById = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1ProplabelById_RAW_URL = function() {
-  return '/api/v1/proplabel/{id}'
+export const deleteProplabelById_RAW_URL = function() {
+  return '/proplabel/{id}'
 }
-export const deleteApiV1ProplabelById_TYPE = function() {
+export const deleteProplabelById_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1ProplabelByIdURL = function(parameters = {}) {
+export const deleteProplabelByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/proplabel/{id}'
+  let path = '/proplabel/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -4666,15 +4666,15 @@ export const deleteApiV1ProplabelByIdURL = function(parameters = {}) {
 }
 /**
  * Returns the number of documents of type transaction
- * request: getApiV1TransactionCount
- * url: getApiV1TransactionCountURL
- * method: getApiV1TransactionCount_TYPE
- * raw_url: getApiV1TransactionCount_RAW_URL
+ * request: getTransactionCount
+ * url: getTransactionCountURL
+ * method: getTransactionCount_TYPE
+ * raw_url: getTransactionCount_RAW_URL
  */
-export const getApiV1TransactionCount = function(parameters = {}) {
+export const getTransactionCount = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/transaction/count'
+  let path = '/transaction/count'
   let body
   let queryParameters = {}
   let form = {}
@@ -4685,16 +4685,16 @@ export const getApiV1TransactionCount = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1TransactionCount_RAW_URL = function() {
-  return '/api/v1/transaction/count'
+export const getTransactionCount_RAW_URL = function() {
+  return '/transaction/count'
 }
-export const getApiV1TransactionCount_TYPE = function() {
+export const getTransactionCount_TYPE = function() {
   return 'get'
 }
-export const getApiV1TransactionCountURL = function(parameters = {}) {
+export const getTransactionCountURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/transaction/count'
+  let path = '/transaction/count'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -4705,20 +4705,20 @@ export const getApiV1TransactionCountURL = function(parameters = {}) {
 }
 /**
  * Returns a List of transactions
- * request: getApiV1Transaction
- * url: getApiV1TransactionURL
- * method: getApiV1Transaction_TYPE
- * raw_url: getApiV1Transaction_RAW_URL
+ * request: getTransaction
+ * url: getTransactionURL
+ * method: getTransaction_TYPE
+ * raw_url: getTransaction_RAW_URL
  * @param sort - Key Name to Sort by, preceded by '-' for descending, default: _id
  * @param skip - Number of records to skip from start, default: 0
  * @param limit - Number of records to return, default: 10
  * @param query - MongoDB Query as a well formed JSON String, ie {"name":"Bob"}
  * @param populate - Path to a MongoDB reference to populate, ie [{"path":"customer"},{"path":"products"}]
  */
-export const getApiV1Transaction = function(parameters = {}) {
+export const getTransaction = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/transaction'
+  let path = '/transaction'
   let body
   let queryParameters = {}
   let form = {}
@@ -4744,16 +4744,16 @@ export const getApiV1Transaction = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1Transaction_RAW_URL = function() {
-  return '/api/v1/transaction'
+export const getTransaction_RAW_URL = function() {
+  return '/transaction'
 }
-export const getApiV1Transaction_TYPE = function() {
+export const getTransaction_TYPE = function() {
   return 'get'
 }
-export const getApiV1TransactionURL = function(parameters = {}) {
+export const getTransactionURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/transaction'
+  let path = '/transaction'
   if (parameters['sort'] !== undefined) {
     queryParameters['sort'] = parameters['sort']
   }
@@ -4779,16 +4779,16 @@ export const getApiV1TransactionURL = function(parameters = {}) {
 }
 /**
  * Creates a new instance of transaction
- * request: postApiV1Transaction
- * url: postApiV1TransactionURL
- * method: postApiV1Transaction_TYPE
- * raw_url: postApiV1Transaction_RAW_URL
+ * request: postTransaction
+ * url: postTransactionURL
+ * method: postTransaction_TYPE
+ * raw_url: postTransaction_RAW_URL
  * @param transaction - 
  */
-export const postApiV1Transaction = function(parameters = {}) {
+export const postTransaction = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/transaction'
+  let path = '/transaction'
   let body
   let queryParameters = {}
   let form = {}
@@ -4805,16 +4805,16 @@ export const postApiV1Transaction = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1Transaction_RAW_URL = function() {
-  return '/api/v1/transaction'
+export const postTransaction_RAW_URL = function() {
+  return '/transaction'
 }
-export const postApiV1Transaction_TYPE = function() {
+export const postTransaction_TYPE = function() {
   return 'post'
 }
-export const postApiV1TransactionURL = function(parameters = {}) {
+export const postTransactionURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/transaction'
+  let path = '/transaction'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -4825,15 +4825,15 @@ export const postApiV1TransactionURL = function(parameters = {}) {
 }
 /**
  * Deletes the entire contents of collection transaction
- * request: deleteApiV1Transaction
- * url: deleteApiV1TransactionURL
- * method: deleteApiV1Transaction_TYPE
- * raw_url: deleteApiV1Transaction_RAW_URL
+ * request: deleteTransaction
+ * url: deleteTransactionURL
+ * method: deleteTransaction_TYPE
+ * raw_url: deleteTransaction_RAW_URL
  */
-export const deleteApiV1Transaction = function(parameters = {}) {
+export const deleteTransaction = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/transaction'
+  let path = '/transaction'
   let body
   let queryParameters = {}
   let form = {}
@@ -4844,16 +4844,16 @@ export const deleteApiV1Transaction = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1Transaction_RAW_URL = function() {
-  return '/api/v1/transaction'
+export const deleteTransaction_RAW_URL = function() {
+  return '/transaction'
 }
-export const deleteApiV1Transaction_TYPE = function() {
+export const deleteTransaction_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1TransactionURL = function(parameters = {}) {
+export const deleteTransactionURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/transaction'
+  let path = '/transaction'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -4864,16 +4864,16 @@ export const deleteApiV1TransactionURL = function(parameters = {}) {
 }
 /**
  * Returns a List of transactions
- * request: getApiV1TransactionById
- * url: getApiV1TransactionByIdURL
- * method: getApiV1TransactionById_TYPE
- * raw_url: getApiV1TransactionById_RAW_URL
+ * request: getTransactionById
+ * url: getTransactionByIdURL
+ * method: getTransactionById_TYPE
+ * raw_url: getTransactionById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const getApiV1TransactionById = function(parameters = {}) {
+export const getTransactionById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/transaction/{id}'
+  let path = '/transaction/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -4888,16 +4888,16 @@ export const getApiV1TransactionById = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1TransactionById_RAW_URL = function() {
-  return '/api/v1/transaction/{id}'
+export const getTransactionById_RAW_URL = function() {
+  return '/transaction/{id}'
 }
-export const getApiV1TransactionById_TYPE = function() {
+export const getTransactionById_TYPE = function() {
   return 'get'
 }
-export const getApiV1TransactionByIdURL = function(parameters = {}) {
+export const getTransactionByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/transaction/{id}'
+  let path = '/transaction/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -4909,17 +4909,17 @@ export const getApiV1TransactionByIdURL = function(parameters = {}) {
 }
 /**
  * Updates the document with the given ID
- * request: postApiV1TransactionById
- * url: postApiV1TransactionByIdURL
- * method: postApiV1TransactionById_TYPE
- * raw_url: postApiV1TransactionById_RAW_URL
+ * request: postTransactionById
+ * url: postTransactionByIdURL
+ * method: postTransactionById_TYPE
+ * raw_url: postTransactionById_RAW_URL
  * @param id - MongoDB document _id
  * @param transaction - 
  */
-export const postApiV1TransactionById = function(parameters = {}) {
+export const postTransactionById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/transaction/{id}'
+  let path = '/transaction/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -4940,16 +4940,16 @@ export const postApiV1TransactionById = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1TransactionById_RAW_URL = function() {
-  return '/api/v1/transaction/{id}'
+export const postTransactionById_RAW_URL = function() {
+  return '/transaction/{id}'
 }
-export const postApiV1TransactionById_TYPE = function() {
+export const postTransactionById_TYPE = function() {
   return 'post'
 }
-export const postApiV1TransactionByIdURL = function(parameters = {}) {
+export const postTransactionByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/transaction/{id}'
+  let path = '/transaction/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -4961,16 +4961,16 @@ export const postApiV1TransactionByIdURL = function(parameters = {}) {
 }
 /**
  * Deletes the document with the given ID
- * request: deleteApiV1TransactionById
- * url: deleteApiV1TransactionByIdURL
- * method: deleteApiV1TransactionById_TYPE
- * raw_url: deleteApiV1TransactionById_RAW_URL
+ * request: deleteTransactionById
+ * url: deleteTransactionByIdURL
+ * method: deleteTransactionById_TYPE
+ * raw_url: deleteTransactionById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const deleteApiV1TransactionById = function(parameters = {}) {
+export const deleteTransactionById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/transaction/{id}'
+  let path = '/transaction/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -4985,16 +4985,16 @@ export const deleteApiV1TransactionById = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1TransactionById_RAW_URL = function() {
-  return '/api/v1/transaction/{id}'
+export const deleteTransactionById_RAW_URL = function() {
+  return '/transaction/{id}'
 }
-export const deleteApiV1TransactionById_TYPE = function() {
+export const deleteTransactionById_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1TransactionByIdURL = function(parameters = {}) {
+export const deleteTransactionByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/transaction/{id}'
+  let path = '/transaction/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -5006,15 +5006,15 @@ export const deleteApiV1TransactionByIdURL = function(parameters = {}) {
 }
 /**
  * Returns the number of documents of type unit
- * request: getApiV1UnitCount
- * url: getApiV1UnitCountURL
- * method: getApiV1UnitCount_TYPE
- * raw_url: getApiV1UnitCount_RAW_URL
+ * request: getUnitCount
+ * url: getUnitCountURL
+ * method: getUnitCount_TYPE
+ * raw_url: getUnitCount_RAW_URL
  */
-export const getApiV1UnitCount = function(parameters = {}) {
+export const getUnitCount = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/unit/count'
+  let path = '/unit/count'
   let body
   let queryParameters = {}
   let form = {}
@@ -5025,16 +5025,16 @@ export const getApiV1UnitCount = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1UnitCount_RAW_URL = function() {
-  return '/api/v1/unit/count'
+export const getUnitCount_RAW_URL = function() {
+  return '/unit/count'
 }
-export const getApiV1UnitCount_TYPE = function() {
+export const getUnitCount_TYPE = function() {
   return 'get'
 }
-export const getApiV1UnitCountURL = function(parameters = {}) {
+export const getUnitCountURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/unit/count'
+  let path = '/unit/count'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -5045,20 +5045,20 @@ export const getApiV1UnitCountURL = function(parameters = {}) {
 }
 /**
  * Returns a List of units
- * request: getApiV1Unit
- * url: getApiV1UnitURL
- * method: getApiV1Unit_TYPE
- * raw_url: getApiV1Unit_RAW_URL
+ * request: getUnit
+ * url: getUnitURL
+ * method: getUnit_TYPE
+ * raw_url: getUnit_RAW_URL
  * @param sort - Key Name to Sort by, preceded by '-' for descending, default: _id
  * @param skip - Number of records to skip from start, default: 0
  * @param limit - Number of records to return, default: 10
  * @param query - MongoDB Query as a well formed JSON String, ie {"name":"Bob"}
  * @param populate - Path to a MongoDB reference to populate, ie [{"path":"customer"},{"path":"products"}]
  */
-export const getApiV1Unit = function(parameters = {}) {
+export const getUnit = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/unit'
+  let path = '/unit'
   let body
   let queryParameters = {}
   let form = {}
@@ -5084,16 +5084,16 @@ export const getApiV1Unit = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1Unit_RAW_URL = function() {
-  return '/api/v1/unit'
+export const getUnit_RAW_URL = function() {
+  return '/unit'
 }
-export const getApiV1Unit_TYPE = function() {
+export const getUnit_TYPE = function() {
   return 'get'
 }
-export const getApiV1UnitURL = function(parameters = {}) {
+export const getUnitURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/unit'
+  let path = '/unit'
   if (parameters['sort'] !== undefined) {
     queryParameters['sort'] = parameters['sort']
   }
@@ -5119,16 +5119,16 @@ export const getApiV1UnitURL = function(parameters = {}) {
 }
 /**
  * Creates a new instance of unit
- * request: postApiV1Unit
- * url: postApiV1UnitURL
- * method: postApiV1Unit_TYPE
- * raw_url: postApiV1Unit_RAW_URL
+ * request: postUnit
+ * url: postUnitURL
+ * method: postUnit_TYPE
+ * raw_url: postUnit_RAW_URL
  * @param unit - 
  */
-export const postApiV1Unit = function(parameters = {}) {
+export const postUnit = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/unit'
+  let path = '/unit'
   let body
   let queryParameters = {}
   let form = {}
@@ -5145,16 +5145,16 @@ export const postApiV1Unit = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1Unit_RAW_URL = function() {
-  return '/api/v1/unit'
+export const postUnit_RAW_URL = function() {
+  return '/unit'
 }
-export const postApiV1Unit_TYPE = function() {
+export const postUnit_TYPE = function() {
   return 'post'
 }
-export const postApiV1UnitURL = function(parameters = {}) {
+export const postUnitURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/unit'
+  let path = '/unit'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -5165,15 +5165,15 @@ export const postApiV1UnitURL = function(parameters = {}) {
 }
 /**
  * Deletes the entire contents of collection unit
- * request: deleteApiV1Unit
- * url: deleteApiV1UnitURL
- * method: deleteApiV1Unit_TYPE
- * raw_url: deleteApiV1Unit_RAW_URL
+ * request: deleteUnit
+ * url: deleteUnitURL
+ * method: deleteUnit_TYPE
+ * raw_url: deleteUnit_RAW_URL
  */
-export const deleteApiV1Unit = function(parameters = {}) {
+export const deleteUnit = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/unit'
+  let path = '/unit'
   let body
   let queryParameters = {}
   let form = {}
@@ -5184,16 +5184,16 @@ export const deleteApiV1Unit = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1Unit_RAW_URL = function() {
-  return '/api/v1/unit'
+export const deleteUnit_RAW_URL = function() {
+  return '/unit'
 }
-export const deleteApiV1Unit_TYPE = function() {
+export const deleteUnit_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1UnitURL = function(parameters = {}) {
+export const deleteUnitURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/unit'
+  let path = '/unit'
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
       queryParameters[parameterName] = parameters.$queryParameters[parameterName]
@@ -5204,16 +5204,16 @@ export const deleteApiV1UnitURL = function(parameters = {}) {
 }
 /**
  * Returns a List of units
- * request: getApiV1UnitById
- * url: getApiV1UnitByIdURL
- * method: getApiV1UnitById_TYPE
- * raw_url: getApiV1UnitById_RAW_URL
+ * request: getUnitById
+ * url: getUnitByIdURL
+ * method: getUnitById_TYPE
+ * raw_url: getUnitById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const getApiV1UnitById = function(parameters = {}) {
+export const getUnitById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/unit/{id}'
+  let path = '/unit/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -5228,16 +5228,16 @@ export const getApiV1UnitById = function(parameters = {}) {
   }
   return request('get', domain + path, body, queryParameters, form, config)
 }
-export const getApiV1UnitById_RAW_URL = function() {
-  return '/api/v1/unit/{id}'
+export const getUnitById_RAW_URL = function() {
+  return '/unit/{id}'
 }
-export const getApiV1UnitById_TYPE = function() {
+export const getUnitById_TYPE = function() {
   return 'get'
 }
-export const getApiV1UnitByIdURL = function(parameters = {}) {
+export const getUnitByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/unit/{id}'
+  let path = '/unit/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -5249,17 +5249,17 @@ export const getApiV1UnitByIdURL = function(parameters = {}) {
 }
 /**
  * Updates the document with the given ID
- * request: postApiV1UnitById
- * url: postApiV1UnitByIdURL
- * method: postApiV1UnitById_TYPE
- * raw_url: postApiV1UnitById_RAW_URL
+ * request: postUnitById
+ * url: postUnitByIdURL
+ * method: postUnitById_TYPE
+ * raw_url: postUnitById_RAW_URL
  * @param id - MongoDB document _id
  * @param unit - 
  */
-export const postApiV1UnitById = function(parameters = {}) {
+export const postUnitById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/unit/{id}'
+  let path = '/unit/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -5280,16 +5280,16 @@ export const postApiV1UnitById = function(parameters = {}) {
   }
   return request('post', domain + path, body, queryParameters, form, config)
 }
-export const postApiV1UnitById_RAW_URL = function() {
-  return '/api/v1/unit/{id}'
+export const postUnitById_RAW_URL = function() {
+  return '/unit/{id}'
 }
-export const postApiV1UnitById_TYPE = function() {
+export const postUnitById_TYPE = function() {
   return 'post'
 }
-export const postApiV1UnitByIdURL = function(parameters = {}) {
+export const postUnitByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/unit/{id}'
+  let path = '/unit/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
@@ -5301,16 +5301,16 @@ export const postApiV1UnitByIdURL = function(parameters = {}) {
 }
 /**
  * Deletes the document with the given ID
- * request: deleteApiV1UnitById
- * url: deleteApiV1UnitByIdURL
- * method: deleteApiV1UnitById_TYPE
- * raw_url: deleteApiV1UnitById_RAW_URL
+ * request: deleteUnitById
+ * url: deleteUnitByIdURL
+ * method: deleteUnitById_TYPE
+ * raw_url: deleteUnitById_RAW_URL
  * @param id - MongoDB document _id
  */
-export const deleteApiV1UnitById = function(parameters = {}) {
+export const deleteUnitById = function(parameters = {}) {
   const domain = parameters.$domain ? parameters.$domain : getDomain()
   const config = parameters.$config
-  let path = '/api/v1/unit/{id}'
+  let path = '/unit/{id}'
   let body
   let queryParameters = {}
   let form = {}
@@ -5325,16 +5325,16 @@ export const deleteApiV1UnitById = function(parameters = {}) {
   }
   return request('delete', domain + path, body, queryParameters, form, config)
 }
-export const deleteApiV1UnitById_RAW_URL = function() {
-  return '/api/v1/unit/{id}'
+export const deleteUnitById_RAW_URL = function() {
+  return '/unit/{id}'
 }
-export const deleteApiV1UnitById_TYPE = function() {
+export const deleteUnitById_TYPE = function() {
   return 'delete'
 }
-export const deleteApiV1UnitByIdURL = function(parameters = {}) {
+export const deleteUnitByIdURL = function(parameters = {}) {
   let queryParameters = {}
   const domain = parameters.$domain ? parameters.$domain : getDomain()
-  let path = '/api/v1/unit/{id}'
+  let path = '/unit/{id}'
   path = path.replace('{id}', `${parameters['id']}`)
   if (parameters.$queryParameters) {
     Object.keys(parameters.$queryParameters).forEach(function(parameterName) {

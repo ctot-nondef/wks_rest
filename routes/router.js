@@ -36,13 +36,13 @@ SCHEMA.initSchemas();
  *             format: password
  */
 
-router.get('/api/v1/swagger.json', function(req, res, next) {
+router.get(`/api/v${CONFIG.version}/swagger.json`, function(req, res, next) {
   res.json(SCHEMA.swaggerSpec);
 });
 
 /**
  * @swagger
- * /api/v1/:
+ * /:
  *   get:
  *     description: API root. Returns JSON Object of Metadata and available Entities
  *     produces:
@@ -51,7 +51,7 @@ router.get('/api/v1/swagger.json', function(req, res, next) {
  *       200:
  *         description: Metadata on A
  */
-router.get('/api/v1/', function (req, res, next) {
+router.get(`/api/v${CONFIG.version}/`, function (req, res, next) {
   res.json({
     'data':SCHEMA.names,
     'meta':CONFIG.meta,
@@ -61,7 +61,7 @@ router.get('/api/v1/', function (req, res, next) {
 
 /**
  * @swagger
- * /api/v1/login:
+ * /login:
  *   post:
  *     description: Login to the application
  *     produces:
@@ -84,7 +84,7 @@ router.get('/api/v1/', function (req, res, next) {
  *       401:
  *         description: invalid credentials
 */
-router.post('/api/v1/login', function (req, res, next) {
+router.post(`/api/v${CONFIG.version}/login`, function (req, res, next) {
   if (req.body.username && req.body.password) {
     USER.User.authenticate(req.body.username, req.body.password, function (error, user) {
       if (error || !user) {
@@ -101,7 +101,7 @@ router.post('/api/v1/login', function (req, res, next) {
 
 /**
  * @swagger
- * /api/v1/logout:
+ * /logout:
  *   get:
  *     description: Logout of the application
  *     produces:
@@ -110,7 +110,7 @@ router.post('/api/v1/login', function (req, res, next) {
  *       200:
  *         description: login successfull
  */
-router.get('/api/v1/logout', function (req, res, next) {
+router.get(`/api/v${CONFIG.version}/logout`, function (req, res, next) {
   if (req.session) {
     // delete session object
     req.session.destroy(function (err) {
@@ -132,7 +132,7 @@ router.get('/api/v1/logout', function (req, res, next) {
 
 /**
  * @swagger
- * /api/v1/register:
+ * /register:
  *   post:
  *     description: New User Registration
  *     produces:
@@ -153,7 +153,7 @@ router.get('/api/v1/logout', function (req, res, next) {
  *       400:
  *         description: malformed input
 */
-router.post('/api/v1/register', function (req, res, next) {
+router.post(`/api/v${CONFIG.version}/register`, function (req, res, next) {
   if (req.body.password !== req.body.passwordConf) {
     res.status(400).json({'error':'The Passwords don\'t match'});
   }
@@ -186,7 +186,7 @@ router.post('/api/v1/register', function (req, res, next) {
 
 /**
  * @swagger
- * /api/v1/jsonschema/{name}:
+ * /jsonschema/{name}:
  *   get:
  *     description: Serves an Entities JSONSchema by Name
  *     produces:
@@ -205,7 +205,7 @@ router.post('/api/v1/register', function (req, res, next) {
  *       404:
  *         description: Schema Name is not known
 */
-router.get('/api/v1/jsonschema/:name', function(req, res, next) {
+router.get(`/api/v${CONFIG.version}/jsonschema/:name`, function(req, res, next) {
   if (req.params.name) {
     let s = SCHEMA.jsonSchemaByName(req.params.name);
     if (s) {
