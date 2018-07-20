@@ -8,6 +8,9 @@ const http = require('https');
 const cors = require('cors');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
+const swaggerGen = require('swagger-vue');
+const fs = require('fs');
+const path = require('path');
 
 // loading config
 const CONFIG =  require('./config.json');
@@ -41,7 +44,7 @@ app.use(session({
 
 // create API for each schema in schema Folder
 for (i = 0; i < SCHEMA.schemas.length; i ++) {
-  if(!/_.*/.test(SCHEMA.names[i])) {    
+  if(!/_.*/.test(SCHEMA.names[i])) {
     restify.serve(ROUTER, mongoose.model(SCHEMA.names[i], SCHEMA.schemas[i]), {
       preCreate: AUTH.chkSession,
       preUpdate: AUTH.chkSession,
@@ -49,6 +52,14 @@ for (i = 0; i < SCHEMA.schemas.length; i ++) {
     });
   }
 };
+ 
+// let opt = {
+//   swagger: SCHEMA.swaggerSpec,
+//   moduleName: 'api',
+//   className: 'api'
+// }
+// const codeResult = swaggerGen(opt);
+// fs.writeFileSync('api.js', codeResult);
 
 // serve and listen
 app.use(ROUTER);
