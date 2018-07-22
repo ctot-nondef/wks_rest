@@ -53,13 +53,15 @@ for (i = 0; i < SCHEMA.schemas.length; i ++) {
   }
 };
 
-// let opt = {
-//   swagger: SCHEMA.swaggerSpec,
-//   moduleName: 'api',
-//   className: 'api'
-// }
-// const codeResult = swaggerGen(opt);
-// fs.writeFileSync('api.js', codeResult);
+let opt = {
+  swagger: SCHEMA.swaggerSpec,
+  moduleName: 'api',
+  className: 'api'
+}
+const codeResult = swaggerGen(opt);
+fs.writeFileSync('asset/api.js', codeResult);
+app.use(express.static('asset'))
+
 
 // serve and listen
 app.use(ROUTER);
