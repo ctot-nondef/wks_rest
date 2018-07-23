@@ -1,5 +1,5 @@
 {
-  "title":{
+  "name":{
     "type":"String",
     "required": true
   },
@@ -63,5 +63,8 @@
   }],
   "comments":[{
       "type":"String"
-  }]
+  }],
+  "adlib":{
+    "type":"String"
+  }
 }

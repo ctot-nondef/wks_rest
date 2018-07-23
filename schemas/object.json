@@ -1,5 +1,5 @@
 {
-  "title":{
+  "name":{
     "type":"String",
     "required": true
   },
@@ -46,5 +46,16 @@
   }],
   "comments":[{
       "type":"String"
-  }]
+  }],
+  "adlib":{
+    "type":"String"
+  },
+  "acquisition":{
+    "type":"ObjectID",
+    "ref":"transaction"
+  },
+  "divestiture":{
+    "type":"ObjectID",
+    "ref":"transaction"
+  }
 }

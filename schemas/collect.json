@@ -3,13 +3,16 @@
     "type": "String",
     "required": true
   },
-  "collector": {
+  "collector": [{
     "type": "ObjectID",
     "ref":"person"
-  },
-  "institution": {
+  }],
+  "institution": [{
     "type":"ObjectID",
     "ref":"corporation"
+  }],
+  "adlib":{
+    "type":"String"
   },
   "references":[{
     "type":"ObjectID",

@@ -1,4 +1,8 @@
 {
+  "name":{
+    "type":"String",
+    "required":"true"
+  },
   "prefLabel":[{
       "lang":{"type":"String"},
       "label":{"type":"String"}
@@ -25,5 +29,8 @@
   "authrec":[{
     "type":"ObjectID",
     "ref":"authrec"
-  }]
+  }],
+  "adlib":{
+    "type":"String"
+  }
 }

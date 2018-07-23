@@ -1,8 +1,14 @@
 {
-  "name":{"type":"String"},
+  "name":{
+    "type":"String",
+    "required": true
+  },
   "identifier":{"type":"String","match":""},
   "authrec":{
     "type":"ObjectID",
     "ref":"authrec"
+  },
+  "adlib":{
+    "type":"String"
   }
 }

@@ -1,6 +1,9 @@
 {
-  "name":{"type":"String"},
-  "identifier":{"type":"String","match":""},
+  "name":{
+    "type":"String",
+    "required":"true"
+  },
+  "identifier":[{"type":"String","match":""}],
   "AdressLine1":{"type":"String"},
   "AdressLine2":{"type":"String"},
   "AdressLine3":{"type":"String"},
@@ -15,5 +18,8 @@
   "authrec":{
     "type":"ObjectID",
     "ref":"authrec"
+  },
+  "adlib":{
+    "type":"String"
   }
 }

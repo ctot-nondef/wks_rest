@@ -1,5 +1,8 @@
 {
-  "name":{"type":"String"},
+  "name":{
+    "type":"String",
+    "required": true
+  },
   "identifier":{"type":"String","match":""},
   "firstName":{"type":"String"},
   "lastName":{"type":"String"},
@@ -14,5 +17,8 @@
   "authrec":{
     "type":"ObjectID",
     "ref":"authrec"
+  },
+  "adlib":{
+    "type":"String"
   }
 }

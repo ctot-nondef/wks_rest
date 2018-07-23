@@ -1,6 +1,6 @@
 {
-  "title":{
-    "type": "String",
+  "name":{
+    "type":"String",
     "required": true
   },
   "publisher":{
@@ -42,5 +42,8 @@
   "partOf":{
     "type":"ObjectID",
     "ref":"coll"
+  },
+  "adlib":{
+    "type":"String"
   }
 }
