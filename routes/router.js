@@ -53,7 +53,7 @@ router.get(`/api/v${CONFIG.version}/swagger.json`, function(req, res, next) {
  */
 router.get(`/api/v${CONFIG.version}/`, function (req, res, next) {
   res.json({
-    'data':SCHEMA.names,
+    'data':SCHEMA.getResObject(req),
     'meta':CONFIG.meta,
     'version':CONFIG.version
   })
