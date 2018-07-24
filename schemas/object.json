@@ -7,10 +7,10 @@
     "type":"ObjectID",
     "ref":"corporation"
   },
-  "artist":{
-    "type":"ObjectID",
-    "ref":"person"
-  },
+  "creator":[{
+    "id": { "type":"ObjectID", "ref":"person" },
+    "role": { "type":"ObjectID", "ref":"descriptor" }
+  }],
   "originaltitle":{
     "type":"String"
   },
@@ -31,13 +31,11 @@
   }],
   "images":[{
       "name":{
-        "type":"String",
-        "required":true
+        "type":"String"
       },
       "reference":{
         "type":"ObjectID",
-        "ref":"assetref",
-        "required":true
+        "ref":"assetref"
       }
   }],
   "references":[{
@@ -49,13 +47,5 @@
   }],
   "adlib":{
     "type":"String"
-  },
-  "acquisition":{
-    "type":"ObjectID",
-    "ref":"transaction"
-  },
-  "divestiture":{
-    "type":"ObjectID",
-    "ref":"transaction"
   }
 }

@@ -12,9 +12,13 @@
     "type":"ObjectID",
     "ref":"object"
   },
+  "correspondsTo":[{
+    "type":"ObjectID",
+    "ref":"entry"
+  }],
   "creator":[{
-    "person":{"type":"ObjectID","ref":"person"},
-    "role":{"type":"ObjectID","ref":"descriptor"}
+    "id": { "type":"ObjectID", "ref":"person" },
+    "role": { "type":"ObjectID", "ref":"descriptor" }
   }],
   "originalTitle":{
     "type":"String"
@@ -48,13 +52,11 @@
   }],
   "images":[{
       "name":{
-        "type":"String",
-        "required":true
+        "type":"String"
       },
       "reference":{
         "type":"ObjectID",
-        "ref":"assetref",
-        "required":true
+        "ref":"assetref"
       }
   }],
   "references":[{

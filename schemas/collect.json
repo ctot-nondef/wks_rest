@@ -7,18 +7,29 @@
     "type": "ObjectID",
     "ref":"person"
   }],
-  "institution": [{
-    "type":"ObjectID",
-    "ref":"corporation"
-  }],
   "adlib":{
     "type":"String"
   },
+  "description":{
+    "type":"String"
+  },
   "references":[{
-    "type":"ObjectID",
-    "ref":"bibref"
+    "type":"String",
+    "match":""
   }],
   "comments":[{
+      "type":"String"
+  }],
+  "editdate":[{
+      "type":"String"
+  }],
+  "edittime":[{
+      "type":"String"
+  }],
+  "editstring":[{
+      "type":"String"
+  }],
+  "version":[{
       "type":"String"
   }]
 }
