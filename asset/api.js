@@ -245,6 +245,52 @@ export const getJsonschemaByNameURL = function(parameters = {}) {
   return domain + path + (keys.length > 0 ? '?' + (keys.map(key => key + '=' + encodeURIComponent(queryParameters[key])).join('&')) : '')
 }
 /**
+ * Retrieves Image and returns corresponding AssetRef
+ * request: postUpload
+ * url: postUploadURL
+ * method: postUpload_TYPE
+ * raw_url: postUpload_RAW_URL
+ * @param image - File Object from upload.
+ */
+export const postUpload = function(parameters = {}) {
+  const domain = parameters.$domain ? parameters.$domain : getDomain()
+  const config = parameters.$config
+  let path = '/upload/'
+  let body
+  let queryParameters = {}
+  let form = {}
+  if (parameters['image'] !== undefined) {
+    form['image'] = parameters['image']
+  }
+  if (parameters['image'] === undefined) {
+    return Promise.reject(new Error('Missing required  parameter: image'))
+  }
+  if (parameters.$queryParameters) {
+    Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
+      queryParameters[parameterName] = parameters.$queryParameters[parameterName]
+    });
+  }
+  return request('post', domain + path, body, queryParameters, form, config)
+}
+export const postUpload_RAW_URL = function() {
+  return '/upload/'
+}
+export const postUpload_TYPE = function() {
+  return 'post'
+}
+export const postUploadURL = function(parameters = {}) {
+  let queryParameters = {}
+  const domain = parameters.$domain ? parameters.$domain : getDomain()
+  let path = '/upload/'
+  if (parameters.$queryParameters) {
+    Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
+      queryParameters[parameterName] = parameters.$queryParameters[parameterName]
+    })
+  }
+  let keys = Object.keys(queryParameters)
+  return domain + path + (keys.length > 0 ? '?' + (keys.map(key => key + '=' + encodeURIComponent(queryParameters[key])).join('&')) : '')
+}
+/**
  * Returns the number of documents of type assetref
  * request: getAssetrefCount
  * url: getAssetrefCountURL

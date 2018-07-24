@@ -227,11 +227,12 @@ router.get(`/api/v${CONFIG.version}/jsonschema/:name`, function(req, res, next) 
  *     produces:
  *       - application/json
  *     consumes:
- *       - application/json
+ *       - multipart/form-data
  *     parameters:
  *       - name: image
+ *         type: file
  *         description: File Object from upload.
- *         in: body
+ *         in: formData
  *         required: true
  *     responses:
  *       200:
