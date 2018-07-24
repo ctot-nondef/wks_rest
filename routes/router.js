@@ -244,11 +244,12 @@ router.get(`/api/v${CONFIG.version}/jsonschema/:name`, function(req, res, next) 
 router.post(`/api/v${CONFIG.version}/upload`, USER.chkSession , function(req, res, next) {
   if (req.files && req.files.image) {
     let image = req.files.image;
-    image.mv(`./asset/img/${Date.now().valueOf().toString(36)}_${image.name}`, function(err) {
+    let name = `${Date.now().valueOf().toString(36)}_${image.name}`
+    image.mv(`./asset/img/${name}`, function(err) {
       if (err) return res.status(500).json({error:'Processing failed'});
       SCHEMA.mongooseModelByName('assetref').create({
         name: image.name,
-        path: `/img/${Date.now().valueOf().toString(36)}_${image.name}`,
+        path: `/img/${name}`,
         mimetype: image.mimetype,
       }, (err, doc) => {
         if (err) return res.status(500).json({error: 'Processing failed'});
