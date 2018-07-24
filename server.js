@@ -50,7 +50,8 @@ for (i = 0; i < SCHEMA.schemas.length; i ++) {
     restify.serve(ROUTER, SCHEMA.models[i], {
       preCreate: AUTH.chkSession,
       preUpdate: AUTH.chkSession,
-      preDelete: AUTH.chkSession
+      preDelete: AUTH.chkSession,
+      totalCountHeader: true,
     });
   }
 };
