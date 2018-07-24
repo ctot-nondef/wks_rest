@@ -11,6 +11,7 @@ const MongoStore = require('connect-mongo')(session);
 const swaggerGen = require('swagger-vue');
 const fs = require('fs');
 const path = require('path');
+const fileUpload = require('express-fileupload');
 
 // loading config
 const CONFIG =  require('./config.json');
@@ -25,6 +26,7 @@ const AUTH = require('./lib/auth.js');
 app.use(bodyParser.json());
 app.use(methodOverride());
 app.use(cors());
+app.use(fileUpload());
 
 // init mongodb
 mongoose.connect(`mongodb://${CONFIG.db.user}:${CONFIG.db.pass}@${CONFIG.db.server}/${CONFIG.db.db}?authSource=test`, function(error) {
@@ -45,7 +47,7 @@ app.use(session({
 // create API for each schema in schema Folder
 for (i = 0; i < SCHEMA.schemas.length; i ++) {
   if(!/_.*/.test(SCHEMA.names[i])) {
-    restify.serve(ROUTER, mongoose.model(SCHEMA.names[i], SCHEMA.schemas[i]), {
+    restify.serve(ROUTER, SCHEMA.models[i], {
       preCreate: AUTH.chkSession,
       preUpdate: AUTH.chkSession,
       preDelete: AUTH.chkSession
@@ -53,6 +55,7 @@ for (i = 0; i < SCHEMA.schemas.length; i ++) {
   }
 };
 
+// create Frontend Library acc to Swagger Spec
 let opt = {
   swagger: SCHEMA.swaggerSpec,
   moduleName: 'api',
@@ -60,7 +63,7 @@ let opt = {
 }
 const codeResult = swaggerGen(opt);
 fs.writeFileSync('asset/api.js', codeResult);
-app.use(express.static('asset'))
+app.use(express.static('asset'));
 
 
 // serve and listen

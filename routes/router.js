@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+
 const USER = require('../lib/auth.js');
 const SCHEMA = require('../lib/schema.js');
 const CONFIG =  require('../config.json');
@@ -215,6 +216,48 @@ router.get(`/api/v${CONFIG.version}/jsonschema/:name`, function(req, res, next) 
     }
   } else {
     res.status(400).json({'error':'Schema name required.'});
+  }
+});
+
+/**
+ * @swagger
+ * /upload/:
+ *   post:
+ *     description: Retrieves Image and returns corresponding AssetRef
+ *     produces:
+ *       - application/json
+ *     consumes:
+ *       - application/json
+ *     parameters:
+ *       - name: image
+ *         description: File Object from upload.
+ *         in: body
+ *         required: true
+ *     responses:
+ *       200:
+ *         description: Image Uploaded, Assetref Created
+ *       400:
+ *         description: Invalid or missing Image Data
+ *       500:
+ *         description: Image processing failed
+*/
+router.post(`/api/v${CONFIG.version}/upload`, USER.chkSession , function(req, res, next) {
+  if (req.files && req.files.image) {
+    let image = req.files.image;
+    image.mv(`./asset/img/${Date.now().valueOf().toString(36)}_${image.name}`, function(err) {
+      if (err) return res.status(500).json({error:'Processing failed'});
+      SCHEMA.mongooseModelByName('assetref').create({
+        name: image.name,
+        path: `/img/${Date.now().valueOf().toString(36)}_${image.name}`,
+        mimetype: image.mimetype,
+      }, (err, doc) => {
+        if (err) return res.status(500).json({error: 'Processing failed'});
+        res.json(doc);
+      })
+    });
+  }
+  else {
+    res.status(400).json({'error':'No Files Uploaded.'});
   }
 });
 
