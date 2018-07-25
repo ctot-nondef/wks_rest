@@ -11,6 +11,7 @@
     "type": "ObjectID",
     "ref":"place"
   },
+  "identifier":[{"type":"String","match":""}],
   "pagecount":{
     "type": "Number",
     "min": 0

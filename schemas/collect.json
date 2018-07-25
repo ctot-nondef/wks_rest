@@ -3,6 +3,7 @@
     "type": "String",
     "required": true
   },
+  "identifier":[{"type":"String","match":""}],
   "collector": [{
     "type": "ObjectID",
     "ref":"person"

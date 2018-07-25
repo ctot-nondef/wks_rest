@@ -10,10 +10,7 @@
   "description":{
     "type":"String"
   },
-  "identifier":{
-    "type":"String",
-    "match":""
-  },
+  "identifier":[{"type":"String","match":""}],
   "sameAs":[{
     "type":"String",
     "match":""

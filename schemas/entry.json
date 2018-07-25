@@ -3,7 +3,7 @@
     "type":"String",
     "required": true
   },
-  "inventory":{
+  "partOf":{
     "type":"ObjectID",
     "ref":"inventory",
     "required": true
@@ -68,5 +68,17 @@
   }],
   "adlib":{
     "type":"String"
-  }
+  },
+  "editdate":[{
+      "type":"String"
+  }],
+  "edittime":[{
+      "type":"String"
+  }],
+  "editstring":[{
+      "type":"String"
+  }],
+  "version":[{
+      "type":"String"
+  }]
 }

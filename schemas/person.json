@@ -3,7 +3,7 @@
     "type":"String",
     "required": true
   },
-  "identifier":{"type":"String","match":""},
+  "identifier":[{"type":"String","match":""}],
   "firstName":{"type":"String"},
   "lastName":{"type":"String"},
   "title":{"type":"String"},
@@ -20,5 +20,17 @@
   },
   "adlib":{
     "type":"String"
-  }
+  },
+  "editdate":[{
+      "type":"String"
+  }],
+  "edittime":[{
+      "type":"String"
+  }],
+  "editstring":[{
+      "type":"String"
+  }],
+  "version":[{
+      "type":"String"
+  }]
 }
