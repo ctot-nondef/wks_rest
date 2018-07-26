@@ -4,9 +4,6 @@
     "required":"true"
   },
   "identifier":[{"type":"String","match":""}],
-  "AdressLine1":{"type":"String"},
-  "AdressLine2":{"type":"String"},
-  "AdressLine3":{"type":"String"},
   "Country":{
     "type":"ObjectID",
     "ref":"place"
