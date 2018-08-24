@@ -38,14 +38,10 @@
   "created": {
     "type": "Date"
   },
-  "acquisition":{
-    "type":"ObjectID",
-    "ref":"transaction"
-  },
-  "divestiture":{
-    "type":"ObjectID",
-    "ref":"transaction"
-  },
+  "transaction":[{
+    "transactiontype": { "type":"ObjectID", "ref":"descriptor"},
+    "record": { "type":"ObjectID", "ref":"transaction"}
+  }],
   "classification":[{
     "aspect": { "type":"ObjectID", "ref": "descriptor" },
     "descriptor": { "type":"ObjectID", "ref": "descriptor" }
