@@ -2,6 +2,7 @@
   "date": {
     "type": "Date"
   },
+  "instanceOf":{"type":"ObjectID", "ref":"descriptor"},
   "price": [{
       "amount":{
         "type":"Number"

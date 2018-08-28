@@ -1,47 +1,27 @@
 {
-  "name":{
-    "type":"String",
-    "required": true
-  },
-  "partOf":{
-    "type":"ObjectID",
-    "ref":"inventory",
-    "required": true
-  },
-  "representsObject":{
-    "type":"ObjectID",
-    "ref":"object"
-  },
-  "correspondsTo":[{
-    "type":"ObjectID",
-    "ref":"entry"
-  }],
+  "name":{"type": "String", "required": true},
+  "identifier":[{"type":"String","match":""}],
+  "partOf":{"type":"ObjectID", "ref":"inventory", "required": true},
+
   "creator":[{
-    "id": { "type":"ObjectID", "ref":"person" },
+    "id": { "type":"ObjectID", "ref":"actor" },
     "role": { "type":"ObjectID", "ref":"descriptor" }
   }],
-  "originalTitle":{
-    "type":"String"
-  },
-  "transscription":{
-    "type":"String"
-  },
-  "material":{
-    "type":"ObjectID",
-    "ref":"descriptor"
-  },
+  "originalTitle":{"type":"String"},
+  "transscription":{"type":"String"},
+  "material":[{"type":"ObjectID", "ref":"descriptor"}],
+  "technique":[{"type":"ObjectID", "ref":"descriptor"}],
   "dimensions": [{
-    "amount": { "type":"number" },
-    "aspect": { "type":"ObjectID", "ref": "descriptor" },
-    "unit": { "type":"ObjectID", "ref": "descriptor" }
+    "amount":{"type":"number" },
+    "aspect":{"type":"ObjectID", "ref": "descriptor" },
+    "unit": {"type":"ObjectID", "ref": "descriptor" }
   }],
-  "created": {
-    "type": "Date"
-  },
-  "transaction":[{
-    "transactiontype": { "type":"ObjectID", "ref":"descriptor"},
-    "record": { "type":"ObjectID", "ref":"transaction"}
+  "created":{"type": "Date"},
+  "relations":[{
+    "target":{"type":"ObjectID", "ref":"entry"},
+    "kind":{"type":"String", "enum":["related", "identical", "probably identical"]},
   }],
+  "transaction":[{ "type":"ObjectID", "ref":"transaction"}],
   "classification":[{
     "aspect": { "type":"ObjectID", "ref": "descriptor" },
     "descriptor": { "type":"ObjectID", "ref": "descriptor" }
@@ -55,26 +35,7 @@
         "ref":"assetref"
       }
   }],
-  "references":[{
-    "type":"ObjectID",
-    "ref":"bibref"
-  }],
-  "comments":[{
-      "type":"String"
-  }],
-  "adlib":{
-    "type":"String"
-  },
-  "editdate":[{
-      "type":"String"
-  }],
-  "edittime":[{
-      "type":"String"
-  }],
-  "editstring":[{
-      "type":"String"
-  }],
-  "version":[{
-      "type":"String"
-  }]
+  "references":[{"type":"String"}],
+  "comments":[{"type":"String"}],
+  "_history":[{"type":"ObjectID", "ref":"_history"}]
 }

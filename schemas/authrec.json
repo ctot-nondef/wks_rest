@@ -1,13 +1,12 @@
 {
   "src":{
     "type":"String",
-    "enum": ["gnd","viaf","geonames"]
+    "match":""
   },
   "record":{
     "type":"mixed"
   },
   "retrieved":{
-    "type":"String",
-    "match":""
+    "type":"Date"
   }
 }

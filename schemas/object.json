@@ -1,31 +1,20 @@
 {
-  "name":{
-    "type":"String",
-    "required": true
-  },
-  "institution":{
-    "type":"ObjectID",
-    "ref":"corporation"
-  },
+  "name":{"type": "String", "required": true},
+  "currentOwner":{"type":"ObjectID", "ref":"actor"},
   "identifier":[{"type":"String","match":""}],
   "creator":[{
     "id": { "type":"ObjectID", "ref":"person" },
     "role": { "type":"ObjectID", "ref":"descriptor" }
   }],
-  "originaltitle":{
-    "type":"String"
-  },
-  "material":{
-    "type":"ObjectID"
-  },
+  "originaltitle":{"type":"String"},
+  "material":[{"type":"ObjectID", "ref":"descriptor"}],
+  "technique":[{"type":"ObjectID", "ref":"descriptor"}],
   "dimensions": [{
-    "amount": {"type":"Number"},
-    "aspect": { "type":"ObjectID", "ref": "descriptor" },
-    "unit": { "type":"ObjectID", "ref": "descriptor" }
+    "amount":{"type":"number" },
+    "aspect":{"type":"ObjectID", "ref": "descriptor" },
+    "unit": {"type":"ObjectID", "ref": "descriptor" }
   }],
-  "date": {
-    "type": "Date"
-  },
+  "created":{"type": "Date"},
   "classification":[{
     "aspect": { "type":"ObjectID", "ref": "descriptor" },
     "descriptor": { "type":"ObjectID", "ref": "descriptor" }
@@ -39,14 +28,6 @@
         "ref":"assetref"
       }
   }],
-  "references":[{
-    "type":"ObjectID",
-    "ref":"bibref"
-  }],
-  "comments":[{
-      "type":"String"
-  }],
-  "adlib":{
-    "type":"String"
-  }
+  "references":[{"type":"String"}],
+  "comments":[{"type":"String"}],
 }

@@ -1,17 +1,19 @@
 {
-  "name":{"type":"String", "required":true},
+  "name":{"type": "String", "required": true},
   "_labels":[{
-      "lang":{"type":"String"},
+      "kind":{"type":"String", "enum":["firstName","lastName","title","acronym"]},
       "label":{"type":"String"}
   }],
   "description":{"type":"String"},
   "instanceOf":{"type":"ObjectID", "ref":"descriptor"},
-  "identifier":[{"type":"String", "match":""}],
+  "identifier":[{"type":"String","match":""}],
   "relations":[{
-    "target":{"type":"ObjectID", "ref":"descriptor"},
-    "kind":{"type":"String", "enum":["sameAs","partOf","related"]},
+    "target":{"type":"ObjectID", "ref":"actor"},
+    "kind":{"type":"String", "enum":["hasParent","partOf","sameAs","hasSibling"]},
     "annotation":{"type":"String"}
   }],
+  "beginOfExistence":{"type":"Date"},
+  "endOfExistence":{"type":"Date"},
   "_authorityRecs":[{
     "record": {"type":"ObjectID", "ref":"authrec"},
     "link": {"type":"String", "match":""}

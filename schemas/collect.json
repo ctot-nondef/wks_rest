@@ -1,36 +1,12 @@
 {
-  "name":{
-    "type": "String",
-    "required": true
-  },
+  "name":{"type": "String", "required": true},
   "identifier":[{"type":"String","match":""}],
-  "collector": [{
-    "type": "ObjectID",
-    "ref":"person"
-  }],
-  "adlib":{
-    "type":"String"
-  },
-  "description":{
-    "type":"String"
-  },
-  "references":[{
-    "type":"String",
-    "match":""
-  }],
-  "comments":[{
-      "type":"String"
-  }],
-  "editdate":[{
-      "type":"String"
-  }],
-  "edittime":[{
-      "type":"String"
-  }],
-  "editstring":[{
-      "type":"String"
-  }],
-  "version":[{
-      "type":"String"
-  }]
+  "collector": [{"type": "ObjectID", "ref":"actor"}],
+  "place": [{"type": "ObjectID", "ref":"descriptor"}],
+  "beginOfExistence":{"type":"Date"},
+  "endOfExistence":{"type":"Date"},
+  "description":{"type": "String"},
+  "references":[{"type":"String"}],
+  "comments":[{"type":"String"}],
+  "_history":[{"type":"ObjectID", "ref":"_history"}]
 }

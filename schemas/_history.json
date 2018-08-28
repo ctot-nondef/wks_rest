@@ -1,0 +1,5 @@
+{
+  "editDate": {"type":"Date"},
+  "editUser": {"type":"ObjectID","ref":"_user"},
+  "record": {"type":"mixed"}
+}
