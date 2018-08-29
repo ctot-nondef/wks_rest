@@ -12,5 +12,5 @@
   }],
   "references":[{"type":"String"}],
   "comments":[{"type":"String"}],
-  "partOf":{"type":"ObjectID", "ref":"collect"},
+  "partOf":{"type":"ObjectID", "ref":"collect"}
 }
