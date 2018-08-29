@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const cors = require('cors');
 
 const USER = require('../lib/auth.js');
 const SCHEMA = require('../lib/schema.js');
@@ -53,7 +54,7 @@ router.get(`/api/v${CONFIG.version}/swagger.json`, function(req, res, next) {
  *         description: Metadata on A
  */
 router.get(`/api/v${CONFIG.version}/`, function (req, res, next) {
-  res.json({
+  return res.json({
     'data':SCHEMA.getResObject(req),
     'meta':CONFIG.meta,
     'version':CONFIG.version

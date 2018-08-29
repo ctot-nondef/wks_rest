@@ -1,17 +1,6 @@
 {
-  "name":{
-    "type":"string",
-    "required":true
-  },
-  "path":{
-    "type":"string",
-    "required":true
-  },
-  "mimetype":{
-    "type":"string",
-    "required":true
-  },
-  "adlib":{
-    "type":"String"
-  }
+  "name":{"type":"string", "required":true},
+  "identifier":[{"type":"String","match":""}],
+  "path":{"type":"string", "required":true},
+  "mimetype":{"type":"string", "required":true}
 }
