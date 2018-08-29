@@ -4,6 +4,7 @@ const cors = require('cors');
 
 const USER = require('../lib/auth.js');
 const SCHEMA = require('../lib/schema.js');
+const IMPORT = require('../lib/import.js');
 const CONFIG =  require('../config.json');
 
 USER.initUser();
@@ -262,6 +263,21 @@ router.post(`/api/v${CONFIG.version}/upload`, USER.chkSession , function(req, re
   else {
     res.status(400).json({'error':'No Files Uploaded.'});
   }
+});
+
+/**
+ * @swagger
+ * /import/:
+ *   get:
+ *     description: Outputs all currently available import Jobs
+ *     produces:
+ *       - application/json
+ *     responses:
+ *       200:
+ *         An array of available import Jobs
+*/
+router.get(`/api/v${CONFIG.version}/importlist/`, function(req, res, next) {
+  res.json(IMPORT.fetchJobList(SCHEMA.mongooseModelByName(`${CONFIG.import.importcol}`)));
 });
 
 module.exports = router;
