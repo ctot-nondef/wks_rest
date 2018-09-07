@@ -1,0 +1,454 @@
+[
+  {
+    "name": "MAKER",
+    "description": "Class of Actor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "MAKER"
+      },
+      {
+        "lang": "en",
+        "label": "creator"
+      },
+      {
+        "lang": "nl",
+        "label": "vervaardiger"
+      },
+      {
+        "lang": "fr",
+        "label": "créateur"
+      },
+      {
+        "lang": "de",
+        "label": "Hersteller"
+      },
+      {
+        "lang": "ar",
+        "label": "الصانع"
+      },
+      {
+        "lang": "it",
+        "label": "creatore"
+      },
+      {
+        "lang": "gr",
+        "label": "δημιουργός"
+      }
+    ]
+  },
+  {
+    "name": "INST",
+    "description": "Class of Actor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "INST"
+      },
+      {
+        "lang": "en",
+        "label": "institution"
+      },
+      {
+        "lang": "nl",
+        "label": "instelling"
+      },
+      {
+        "lang": "fr",
+        "label": "institution"
+      },
+      {
+        "lang": "de",
+        "label": "Institution"
+      },
+      {
+        "lang": "ar",
+        "label": "المؤسسة"
+      },
+      {
+        "lang": "it",
+        "label": "istituto"
+      },
+      {
+        "lang": "gr",
+        "label": "οργανισμός"
+      }
+    ]
+  },
+  {
+    "name": "AUCTIONEER",
+    "description": "Class of Actor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "AUCTIONEER"
+      },
+      {
+        "lang": "en",
+        "label": "auctioneer"
+      },
+      {
+        "lang": "nl",
+        "label": "veilinghuis"
+      },
+      {
+        "lang": "fr",
+        "label": "salle de vente"
+      },
+      {
+        "lang": "de",
+        "label": "Auktionator"
+      },
+      {
+        "lang": "ar",
+        "label": "قاعة_المزاد"
+      },
+      {
+        "lang": "it",
+        "label": "banditore"
+      },
+      {
+        "lang": "gr",
+        "label": "υπεύθυνος δημοπρ."
+      }
+    ]
+  },
+  {
+    "name": "PERSON",
+    "description": "Class of Actor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "PERSON"
+      },
+      {
+        "lang": "en",
+        "label": "person"
+      },
+      {
+        "lang": "nl",
+        "label": "persoon"
+      },
+      {
+        "lang": "fr",
+        "label": "personne"
+      },
+      {
+        "lang": "de",
+        "label": "Person"
+      },
+      {
+        "lang": "ar",
+        "label": "إسم شخص"
+      },
+      {
+        "lang": "it",
+        "label": "persona"
+      },
+      {
+        "lang": "gr",
+        "label": "πρόσωπο"
+      }
+    ]
+  },
+  {
+    "name": "FAMILY",
+    "description": "Class of Actor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "FAMILY"
+      },
+      {
+        "lang": "en",
+        "label": "family"
+      },
+      {
+        "lang": "nl",
+        "label": "familie"
+      },
+      {
+        "lang": "fr",
+        "label": "famille"
+      },
+      {
+        "lang": "de",
+        "label": "Familie"
+      },
+      {
+        "lang": "ar",
+        "label": "إسم عائلة"
+      },
+      {
+        "lang": "it",
+        "label": "famiglia"
+      },
+      {
+        "lang": "gr",
+        "label": "οικογένεια"
+      }
+    ]
+  },
+  {
+    "name": "AUTHOR",
+    "description": "Class of Actor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "AUTHOR"
+      },
+      {
+        "lang": "en",
+        "label": "author"
+      },
+      {
+        "lang": "nl",
+        "label": "auteur"
+      },
+      {
+        "lang": "fr",
+        "label": "auteur"
+      },
+      {
+        "lang": "de",
+        "label": "Verfasser"
+      },
+      {
+        "lang": "ar",
+        "label": "المؤلف"
+      },
+      {
+        "lang": "it",
+        "label": "autore"
+      },
+      {
+        "lang": "gr",
+        "label": "συντάκτης"
+      }
+    ]
+  },
+  {
+    "name": "SERVICE",
+    "description": "Class of Actor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "SERVICE"
+      },
+      {
+        "lang": "en",
+        "label": "regiment/service"
+      },
+      {
+        "lang": "nl",
+        "label": "dienstonderdeel"
+      },
+      {
+        "lang": "fr",
+        "label": "subdivision de service"
+      },
+      {
+        "lang": "de",
+        "label": "Dienststelle"
+      },
+      {
+        "lang": "ar",
+        "label": "منظمة"
+      },
+      {
+        "lang": "it",
+        "label": "subdivisione/servizio"
+      },
+      {
+        "lang": "gr",
+        "label": "τμήμα / υπηρεσία"
+      }
+    ]
+  },
+  {
+    "name": "CORPORATE",
+    "description": "Class of Actor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "CORPORATE"
+      },
+      {
+        "lang": "en",
+        "label": "corporate author"
+      },
+      {
+        "lang": "nl",
+        "label": "corporatieve auteur"
+      },
+      {
+        "lang": "fr",
+        "label": "collectivité auteur"
+      },
+      {
+        "lang": "de",
+        "label": "Körperschaft"
+      },
+      {
+        "lang": "ar",
+        "label": "المؤلف_هيئة"
+      },
+      {
+        "lang": "it",
+        "label": "autore corporativo"
+      },
+      {
+        "lang": "gr",
+        "label": "θεσμικός συντάκτης"
+      }
+    ]
+  },
+  {
+    "name": "ACQUISITIONSOURCE",
+    "description": "Class of Actor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "ACQUISITIONSOURCE"
+      },
+      {
+        "lang": "en",
+        "label": "acquisition source"
+      },
+      {
+        "lang": "nl",
+        "label": "verwervingsbron"
+      },
+      {
+        "lang": "fr",
+        "label": "source d'acquisition"
+      },
+      {
+        "lang": "de",
+        "label": "Erwerbungsquelle"
+      },
+      {
+        "lang": "ar",
+        "label": "fonte di acquisizione"
+      },
+      {
+        "lang": "it",
+        "label": "πηγή απόκτησης"
+      }
+    ]
+  },
+  {
+    "name": "CONF",
+    "description": "Class of Actor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "CONF"
+      },
+      {
+        "lang": "en",
+        "label": "conference"
+      },
+      {
+        "lang": "nl",
+        "label": "conferentie"
+      },
+      {
+        "lang": "fr",
+        "label": "conférence"
+      },
+      {
+        "lang": "de",
+        "label": "Konferenz"
+      },
+      {
+        "lang": "ar",
+        "label": "مؤتمر"
+      },
+      {
+        "lang": "it",
+        "label": "conferenza"
+      },
+      {
+        "lang": "gr",
+        "label": "σύσκεψη"
+      }
+    ]
+  },
+  {
+    "name": "COLLECT",
+    "description": "Class of Actor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "COLLECT"
+      },
+      {
+        "lang": "en",
+        "label": "collectioneer"
+      },
+      {
+        "lang": "nl",
+        "label": "collectioneur"
+      },
+      {
+        "lang": "fr",
+        "label": "collectionneur"
+      },
+      {
+        "lang": "de",
+        "label": "Sammler"
+      },
+      {
+        "lang": "ar",
+        "label": "جامع"
+      },
+      {
+        "lang": "it",
+        "label": "collezionista"
+      },
+      {
+        "lang": "gr",
+        "label": "συλλέκτης"
+      }
+    ]
+  },
+  {
+    "name": "PUBL",
+    "description": "Class of Actor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "PUBL"
+      },
+      {
+        "lang": "en",
+        "label": "publisher"
+      },
+      {
+        "lang": "nl",
+        "label": "uitgever"
+      },
+      {
+        "lang": "fr",
+        "label": "éditeur"
+      },
+      {
+        "lang": "de",
+        "label": "Verlag"
+      },
+      {
+        "lang": "ar",
+        "label": "الناشر"
+      },
+      {
+        "lang": "it",
+        "label": "editore"
+      },
+      {
+        "lang": "gr",
+        "label": "εκδότης"
+      }
+    ]
+  }
+]

@@ -1,6 +1,7 @@
 {
   "name":{"type":"String", "required":true},
-  "_labels":[{
+  "labels":[{
+      "_id":false,
       "lang":{"type":"String"},
       "label":{"type":"String"}
   }],
