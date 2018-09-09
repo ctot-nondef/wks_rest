@@ -87,10 +87,10 @@ var db = mongoose.connection;
 process.argv.forEach(function (val, index, array) {
   console.log(index + ': ' + val);
 });
-let descriptors = SCHEMA.mongooseModelByName('descriptor');
-let actors = SCHEMA.mongooseModelByName('actor');
-let history = SCHEMA.mongooseModelByName('_history');
-let authrec = SCHEMA.mongooseModelByName('authrec');
+let descriptors = SCHEMA.mongooseModelByName('descriptor'); descriptors.remove({}, (err) => console.log(err));
+let actors = SCHEMA.mongooseModelByName('actor'); actors.remove({}, (err) => console.log(err));
+let history = SCHEMA.mongooseModelByName('_history'); history.remove({}, (err) => console.log(err));
+let authrec = SCHEMA.mongooseModelByName('authrec'); authrec.remove({}, (err) => console.log(err));
 
 var authrecs = [];
 var authrecs_fail = [];
