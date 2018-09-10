@@ -9,11 +9,13 @@
   "instanceOf":{"type":"ObjectID", "ref":"descriptor"},
   "identifier":[{"type":"String", "match":""}],
   "relations":[{
+    "_id":false,
     "target":{"type":"ObjectID", "ref":"descriptor"},
     "kind":{"type":"String", "enum":["sameAs","partOf","related"]},
     "annotation":{"type":"String"}
   }],
   "_authorityRecs":[{
+    "_id":false,
     "record": {"type":"ObjectID", "ref":"authrec"},
     "link": {"type":"String", "match":""}
   }],

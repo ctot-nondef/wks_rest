@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 app.use(methodOverride());
 app.use(cors({
   credentials: true,
-  origin: ["http://localhost:8080"]
+  origin: ["http://localhost:8080","https://vchc.univie.ac.at"]
 }));
 app.use(fileUpload());
 

@@ -1,9 +1,0 @@
-{
-  "name":{"type": "String", "required": true},
-  "recpath":{"type": "String"},
-  "mappings":[{
-      "sourcePath":{"type": "String"},
-      "processing":{"type": "String"},
-      "destinationPath":{"type": "String"}
-  }]
-}
