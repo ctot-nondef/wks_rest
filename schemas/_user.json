@@ -7,5 +7,15 @@
   "password": {
     "type": "String",
     "required": "true"
-  }
+  },
+  "_history":[{"type":"ObjectID", "ref":"_history"}],
+  "images":[{
+      "name":{
+        "type":"String"
+      },
+      "reference":{
+        "type":"ObjectID",
+        "ref":"assetref"
+      }
+  }]  
 }

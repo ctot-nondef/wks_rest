@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const process = require('process');
 const axios = require('axios');
+const request = require('request');
 
 const CONFIG =  require('./config.json');
 
@@ -87,6 +88,36 @@ function fetchArray(ids) {
 
 
 
+function downloadArray(uri){
+  if(uri.length > 0){
+    console.log(uri[0]);
+    let fn = uri[0].split('/').splice(-1)[0].split('?')[0];
+    console.log(fn);
+    request(uri.shift()).pipe(fs.createWriteStream(`asset/userimg/${fn}`)).on('close', function() {
+      filelist.push(`asset/userimg/${fn}`)
+      downloadArray(uri);
+    });
+  }
+  else {
+    for (var i = 0; i < filelist.length; i++) {
+      assetrefs.push({
+        "name": filelist[i].split('/').splice(-1)[0],
+        "path": filelist[i],
+        "mimetype":"image/jpeg"
+      })
+    }
+    assets.insertMany(assetrefs, function(error, docs) {
+      for (var i = 0; i < docs.length; i++) {
+        ids[i].images = [{
+          name: filelist[i].split('/').splice(-1)[0],
+          reference: docs[i]._id
+        }];
+      }
+      fs.writeFileSync('import/users_mapped.json', JSON.stringify(ids, null, 2));
+    });
+  }
+};
+
 const APIS = buildFetchers();
 
 // loading internal libs
@@ -103,104 +134,32 @@ var db = mongoose.connection;
 process.argv.forEach(function (val, index, array) {
   console.log(index + ': ' + val);
 });
-let descriptors = SCHEMA.mongooseModelByName('descriptor'); descriptors.remove({}, (err) => console.log(err));
-let actors = SCHEMA.mongooseModelByName('actor'); actors.remove({}, (err) => console.log(err));
-let history = SCHEMA.mongooseModelByName('_history'); history.remove({}, (err) => console.log(err));
-let authrec = SCHEMA.mongooseModelByName('authrec'); authrec.remove({}, (err) => console.log(err));
 let users = SCHEMA.mongooseModelByName('_user'); users.remove({}, (err) => console.log(err));
+let assets = SCHEMA.mongooseModelByName('assetref'); assets.remove({}, (err) => console.log(err));
 
-var authrecs = [];
-var authrecs_fail = [];
-let rec = [];
-var refs = {};
-let um = JSON.parse(fs.readFileSync(`${CONFIG.import.dir}/users_mapped.json`, 'utf8'));
-let pc = JSON.parse(fs.readFileSync(`${CONFIG.import.dir}/people_classes.json`, 'utf8'));
-let dc = JSON.parse(fs.readFileSync(`${CONFIG.import.dir}/thesau_classes.json`, 'utf8'));
-let ta = JSON.parse(fs.readFileSync(`${CONFIG.import.dir}/thesau_authrecs.json`, 'utf8'));
-let pa = JSON.parse(fs.readFileSync(`${CONFIG.import.dir}/people_authrecs.json`, 'utf8'));
-users.insertMany(um, function(error, docs) {});
-descriptors.insertMany(pc, function(error, docs) {
-  for (let i = 0; i < docs.length; i++) {
-    refs[docs[i]['name']] = docs[i]['_id'];
+let l = ['0','en','nl','fr','de','ar','it','gr']
+let s = JSON.parse(fs.readFileSync(`${CONFIG.import.dir}/users.json`, 'utf8'));
+let ids = [];
+let imgurls = [];
+let filelist = [];
+let assetrefs = [];
+for (var i = 0; i < s.length; i++) {
+  let a = {
+    firstName: s[i].firstName,
+    lastName: s[i].lastName,
+    email : s[i].email[0],
+    identifier: `VCHCWEBSITE:${s[i].name}`,
+    password: "$2b$10$VgkUxb4Pd7sh0RXnXhUpbenqKHXfBmXBwxi9SJf9yK8wg03WfCqI.",
+    username: `${s[i].firstName.split(' ').slice(-1)[0][0].toLowerCase()}${s[i].lastName.toLowerCase()}`
   }
-  authrec.insertMany(pa, function(error, docs) {
-    for (let i = 0; i < docs.length; i++) {
-      refs[docs[i]['record']['gndIdentifier']] = docs[i]['_id'];
+  if(s[i].image) {
+    for (var y = 0; y < s[i].image.length; y++) {
+      imgurls.push(s[i].image[y].url);
     }
-    descriptors.insertMany(dc, function(error, docs) {
-      for (let i = 0; i < docs.length; i++) {
-        refs[docs[i]['name']] = docs[i]['_id'];
-      }
-      authrec.insertMany(ta, function(error, docs) {
-        for (let i = 0; i < docs.length; i++) {
-          refs[docs[i]['record']['gndIdentifier']] = docs[i]['_id'];
-        }
-        let l = ['0','en','nl','fr','de','ar','it','gr']
-        let s = JSON.parse(fs.readFileSync(`${CONFIG.import.dir}/people.json`, 'utf8'));
-        let ids = [];
-        let list = {};
-        for (var i = 0; i < s.length; i++) {
-          let a = {
-            name: s[i].name[0],
-            _labels : [],
-            identifier: [`ADLIBPEOPLE:${s[i].priref[0]}`],
-            _authorityRecs: []
-          }
-          if(s[i]['name.type']) a.instanceOf = refs[s[i]['name.type'][0].value[0]];
-          if(s[i].biography) a.description = s[i].biography[0];
-          if(s[i].surname) a._labels.push({kind: 'lastName', label: s[i].surname[0]});
-          if(s[i].forename) a._labels.push({kind: 'firstName', label: s[i].forename[0]});
-          if(s[i].title) a._labels.push({kind: 'title', label: s[i].title[0]});
-          if(s[i].prefixes_to_name) a._labels.push({kind: 'prefixToName', label: s[i].prefixes_to_name[0]});
-          if(s[i]['birth.date.start']) a.beginOfExistence = s[i]['birth.date.start'][0];
-          if(s[i]['death.date.start']) a.endOfExistence = s[i]['death.date.start'][0];
-          if(s[i].source) {
-            for (var y = 0; y < s[i].source.length; y++) {
-              a.identifier.push(`${s[i].source[y]}:${s[i]['source.number'][y].split('/')[s[i]['source.number'][y].split('/').length - 1]}`);
-              //console.log(s[i]['source.number'][y].split('/')[s[i]['source.number'][y].split('/').length - 1]);
-              if (refs[s[i]['source.number'][y].split('/')[s[i]['source.number'][y].split('/').length - 1]]) {
-                a._authorityRecs.push({
-                  record: refs[s[i]['source.number'][y].split('/')[s[i]['source.number'][y].split('/').length - 1]]
-                });
-              }
-            }
-          }
-          ids.push(a);
-        }
-        fs.writeFileSync('import/actors.json', JSON.stringify(ids, null, 2));
-        actors.insertMany(ids, function(error, docs) {
-          s = JSON.parse(fs.readFileSync(`${CONFIG.import.dir}/thesau.json`, 'utf8'));
-          ids = [];
-          list = {};
-          for (var i = 0; i < s.length; i++) {
-            let a = {
-              name: s[i].term[0],
-              _labels : [],
-              identifier: [`ADLIBTHESAU:${s[i].priref[0]}`],
-              _authorityRecs: []
-            }
-            if(s[i]['term.type']) a.instanceOf = refs[s[i]['term.type'][0].value[0]];
-            if(s[i].source) {
-              for (var y = 0; y < s[i].source.length; y++) {
-                a.identifier.push(`${s[i].source[y]}:${s[i]['term.number'][y].split('/')[s[i]['term.number'][y].split('/').length - 1]}`);
-                console.log(refs[s[i]['term.number'][y].split('/')[s[i]['term.number'][y].split('/').length - 1]]);
-                if (refs[s[i]['term.number'][y].split('/')[s[i]['term.number'][y].split('/').length - 1]]) {
-                  a._authorityRecs.push({
-                    record: refs[s[i]['term.number'][y].split('/')[s[i]['term.number'][y].split('/').length - 1]]
-                  });
-                }
-              }
-            }
-            ids.push(a);
-          }
-          fs.writeFileSync('import/descriptors.json', JSON.stringify(ids, null, 2));
-          descriptors.insertMany(ids, function(error, docs) {
-          });
-        });
-      });
-    });
-  });
-});
+  }
+  ids.push(a);
+}
+downloadArray(imgurls);
 
 
 
