@@ -1,0 +1,156 @@
+[
+  {
+    "firstName": "Univ. Doz. Dr. Werner",
+    "lastName": "Telesko",
+    "email": "Werner.Telesko@oeaw.ac.at",
+    "identifier": "VCHCWEBSITE:26",
+    "password": "$2b$10$VgkUxb4Pd7sh0RXnXhUpbenqKHXfBmXBwxi9SJf9yK8wg03WfCqI.",
+    "username": "wtelesko",
+    "images": [
+      {
+        "name": "Telesko.JPG",
+        "reference": "5b97ca727b8b0c04c7aa9a13"
+      }
+    ]
+  },
+  {
+    "firstName": "MMag. Stefanie",
+    "lastName": "Linsboth",
+    "email": "Stefanie.Linsboth@oeaw.ac.at",
+    "identifier": "VCHCWEBSITE:16",
+    "password": "$2b$10$VgkUxb4Pd7sh0RXnXhUpbenqKHXfBmXBwxi9SJf9yK8wg03WfCqI.",
+    "username": "slinsboth",
+    "images": [
+      {
+        "name": "Linsboth.jpg",
+        "reference": "5b97ca727b8b0c04c7aa9a14"
+      }
+    ]
+  },
+  {
+    "firstName": "Prof. Dr. Sebastian",
+    "lastName": "Schütze",
+    "email": "sebastian.schuetze@univie.ac.at",
+    "identifier": "VCHCWEBSITE:13",
+    "password": "$2b$10$VgkUxb4Pd7sh0RXnXhUpbenqKHXfBmXBwxi9SJf9yK8wg03WfCqI.",
+    "username": "sschütze",
+    "images": [
+      {
+        "name": "csm_Foto_Schuetze_75abdafe3e.jpg",
+        "reference": "5b97ca727b8b0c04c7aa9a16"
+      }
+    ]
+  },
+  {
+    "firstName": "Dr. Matthias",
+    "lastName": "Bodenstein",
+    "email": "matthias.bodenstein@univie.ac.at",
+    "identifier": "VCHCWEBSITE:51",
+    "password": "$2b$10$VgkUxb4Pd7sh0RXnXhUpbenqKHXfBmXBwxi9SJf9yK8wg03WfCqI.",
+    "username": "mbodenstein",
+    "images": [
+      {
+        "name": "BodensteinFoto_CV_0.jpg",
+        "reference": "5b97ca727b8b0c04c7aa9a17"
+      }
+    ]
+  },
+  {
+    "firstName": "Luka",
+    "lastName": "Ručigaj, MA",
+    "email": "Luka.Rucigaj@oeaw.ac.at",
+    "identifier": "VCHCWEBSITE:58",
+    "password": "$2b$10$VgkUxb4Pd7sh0RXnXhUpbenqKHXfBmXBwxi9SJf9yK8wg03WfCqI.",
+    "username": "lručigaj",
+    "images": [
+      {
+        "name": "Luka.jpeg",
+        "reference": "5b97ca727b8b0c04c7aa9a18"
+      }
+    ]
+  },
+  {
+    "firstName": "Mag. Katharina",
+    "lastName": "Leithner",
+    "email": "katharina_leithner@hotmail.com",
+    "identifier": "VCHCWEBSITE:52",
+    "password": "$2b$10$VgkUxb4Pd7sh0RXnXhUpbenqKHXfBmXBwxi9SJf9yK8wg03WfCqI.",
+    "username": "kleithner",
+    "images": [
+      {
+        "name": "Leithner_DSC8449.jpg",
+        "reference": "5b97ca727b8b0c04c7aa9a19"
+      }
+    ]
+  },
+  {
+    "firstName": "Dr. Karlheinz",
+    "lastName": "Mörth",
+    "email": "karlheinz.moerth@oeaw.ac.at",
+    "identifier": "VCHCWEBSITE:32",
+    "password": "$2b$10$VgkUxb4Pd7sh0RXnXhUpbenqKHXfBmXBwxi9SJf9yK8wg03WfCqI.",
+    "username": "kmörth",
+    "images": [
+      {
+        "name": "csm_team_moerth_51803e38a9.png",
+        "reference": "5b97ca727b8b0c04c7aa9a1a"
+      }
+    ]
+  },
+  {
+    "firstName": "Mag. Gernot",
+    "lastName": "Mayer",
+    "email": "gernot.mayer@univie.ac.at",
+    "identifier": "VCHCWEBSITE:20",
+    "password": "$2b$10$VgkUxb4Pd7sh0RXnXhUpbenqKHXfBmXBwxi9SJf9yK8wg03WfCqI.",
+    "username": "gmayer",
+    "images": [
+      {
+        "name": "Jean-Etienne_Liotard_12.jpg",
+        "reference": "5b97ca727b8b0c04c7aa9a1b"
+      }
+    ]
+  },
+  {
+    "firstName": "Cigdem",
+    "lastName": "Özel, MA ",
+    "email": "cigdem.oezel@univie.ac.at",
+    "identifier": "VCHCWEBSITE:24",
+    "password": "$2b$10$VgkUxb4Pd7sh0RXnXhUpbenqKHXfBmXBwxi9SJf9yK8wg03WfCqI.",
+    "username": "cözel",
+    "images": [
+      {
+        "name": "_MG_9784.jpg",
+        "reference": "5b97ca727b8b0c04c7aa9a1c"
+      }
+    ]
+  },
+  {
+    "firstName": "Christoph",
+    "lastName": "Hoffmann",
+    "email": "christoph.hoffmann@oeaw.ac.at",
+    "identifier": "VCHCWEBSITE:60",
+    "password": "$2b$10$VgkUxb4Pd7sh0RXnXhUpbenqKHXfBmXBwxi9SJf9yK8wg03WfCqI.",
+    "username": "choffmann",
+    "images": [
+      {
+        "name": "DSC_0742.JPG",
+        "reference": "5b97ca727b8b0c04c7aa9a1d"
+      }
+    ]
+  },
+  {
+    "firstName": "Dr. Anna",
+    "lastName": "Frasca-Rath",
+    "email": "anna.sophie.rath@univie.ac.at",
+    "identifier": "VCHCWEBSITE:18",
+    "password": "$2b$10$VgkUxb4Pd7sh0RXnXhUpbenqKHXfBmXBwxi9SJf9yK8wg03WfCqI.",
+    "username": "afrascarath",
+    "images": [
+      {
+        "name": "anna.jpg",
+        "reference": "5b97ca727b8b0c04c7aa9a1e"
+      }
+    ]
+  }
+]
