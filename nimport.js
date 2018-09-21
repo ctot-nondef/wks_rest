@@ -106,6 +106,7 @@ process.argv.forEach(function (val, index, array) {
 let descriptors = SCHEMA.mongooseModelByName('descriptor');
 let actors = SCHEMA.mongooseModelByName('actor');
 let collections = SCHEMA.mongooseModelByName('collect'); collections.remove({}, (err) => console.log(err));
+let hist = SCHEMA.mongooseModelByName('_history'); hist.remove({}, (err) => console.log(err));
 
 
 
@@ -120,11 +121,7 @@ for (var i = 0; i < s.length; i++) {
     identifier: [`ADLIB:${s[i].priref[0]}`],
   }
   if(s[i].description) a.description = s[i].description[0];
-  if(s[i].surname) a._labels.push({kind: 'lastName', label: s[i].surname[0]});
-  if(s[i].forename) a._labels.push({kind: 'firstName', label: s[i].forename[0]});
-  if(s[i].title) a._labels.push({kind: 'title', label: s[i].title[0]});
-  if(s[i].prefixes_to_name) a._labels.push({kind: 'prefixToName', label: s[i].prefixes_to_name[0]});
-  if(s[i]['birth.date.start']) a.beginOfExistence = s[i]['birth.date.start'][0];
+  if(s[i]['production.date.start']) a.beginOfExistence = s[i]['production.date.start'][0];
   if(s[i]['death.date.start']) a.endOfExistence = s[i]['death.date.start'][0];
   if(s[i].source) {
     for (var y = 0; y < s[i].source.length; y++) {
