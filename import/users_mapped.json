@@ -9,7 +9,7 @@
     "images": [
       {
         "name": "Telesko.JPG",
-        "reference": "5b97ca727b8b0c04c7aa9a13"
+        "reference": "5b97cbfac59c3a05127a54c3"
       }
     ]
   },
@@ -23,7 +23,7 @@
     "images": [
       {
         "name": "Linsboth.jpg",
-        "reference": "5b97ca727b8b0c04c7aa9a14"
+        "reference": "5b97cbfac59c3a05127a54c4"
       }
     ]
   },
@@ -31,13 +31,13 @@
     "firstName": "Prof. Dr. Sebastian",
     "lastName": "Schütze",
     "email": "sebastian.schuetze@univie.ac.at",
-    "identifier": "VCHCWEBSITE:13",
+    "identifier": "VCHCWEBSITE:61",
     "password": "$2b$10$VgkUxb4Pd7sh0RXnXhUpbenqKHXfBmXBwxi9SJf9yK8wg03WfCqI.",
     "username": "sschütze",
     "images": [
       {
-        "name": "csm_Foto_Schuetze_75abdafe3e.jpg",
-        "reference": "5b97ca727b8b0c04c7aa9a16"
+        "name": "Schuetze_Sebastian.jpg",
+        "reference": "5b97cbfac59c3a05127a54c5"
       }
     ]
   },
@@ -51,7 +51,7 @@
     "images": [
       {
         "name": "BodensteinFoto_CV_0.jpg",
-        "reference": "5b97ca727b8b0c04c7aa9a17"
+        "reference": "5b97cbfac59c3a05127a54c7"
       }
     ]
   },
@@ -65,7 +65,7 @@
     "images": [
       {
         "name": "Luka.jpeg",
-        "reference": "5b97ca727b8b0c04c7aa9a18"
+        "reference": "5b97cbfac59c3a05127a54c8"
       }
     ]
   },
@@ -79,7 +79,7 @@
     "images": [
       {
         "name": "Leithner_DSC8449.jpg",
-        "reference": "5b97ca727b8b0c04c7aa9a19"
+        "reference": "5b97cbfac59c3a05127a54c9"
       }
     ]
   },
@@ -93,7 +93,7 @@
     "images": [
       {
         "name": "csm_team_moerth_51803e38a9.png",
-        "reference": "5b97ca727b8b0c04c7aa9a1a"
+        "reference": "5b97cbfac59c3a05127a54ca"
       }
     ]
   },
@@ -107,7 +107,7 @@
     "images": [
       {
         "name": "Jean-Etienne_Liotard_12.jpg",
-        "reference": "5b97ca727b8b0c04c7aa9a1b"
+        "reference": "5b97cbfac59c3a05127a54cb"
       }
     ]
   },
@@ -121,7 +121,7 @@
     "images": [
       {
         "name": "_MG_9784.jpg",
-        "reference": "5b97ca727b8b0c04c7aa9a1c"
+        "reference": "5b97cbfac59c3a05127a54cc"
       }
     ]
   },
@@ -135,7 +135,7 @@
     "images": [
       {
         "name": "DSC_0742.JPG",
-        "reference": "5b97ca727b8b0c04c7aa9a1d"
+        "reference": "5b97cbfac59c3a05127a54cd"
       }
     ]
   },
@@ -149,7 +149,7 @@
     "images": [
       {
         "name": "anna.jpg",
-        "reference": "5b97ca727b8b0c04c7aa9a1e"
+        "reference": "5b97cbfac59c3a05127a54ce"
       }
     ]
   }

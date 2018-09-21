@@ -105,14 +105,13 @@ process.argv.forEach(function (val, index, array) {
 });
 let descriptors = SCHEMA.mongooseModelByName('descriptor');
 let actors = SCHEMA.mongooseModelByName('actor');
-
-
 let collections = SCHEMA.mongooseModelByName('collect'); collections.remove({}, (err) => console.log(err));
 
 
 
 let l = ['0','en','nl','fr','de','ar','it','gr']
 let s = JSON.parse(fs.readFileSync(`${CONFIG.import.dir}/collections.json`, 'utf8'));
+let refs = JSON.parse(fs.readFileSync(`${CONFIG.import.dir}/references.json`, 'utf8'));
 let ids = [];
 let list = {};
 for (var i = 0; i < s.length; i++) {
