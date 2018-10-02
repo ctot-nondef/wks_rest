@@ -1,0 +1,112 @@
+[
+  {
+    "editDate": 1538475627769,
+    "editUser": "5bb34662eb982008f504cbd4",
+    "editType": "create",
+    "data": {
+      "name": "Sammlung Esterhazy",
+      "identifier": [
+        "ADLIB:150000002"
+      ],
+      "_history": [
+        "5bb3466b495860091c9cb721",
+        "5bb3466b495860091c9cb728"
+      ]
+    }
+  },
+  {
+    "editDate": 1538475627769,
+    "editUser": "5bb34662eb982008f504cbd4",
+    "editType": "create",
+    "data": {
+      "name": "Sammlung Felsenberg",
+      "identifier": [
+        "ADLIB:150000004"
+      ],
+      "_history": [
+        "5bb3466b495860091c9cb722",
+        "5bb3466b495860091c9cb729"
+      ],
+      "beginOfExistence": "1828",
+      "endOfExistence": "1828"
+    }
+  },
+  {
+    "editDate": 1538475627769,
+    "editUser": "5bb34662eb982008f504cbd4",
+    "editType": "create",
+    "data": {
+      "name": "Sammlung Adamovics",
+      "identifier": [
+        "ADLIB:150000008"
+      ],
+      "_history": [
+        "5bb3466b495860091c9cb723",
+        "5bb3466b495860091c9cb72a"
+      ],
+      "description": "Sammler: Valentin Andreas Adamovics (gest. 1856), Sammler, Händler und Agent des bayerischen Königs [er vermittelte zahlreiche Bilder nach München, u.a. Vermeers \"Dame mit der Waage\" heute NG, Washington].\r\nSammlung: Große Gemäldesammlung, entstanden in 1. H. 19 Jh. durch Käufe aus Versteigerungen Kaunitz [etwa Correggio (Detroit) oder Weenix (Rijksmuseum)], Apponyi, Fries, Sickingen etc.; Ins KHM gelangten aus Slg. A.: Engelspietà von Cosmè Tura (GG_1867) und Landschaft mit Rudolf von Habsburg und dem Priester von Gonzales Coques (GG_3692). Ferner: Issac van Ostade, Eine Bäuerin am Kamin (Perger 1854, S. 310); Claude Lorrain, Landschaft mit Figuren von Lauri (Perger 1854, S. 396); Murillo, Madonna mit Christuskind und Engeln (Perger 1854, S. 512)\r\nVerbleib: VK 1856, Catalog der Gemälde-Sammlung des seligen Herrn Valentin Andreas von Adamovics, königlich bayrischen Hofrathes, bestehend aus ausgezeichneten Original-Oel-Gemälden […], Wien 1856 [277 Gemälde, abgedruckt bei Frimmel 1913]\r\n>Ein Großteil der Bilder geht an Andreas Ritter von Reisinger (s. ÖKT mit zahlr. Abb.)\r\nLit.: Frimmel 1913, S. 5ff",
+      "collector": "5bb34664eb982008f504dba1"
+    }
+  },
+  {
+    "editDate": 1538475627769,
+    "editUser": "5bb34662eb982008f504cbd4",
+    "editType": "create",
+    "data": {
+      "name": "Sammlung Geiger",
+      "identifier": [
+        "ADLIB:150000394"
+      ],
+      "_history": [
+        "5bb3466b495860091c9cb724",
+        "5bb3466b495860091c9cb72b"
+      ],
+      "description": "Literatur: Sebastian Schütze, Benno Geiger, connoisseur, collector, and marchand-amateur of old master drawings, in Una Roman D'Elia (Hg.), Rethinking Renaissance drawings, Montreal u.a. 2015, 225-241."
+    }
+  },
+  {
+    "editDate": 1538475627769,
+    "editUser": "5bb34662eb982008f504cbd4",
+    "editType": "create",
+    "data": {
+      "name": "Sammlung Auersperg",
+      "identifier": [
+        "ADLIB:150001180"
+      ],
+      "_history": [
+        "5bb3466b495860091c9cb725",
+        "5bb3466b495860091c9cb72c"
+      ]
+    }
+  },
+  {
+    "editDate": 1538475627769,
+    "editUser": "5bb34662eb982008f504cbd4",
+    "editType": "create",
+    "data": {
+      "name": "Sammlung Harrach",
+      "identifier": [
+        "ADLIB:150001627"
+      ],
+      "_history": [
+        "5bb3466b495860091c9cb726",
+        "5bb3466b495860091c9cb72d"
+      ]
+    }
+  },
+  {
+    "editDate": 1538475627769,
+    "editUser": "5bb34662eb982008f504cbd4",
+    "editType": "create",
+    "data": {
+      "name": "Sammlung Salzmann",
+      "identifier": [
+        "ADLIB:150003903"
+      ],
+      "_history": [
+        "5bb3466b495860091c9cb727",
+        "5bb3466b495860091c9cb72e"
+      ]
+    }
+  }
+]
