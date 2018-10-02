@@ -20,6 +20,7 @@
     "mongoose-gen": "= 2.1.1",
     "mongoose-schema-jsonschema": "^1.1.15",
     "nodemon": "^1.18.3",
+    "request": "^2.88.0",
     "swagger-jsdoc": "1.9.7",
     "swagger-vue": "1.0.3"
   }
