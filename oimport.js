@@ -85,9 +85,6 @@ function fetchArray(ids) {
   }
 }
 
-function createHistoryRecord(type, rec) {
-
-}
 const APIS = buildFetchers();
 
 // loading internal libs
@@ -104,13 +101,13 @@ var db = mongoose.connection;
 process.argv.forEach(function (val, index, array) {
   console.log(index + ': ' + val);
 });
-let collections = SCHEMA.mongooseModelByName('collect'); collections.remove({}, (err) => console.log(err));
-let hist = SCHEMA.mongooseModelByName('_history'); hist.remove({}, (err) => console.log(err));
+let inventories = SCHEMA.mongooseModelByName('inventory'); inventories.remove({}, (err) => console.log(err));
+let hist = SCHEMA.mongooseModelByName('_history');
 
 
 
 let l = ['0','en','nl','fr','de','ar','it','gr']
-let s = JSON.parse(fs.readFileSync(`${CONFIG.import.dir}/collections.json`, 'utf8'));
+let s = JSON.parse(fs.readFileSync(`${CONFIG.import.dir}/inventories.json`, 'utf8'));
 let refs = JSON.parse(fs.readFileSync(`${CONFIG.import.dir}/references.json`, 'utf8'));
 let ids = [];
 let hist_import = [];
@@ -120,12 +117,18 @@ for (var i = 0; i < s.length; i++) {
   let a = {
     name: s[i].title[0],
     identifier: [`ADLIB:${s[i].priref[0]}`],
-    _history: []
+    _history: [],
+    classification: [],
+    partOf: refs[`ADLIB:${s[i]['part_of_reference.lref'][0]}`]
   }
   if(s[i].description) a.description = s[i].description[0];
   if(s[i]['production.date.start']) a.beginOfExistence = s[i]['production.date.start'][0];
   if(s[i]['production.date.end']) a.endOfExistence = s[i]['production.date.end'][0];
-  if(s[i]['current_owner.lref']) a.collector = refs[`ADLIBPEOPLE:${s[i]['current_owner.lref'][0]}`];
+  if(s[i]['production.notes']) a.comments = s[i]['production.notes'];
+  if(s[i]['current_owner.lref']) a.current_owner = refs[`ADLIBPEOPLE:${s[i]['current_owner.lref'][0]}`];
+  if(s[i]['alternative_number'] && s[i]['alternative_number.institution']) a.identifier.push(`${s[i]['alternative_number.institution'][0]}:${s[i]['alternative_number'][0]}`);
+  if(s[i]['phys_characteristic.keyword.lref']) a.classification.push({descriptor: refs[`ADLIBTHESAU:${s[i]['phys_characteristic.keyword.lref'][0]}`]});
+
   ids.push(a);
   let b = {
     "editDate": Date.now(),
@@ -151,14 +154,14 @@ hist.insertMany(hist_import, function(error, docs) {
     for (let i = 0; i < docs.length; i++) {
       ids[i]._history.push(docs[i]['_id']);
     }
-    collections.insertMany(ids, function(error, docs) {
+    inventories.insertMany(ids, function(error, docs) {
       for (let i = 0; i < docs.length; i++) {
         refs[docs[i]['identifier'][0]] = docs[i]['_id'];
       }
       fs.writeFileSync('import/references.json', JSON.stringify(refs, null, 2));
-      fs.writeFileSync('import/collection_mapped.json', JSON.stringify(ids, null, 2));
-      fs.writeFileSync('import/collection_history_import.json', JSON.stringify(hist_import, null, 2));
-      fs.writeFileSync('import/collection_history_create.json', JSON.stringify(hist_create, null, 2));
+      fs.writeFileSync('import/inventories_mapped.json', JSON.stringify(ids, null, 2));
+      fs.writeFileSync('import/inventories_history_import.json', JSON.stringify(hist_import, null, 2));
+      fs.writeFileSync('import/inventories_history_create.json', JSON.stringify(hist_create, null, 2));
     });
   });
 });

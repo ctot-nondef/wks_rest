@@ -1,16 +1,21 @@
 {
   "name":{"type": "String", "required": true},
   "creator":{"type":"ObjectID", "ref":"actor"},
+  "current_owner":{"type":"ObjectID", "ref":"actor"},
   "place":{"type": "ObjectID", "ref":"descriptor"},
   "identifier":[{"type":"String","match":""}],
   "pagecount":{"type": "Number", "min": 0},
-  "startdate":{"type": "Date"},
-  "enddate":{"type": "Date"},
+  "beginOfExistence":{"type": "Date"},
+  "endOfExistence":{"type": "Date"},
   "images":[{
       "name":{"type":"String", "required":true},
       "reference":{"type":"ObjectID", "ref":"assetref", "required":true}
   }],
   "references":[{"type":"String"}],
   "comments":[{"type":"String"}],
+  "classification":[{
+    "aspect": { "type":"ObjectID", "ref": "descriptor" },
+    "descriptor": { "type":"ObjectID", "ref": "descriptor" }
+  }],
   "partOf":{"type":"ObjectID", "ref":"collect"}
 }

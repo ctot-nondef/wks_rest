@@ -1,0 +1,242 @@
+[
+  {
+    "name": "VK.Adamovics.1856",
+    "identifier": [
+      "ADLIB:150000011",
+      "Wienbibliothek:A-54290"
+    ],
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5ba9f8e52a1ce5002683a26d"
+      }
+    ],
+    "partOf": "5baa1ddce562470267cc4171",
+    "description": "Die Auktion fand 1856 in: Wien, Nr. 804 Seilerstätte, Ecke Weihburggasse 2. Stock statt; angeboten wurden Gemälde und 2 Handzeichnungen.",
+    "beginOfExistence": "1856",
+    "endOfExistence": "1856",
+    "current_owner": "5ba9f8e32a1ce50026839503"
+  },
+  {
+    "name": "Inv.Salzmann",
+    "identifier": [
+      "ADLIB:150000067",
+      "Haus-, Hof- und Staatsarchiv [OeStA]:AT-OeStA/HHStA SB Nachlass Waldstein-Wartenberg 11"
+    ],
+    "_history": [],
+    "classification": [],
+    "partOf": "5baa1ddce562470267cc4175"
+  },
+  {
+    "name": "Harrach Inventar 2. September 1745",
+    "identifier": [
+      "ADLIB:150000286"
+    ],
+    "_history": [],
+    "classification": [],
+    "partOf": "5baa1ddce562470267cc4174",
+    "beginOfExistence": "1745-09-02",
+    "endOfExistence": "02091745"
+  },
+  {
+    "name": "SK.Geiger.1922",
+    "identifier": [
+      "ADLIB:150000350"
+    ],
+    "_history": [],
+    "classification": [],
+    "partOf": "5baa1ddce562470267cc4172",
+    "beginOfExistence": "1922",
+    "endOfExistence": "1922"
+  },
+  {
+    "name": "SK.Geiger.1948",
+    "identifier": [
+      "ADLIB:150000395"
+    ],
+    "_history": [],
+    "classification": [],
+    "partOf": "5baa1ddce562470267cc4172",
+    "beginOfExistence": "1948",
+    "endOfExistence": "1948"
+  },
+  {
+    "name": "VK.Geiger.1920",
+    "identifier": [
+      "ADLIB:150000435"
+    ],
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5ba9f8e52a1ce5002683a26d"
+      }
+    ],
+    "partOf": "5baa1ddce562470267cc4172",
+    "beginOfExistence": "1920",
+    "endOfExistence": "1920"
+  },
+  {
+    "name": "Katalog der vom Grafen Johann von Harrach seit dem Jahr 1783 zugekauften Bilder",
+    "identifier": [
+      "ADLIB:150000570"
+    ],
+    "_history": [],
+    "classification": [],
+    "partOf": "5baa1ddce562470267cc4174",
+    "beginOfExistence": "1783",
+    "endOfExistence": "1827"
+  },
+  {
+    "name": "Inventar Auersperg 1729 (Ljubljana, Fürstenhof)",
+    "identifier": [
+      "ADLIB:150001179",
+      "Haus-, Hof- und Staatsarchiv [OeStA]:AT-OeStA/HHStA SB Auersperg VII-A-14-4-2"
+    ],
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5ba9f8e52a1ce5002683a3a0"
+      }
+    ],
+    "partOf": "5baa1ddce562470267cc4173",
+    "beginOfExistence": "1729",
+    "endOfExistence": "1729",
+    "current_owner": "5ba9f8e42a1ce50026839de3"
+  },
+  {
+    "name": "Inventar Auersperg 1731 (Ljubljana, Fürstenhof)",
+    "identifier": [
+      "ADLIB:150001226",
+      "Haus-, Hof- und Staatsarchiv [OeStA]:AT-OeStA/HHStA SB Auersperg VII-A-14-4-3"
+    ],
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5ba9f8e52a1ce5002683a3a0"
+      }
+    ],
+    "partOf": "5baa1ddce562470267cc4173",
+    "beginOfExistence": "1731",
+    "endOfExistence": "1731",
+    "current_owner": "5ba9f8e42a1ce50026839de3"
+  },
+  {
+    "name": "Inventar Auersperg 1762 (Ljubljana, Fürstenhof)",
+    "identifier": [
+      "ADLIB:150001282",
+      "Haus-, Hof- und Staatsarchiv [OeStA]:AT-OeStA/HHStA SB Auersperg VII-A-14-4-1"
+    ],
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5ba9f8e52a1ce5002683a3a0"
+      }
+    ],
+    "partOf": "5baa1ddce562470267cc4173",
+    "beginOfExistence": "1761",
+    "endOfExistence": "1762",
+    "current_owner": "5ba9f8e42a1ce50026839de3"
+  },
+  {
+    "name": "Inventar Auersperg 1707 (Ljubljana, Fürstenhof)",
+    "identifier": [
+      "ADLIB:150001664",
+      "Haus-, Hof- und Staatsarchiv [OeStA]:AT-OeStA/HHStA SB Auersperg I-A-2-8-8"
+    ],
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5ba9f8e52a1ce5002683a3a0"
+      }
+    ],
+    "partOf": "5baa1ddce562470267cc4173",
+    "beginOfExistence": "1707",
+    "endOfExistence": "1707",
+    "current_owner": "5ba9f8e42a1ce50026839de3"
+  },
+  {
+    "name": "Inventar Auersperg 1678 (Ljubljana, Fürstenhof)",
+    "identifier": [
+      "ADLIB:150001666",
+      "Haus-, Hof- und Staatsarchiv [OeStA]:AT-OeStA/HHStA SB Auersperg I-A-2-8-8"
+    ],
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5ba9f8e52a1ce5002683a3a0"
+      }
+    ],
+    "partOf": "5baa1ddce562470267cc4173",
+    "current_owner": "5ba9f8e42a1ce50026839de3"
+  },
+  {
+    "name": "Inventarium Palais Harrach auf der Freyung 5. August 1753",
+    "identifier": [
+      "ADLIB:150002973"
+    ],
+    "_history": [],
+    "classification": [],
+    "partOf": "5baa1ddce562470267cc4174"
+  },
+  {
+    "name": "Inventar Auersperg 1677 (Seisenberg)",
+    "identifier": [
+      "ADLIB:150003117",
+      "Haus-, Hof- und Staatsarchiv [OeStA]:AT-OeStA/HHStA SB Auersperg I-A-2-7-8"
+    ],
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5ba9f8e52a1ce5002683a3a0"
+      }
+    ],
+    "partOf": "5baa1ddce562470267cc4173",
+    "current_owner": "5ba9f8e42a1ce50026839de3"
+  },
+  {
+    "name": "Inventar Auersperg 1678 (Gottschee)",
+    "identifier": [
+      "ADLIB:150003192",
+      "Haus-, Hof- und Staatsarchiv [OeStA]:AT-OeStA/HHStA SB Auersperg I-A-2-7-8"
+    ],
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5ba9f8e52a1ce5002683a3a0"
+      }
+    ],
+    "partOf": "5baa1ddce562470267cc4173",
+    "current_owner": "5ba9f8e42a1ce50026839de3"
+  },
+  {
+    "name": "Inventar Auersperg 1658 (Wien)",
+    "identifier": [
+      "ADLIB:150003904",
+      "Haus-, Hof- und Staatsarchiv [OeStA]:AT-OeStA/HHStA SB Auersperg I-A-2-7"
+    ],
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5ba9f8e52a1ce5002683a3a0"
+      }
+    ],
+    "partOf": "5baa1ddce562470267cc4173",
+    "beginOfExistence": "1658",
+    "endOfExistence": "",
+    "current_owner": "5ba9f8e42a1ce50026839de3"
+  },
+  {
+    "name": "Inventar Auersperg 1762 (Wolf Ferdinand Polz eigenes Vermögen)",
+    "identifier": [
+      "ADLIB:150003908",
+      "Haus-, Hof- und Staatsarchiv [OeStA]:AT-OeStA/HHStA SB Auersperg VII-A-14-4-1"
+    ],
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5ba9f8e52a1ce5002683a3a0"
+      }
+    ],
+    "partOf": "5baa1ddce562470267cc4173"
+  }
+]
