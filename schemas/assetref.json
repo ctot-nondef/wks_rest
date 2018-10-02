@@ -1,6 +1,7 @@
 {
   "name":{"type":"string", "required":true},
   "identifier":[{"type":"String","match":""}],
+  "source":{"type":"string"},
   "path":{"type":"string", "required":true},
   "mimetype":{"type":"string", "required":true}
 }

@@ -4,7 +4,8 @@
   "partOf":{"type":"ObjectID", "ref":"inventory", "required": true},
   "creator":[{
     "id": { "type":"ObjectID", "ref":"actor"},
-    "role": { "type":"ObjectID", "ref":"descriptor"}
+    "role": { "type":"ObjectID", "ref":"descriptor"},
+    "note": { "type":"String"}
   }],
   "originalTitle":{"type":"String"},
   "transscription":{"type":"String"},
@@ -15,7 +16,8 @@
     "aspect":{"type":"ObjectID", "ref": "descriptor"},
     "unit": {"type":"ObjectID", "ref": "descriptor"}
   }],
-  "created":{"type": "Date"},
+  "created_start":{"type": "Date"},
+  "created_end":{"type": "Date"},
   "relations":[{
     "target":{"type":"ObjectID", "ref":"entry"},
     "kind":{"type":"String", "enum":["related", "identical", "probably identical"]}
