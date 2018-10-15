@@ -3,6 +3,7 @@
   "identifier":[{"type":"String","match":""}],
   "partOf":{"type":"ObjectID", "ref":"inventory", "required": true},
   "creator":[{
+    "_id":false,
     "id": { "type":"ObjectID", "ref":"actor"},
     "role": { "type":"ObjectID", "ref":"descriptor"},
     "note": { "type":"String"}
@@ -12,6 +13,7 @@
   "material":[{"type":"ObjectID", "ref":"descriptor"}],
   "technique":[{"type":"ObjectID", "ref":"descriptor"}],
   "dimensions": [{
+    "_id":false,
     "amount":{"type":"number"},
     "aspect":{"type":"ObjectID", "ref": "descriptor"},
     "unit": {"type":"ObjectID", "ref": "descriptor"}
@@ -19,22 +21,25 @@
   "created_start":{"type": "Date"},
   "created_end":{"type": "Date"},
   "relations":[{
+    "_id":false,
     "target":{"type":"ObjectID", "ref":"entry"},
     "kind":{"type":"String", "enum":["related", "identical", "probably identical"]}
   }],
   "transaction":[{"type":"ObjectID", "ref":"transaction"}],
   "classification":[{
+    "_id":false,
     "aspect": { "type":"ObjectID", "ref": "descriptor" },
     "descriptor": { "type":"ObjectID", "ref": "descriptor" }
   }],
   "images":[{
-      "name":{
-        "type":"String"
-      },
-      "reference":{
-        "type":"ObjectID",
-        "ref":"assetref"
-      }
+    "_id":false,
+    "name":{
+      "type":"String"
+    },
+    "reference":{
+      "type":"ObjectID",
+      "ref":"assetref"
+    }
   }],
   "references":[{"type":"String"}],
   "comments":[{"type":"String"}],
