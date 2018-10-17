@@ -29,6 +29,9 @@
         "qualifier": "Landschaft"
       }
     ],
+    "currentOwner": [
+      "5bb34663eb982008f504d5ef"
+    ],
     "dimensions": [
       {
         "amount": "108.5",
@@ -77,6 +80,9 @@
         "qualifier": ""
       }
     ],
+    "currentOwner": [
+      null
+    ],
     "dimensions": [
       {
         "amount": "136.2",
@@ -124,6 +130,7 @@
         "qualifier": ""
       }
     ],
+    "currentOwner": [],
     "dimensions": [
       {
         "amount": "162",
@@ -171,6 +178,7 @@
         "qualifier": ""
       }
     ],
+    "currentOwner": [],
     "dimensions": [
       {
         "amount": "251",
@@ -219,6 +227,7 @@
         "qualifier": ""
       }
     ],
+    "currentOwner": [],
     "dimensions": [
       {
         "amount": "251",
@@ -267,6 +276,7 @@
         "qualifier": ""
       }
     ],
+    "currentOwner": [],
     "dimensions": [
       {
         "amount": "253",
@@ -315,6 +325,7 @@
         "qualifier": ""
       }
     ],
+    "currentOwner": [],
     "dimensions": [
       {
         "amount": "254",
@@ -363,6 +374,7 @@
         "qualifier": ""
       }
     ],
+    "currentOwner": [],
     "dimensions": [
       {
         "amount": "250",
@@ -411,6 +423,7 @@
         "qualifier": ""
       }
     ],
+    "currentOwner": [],
     "dimensions": [
       {
         "amount": "251",
@@ -459,6 +472,7 @@
         "qualifier": ""
       }
     ],
+    "currentOwner": [],
     "dimensions": [
       {
         "amount": "354",
@@ -507,6 +521,7 @@
         "qualifier": ""
       }
     ],
+    "currentOwner": [],
     "dimensions": [
       {
         "amount": "515",
@@ -556,6 +571,7 @@
         "qualifier": ""
       }
     ],
+    "currentOwner": [],
     "dimensions": [
       {
         "amount": "187",
@@ -595,6 +611,7 @@
         "qualifier": ""
       }
     ],
+    "currentOwner": [],
     "dimensions": [
       {
         "amount": "254",
@@ -644,6 +661,7 @@
         "qualifier": ""
       }
     ],
+    "currentOwner": [],
     "dimensions": [
       {
         "amount": "218",
@@ -689,6 +707,7 @@
         "qualifier": ""
       }
     ],
+    "currentOwner": [],
     "dimensions": [
       {
         "amount": "177",
@@ -735,6 +754,7 @@
         "qualifier": ""
       }
     ],
+    "currentOwner": [],
     "dimensions": [
       {
         "amount": "147",
@@ -781,6 +801,7 @@
         "qualifier": ""
       }
     ],
+    "currentOwner": [],
     "dimensions": [
       {
         "amount": "266",
@@ -827,6 +848,7 @@
         "qualifier": ""
       }
     ],
+    "currentOwner": [],
     "dimensions": [
       {
         "amount": "389",
@@ -874,6 +896,7 @@
         "qualifier": ""
       }
     ],
+    "currentOwner": [],
     "dimensions": [
       {
         "amount": "287",
@@ -923,6 +946,7 @@
         "qualifier": ""
       }
     ],
+    "currentOwner": [],
     "dimensions": [
       {
         "amount": "263",
@@ -973,6 +997,9 @@
         "qualifier": ""
       }
     ],
+    "currentOwner": [
+      "5bb34663eb982008f504d5ef"
+    ],
     "dimensions": [
       {
         "amount": "66",
@@ -1020,6 +1047,9 @@
         "qualifier": ""
       }
     ],
+    "currentOwner": [
+      "5bb34664eb982008f504df6d"
+    ],
     "dimensions": [
       {
         "amount": "49",
@@ -1057,6 +1087,11 @@
         "qualifier": ""
       }
     ],
+    "currentOwner": [
+      "5bb34664eb982008f504df72",
+      "5bb34664eb982008f504df73",
+      "5bb34664eb982008f504df73"
+    ],
     "dimensions": [
       {
         "amount": "43",
@@ -1077,7 +1112,7 @@
     ],
     "images": [],
     "originalTitle": "Parodie op \"Ne sutor ultra crepidam\"",
-    "transscription": " Olieverf op hout\n Signatuur en inscriptie onderaan links op de bank : JSenave.PINX / natif de Loo. ; titel naar rechts onderaan op de grondbouw van de muur : PARODIE DE.Ne sutor ultra crepidam\n Afmetingen: 43 x 54,5\n Herkomst: Geschonken door de Vrienden van de Koninklijke Musea van de Staat, Brussel, 1938",
+    "description": " Olieverf op hout\n Signatuur en inscriptie onderaan links op de bank : JSenave.PINX / natif de Loo. ; titel naar rechts onderaan op de grondbouw van de muur : PARODIE DE.Ne sutor ultra crepidam\n Afmetingen: 43 x 54,5\n Herkomst: Geschonken door de Vrienden van de Koninklijke Musea van de Staat, Brussel, 1938",
     "comments": [
       ""
     ]
@@ -1105,6 +1140,7 @@
         "qualifier": ""
       }
     ],
+    "currentOwner": [],
     "dimensions": [
       {
         "amount": "29",
@@ -1123,7 +1159,7 @@
     "material": [],
     "images": [],
     "originalTitle": "Rembrandts Mutter im Mantel",
-    "transscription": "Artist:\n Attributed to Christian Wilhelm Ernst Dietrich (German, 1712-1774)\nTitle:\n Rembrandts Mutter im Mantel (after Rembrandt) (+ Bildnis eines alten Orientalen; 2 works) \nMedium:\n oil on wood\nSize:\n 39 x 29 cm. (15.4 x 11.4 in.)",
+    "description": "Artist:\n Attributed to Christian Wilhelm Ernst Dietrich (German, 1712-1774)\nTitle:\n Rembrandts Mutter im Mantel (after Rembrandt) (+ Bildnis eines alten Orientalen; 2 works) \nMedium:\n oil on wood\nSize:\n 39 x 29 cm. (15.4 x 11.4 in.)",
     "comments": [
       ""
     ]
@@ -1140,6 +1176,9 @@
         "id": "5bb34663eb982008f504d44f",
         "qualifier": ""
       }
+    ],
+    "currentOwner": [
+      "5bb34664eb982008f504dfb1"
     ],
     "dimensions": [
       {
@@ -1187,6 +1226,9 @@
         "id": "5bb34664eb982008f504de73",
         "qualifier": ""
       }
+    ],
+    "currentOwner": [
+      "5bb34663eb982008f504d873"
     ],
     "dimensions": [
       {

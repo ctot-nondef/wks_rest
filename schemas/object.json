@@ -1,6 +1,6 @@
 {
   "name":{"type": "String", "required": true},
-  "currentOwner":{"type":"ObjectID", "ref":"actor"},
+  "currentOwner":[{"type":"ObjectID", "ref":"actor"}],
   "identifier":[{"type":"String","match":""}],
   "creator":[{
     "_id":false,

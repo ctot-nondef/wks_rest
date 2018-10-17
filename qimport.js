@@ -122,6 +122,7 @@ for (var i = 0; i < s.length; i++) {
     _history: [],
     classification: [],
     creator: [],
+    currentOwner: [],
     dimensions: [],
     technique: [],
     material: [],
@@ -141,6 +142,12 @@ for (var i = 0; i < s.length; i++) {
         role: refs[`ADLIBTHESAU:${s[i]['creator.role.lref'][q]}`],
         qualifier: s[i]['creator.qualifier'][q],
       })
+    }
+  }
+  if(s[i]['institution.name.lref']) {
+    for (var q = 0; q < s[i]['institution.name.lref'].length; q++) {
+      console.log(`ADLIBPEOPLE:${s[i]['institution.name.lref'][q]}`, refs[`ADLIBPEOPLE:${s[i]['institution.name.lref'][q]}`]);
+      a.currentOwner.push(refs[`ADLIBPEOPLE:${s[i]['institution.name.lref'][q]}`]);
     }
   }
   if(s[i]['phys_characteristic.keyword.lref']) {
@@ -204,40 +211,40 @@ for (var i = 0; i < s.length; i++) {
   }
 }
 
-fs.writeFileSync('import/objects_mapped.json', JSON.stringify(ids, null, 2));
+// fs.writeFileSync('import/objects_mapped.json', JSON.stringify(ids, null, 2));
 fs.writeFileSync('import/objects_assets.json', JSON.stringify(assets, null, 2));
 
-// assetrefs.insertMany(assets, function(error, docs) {
-//   for (let i = 0; i < docs.length; i++) {
-//     for (let q = 0; q < ids.length; q++) {
-//       if(s[q]['reproduction.reference'] && docs[i].name == s[q]['reproduction.reference'][0]) {
-//         ids[q].images.push({
-//           name: s[q]['reproduction.reference'][0],
-//           reference: docs[i]['_id']
-//         });
-//       }
-//     }
-//   }
-//   hist.insertMany(hist_import, function(error, docs) {
-//     for (let i = 0; i < docs.length; i++) {
-//       ids[i]._history.push(docs[i]['_id']);
-//     }
-//     hist.insertMany(hist_create, function(error, docs) {
-//       for (let i = 0; i < docs.length; i++) {
-//         ids[i]._history.push(docs[i]['_id']);
-//       }
-//       entries.insertMany(ids, function(error, docs) {
-//         for (let i = 0; i < docs.length; i++) {
-//           refs[docs[i]['identifier'][0]] = docs[i]['_id'];
-//         }
-//         fs.writeFileSync('import/references.json', JSON.stringify(refs, null, 2));
-//         fs.writeFileSync('import/entries_mapped.json', JSON.stringify(ids, null, 2));
-//         fs.writeFileSync('import/entries_history_import.json', JSON.stringify(hist_import, null, 2));
-//         fs.writeFileSync('import/entries_history_create.json', JSON.stringify(hist_create, null, 2));
-//       });
-//     });
-//   });
-// });
+assetrefs.insertMany(assets, function(error, docs) {
+  for (let i = 0; i < docs.length; i++) {
+    for (let q = 0; q < ids.length; q++) {
+      if(s[q]['reproduction.reference'] && docs[i].name == s[q]['reproduction.reference'][0]) {
+        ids[q].images.push({
+          name: s[q]['reproduction.reference'][0],
+          reference: docs[i]['_id']
+        });
+      }
+    }
+  }
+  hist.insertMany(hist_import, function(error, docs) {
+    for (let i = 0; i < docs.length; i++) {
+      ids[i]._history.push(docs[i]['_id']);
+    }
+    hist.insertMany(hist_create, function(error, docs) {
+      for (let i = 0; i < docs.length; i++) {
+        ids[i]._history.push(docs[i]['_id']);
+      }
+      objects.insertMany(ids, function(error, docs) {
+        for (let i = 0; i < docs.length; i++) {
+          refs[docs[i]['identifier'][0]] = docs[i]['_id'];
+        }
+        fs.writeFileSync('import/references.json', JSON.stringify(refs, null, 2));
+        fs.writeFileSync('import/objects_mapped.json', JSON.stringify(ids, null, 2));
+        fs.writeFileSync('import/objects_history_import.json', JSON.stringify(hist_import, null, 2));
+        fs.writeFileSync('import/objects_history_create.json', JSON.stringify(hist_create, null, 2));
+      });
+    });
+  });
+});
 
 
 // let o = s.adlibJSON.recordList.record;
