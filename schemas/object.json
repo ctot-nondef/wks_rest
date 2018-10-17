@@ -3,31 +3,39 @@
   "currentOwner":{"type":"ObjectID", "ref":"actor"},
   "identifier":[{"type":"String","match":""}],
   "creator":[{
-    "id": { "type":"ObjectID", "ref":"person" },
-    "role": { "type":"ObjectID", "ref":"descriptor" }
+    "_id":false,
+    "id": { "type":"ObjectID", "ref":"actor"},
+    "role": { "type":"ObjectID", "ref":"descriptor"},
+    "note": { "type":"String"}
   }],
   "originaltitle":{"type":"String"},
+  "description":{"type":"String"},
   "material":[{"type":"ObjectID", "ref":"descriptor"}],
   "technique":[{"type":"ObjectID", "ref":"descriptor"}],
   "dimensions": [{
-    "amount":{"type":"number" },
-    "aspect":{"type":"ObjectID", "ref": "descriptor" },
-    "unit": {"type":"ObjectID", "ref": "descriptor" }
+    "_id":false,
+    "amount":{"type":"number"},
+    "aspect":{"type":"ObjectID", "ref": "descriptor"},
+    "unit": {"type":"ObjectID", "ref": "descriptor"}
   }],
-  "created":{"type": "Date"},
+  "created_start":{"type": "Date"},
+  "created_end":{"type": "Date"},
   "classification":[{
+    "_id":false,
     "aspect": { "type":"ObjectID", "ref": "descriptor" },
     "descriptor": { "type":"ObjectID", "ref": "descriptor" }
   }],
   "images":[{
-      "name":{
-        "type":"String"
-      },
-      "reference":{
-        "type":"ObjectID",
-        "ref":"assetref"
-      }
+    "_id":false,
+    "name":{
+      "type":"String"
+    },
+    "reference":{
+      "type":"ObjectID",
+      "ref":"assetref"
+    }
   }],
   "references":[{"type":"String"}],
-  "comments":[{"type":"String"}]
+  "comments":[{"type":"String"}],
+  "_history":[{"type":"ObjectID", "ref":"_history"}]
 }

@@ -1,0 +1,1215 @@
+[
+  {
+    "identifier": [
+      "ADLIB:150000042"
+    ],
+    "name": "KHM GG 3692",
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5bb34664eb982008f504e228"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e379"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e2be"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e02d"
+      }
+    ],
+    "creator": [
+      {
+        "id": "5bb34664eb982008f504dbd1",
+        "qualifier": ""
+      },
+      {
+        "id": "5bb34664eb982008f504dba5",
+        "qualifier": "Landschaft"
+      }
+    ],
+    "dimensions": [
+      {
+        "amount": "108.5",
+        "aspect": "5bb34664eb982008f504e024",
+        "unit": "5bb34664eb982008f504e028"
+      },
+      {
+        "amount": "138.5",
+        "aspect": "5bb34664eb982008f504e027",
+        "unit": "5bb34664eb982008f504e028"
+      }
+    ],
+    "technique": [],
+    "material": [
+      "5bb34664eb982008f504e372"
+    ],
+    "images": [],
+    "originalTitle": "Landschaft mit Rudolf von Habsburg und dem Priester",
+    "created_start": "1600",
+    "created_end": "1699",
+    "comments": [
+      "",
+      ""
+    ]
+  },
+  {
+    "identifier": [
+      "ADLIB:150000044"
+    ],
+    "name": "DIA 26.94",
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5bb34664eb982008f504e228"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e379"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e377"
+      }
+    ],
+    "creator": [
+      {
+        "id": "5bb34664eb982008f504dbd4",
+        "qualifier": ""
+      }
+    ],
+    "dimensions": [
+      {
+        "amount": "136.2",
+        "aspect": "5bb34664eb982008f504e024",
+        "unit": "5bb34664eb982008f504e028"
+      },
+      {
+        "amount": "123.2",
+        "aspect": "5bb34664eb982008f504e027",
+        "unit": "5bb34664eb982008f504e028"
+      }
+    ],
+    "technique": [],
+    "material": [
+      "5bb34664eb982008f504e071"
+    ],
+    "images": [],
+    "originalTitle": "Mystische Vermählung der heiligen Katharina",
+    "created_start": "1510",
+    "created_end": "1514",
+    "comments": [
+      ""
+    ]
+  },
+  {
+    "identifier": [
+      "ADLIB:150001529"
+    ],
+    "name": "MET 1976.236",
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5bb34664eb982008f504e218"
+      },
+      {
+        "descriptor": "5bb34665eb982008f504e3bc"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e377"
+      }
+    ],
+    "creator": [
+      {
+        "id": "5bb34663eb982008f504d44f",
+        "qualifier": ""
+      }
+    ],
+    "dimensions": [
+      {
+        "amount": "162",
+        "aspect": "5bb34664eb982008f504e024",
+        "unit": "5bb34664eb982008f504e14d"
+      },
+      {
+        "amount": "222",
+        "aspect": "5bb34664eb982008f504e027",
+        "unit": "5bb34664eb982008f504e14d"
+      }
+    ],
+    "technique": [
+      "5bb34664eb982008f504e086"
+    ],
+    "material": [],
+    "images": [],
+    "originalTitle": "Triumph von David",
+    "created_start": "1657",
+    "created_end": "1747",
+    "comments": [
+      ""
+    ]
+  },
+  {
+    "identifier": [
+      "ADLIB:150001585"
+    ],
+    "name": "Fitzwilliam 2628 D",
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5bb34664eb982008f504e377"
+      },
+      {
+        "descriptor": "5bb34665eb982008f504e45b"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e218"
+      }
+    ],
+    "creator": [
+      {
+        "id": "5bb34664eb982008f504df05",
+        "qualifier": ""
+      }
+    ],
+    "dimensions": [
+      {
+        "amount": "251",
+        "aspect": "5bb34664eb982008f504e024",
+        "unit": "5bb34664eb982008f504e14d"
+      },
+      {
+        "amount": "364",
+        "aspect": "5bb34664eb982008f504e027",
+        "unit": "5bb34664eb982008f504e14d"
+      }
+    ],
+    "technique": [
+      "5bb34664eb982008f504e086",
+      "5bb34664eb982008f504e351"
+    ],
+    "material": [],
+    "images": [],
+    "originalTitle": "Il primo abbocamento",
+    "created_start": "1759",
+    "created_end": "1790",
+    "comments": [
+      ""
+    ]
+  },
+  {
+    "identifier": [
+      "ADLIB:150001586"
+    ],
+    "name": "Fitzwilliam 2628 F",
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5bb34664eb982008f504e377"
+      },
+      {
+        "descriptor": "5bb34665eb982008f504e45b"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e218"
+      }
+    ],
+    "creator": [
+      {
+        "id": "5bb34664eb982008f504df05",
+        "qualifier": ""
+      }
+    ],
+    "dimensions": [
+      {
+        "amount": "251",
+        "aspect": "5bb34664eb982008f504e024",
+        "unit": "5bb34664eb982008f504e14d"
+      },
+      {
+        "amount": "355",
+        "aspect": "5bb34664eb982008f504e027",
+        "unit": "5bb34664eb982008f504e14d"
+      }
+    ],
+    "technique": [
+      "5bb34664eb982008f504e086",
+      "5bb34664eb982008f504e351"
+    ],
+    "material": [],
+    "images": [],
+    "originalTitle": "I rinfreschi",
+    "created_start": "1759",
+    "created_end": "1790",
+    "comments": [
+      ""
+    ]
+  },
+  {
+    "identifier": [
+      "ADLIB:150001587"
+    ],
+    "name": "Fitzwilliam 2628 E",
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5bb34664eb982008f504e377"
+      },
+      {
+        "descriptor": "5bb34665eb982008f504e45b"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e218"
+      }
+    ],
+    "creator": [
+      {
+        "id": "5bb34664eb982008f504df05",
+        "qualifier": ""
+      }
+    ],
+    "dimensions": [
+      {
+        "amount": "253",
+        "aspect": "5bb34664eb982008f504e024",
+        "unit": "5bb34664eb982008f504e14d"
+      },
+      {
+        "amount": "365",
+        "aspect": "5bb34664eb982008f504e027",
+        "unit": "5bb34664eb982008f504e14d"
+      }
+    ],
+    "technique": [
+      "5bb34664eb982008f504e086",
+      "5bb34664eb982008f504e351"
+    ],
+    "material": [],
+    "images": [],
+    "originalTitle": "L'anello",
+    "created_start": "1759",
+    "created_end": "1790",
+    "comments": [
+      ""
+    ]
+  },
+  {
+    "identifier": [
+      "ADLIB:150001588"
+    ],
+    "name": "Fitzwilliam 2628 B",
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5bb34664eb982008f504e377"
+      },
+      {
+        "descriptor": "5bb34665eb982008f504e45b"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e218"
+      }
+    ],
+    "creator": [
+      {
+        "id": "5bb34664eb982008f504df05",
+        "qualifier": ""
+      }
+    ],
+    "dimensions": [
+      {
+        "amount": "254",
+        "aspect": "5bb34664eb982008f504e024",
+        "unit": "5bb34664eb982008f504e14d"
+      },
+      {
+        "amount": "358",
+        "aspect": "5bb34664eb982008f504e027",
+        "unit": "5bb34664eb982008f504e14d"
+      }
+    ],
+    "technique": [
+      "5bb34664eb982008f504e086",
+      "5bb34664eb982008f504e351"
+    ],
+    "material": [],
+    "images": [],
+    "originalTitle": "Li sposi che vanno a spasso",
+    "created_start": "1759",
+    "created_end": "1790",
+    "comments": [
+      ""
+    ]
+  },
+  {
+    "identifier": [
+      "ADLIB:150001589"
+    ],
+    "name": "Fitzwilliam 2628 C",
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5bb34664eb982008f504e377"
+      },
+      {
+        "descriptor": "5bb34665eb982008f504e45b"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e218"
+      }
+    ],
+    "creator": [
+      {
+        "id": "5bb34664eb982008f504df05",
+        "qualifier": ""
+      }
+    ],
+    "dimensions": [
+      {
+        "amount": "250",
+        "aspect": "5bb34664eb982008f504e024",
+        "unit": "5bb34664eb982008f504e14d"
+      },
+      {
+        "amount": "350",
+        "aspect": "5bb34664eb982008f504e027",
+        "unit": "5bb34664eb982008f504e14d"
+      }
+    ],
+    "technique": [
+      "5bb34664eb982008f504e086",
+      "5bb34664eb982008f504e351"
+    ],
+    "material": [],
+    "images": [],
+    "originalTitle": "Accademia",
+    "created_start": "1759",
+    "created_end": "1790",
+    "comments": [
+      ""
+    ]
+  },
+  {
+    "identifier": [
+      "ADLIB:150001590"
+    ],
+    "name": "Fitzwilliam 2628 A",
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5bb34664eb982008f504e377"
+      },
+      {
+        "descriptor": "5bb34665eb982008f504e45b"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e218"
+      }
+    ],
+    "creator": [
+      {
+        "id": "5bb34664eb982008f504df05",
+        "qualifier": ""
+      }
+    ],
+    "dimensions": [
+      {
+        "amount": "251",
+        "aspect": "5bb34664eb982008f504e024",
+        "unit": "5bb34664eb982008f504e14d"
+      },
+      {
+        "amount": "352",
+        "aspect": "5bb34664eb982008f504e027",
+        "unit": "5bb34664eb982008f504e14d"
+      }
+    ],
+    "technique": [
+      "5bb34664eb982008f504e086",
+      "5bb34664eb982008f504e351"
+    ],
+    "material": [],
+    "images": [],
+    "originalTitle": "Il regalo",
+    "created_start": "1759",
+    "created_end": "1790",
+    "comments": [
+      ""
+    ]
+  },
+  {
+    "identifier": [
+      "ADLIB:150001591"
+    ],
+    "name": "Fitzwilliam 2628 G",
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5bb34664eb982008f504e377"
+      },
+      {
+        "descriptor": "5bb34665eb982008f504e45b"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e218"
+      }
+    ],
+    "creator": [
+      {
+        "id": "5bb34664eb982008f504df05",
+        "qualifier": ""
+      }
+    ],
+    "dimensions": [
+      {
+        "amount": "354",
+        "aspect": "5bb34664eb982008f504e024",
+        "unit": "5bb34664eb982008f504e14d"
+      },
+      {
+        "amount": "366",
+        "aspect": "5bb34664eb982008f504e027",
+        "unit": "5bb34664eb982008f504e14d"
+      }
+    ],
+    "technique": [
+      "5bb34664eb982008f504e086",
+      "5bb34664eb982008f504e351"
+    ],
+    "material": [],
+    "images": [],
+    "originalTitle": "La buona notte",
+    "created_start": "1759",
+    "created_end": "1790",
+    "comments": [
+      ""
+    ]
+  },
+  {
+    "identifier": [
+      "ADLIB:150001592"
+    ],
+    "name": "Fitzwilliam 1978",
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5bb34664eb982008f504e377"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e218"
+      },
+      {
+        "descriptor": "5bb34665eb982008f504e3bc"
+      }
+    ],
+    "creator": [
+      {
+        "id": "5bb34664eb982008f504dbae",
+        "qualifier": ""
+      }
+    ],
+    "dimensions": [
+      {
+        "amount": "515",
+        "aspect": "5bb34664eb982008f504e024",
+        "unit": "5bb34664eb982008f504e14d"
+      },
+      {
+        "amount": "410",
+        "aspect": "5bb34664eb982008f504e027",
+        "unit": "5bb34664eb982008f504e14d"
+      }
+    ],
+    "technique": [
+      "5bb34664eb982008f504e086"
+    ],
+    "material": [
+      "5bb34664eb982008f504e087"
+    ],
+    "images": [],
+    "originalTitle": "Christus am Kreuz",
+    "created_start": "1535",
+    "created_end": "1612",
+    "comments": [
+      ""
+    ]
+  },
+  {
+    "identifier": [
+      "ADLIB:150001593"
+    ],
+    "name": "Fitzwilliam 2249",
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5bb34665eb982008f504e43c"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e377"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e218"
+      }
+    ],
+    "creator": [
+      {
+        "id": "5bb34664eb982008f504df08",
+        "qualifier": ""
+      }
+    ],
+    "dimensions": [
+      {
+        "amount": "187",
+        "aspect": "5bb34664eb982008f504e024",
+        "unit": "5bb34664eb982008f504e14d"
+      },
+      {
+        "amount": "216",
+        "aspect": "5bb34664eb982008f504e027",
+        "unit": "5bb34664eb982008f504e14d"
+      }
+    ],
+    "technique": [
+      "5bb34664eb982008f504e0e8",
+      "5bb34664eb982008f504e1fa",
+      "5bb34664eb982008f504e086"
+    ],
+    "material": [],
+    "images": [],
+    "originalTitle": "liegende Figur eines Mannes",
+    "created_start": "1655",
+    "created_end": "1716",
+    "comments": [
+      ""
+    ]
+  },
+  {
+    "identifier": [
+      "ADLIB:150001594"
+    ],
+    "name": "Fitzwilliam 2116",
+    "_history": [],
+    "classification": [],
+    "creator": [
+      {
+        "id": "5bb34664eb982008f504df09",
+        "qualifier": ""
+      }
+    ],
+    "dimensions": [
+      {
+        "amount": "254",
+        "aspect": "5bb34664eb982008f504e024",
+        "unit": "5bb34664eb982008f504e14d"
+      },
+      {
+        "amount": "183",
+        "aspect": "5bb34664eb982008f504e027",
+        "unit": "5bb34664eb982008f504e14d"
+      }
+    ],
+    "technique": [
+      "5bb34664eb982008f504e086"
+    ],
+    "material": [
+      "5bb34664eb982008f504e087"
+    ],
+    "images": [],
+    "originalTitle": "Studie für eine Figur des gekreuzigten Christus",
+    "created_start": "1465",
+    "created_end": "1524",
+    "comments": [
+      ""
+    ]
+  },
+  {
+    "identifier": [
+      "ADLIB:150001595"
+    ],
+    "name": "Fitzwilliam 2613",
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5bb34665eb982008f504e43c"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e377"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e218"
+      }
+    ],
+    "creator": [
+      {
+        "id": "5bb34664eb982008f504dd08",
+        "qualifier": ""
+      }
+    ],
+    "dimensions": [
+      {
+        "amount": "218",
+        "aspect": "5bb34664eb982008f504e024",
+        "unit": "5bb34664eb982008f504e14d"
+      },
+      {
+        "amount": "370",
+        "aspect": "5bb34664eb982008f504e027",
+        "unit": "5bb34664eb982008f504e14d"
+      }
+    ],
+    "technique": [
+      "5bb34664eb982008f504e0e8"
+    ],
+    "material": [],
+    "images": [],
+    "originalTitle": "Gruppe von Orientalen, Köpfen und einem Schädel",
+    "comments": [
+      ""
+    ]
+  },
+  {
+    "identifier": [
+      "ADLIB:150001596"
+    ],
+    "name": "Fitzwilliam 2615",
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5bb34665eb982008f504e3bc"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e377"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e218"
+      }
+    ],
+    "creator": [
+      {
+        "id": "5bb34664eb982008f504dd08",
+        "qualifier": ""
+      }
+    ],
+    "dimensions": [
+      {
+        "amount": "177",
+        "aspect": "5bb34664eb982008f504e024",
+        "unit": "5bb34664eb982008f504e14d"
+      },
+      {
+        "amount": "244",
+        "aspect": "5bb34664eb982008f504e027",
+        "unit": "5bb34664eb982008f504e14d"
+      }
+    ],
+    "technique": [
+      "5bb34664eb982008f504e0e8",
+      "5bb34664eb982008f504e1fa"
+    ],
+    "material": [],
+    "images": [],
+    "originalTitle": "Gottvater in den Wolken",
+    "comments": [
+      ""
+    ]
+  },
+  {
+    "identifier": [
+      "ADLIB:150001597"
+    ],
+    "name": "Fitzwilliam 2607",
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5bb34665eb982008f504e3bc"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e218"
+      },
+      {
+        "descriptor": "5bb34665eb982008f504e3ba"
+      }
+    ],
+    "creator": [
+      {
+        "id": "5bb34664eb982008f504dd77",
+        "qualifier": ""
+      }
+    ],
+    "dimensions": [
+      {
+        "amount": "147",
+        "aspect": "5bb34664eb982008f504e024",
+        "unit": "5bb34664eb982008f504e14d"
+      },
+      {
+        "amount": "225",
+        "aspect": "5bb34664eb982008f504e027",
+        "unit": "5bb34664eb982008f504e14d"
+      }
+    ],
+    "technique": [
+      "5bb34664eb982008f504e0e8",
+      "5bb34664eb982008f504e1fa"
+    ],
+    "material": [],
+    "images": [],
+    "originalTitle": "Heiliger Hieronymus vor einem Kruzifix betend, mit einem Löwen",
+    "comments": [
+      ""
+    ]
+  },
+  {
+    "identifier": [
+      "ADLIB:150001614"
+    ],
+    "name": "NGA USA 1988.26.1",
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5bb34664eb982008f504e377"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e218"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e378"
+      }
+    ],
+    "creator": [
+      {
+        "id": "5bb34664eb982008f504dd8a",
+        "qualifier": ""
+      }
+    ],
+    "dimensions": [
+      {
+        "amount": "266",
+        "aspect": "5bb34664eb982008f504e024",
+        "unit": "5bb34664eb982008f504e14d"
+      },
+      {
+        "amount": "378",
+        "aspect": "5bb34664eb982008f504e027",
+        "unit": "5bb34664eb982008f504e14d"
+      }
+    ],
+    "technique": [
+      "5bb34664eb982008f504e0e8"
+    ],
+    "material": [],
+    "images": [],
+    "created_start": "1727",
+    "created_end": "1729",
+    "comments": [
+      ""
+    ]
+  },
+  {
+    "identifier": [
+      "ADLIB:150001615"
+    ],
+    "name": "Getty Museum 87.GB.95",
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5bb34664eb982008f504e377"
+      },
+      {
+        "descriptor": "5bb34665eb982008f504e43c"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e218"
+      }
+    ],
+    "creator": [
+      {
+        "id": "5bb34664eb982008f504dd45",
+        "qualifier": ""
+      }
+    ],
+    "dimensions": [
+      {
+        "amount": "389",
+        "aspect": "5bb34664eb982008f504e024",
+        "unit": "5bb34664eb982008f504e14d"
+      },
+      {
+        "amount": "240",
+        "aspect": "5bb34664eb982008f504e027",
+        "unit": "5bb34664eb982008f504e14d"
+      }
+    ],
+    "technique": [
+      "5bb34664eb982008f504e086"
+    ],
+    "material": [],
+    "images": [],
+    "originalTitle": "Studie eines nackten Jünglings (recto), sitzender Mann (verso)",
+    "created_start": "1518",
+    "created_end": "1518",
+    "comments": [
+      ""
+    ]
+  },
+  {
+    "identifier": [
+      "ADLIB:150001616"
+    ],
+    "name": "British Mus 1920,1220.1",
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5bb34664eb982008f504e377"
+      },
+      {
+        "descriptor": "5bb34665eb982008f504e3bc"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e218"
+      }
+    ],
+    "creator": [
+      {
+        "id": "5bb34664eb982008f504dd82",
+        "qualifier": ""
+      }
+    ],
+    "dimensions": [
+      {
+        "amount": "287",
+        "aspect": "5bb34664eb982008f504e024",
+        "unit": "5bb34664eb982008f504e14d"
+      },
+      {
+        "amount": "224",
+        "aspect": "5bb34664eb982008f504e027",
+        "unit": "5bb34664eb982008f504e14d"
+      }
+    ],
+    "technique": [
+      "5bb34664eb982008f504e1fa"
+    ],
+    "material": [
+      "5bb34664eb982008f504e087"
+    ],
+    "images": [],
+    "originalTitle": "vor einem Kruzifix knieende Figur",
+    "created_start": "1652",
+    "created_end": "1713",
+    "comments": [
+      ""
+    ]
+  },
+  {
+    "identifier": [
+      "ADLIB:150001617"
+    ],
+    "name": "British Mus 1921,0614.8",
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5bb34664eb982008f504e377"
+      },
+      {
+        "descriptor": "5bb34665eb982008f504e3bc"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e218"
+      }
+    ],
+    "creator": [
+      {
+        "id": "5bb34664eb982008f504dd05",
+        "qualifier": ""
+      }
+    ],
+    "dimensions": [
+      {
+        "amount": "263",
+        "aspect": "5bb34664eb982008f504e024",
+        "unit": "5bb34664eb982008f504e14d"
+      },
+      {
+        "amount": "202",
+        "aspect": "5bb34664eb982008f504e027",
+        "unit": "5bb34664eb982008f504e14d"
+      }
+    ],
+    "technique": [
+      "5bb34664eb982008f504e0e8",
+      "5bb34664eb982008f504e086"
+    ],
+    "material": [
+      "5bb34664eb982008f504e087"
+    ],
+    "images": [],
+    "originalTitle": "Sturz der Giganten",
+    "created_start": "1756",
+    "created_end": "1756",
+    "comments": [
+      ""
+    ]
+  },
+  {
+    "identifier": [
+      "ADLIB:150003886"
+    ],
+    "name": "KHM GG 4056",
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5bb34664eb982008f504e228"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e375"
+      },
+      {
+        "descriptor": "5bb34665eb982008f504e3bc"
+      }
+    ],
+    "creator": [
+      {
+        "id": "5bb34664eb982008f504df43",
+        "qualifier": ""
+      }
+    ],
+    "dimensions": [
+      {
+        "amount": "66",
+        "aspect": "5bb34664eb982008f504e024",
+        "unit": "5bb34664eb982008f504e028"
+      },
+      {
+        "amount": "75.5",
+        "aspect": "5bb34664eb982008f504e027",
+        "unit": "5bb34664eb982008f504e028"
+      }
+    ],
+    "technique": [],
+    "material": [
+      "5bb34664eb982008f504e071"
+    ],
+    "images": [],
+    "originalTitle": "Flügelaltar: Erzengel Michael, heilige Hieronymus, Antonius von Padua, Sebastian und Stifterfigur (?)",
+    "created_start": "1510",
+    "created_end": "",
+    "comments": [
+      ""
+    ]
+  },
+  {
+    "identifier": [
+      "ADLIB:150003921"
+    ],
+    "name": "MDBK.Leipzig.1571",
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5bb34664eb982008f504e228"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e01c"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e375"
+      }
+    ],
+    "creator": [
+      {
+        "id": "5bb34664eb982008f504df6c",
+        "qualifier": ""
+      }
+    ],
+    "dimensions": [
+      {
+        "amount": "49",
+        "aspect": "5bb34664eb982008f504e024",
+        "unit": "5bb34664eb982008f504e028"
+      },
+      {
+        "amount": "40",
+        "aspect": "5bb34664eb982008f504e027",
+        "unit": "5bb34664eb982008f504e028"
+      }
+    ],
+    "technique": [
+      "5bb34664eb982008f504e03f"
+    ],
+    "material": [],
+    "images": [],
+    "originalTitle": "Kindergruppe im Fenster",
+    "created_start": "1676",
+    "created_end": "1676",
+    "comments": [
+      ""
+    ]
+  },
+  {
+    "identifier": [
+      "ADLIB:150003922"
+    ],
+    "name": "FAMB 6095",
+    "_history": [],
+    "classification": [],
+    "creator": [
+      {
+        "id": "5bb34664eb982008f504df70",
+        "qualifier": ""
+      }
+    ],
+    "dimensions": [
+      {
+        "amount": "43",
+        "aspect": "5bb34664eb982008f504e024",
+        "unit": "5bb34664eb982008f504e028"
+      },
+      {
+        "amount": "54",
+        "aspect": "5bb34664eb982008f504e027",
+        "unit": "5bb34664eb982008f504e028"
+      }
+    ],
+    "technique": [
+      "5bb34665eb982008f504e4a5"
+    ],
+    "material": [
+      "5bb34664eb982008f504e071"
+    ],
+    "images": [],
+    "originalTitle": "Parodie op \"Ne sutor ultra crepidam\"",
+    "transscription": " Olieverf op hout\n Signatuur en inscriptie onderaan links op de bank : JSenave.PINX / natif de Loo. ; titel naar rechts onderaan op de grondbouw van de muur : PARODIE DE.Ne sutor ultra crepidam\n Afmetingen: 43 x 54,5\n Herkomst: Geschonken door de Vrienden van de Koninklijke Musea van de Staat, Brussel, 1938",
+    "comments": [
+      ""
+    ]
+  },
+  {
+    "identifier": [
+      "ADLIB:150003923"
+    ],
+    "name": "artnet.dietrich",
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5bb34664eb982008f504e002"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e228"
+      },
+      {
+        "descriptor": "5bb34664eb982008f504e01c"
+      }
+    ],
+    "creator": [
+      {
+        "id": "5bb34664eb982008f504de3b",
+        "qualifier": ""
+      }
+    ],
+    "dimensions": [
+      {
+        "amount": "29",
+        "aspect": "5bb34664eb982008f504e027",
+        "unit": "5bb34664eb982008f504e028"
+      },
+      {
+        "amount": "39",
+        "aspect": "5bb34664eb982008f504e024",
+        "unit": "5bb34664eb982008f504e028"
+      }
+    ],
+    "technique": [
+      "5bb34665eb982008f504e4a5"
+    ],
+    "material": [],
+    "images": [],
+    "originalTitle": "Rembrandts Mutter im Mantel",
+    "transscription": "Artist:\n Attributed to Christian Wilhelm Ernst Dietrich (German, 1712-1774)\nTitle:\n Rembrandts Mutter im Mantel (after Rembrandt) (+ Bildnis eines alten Orientalen; 2 works) \nMedium:\n oil on wood\nSize:\n 39 x 29 cm. (15.4 x 11.4 in.)",
+    "comments": [
+      ""
+    ]
+  },
+  {
+    "identifier": [
+      "ADLIB:150004013"
+    ],
+    "name": "Getty.72.PA.24",
+    "_history": [],
+    "classification": [],
+    "creator": [
+      {
+        "id": "5bb34663eb982008f504d44f",
+        "qualifier": ""
+      }
+    ],
+    "dimensions": [
+      {
+        "amount": "165.4",
+        "aspect": "5bb34664eb982008f504e024",
+        "unit": "5bb34664eb982008f504e028"
+      },
+      {
+        "amount": "223.8",
+        "aspect": "5bb34664eb982008f504e027",
+        "unit": "5bb34664eb982008f504e028"
+      }
+    ],
+    "technique": [],
+    "material": [
+      "5bb34664eb982008f504e372"
+    ],
+    "images": [],
+    "originalTitle": "Tod der Messalina",
+    "created_start": "1712",
+    "created_end": "1712",
+    "comments": [
+      ""
+    ]
+  },
+  {
+    "identifier": [
+      "ADLIB:150004053"
+    ],
+    "name": "Rijksmuseum.SK-A-3879",
+    "_history": [],
+    "classification": [
+      {
+        "descriptor": "5bb34664eb982008f504e228"
+      },
+      {
+        "descriptor": "5bb34665eb982008f504e3b7"
+      },
+      {
+        "descriptor": "5bb34665eb982008f504e3bd"
+      }
+    ],
+    "creator": [
+      {
+        "id": "5bb34664eb982008f504de73",
+        "qualifier": ""
+      }
+    ],
+    "dimensions": [
+      {
+        "amount": "101",
+        "aspect": "5bb34664eb982008f504e024",
+        "unit": "5bb34664eb982008f504e028"
+      },
+      {
+        "amount": "179",
+        "aspect": "5bb34664eb982008f504e027",
+        "unit": "5bb34664eb982008f504e028"
+      }
+    ],
+    "technique": [],
+    "material": [
+      "5bb34664eb982008f504e372"
+    ],
+    "images": [],
+    "originalTitle": "Der holländische Botschafter auf seinem Weg nach Isfahan",
+    "created_start": "1651",
+    "created_end": "1652",
+    "comments": [
+      ""
+    ]
+  }
+]
