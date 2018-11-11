@@ -124,6 +124,9 @@ const APIS = buildFetchers();
 const SCHEMA = require('./lib/schema.js');
 SCHEMA.initSchemas();
 
+const USER = require('./lib/auth.js');
+USER.initUser();
+
 // init mongodb
 mongoose.connect(`mongodb://${CONFIG.db.user}:${CONFIG.db.pass}@${CONFIG.db.server}/${CONFIG.db.db}?authSource=test`, function(error) {
   console.log(error);
@@ -134,7 +137,8 @@ var db = mongoose.connection;
 process.argv.forEach(function (val, index, array) {
   console.log(index + ': ' + val);
 });
-let users = SCHEMA.mongooseModelByName('_user'); users.remove({}, (err) => console.log(err));
+let users = USER.User;
+//SCHEMA.mongooseModelByName('_user'); users.remove({}, (err) => console.log(err));
 let assets = SCHEMA.mongooseModelByName('assetref'); assets.remove({}, (err) => console.log(err));
 
 let l = ['0','en','nl','fr','de','ar','it','gr']
@@ -159,7 +163,12 @@ for (var i = 0; i < s.length; i++) {
   }
   ids.push(a);
 }
-downloadArray(imgurls);
+//downloadArray(imgurls);
+
+let usersmapped = JSON.parse(fs.readFileSync(`${CONFIG.import.dir}/users_mapped.json`, 'utf8'));
+users.insertMany(usersmapped, function(error, docs) {
+  console.log(docs);
+});
 
 
 

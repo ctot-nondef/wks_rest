@@ -111,7 +111,7 @@ router.post(`/api/v${CONFIG.version}/login`, function (req, res, next) {
  *       - application/json
  *     responses:
  *       200:
- *         description: login successfull
+ *         description: logout successfull
  */
 router.get(`/api/v${CONFIG.version}/logout`, function (req, res, next) {
   if (req.session) {
