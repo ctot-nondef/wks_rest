@@ -16,10 +16,11 @@
     "express-restify-mongoose": "^5.0.0",
     "express-session": "1.15.6",
     "method-override": "= 2.3.10",
-    "mongoose": "^5.2.5",
+    "mongoose": "^5.3.11",
     "mongoose-gen": "= 2.1.1",
     "mongoose-schema-jsonschema": "^1.1.15",
-    "nodemon": "^1.18.3",
+    "nodemon": "^1.18.6",
+    "object-path": "^0.11.4",
     "request": "^2.88.0",
     "swagger-jsdoc": "1.9.7",
     "swagger-vue": "1.0.3"
