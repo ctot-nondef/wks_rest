@@ -944,10 +944,10 @@
         "dstOffset": 3
       },
       "bbox": {
-        "east": 44.46358722732941,
-        "south": 14.781099351248574,
-        "north": 14.799086648751427,
-        "west": 44.444982772670585,
+        "east": 44.46365621128734,
+        "south": 14.780725351248574,
+        "north": 14.798712648751426,
+        "west": 44.44505178871266,
         "accuracyLevel": 0
       },
       "asciiName": "Busan",
@@ -961,12 +961,12 @@
         "ISO3166_2": "DH"
       },
       "adminId1": "76183",
-      "lat": "14.79009",
+      "lat": "14.78972",
       "fcode": "PPL",
       "continentCode": "AS",
       "adminCode2": "2001",
       "adminCode1": "11",
-      "lng": "44.45428",
+      "lng": "44.45435",
       "geonameId": 402243,
       "toponymName": "Būsān",
       "population": 0,
@@ -976,6 +976,10 @@
       "alternateNames": [
         {
           "name": "Būsān",
+          "lang": "ar"
+        },
+        {
+          "name": "بوسان",
           "lang": "ar"
         }
       ],
@@ -2614,6 +2618,10 @@
       "alternateNames": [
         {
           "name": "Ḩayd al Qarnayn"
+        },
+        {
+          "name": "حيد القرنين",
+          "lang": "ar"
         }
       ],
       "adminName2": "Sanhan",
