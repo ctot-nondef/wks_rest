@@ -8,7 +8,7 @@
     "note": { "type":"String"}
   }],
   "place": [{"type": "ObjectID", "ref":"descriptor"}],
-  "time": {"type": "ObjectID", "ref":"descriptor"},
+  "time": [{"type": "ObjectID", "ref":"descriptor"}],
   "classification":[{ "type":"ObjectID", "ref": "descriptor" }],
   "beginOfExistence":{"type":"Date"},
   "endOfExistence":{"type":"Date"},
