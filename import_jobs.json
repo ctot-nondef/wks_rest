@@ -32,7 +32,7 @@
         "actor"
       ],
       "paths":[
-        "source",
+        "source.number",
         "term.number"
       ]
     }
