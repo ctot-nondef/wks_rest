@@ -24,6 +24,68 @@
         "data.adlibJSON.recordList.record",
         "data.adlibJSON.recordList.record",
         "data.adlibJSON.recordList.record"
+      ],
+      "mappings":[
+        {
+          "sourcepaths":[
+          ],
+          "targetpaths":[
+          ],
+          "before":[
+          ],
+          "after":[
+          ]
+        },
+        {
+          "sourcepaths":[
+          ],
+          "targetpaths":[
+          ],
+          "before":[
+          ],
+          "after":[
+          ]
+        },
+        {
+          "sourcepaths":[
+          ],
+          "targetpaths":[
+          ],
+          "before":[
+          ],
+          "after":[
+          ]
+        },
+        {
+          "sourcepaths":[
+          ],
+          "targetpaths":[
+          ],
+          "before":[
+          ],
+          "after":[
+          ]
+        },
+        {
+          "sourcepaths":[
+          ],
+          "targetpaths":[
+          ],
+          "before":[
+          ],
+          "after":[
+          ]
+        },
+        {
+          "sourcepaths":[
+          ],
+          "targetpaths":[
+          ],
+          "before":[
+          ],
+          "after":[
+          ]
+        }
       ]
     },
     "authority":{
