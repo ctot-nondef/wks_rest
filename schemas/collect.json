@@ -9,7 +9,11 @@
   }],
   "place": [{"type": "ObjectID", "ref":"descriptor"}],
   "time": [{"type": "ObjectID", "ref":"descriptor"}],
-  "classification":[{ "type":"ObjectID", "ref": "descriptor" }],
+  "classification":[{
+    "_id":false,
+    "aspect": { "type":"ObjectID", "ref": "descriptor" },
+    "descriptor": { "type":"ObjectID", "ref": "descriptor" }
+  }],
   "beginOfExistence":{"type":"Date"},
   "endOfExistence":{"type":"Date"},
   "description":{"type": "String"},
