@@ -27,11 +27,17 @@
       ],
       "mappings":[
         {
-          "sourcepaths":[
+          "sourcepaths":[ 
+            "s[i].term[0]",
+            "s[i].priref[0]"
           ],
           "targetpaths":[
+            "name",
+            "identifier"
           ],
           "before":[
+            null,
+            "(in) => {`ADLIBTHESAU:${in}`}"
           ],
           "after":[
           ]
