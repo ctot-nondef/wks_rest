@@ -23,6 +23,8 @@
     "object-path": "^0.11.4",
     "request": "^2.88.0",
     "swagger-jsdoc": "1.9.7",
-    "swagger-vue": "1.0.3"
+    "swagger-vue": "1.0.3",
+    "jimp":"0.5.6",
+    "pdf-image":"1.1.0"
   }
 }

@@ -24,6 +24,74 @@
         "data.adlibJSON.recordList.record",
         "data.adlibJSON.recordList.record",
         "data.adlibJSON.recordList.record"
+      ],
+      "mappings":[
+        {
+          "sourcepaths":[ 
+            "s[i].term[0]",
+            "s[i].priref[0]"
+          ],
+          "targetpaths":[
+            "name",
+            "identifier"
+          ],
+          "before":[
+            null,
+            "(in) => {`ADLIBTHESAU:${in}`}"
+          ],
+          "after":[
+          ]
+        },
+        {
+          "sourcepaths":[
+          ],
+          "targetpaths":[
+          ],
+          "before":[
+          ],
+          "after":[
+          ]
+        },
+        {
+          "sourcepaths":[
+          ],
+          "targetpaths":[
+          ],
+          "before":[
+          ],
+          "after":[
+          ]
+        },
+        {
+          "sourcepaths":[
+          ],
+          "targetpaths":[
+          ],
+          "before":[
+          ],
+          "after":[
+          ]
+        },
+        {
+          "sourcepaths":[
+          ],
+          "targetpaths":[
+          ],
+          "before":[
+          ],
+          "after":[
+          ]
+        },
+        {
+          "sourcepaths":[
+          ],
+          "targetpaths":[
+          ],
+          "before":[
+          ],
+          "after":[
+          ]
+        }
       ]
     },
     "authority":{
@@ -32,7 +100,7 @@
         "actor"
       ],
       "paths":[
-        "source",
+        "source.number",
         "term.number"
       ]
     }

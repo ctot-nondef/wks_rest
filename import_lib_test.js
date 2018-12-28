@@ -7,7 +7,7 @@ const axios = require('axios');
 const IMPORT = require('./lib/import.js');
 
 const CONFIG =  require('./config.json');
-const JOBS = require('./import_jobs.json')
+const JOBS = require('./import_jobs.json');
 
 let jobs = Object.keys(JOBS);
 
@@ -18,28 +18,37 @@ while(idx+1) {
   let sources = JOBS[jobs[idx]].sources;
   console.log(jobs[idx], sources);
   // IMPORT.fetchSources(sources.keys, sources.uris, sources.paths);
+
   /////////////////////////////////////////////////////////////////
-  //fetch required authority data from GeoNames
+  // fetch required authority data
   let geoids = [];
+  let gndids = [];
   let idy = JOBS[jobs[idx]].authority.keys.length - 1;
   while(idy+1) {
     let s = JSON.parse(fs.readFileSync(`${CONFIG.import.dir}/data/source_${JOBS[jobs[idx]].authority.keys[idy]}.json`, 'utf8'));
     for (var i = 0; i < s.length; i++) {
-      if(s[i].source) {
+      if(s[i].source && s[i]['term.number']) {
         for (var y = 0; y < s[i].source.length; y++) {
           if (s[i].source[y] == "Geonames" && s[i]['term.number'][y].split('/')[s[i]['term.number'][y].split('/').length - 1] != "") {
             geoids.push(s[i]['term.number'][y].split('/')[s[i]['term.number'][y].split('/').length - 1]);
             //ids.push(s[i]['source.number'][y].split('/')[s[i]['source.number'][y].split('/').length - 1]);
+          }
+          if (s[i].source[y] == "GND" && s[i]['term.number'][y].split('/')[s[i]['term.number'][y].split('/').length - 1] != "") {
+            gndids.push(s[i]['term.number'][y].split('/')[s[i]['term.number'][y].split('/').length - 1]);
+          }
+        }
+      }
+      if(s[i].source && s[i]['source.number']) {
+        for (var y = 0; y < s[i].source.length; y++) {
+          if (s[i].source[y] == "GND" && s[i]['source.number'][y].split('/')[s[i]['source.number'][y].split('/').length - 1] != "") {
+            gndids.push(s[i]['source.number'][y].split('/')[s[i]['source.number'][y].split('/').length - 1]);
           }
         }
       }
     }
     idy -= 1;
   }
-  IMPORT.fetchAuthRecs(geoids, IMPORT.endpoints.GEO.BASE, 'geonameId', [], [], 'geonames');
-
-
-
-
+  // IMPORT.fetchAuthRecs(geoids, IMPORT.endpoints.GEO.BASE, 'geonameId', [], [], 'geonames');
+  // IMPORT.fetchAuthRecs(gndids, IMPORT.endpoints.GND.BASE, null, [], [], 'gnd');
   idx -= 1;
 }

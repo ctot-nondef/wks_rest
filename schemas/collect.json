@@ -1,12 +1,28 @@
 {
   "name":{"type": "String", "required": true},
   "identifier":[{"type":"String","match":""}],
-  "collector": [{"type": "ObjectID", "ref":"actor"}],
+  "creator":[{
+    "_id":false,
+    "id": { "type":"ObjectID", "ref":"actor"},
+    "role": { "type":"ObjectID", "ref":"descriptor"},
+    "note": { "type":"String"}
+  }],
   "place": [{"type": "ObjectID", "ref":"descriptor"}],
+  "time": [{"type": "ObjectID", "ref":"descriptor"}],
+  "classification":[{
+    "_id":false,
+    "aspect": { "type":"ObjectID", "ref": "descriptor" },
+    "descriptor": { "type":"ObjectID", "ref": "descriptor" }
+  }],
   "beginOfExistence":{"type":"Date"},
   "endOfExistence":{"type":"Date"},
   "description":{"type": "String"},
-  "references":[{"type":"String"}],
+  "destitution":{"type": "String"},
+  "documents":[{"type":"ObjectID", "ref":"assetref"}],
+  "references":[{
+    "ref":{"type":"String"},
+    "pageno":{"type":"String"}
+  }],
   "comments":[{"type":"String"}],
   "_history":[{"type":"ObjectID", "ref":"_history"}]
 }

@@ -1,0 +1,1246 @@
+[
+  {
+    "name": "ROLE",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "ROLE"
+      },
+      {
+        "lang": "en",
+        "label": "role"
+      },
+      {
+        "lang": "nl",
+        "label": "rol"
+      },
+      {
+        "lang": "fr",
+        "label": "fonction"
+      },
+      {
+        "lang": "de",
+        "label": "Rolle"
+      },
+      {
+        "lang": "ar",
+        "label": "دور"
+      },
+      {
+        "lang": "it",
+        "label": "ruolo"
+      },
+      {
+        "lang": "gr",
+        "label": "ρόλος"
+      }
+    ]
+  },
+  {
+    "name": "DIM",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "DIM"
+      },
+      {
+        "lang": "en",
+        "label": "dimension"
+      },
+      {
+        "lang": "nl",
+        "label": "afmeting"
+      },
+      {
+        "lang": "fr",
+        "label": "dimension"
+      },
+      {
+        "lang": "de",
+        "label": "Dimension"
+      },
+      {
+        "lang": "ar",
+        "label": "أبعاد"
+      },
+      {
+        "lang": "it",
+        "label": "dimensione"
+      },
+      {
+        "lang": "gr",
+        "label": "διάσταση"
+      }
+    ]
+  },
+  {
+    "name": "INSCTYPE",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "INSCTYPE"
+      },
+      {
+        "lang": "en",
+        "label": "inscription type"
+      },
+      {
+        "lang": "nl",
+        "label": "soort opschrift"
+      },
+      {
+        "lang": "fr",
+        "label": "type d'inscription"
+      },
+      {
+        "lang": "de",
+        "label": "Inschriftentyp"
+      },
+      {
+        "lang": "ar",
+        "label": "نوع التسجيل"
+      },
+      {
+        "lang": "it",
+        "label": "tipo d'iscrizione"
+      },
+      {
+        "lang": "gr",
+        "label": "τύπος επιγραφής"
+      }
+    ]
+  },
+  {
+    "name": "ASSOC",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "ASSOC"
+      },
+      {
+        "lang": "en",
+        "label": "association"
+      },
+      {
+        "lang": "nl",
+        "label": "associatie"
+      },
+      {
+        "lang": "fr",
+        "label": "association"
+      },
+      {
+        "lang": "de",
+        "label": "Assoziation"
+      },
+      {
+        "lang": "ar",
+        "label": "هيئة"
+      },
+      {
+        "lang": "it",
+        "label": "associazione"
+      },
+      {
+        "lang": "gr",
+        "label": "συσχετισμός"
+      }
+    ]
+  },
+  {
+    "name": "DOCTYPE",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "DOCTYPE"
+      },
+      {
+        "lang": "en",
+        "label": "document type"
+      },
+      {
+        "lang": "nl",
+        "label": "materiaalsoort"
+      },
+      {
+        "lang": "fr",
+        "label": "type de matériaux"
+      },
+      {
+        "lang": "de",
+        "label": "Medientyp"
+      },
+      {
+        "lang": "ar",
+        "label": "نوع_المواد"
+      },
+      {
+        "lang": "it",
+        "label": "tipo di documento"
+      },
+      {
+        "lang": "gr",
+        "label": "τύπος εγγράφου "
+      }
+    ]
+  },
+  {
+    "name": "REPRO_TYPE",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "REPRO_TYPE"
+      },
+      {
+        "lang": "en",
+        "label": "reproduction type"
+      },
+      {
+        "lang": "nl",
+        "label": "soort reproductie"
+      },
+      {
+        "lang": "fr",
+        "label": "type de reproduction"
+      },
+      {
+        "lang": "de",
+        "label": "Abbildungstyp"
+      },
+      {
+        "lang": "ar",
+        "label": "نوع.النسخ"
+      },
+      {
+        "lang": "it",
+        "label": "tipo della riproduzione"
+      },
+      {
+        "lang": "gr",
+        "label": "τύπος αναπαραγωγής"
+      }
+    ]
+  },
+  {
+    "name": "LANGUAGE",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "LANGUAGE"
+      },
+      {
+        "lang": "en",
+        "label": "language"
+      },
+      {
+        "lang": "nl",
+        "label": "taal"
+      },
+      {
+        "lang": "fr",
+        "label": "langue"
+      },
+      {
+        "lang": "de",
+        "label": "Sprache"
+      },
+      {
+        "lang": "ar",
+        "label": "اللغة"
+      },
+      {
+        "lang": "it",
+        "label": "lingua"
+      },
+      {
+        "lang": "gr",
+        "label": "γλώσσα"
+      }
+    ]
+  },
+  {
+    "name": "GEOKEYW",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "GEOKEYW"
+      },
+      {
+        "lang": "en",
+        "label": "geographical keyword"
+      },
+      {
+        "lang": "nl",
+        "label": "geografisch trefwoord"
+      },
+      {
+        "lang": "fr",
+        "label": "mot-clé géographique"
+      },
+      {
+        "lang": "de",
+        "label": "Geograf. Schlagwort"
+      },
+      {
+        "lang": "ar",
+        "label": "الكلمات-المفتاحيةالجغرافية"
+      },
+      {
+        "lang": "it",
+        "label": "parola chiave geografica"
+      },
+      {
+        "lang": "gr",
+        "label": "γεωγραφ. λέξη-κλειδί"
+      }
+    ]
+  },
+  {
+    "name": "SCRIPT",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "SCRIPT"
+      },
+      {
+        "lang": "en",
+        "label": "script"
+      },
+      {
+        "lang": "nl",
+        "label": "schrift"
+      },
+      {
+        "lang": "fr",
+        "label": "écriture"
+      },
+      {
+        "lang": "de",
+        "label": "Schrift"
+      },
+      {
+        "lang": "ar",
+        "label": "كتابة"
+      },
+      {
+        "lang": "it",
+        "label": "scrittura"
+      },
+      {
+        "lang": "gr",
+        "label": "γραφή "
+      }
+    ]
+  },
+  {
+    "name": "EVENT",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "EVENT"
+      },
+      {
+        "lang": "en",
+        "label": "event"
+      },
+      {
+        "lang": "nl",
+        "label": "gebeurtenis"
+      },
+      {
+        "lang": "fr",
+        "label": "événement"
+      },
+      {
+        "lang": "de",
+        "label": "Ereignis"
+      },
+      {
+        "lang": "ar",
+        "label": "حدث"
+      },
+      {
+        "lang": "it",
+        "label": "evento"
+      },
+      {
+        "lang": "gr",
+        "label": "γεγονός"
+      }
+    ]
+  },
+  {
+    "name": "COUNTRY",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "COUNTRY"
+      },
+      {
+        "lang": "en",
+        "label": "country"
+      },
+      {
+        "lang": "nl",
+        "label": "land"
+      },
+      {
+        "lang": "fr",
+        "label": "pays"
+      },
+      {
+        "lang": "de",
+        "label": "Land"
+      },
+      {
+        "lang": "ar",
+        "label": "الدولة"
+      },
+      {
+        "lang": "it",
+        "label": "paese"
+      },
+      {
+        "lang": "gr",
+        "label": "χώρα"
+      }
+    ]
+  },
+  {
+    "name": "SUBJECT",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "SUBJECT"
+      },
+      {
+        "lang": "en",
+        "label": "subject"
+      },
+      {
+        "lang": "nl",
+        "label": "onderwerp"
+      },
+      {
+        "lang": "fr",
+        "label": "sujet"
+      },
+      {
+        "lang": "de",
+        "label": "Thema"
+      },
+      {
+        "lang": "ar",
+        "label": "موضوع"
+      },
+      {
+        "lang": "it",
+        "label": "soggetto"
+      },
+      {
+        "lang": "gr",
+        "label": "θέμα"
+      }
+    ]
+  },
+  {
+    "name": "ACTIV",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "ACTIV"
+      },
+      {
+        "lang": "en",
+        "label": "activity"
+      },
+      {
+        "lang": "nl",
+        "label": "activiteit"
+      },
+      {
+        "lang": "fr",
+        "label": "activité"
+      },
+      {
+        "lang": "de",
+        "label": "Handlung"
+      },
+      {
+        "lang": "ar",
+        "label": "نشاط"
+      },
+      {
+        "lang": "it",
+        "label": "attività"
+      },
+      {
+        "lang": "gr",
+        "label": "δραστηριότητα"
+      }
+    ]
+  },
+  {
+    "name": "OBJECT",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "OBJECT"
+      },
+      {
+        "lang": "en",
+        "label": "object name"
+      },
+      {
+        "lang": "nl",
+        "label": "objectnaam"
+      },
+      {
+        "lang": "fr",
+        "label": "nom d'objet"
+      },
+      {
+        "lang": "de",
+        "label": "Objektbezeichnung"
+      },
+      {
+        "lang": "ar",
+        "label": "إسم_قطعة.فنية"
+      },
+      {
+        "lang": "it",
+        "label": "nome dell'oggetto"
+      },
+      {
+        "lang": "gr",
+        "label": "ονομασία αντικειμ."
+      }
+    ]
+  },
+  {
+    "name": "KEYWORD",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "KEYWORD"
+      },
+      {
+        "lang": "en",
+        "label": "keyword"
+      },
+      {
+        "lang": "nl",
+        "label": "trefwoord"
+      },
+      {
+        "lang": "fr",
+        "label": "mot-clé"
+      },
+      {
+        "lang": "de",
+        "label": "Schlagwort"
+      },
+      {
+        "lang": "ar",
+        "label": "كلمة.مفتاحية"
+      },
+      {
+        "lang": "it",
+        "label": "parola chiave"
+      },
+      {
+        "lang": "gr",
+        "label": "λέξη-κλειδί"
+      }
+    ]
+  },
+  {
+    "name": "UNIT",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "UNIT"
+      },
+      {
+        "lang": "en",
+        "label": "unit"
+      },
+      {
+        "lang": "nl",
+        "label": "eenheid"
+      },
+      {
+        "lang": "fr",
+        "label": "unité"
+      },
+      {
+        "lang": "de",
+        "label": "Einheit"
+      },
+      {
+        "lang": "ar",
+        "label": "وحدة"
+      },
+      {
+        "lang": "it",
+        "label": "unità"
+      },
+      {
+        "lang": "gr",
+        "label": "μονάδα"
+      }
+    ]
+  },
+  {
+    "name": "PERIOD",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "PERIOD"
+      },
+      {
+        "lang": "en",
+        "label": "period"
+      },
+      {
+        "lang": "nl",
+        "label": "periode"
+      },
+      {
+        "lang": "fr",
+        "label": "période"
+      },
+      {
+        "lang": "de",
+        "label": "Zeitraum"
+      },
+      {
+        "lang": "ar",
+        "label": "الفترة"
+      },
+      {
+        "lang": "it",
+        "label": "periodo"
+      },
+      {
+        "lang": "gr",
+        "label": "περίοδος"
+      }
+    ]
+  },
+  {
+    "name": "PLACE",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "PLACE"
+      },
+      {
+        "lang": "en",
+        "label": "place"
+      },
+      {
+        "lang": "nl",
+        "label": "plaats"
+      },
+      {
+        "lang": "fr",
+        "label": "lieu"
+      },
+      {
+        "lang": "de",
+        "label": "Ort"
+      },
+      {
+        "lang": "ar",
+        "label": "المكان"
+      },
+      {
+        "lang": "it",
+        "label": "luogo"
+      },
+      {
+        "lang": "gr",
+        "label": "τόπος"
+      }
+    ]
+  },
+  {
+    "name": "OCCUPATION",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "OCCUPATION"
+      },
+      {
+        "lang": "en",
+        "label": "occupation"
+      },
+      {
+        "lang": "nl",
+        "label": "beroep"
+      },
+      {
+        "lang": "fr",
+        "label": "profession"
+      },
+      {
+        "lang": "de",
+        "label": "Beruf"
+      },
+      {
+        "lang": "ar",
+        "label": "المهنة"
+      },
+      {
+        "lang": "it",
+        "label": "occupazione"
+      },
+      {
+        "lang": "gr",
+        "label": "επάγγελμα"
+      }
+    ]
+  },
+  {
+    "name": "TECHN",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "TECHN"
+      },
+      {
+        "lang": "en",
+        "label": "technique"
+      },
+      {
+        "lang": "nl",
+        "label": "techniek"
+      },
+      {
+        "lang": "fr",
+        "label": "technique"
+      },
+      {
+        "lang": "de",
+        "label": "Technik"
+      },
+      {
+        "lang": "ar",
+        "label": "تقنية"
+      },
+      {
+        "lang": "it",
+        "label": "tecnica"
+      },
+      {
+        "lang": "gr",
+        "label": "τεχνική "
+      }
+    ]
+  },
+  {
+    "name": "MOTIF",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "MOTIF"
+      },
+      {
+        "lang": "en",
+        "label": "motif"
+      },
+      {
+        "lang": "nl",
+        "label": "motief"
+      },
+      {
+        "lang": "fr",
+        "label": "motif"
+      },
+      {
+        "lang": "de",
+        "label": "Motiv"
+      },
+      {
+        "lang": "ar",
+        "label": "زخرفة"
+      },
+      {
+        "lang": "it",
+        "label": "motivo"
+      },
+      {
+        "lang": "gr",
+        "label": "μοτίβο"
+      }
+    ]
+  },
+  {
+    "name": "MATER",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "MATER"
+      },
+      {
+        "lang": "en",
+        "label": "material"
+      },
+      {
+        "lang": "nl",
+        "label": "materiaal"
+      },
+      {
+        "lang": "fr",
+        "label": "matériel"
+      },
+      {
+        "lang": "de",
+        "label": "Material"
+      },
+      {
+        "lang": "ar",
+        "label": "المواد"
+      },
+      {
+        "lang": "it",
+        "label": "materiale"
+      },
+      {
+        "lang": "gr",
+        "label": "υλικό"
+      }
+    ]
+  },
+  {
+    "name": "POSITION",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "POSITION"
+      },
+      {
+        "lang": "en",
+        "label": "inscription position"
+      },
+      {
+        "lang": "nl",
+        "label": "inscriptie positie"
+      },
+      {
+        "lang": "fr",
+        "label": "inscription endroit"
+      },
+      {
+        "lang": "de",
+        "label": "Inschrift Position"
+      },
+      {
+        "lang": "ar",
+        "label": "مكان النقش"
+      },
+      {
+        "lang": "it",
+        "label": "iscrizione posizione"
+      },
+      {
+        "lang": "gr",
+        "label": "επιγραφή θέση"
+      }
+    ]
+  },
+  {
+    "name": "Geographie",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "Geographie"
+      }
+    ]
+  },
+  {
+    "name": "RIGHTS",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "RIGHTS"
+      },
+      {
+        "lang": "en",
+        "label": "rights"
+      },
+      {
+        "lang": "nl",
+        "label": "rechten"
+      },
+      {
+        "lang": "fr",
+        "label": "droits"
+      },
+      {
+        "lang": "de",
+        "label": "Rechte"
+      },
+      {
+        "lang": "ar",
+        "label": "diritti"
+      }
+    ]
+  },
+  {
+    "name": "SCHOOL",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "SCHOOL"
+      },
+      {
+        "lang": "en",
+        "label": "school / style"
+      },
+      {
+        "lang": "nl",
+        "label": "school / stijl"
+      },
+      {
+        "lang": "fr",
+        "label": "école / style"
+      },
+      {
+        "lang": "de",
+        "label": "Stilrichtung"
+      },
+      {
+        "lang": "ar",
+        "label": "نسق_المدرسة"
+      },
+      {
+        "lang": "it",
+        "label": "scuola / stile"
+      },
+      {
+        "lang": "gr",
+        "label": "σχολή / ρεύμα"
+      }
+    ]
+  },
+  {
+    "name": "COND",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "COND"
+      },
+      {
+        "lang": "en",
+        "label": "condition"
+      },
+      {
+        "lang": "nl",
+        "label": "toestand"
+      },
+      {
+        "lang": "fr",
+        "label": "état"
+      },
+      {
+        "lang": "de",
+        "label": "Zustand"
+      },
+      {
+        "lang": "ar",
+        "label": "لقطة"
+      },
+      {
+        "lang": "it",
+        "label": "condizioni"
+      },
+      {
+        "lang": "gr",
+        "label": "κατάσταση"
+      }
+    ]
+  },
+  {
+    "name": "COLL",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "COLL"
+      },
+      {
+        "lang": "en",
+        "label": "collection"
+      },
+      {
+        "lang": "nl",
+        "label": "collectie"
+      },
+      {
+        "lang": "fr",
+        "label": "collection"
+      },
+      {
+        "lang": "de",
+        "label": "Sammlung"
+      },
+      {
+        "lang": "ar",
+        "label": "سلسلة"
+      },
+      {
+        "lang": "it",
+        "label": "collezione"
+      },
+      {
+        "lang": "gr",
+        "label": "συλλογή "
+      }
+    ]
+  },
+  {
+    "name": "OBJCAT",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "OBJCAT"
+      },
+      {
+        "lang": "en",
+        "label": "object category"
+      },
+      {
+        "lang": "nl",
+        "label": "objectcategorie"
+      },
+      {
+        "lang": "fr",
+        "label": "catégorie d'objet"
+      },
+      {
+        "lang": "de",
+        "label": "Sachgruppe"
+      },
+      {
+        "lang": "ar",
+        "label": "صنف_القطعة"
+      },
+      {
+        "lang": "it",
+        "label": "categoria dell'oggetto"
+      },
+      {
+        "lang": "gr",
+        "label": "κατηγορία αντικειμένου"
+      }
+    ]
+  },
+  {
+    "name": "NATIONALITY",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "NATIONALITY"
+      },
+      {
+        "lang": "en",
+        "label": "nationality"
+      },
+      {
+        "lang": "nl",
+        "label": "nationaliteit"
+      },
+      {
+        "lang": "fr",
+        "label": "nationalité"
+      },
+      {
+        "lang": "de",
+        "label": "Nationalität"
+      }
+    ]
+  },
+  {
+    "name": "ACQMETH",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "ACQMETH"
+      },
+      {
+        "lang": "en",
+        "label": "acquisition method"
+      },
+      {
+        "lang": "nl",
+        "label": "verwervingsmethode"
+      },
+      {
+        "lang": "fr",
+        "label": "méthode d'acquisition"
+      },
+      {
+        "lang": "de",
+        "label": "Art des Erwerbs"
+      },
+      {
+        "lang": "ar",
+        "label": "طريقة الإقتناء"
+      },
+      {
+        "lang": "it",
+        "label": "metodo di aquisizione"
+      },
+      {
+        "lang": "gr",
+        "label": "μέθοδος πρόσκτησης "
+      }
+    ]
+  },
+  {
+    "name": "LOANCAT",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "LOANCAT"
+      },
+      {
+        "lang": "en",
+        "label": "loan category"
+      },
+      {
+        "lang": "nl",
+        "label": "uitleencategorie"
+      },
+      {
+        "lang": "fr",
+        "label": "catégorie  de prêt"
+      },
+      {
+        "lang": "de",
+        "label": "Leihkategorie"
+      },
+      {
+        "lang": "ar",
+        "label": "أصناف_الإعارة"
+      },
+      {
+        "lang": "it",
+        "label": "categoria di prestito"
+      },
+      {
+        "lang": "gr",
+        "label": "κατηγ. δανεισμού"
+      }
+    ]
+  },
+  {
+    "name": "LOCATION",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "LOCATION"
+      },
+      {
+        "lang": "en",
+        "label": "site"
+      },
+      {
+        "lang": "nl",
+        "label": "filiaal"
+      },
+      {
+        "lang": "fr",
+        "label": "filiale"
+      },
+      {
+        "lang": "de",
+        "label": "Standort (Bibliothek)"
+      },
+      {
+        "lang": "ar",
+        "label": "موقع"
+      },
+      {
+        "lang": "it",
+        "label": "sito"
+      },
+      {
+        "lang": "gr",
+        "label": "τοποθεσία"
+      }
+    ]
+  },
+  {
+    "name": "PROPNAME",
+    "description": "Class of Descriptor",
+    "labels": [
+      {
+        "lang": "0",
+        "label": "PROPNAME"
+      },
+      {
+        "lang": "en",
+        "label": "proper name"
+      },
+      {
+        "lang": "nl",
+        "label": "eigennaam"
+      },
+      {
+        "lang": "fr",
+        "label": "nom propre"
+      },
+      {
+        "lang": "de",
+        "label": "Vorzugsbezeichnung"
+      },
+      {
+        "lang": "ar",
+        "label": "إسم شخص"
+      },
+      {
+        "lang": "it",
+        "label": "nome proprio"
+      },
+      {
+        "lang": "gr",
+        "label": "κύριο όνομα"
+      }
+    ]
+  }
+]

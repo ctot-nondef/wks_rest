@@ -7121,5 +7121,273 @@
     "title.type": [
       ""
     ]
+  },
+  {
+    "@attributes": {
+      "priref": "150004109",
+      "created": "2018-11-22T17:18:51",
+      "modification": "2018-11-22T18:19:43",
+      "selected": "False"
+    },
+    "documentation.free_text": [
+      "https://www.nhm-wien.ac.at/forschung/praehistorie/forschungen/venus-forschung"
+    ],
+    "edit.date": [
+      "2018-11-22"
+    ],
+    "edit.name": [
+      "Luka Rucigaj"
+    ],
+    "edit.notes": [
+      ""
+    ],
+    "edit.source": [
+      "COLLECT>extern"
+    ],
+    "edit.time": [
+      "18:19:42"
+    ],
+    "identification": [
+      "MUSEUM_INV"
+    ],
+    "input.date": [
+      "2018-11-22"
+    ],
+    "input.name": [
+      "Luka Rucigaj"
+    ],
+    "input.source": [
+      "COLLECT>extern"
+    ],
+    "input.time": [
+      "18:18:51"
+    ],
+    "institution.name": [
+      "Naturhistorisches Museum Wien"
+    ],
+    "institution.name.lref": [
+      "815"
+    ],
+    "institution.place": [
+      "Wien"
+    ],
+    "object_number": [
+      "KGUW_24775"
+    ],
+    "priref": [
+      "150004109"
+    ],
+    "record_access.owner": [
+      "Luka Rucigaj"
+    ],
+    "record_type": [
+      {
+        "@lang": "neutral",
+        "value": [
+          "OBJECT",
+          "single object",
+          "enkelvoudig object",
+          "objet individuel",
+          "Einzelnes Objekt",
+          "oggetto singolo"
+        ]
+      }
+    ],
+    "related_object.association": [
+      ""
+    ],
+    "related_object.association.lref": [
+      ""
+    ],
+    "related_object.notes": [
+      ""
+    ],
+    "related_object.reference": [
+      "KGUW_24773"
+    ],
+    "related_object.reference.lref": [
+      "150004108"
+    ],
+    "related_object.title": [
+      "Skulptur Übung"
+    ],
+    "reproduction.creator": [
+      ""
+    ],
+    "reproduction.date": [
+      ""
+    ],
+    "reproduction.format": [
+      ""
+    ],
+    "@lang": "",
+    "reproduction.notes": [
+      ""
+    ],
+    "reproduction.reference": [
+      "Venus_of_Willendorf_frontview.jpg"
+    ],
+    "reproduction.reference.lref": [
+      "18774"
+    ],
+    "reproduction.type": [
+      ""
+    ],
+    "title": [
+      "Übung"
+    ],
+    "title.notes": [
+      ""
+    ],
+    "title.term_index": [
+      ""
+    ],
+    "title.type": [
+      ""
+    ]
+  },
+  {
+    "@attributes": {
+      "priref": "150004150",
+      "created": "2018-12-04T09:37:02",
+      "modification": "2018-12-04T10:38:35",
+      "selected": "False"
+    },
+    "creator": [
+      "Canova, Antonio"
+    ],
+    "creator.date_of_birth": [
+      "1757"
+    ],
+    "creator.date_of_death": [
+      "1822"
+    ],
+    "creator.history": [
+      ""
+    ],
+    "creator.lref": [
+      "2921"
+    ],
+    "creator.qualifier": [
+      ""
+    ],
+    "creator.role": [
+      ""
+    ],
+    "creator.role.lref": [
+      ""
+    ],
+    "edit.date": [
+      "2018-12-04"
+    ],
+    "edit.name": [
+      "Luka Rucigaj"
+    ],
+    "edit.notes": [
+      ""
+    ],
+    "edit.source": [
+      "COLLECT>extern"
+    ],
+    "edit.time": [
+      "10:38:35"
+    ],
+    "identification": [
+      "TL.Metternich.1908.12"
+    ],
+    "input.date": [
+      "2018-12-04"
+    ],
+    "input.name": [
+      "Luka Rucigaj"
+    ],
+    "input.source": [
+      "COLLECT>extern"
+    ],
+    "input.time": [
+      "10:37:02"
+    ],
+    "material": [
+      "Marmor"
+    ],
+    "material.lref": [
+      "203"
+    ],
+    "material.notes": [
+      ""
+    ],
+    "material.part": [
+      ""
+    ],
+    "object_number": [
+      "KGUW_24854"
+    ],
+    "phys_characteristic.keyword": [
+      "Historie (mythologisch)",
+      "Skulptur"
+    ],
+    "phys_characteristic.keyword.lref": [
+      "1182",
+      "850"
+    ],
+    "priref": [
+      "150004150"
+    ],
+    "production.notes": [
+      ""
+    ],
+    "production.place": [
+      ""
+    ],
+    "production.place.lref": [
+      ""
+    ],
+    "record_access.owner": [
+      "Luka Rucigaj"
+    ],
+    "record_type": [
+      {
+        "@lang": "neutral",
+        "value": [
+          "OBJECT",
+          "single object",
+          "enkelvoudig object",
+          "objet individuel",
+          "Einzelnes Objekt",
+          "oggetto singolo"
+        ]
+      }
+    ],
+    "related_object.association": [
+      "identifiziert mit"
+    ],
+    "related_object.association.lref": [
+      "1471"
+    ],
+    "related_object.notes": [
+      ""
+    ],
+    "related_object.reference": [
+      "KGUW_24843"
+    ],
+    "related_object.reference.lref": [
+      "150004141"
+    ],
+    "related_object.title": [
+      "Hebe"
+    ],
+    "@lang": "",
+    "title": [
+      "Venus"
+    ],
+    "title.notes": [
+      ""
+    ],
+    "title.term_index": [
+      ""
+    ],
+    "title.type": [
+      ""
+    ]
   }
 ]
