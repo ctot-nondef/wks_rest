@@ -251,8 +251,14 @@ router.post(`/api/v${CONFIG.version}/upload`, function(req, res, next) {
     let image = req.files.image;
     let name = `${Date.now().valueOf().toString(36)}_${image.name}`
     image.mv(`asset/img/${name}`, function(err) {
-      ASSETS.makeImgThumb(`asset/img/${name}`, {width: 220, height: 220}, 90, 'thumb');
-      ASSETS.makeImgThumb(`asset/img/${name}`, {width: 1500, height: 1500}, 90, 'preview');
+      console.log(image.mimetype);
+      if(image.mimetype.split('/')[0] == 'image') {
+        ASSETS.makeImgThumb(`asset/img/${name}`, {width: 220, height: 220}, 90, 'thumb');
+        ASSETS.makeImgThumb(`asset/img/${name}`, {width: 1500, height: 1500}, 90, 'preview');
+      }
+      else if(image.mimetype == 'application/pdf'){
+        ASSETS.makePDFThumb(`asset/img/${name}`, 0)
+      }
       if (err) return res.status(500).json({error:'Processing failed'});
       SCHEMA.mongooseModelByName('assetref').create({
         name: image.name,
