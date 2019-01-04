@@ -209,6 +209,7 @@ for (var i = 0; i < s.length; i++) {
 fs.writeFileSync('import/entries_assets.json', JSON.stringify(assets, null, 2));
 
 assetrefs.insertMany(assets, function(error, docs) {
+  console.log('assets',error, docs);
   for (let i = 0; i < docs.length; i++) {
     for (let q = 0; q < ids.length; q++) {
       if(s[q]['reproduction.reference'] && docs[i].name == s[q]['reproduction.reference'][0]) {
@@ -220,14 +221,14 @@ assetrefs.insertMany(assets, function(error, docs) {
     }
   }
   hist.insertMany(hist_import, function(error, docs) {
-    for (let i = 0; i < docs.length; i++) {
-      ids[i]._history.push(docs[i]['_id']);
-    }
+    console.log('assets',error, docs);
     hist.insertMany(hist_create, function(error, docs) {
+      console.log('assets',error, docs);
       for (let i = 0; i < docs.length; i++) {
         ids[i]._history.push(docs[i]['_id']);
       }
       entries.insertMany(ids, function(error, docs) {
+        console.log('assets',error, docs);
         for (let i = 0; i < docs.length; i++) {
           refs[docs[i]['identifier'][0]] = docs[i]['_id'];
         }

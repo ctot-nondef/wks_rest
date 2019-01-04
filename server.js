@@ -27,7 +27,8 @@ app.use(bodyParser.json());
 app.use(methodOverride());
 app.use(cors({
   credentials: true,
-  origin: ["http://localhost:8080","https://vchc.univie.ac.at"]
+  origin: ["http://localhost:8080","https://vchc.univie.ac.at"],
+  exposedHeaders: ["X-Total-Count"]
 }));
 app.use(fileUpload());
 
@@ -51,9 +52,9 @@ app.use(session({
 for (i = 0; i < SCHEMA.schemas.length; i ++) {
   if(!/_.*/.test(SCHEMA.names[i])) {
     restify.serve(ROUTER, SCHEMA.models[i], {
-      preCreate: AUTH.chkSession,
-      preUpdate: AUTH.chkSession,
-      preDelete: AUTH.chkSession,
+      // preCreate: AUTH.chkSession,
+      // preUpdate: AUTH.chkSession,
+      // preDelete: AUTH.chkSession,
       totalCountHeader: true,
     });
   }

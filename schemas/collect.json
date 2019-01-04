@@ -18,7 +18,10 @@
   "endOfExistence":{"type":"Date"},
   "description":{"type": "String"},
   "destitution":{"type": "String"},
-  "documents":[{"type":"ObjectID", "ref":"assetref"}],
+  "documents":[{
+    "note":{"type": "String"},
+    "ref":{"type": "ObjectID", "ref":"assetref"}
+  }],
   "references":[{
     "ref":{"type":"String"},
     "pageno":{"type":"String"}
