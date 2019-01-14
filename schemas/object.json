@@ -27,13 +27,8 @@
   }],
   "images":[{
     "_id":false,
-    "name":{
-      "type":"String"
-    },
-    "reference":{
-      "type":"ObjectID",
-      "ref":"assetref"
-    }
+    "name":{"type":"String"},
+    "reference":{"type":"ObjectID", "ref":"assetref"}
   }],
   "references":[{"type":"String"}],
   "comments":[{"type":"String"}],

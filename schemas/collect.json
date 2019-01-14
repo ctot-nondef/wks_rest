@@ -23,6 +23,7 @@
     "ref":{"type": "ObjectID", "ref":"assetref"}
   }],
   "references":[{
+    "_id":false,
     "ref":{"type":"String"},
     "pageno":{"type":"String"}
   }],

@@ -1,0 +1,18 @@
+{
+  "adlib":{
+    "sources":{
+      "keys":[
+        "descriptor",
+        "actor",
+        "collect",
+        "inventory",
+        "entry",
+        "object"
+      ],
+      "uris":[
+
+      ],
+      "paths":[],
+    }
+  }
+}

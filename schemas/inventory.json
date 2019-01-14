@@ -8,14 +8,17 @@
   "beginOfExistence":{"type": "Date"},
   "endOfExistence":{"type": "Date"},
   "images":[{
-      "name":{"type":"String", "required":true},
-      "reference":{"type":"ObjectID", "ref":"assetref", "required":true}
+    "_id":false,
+    "name":{"type":"String"},
+    "reference":{"type":"ObjectID", "ref":"assetref"}
   }],
   "references":[{"type":"String"}],
   "comments":[{"type":"String"}],
   "classification":[{
+    "_id":false,
     "aspect": { "type":"ObjectID", "ref": "descriptor" },
     "descriptor": { "type":"ObjectID", "ref": "descriptor" }
   }],
-  "partOf":{"type":"ObjectID", "ref":"collect"}
+  "partOf":{"type":"ObjectID", "ref":"collect"},
+  "_history":[{"type":"ObjectID", "ref":"_history"}]
 }
