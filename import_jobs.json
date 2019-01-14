@@ -10,12 +10,12 @@
         "object"
       ],
       "uris":[
-        "http://kgunivie.w07adlibdb1.arz.oeaw.ac.at/wwwopac.ashx?&action=search&search=pointer%20110&database=thesau&limit=5000&output=JSON",
-        "http://kgunivie.w07adlibdb1.arz.oeaw.ac.at/wwwopac.ashx?&action=search&search=pointer%20100&database=people&limit=5000&output=JSON",
-        "http://kgunivie.w07adlibdb1.arz.oeaw.ac.at/wwwopac.ashx?&action=search&search=pointer%2050&database=collect&limit=5000&output=json",
-        "http://kgunivie.w07adlibdb1.arz.oeaw.ac.at/wwwopac.ashx?&action=search&search=pointer%2053&database=collect&limit=5000&output=json",
-        "http://kgunivie.w07adlibdb1.arz.oeaw.ac.at/wwwopac.ashx?&action=search&search=pointer%2054&database=collect&limit=5000&output=json",
-        "http://kgunivie.w07adlibdb1.arz.oeaw.ac.at/wwwopac.ashx?&action=search&search=pointer%2051&database=collect&limit=5000&output=json"
+        "http://opackg.w07adlib1.arz.oeaw.ac.at/wwwopac.ashx?&action=search&search=pointer%20110&database=thesau&limit=5000&output=JSON",
+        "http://opackg.w07adlib1.arz.oeaw.ac.at/wwwopac.ashx?&action=search&search=pointer%20100&database=people&limit=5000&output=JSON",
+        "http://opackg.w07adlib1.arz.oeaw.ac.at/wwwopac.ashx?&action=search&search=pointer%2050&database=collect&limit=5000&output=json",
+        "http://opackg.w07adlib1.arz.oeaw.ac.at/wwwopac.ashx?&action=search&search=pointer%2053&database=collect&limit=5000&output=json",
+        "http://opackg.w07adlib1.arz.oeaw.ac.at/wwwopac.ashx?&action=search&search=pointer%2054&database=collect&limit=5000&output=json",
+        "http://opackg.w07adlib1.arz.oeaw.ac.at/wwwopac.ashx?&action=search&search=pointer%2051&database=collect&limit=5000&output=json"
       ],
       "paths":[
         "data.adlibJSON.recordList.record",
@@ -27,7 +27,7 @@
       ],
       "mappings":[
         {
-          "sourcepaths":[ 
+          "sourcepaths":[
             "s[i].term[0]",
             "s[i].priref[0]"
           ],

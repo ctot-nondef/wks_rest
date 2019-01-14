@@ -1064,10 +1064,25 @@
   {
     "@attributes": {
       "priref": "20",
-      "created": "2015-09-30T15:28:27",
-      "modification": "2015-09-30T15:28:40",
+      "created": "2015-09-30T15:28:40",
+      "modification": "2018-12-20T12:52:29",
       "selected": "False"
     },
+    "edit.date": [
+      "2018-12-20"
+    ],
+    "edit.name": [
+      "akuenrath"
+    ],
+    "edit.notes": [
+      ""
+    ],
+    "edit.source": [
+      "COLLECT>extern"
+    ],
+    "edit.time": [
+      "12:52:29"
+    ],
     "input.date": [
       "2015-09-30"
     ],
@@ -1112,6 +1127,19 @@
           "نوع.النسخ",
           "tipo della riproduzione",
           "τύπος αναπαραγωγής"
+        ]
+      },
+      {
+        "@lang": "neutral",
+        "value": [
+          "OBJCAT",
+          "object category",
+          "objectcategorie",
+          "catégorie d'objet",
+          "Sachgruppe",
+          "صنف_القطعة",
+          "categoria dell'oggetto",
+          "κατηγορία αντικειμένου"
         ]
       }
     ]
@@ -26219,14 +26247,14 @@
     "@attributes": {
       "priref": "383",
       "created": "2015-10-30T13:06:40",
-      "modification": "2018-12-04T14:44:16",
+      "modification": "2018-12-11T09:45:39",
       "selected": "False"
     },
     "edit.date": [
-      "2018-12-04"
+      "2018-12-11"
     ],
     "edit.name": [
-      "slinsbot"
+      "Luka Rucigaj"
     ],
     "edit.notes": [
       ""
@@ -26235,7 +26263,7 @@
       "COLLECT>extern"
     ],
     "edit.time": [
-      "14:44:16"
+      "09:45:39"
     ],
     "input.date": [
       "2015-10-30"
@@ -26315,6 +26343,19 @@
           "إسم_قطعة.فنية",
           "nome dell'oggetto",
           "ονομασία αντικειμ."
+        ]
+      },
+      {
+        "@lang": "neutral",
+        "value": [
+          "KEYWORD",
+          "keyword",
+          "trefwoord",
+          "mot-clé",
+          "Schlagwort",
+          "كلمة.مفتاحية",
+          "parola chiave",
+          "λέξη-κλειδί"
         ]
       }
     ]
@@ -59122,23 +59163,23 @@
     "@attributes": {
       "priref": "871",
       "created": "2016-07-11T16:05:06",
-      "modification": "2017-06-13T11:48:57",
+      "modification": "2018-12-14T09:55:39",
       "selected": "False"
     },
     "edit.date": [
-      "2017-06-13"
+      "2018-12-14"
     ],
     "edit.name": [
-      "slinsbot"
+      "akuenrath"
     ],
     "edit.notes": [
       ""
     ],
     "edit.source": [
-      "thesau"
+      "COLLECT>extern"
     ],
     "edit.time": [
-      "11:48:57"
+      "09:55:39"
     ],
     "input.date": [
       "2016-07-11"
@@ -59190,6 +59231,19 @@
           "المهنة",
           "occupazione",
           "επάγγελμα"
+        ]
+      },
+      {
+        "@lang": "neutral",
+        "value": [
+          "ROLE",
+          "role",
+          "rol",
+          "fonction",
+          "Rolle",
+          "دور",
+          "ruolo",
+          "ρόλος"
         ]
       }
     ]
@@ -82066,10 +82120,25 @@
   {
     "@attributes": {
       "priref": "1249",
-      "created": "2017-10-04T09:39:13",
-      "modification": "2017-10-04T09:39:19",
+      "created": "2017-10-04T09:39:19",
+      "modification": "2018-12-11T10:29:36",
       "selected": "False"
     },
+    "edit.date": [
+      "2018-12-11"
+    ],
+    "edit.name": [
+      "Projekt 2"
+    ],
+    "edit.notes": [
+      ""
+    ],
+    "edit.source": [
+      "COLLECT>extern"
+    ],
+    "edit.time": [
+      "10:29:36"
+    ],
     "input.date": [
       "2017-10-04"
     ],
@@ -82114,6 +82183,19 @@
           "دور",
           "ruolo",
           "ρόλος"
+        ]
+      },
+      {
+        "@lang": "neutral",
+        "value": [
+          "ACQMETH",
+          "acquisition method",
+          "verwervingsmethode",
+          "méthode d'acquisition",
+          "Art des Erwerbs",
+          "طريقة الإقتناء",
+          "metodo di aquisizione",
+          "μέθοδος πρόσκτησης "
         ]
       }
     ]
@@ -98046,23 +98128,23 @@
     "@attributes": {
       "priref": "1490",
       "created": "2018-12-07T08:08:54",
-      "modification": "2018-12-07T14:55:01",
+      "modification": "2018-12-14T13:58:15",
       "selected": "False"
     },
     "edit.date": [
-      "2018-12-07"
+      "2018-12-14"
     ],
     "edit.name": [
-      "paigner"
+      "Anton Kungl"
     ],
     "edit.notes": [
       ""
     ],
     "edit.source": [
-      "thesau"
+      "COLLECT>archivecatalogue"
     ],
     "edit.time": [
-      "14:55:01"
+      "13:58:15"
     ],
     "input.date": [
       "2018-12-07"
@@ -98109,6 +98191,7 @@
       "Aqabat Ṯira",
       "ʿArnd",
       "as-Sawdāʾ",
+      "aš-Širāwī",
       "Atwa",
       "Bait Baus",
       "Balas",
@@ -98126,6 +98209,7 @@
       "Ḍaḥiān",
       "Ḍalāma",
       "Ḏamār",
+      "Dār Sālim",
       "Dimna",
       "Diret Ibn Qauzan",
       "Durā",
@@ -98283,6 +98367,7 @@
       "804",
       "803",
       "652",
+      "1496",
       "344",
       "732",
       "796",
@@ -98300,6 +98385,7 @@
       "735",
       "543",
       "734",
+      "1497",
       "61",
       "830",
       "807",
@@ -98588,10 +98674,25 @@
   {
     "@attributes": {
       "priref": "1493",
-      "created": "2018-12-07T11:39:39",
-      "modification": "2018-12-07T11:39:39",
+      "created": "2018-12-07T10:39:39",
+      "modification": "2018-12-20T10:26:45",
       "selected": "False"
     },
+    "edit.date": [
+      "2018-12-20"
+    ],
+    "edit.name": [
+      "akuenrath"
+    ],
+    "edit.notes": [
+      ""
+    ],
+    "edit.source": [
+      "COLLECT>extern"
+    ],
+    "edit.time": [
+      "10:26:45"
+    ],
     "input.date": [
       "2018-12-07"
     ],
@@ -98636,6 +98737,19 @@
           "إسم_قطعة.فنية",
           "nome dell'oggetto",
           "ονομασία αντικειμ."
+        ]
+      },
+      {
+        "@lang": "neutral",
+        "value": [
+          "OBJCAT",
+          "object category",
+          "objectcategorie",
+          "catégorie d'objet",
+          "Sachgruppe",
+          "صنف_القطعة",
+          "categoria dell'oggetto",
+          "κατηγορία αντικειμένου"
         ]
       }
     ]

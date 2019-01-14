@@ -17,7 +17,7 @@ while(idx+1) {
   // fetch all resources
   let sources = JOBS[jobs[idx]].sources;
   console.log(jobs[idx], sources);
-  // IMPORT.fetchSources(sources.keys, sources.uris, sources.paths);
+  IMPORT.fetchSources(sources.keys, sources.uris, sources.paths);
 
   /////////////////////////////////////////////////////////////////
   // fetch required authority data
