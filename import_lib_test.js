@@ -17,7 +17,7 @@ while(idx+1) {
   // fetch all resources
   let sources = JOBS[jobs[idx]].sources;
   console.log(jobs[idx], sources);
-  IMPORT.fetchSources(sources.keys, sources.uris, sources.paths);
+  // IMPORT.fetchSources(sources.keys, sources.uris, sources.paths);
 
   /////////////////////////////////////////////////////////////////
   // fetch required authority data
@@ -48,7 +48,7 @@ while(idx+1) {
     }
     idy -= 1;
   }
-  // IMPORT.fetchAuthRecs(geoids, IMPORT.endpoints.GEO.BASE, 'geonameId', [], [], 'geonames');
-  // IMPORT.fetchAuthRecs(gndids, IMPORT.endpoints.GND.BASE, null, [], [], 'gnd');
+  IMPORT.fetchAuthRecs(geoids, IMPORT.endpoints.GEO.BASE, 'geonameId', [], [], 'geonames');
+  IMPORT.fetchAuthRecs(gndids, IMPORT.endpoints.GND.BASE, null, [], [], 'gnd');
   idx -= 1;
 }

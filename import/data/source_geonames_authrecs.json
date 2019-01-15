@@ -408,6 +408,10 @@
           "name": "Hajar Shabwah"
         },
         {
+          "name": "Q2005211",
+          "lang": "wkdt"
+        },
+        {
           "name": "Shabwa"
         },
         {
@@ -515,7 +519,7 @@
       "adminName3": "",
       "alternateNames": [
         {
-          "name": "http://en.wikipedia.org/wiki/Shararah",
+          "name": "https://en.wikipedia.org/wiki/Shararah",
           "lang": "link"
         },
         {
@@ -567,6 +571,10 @@
       "alternateNames": [
         {
           "name": "Naqīl Mudarraj"
+        },
+        {
+          "name": "Q29885285",
+          "lang": "wkdt"
         }
       ],
       "adminName2": "Marib City",
@@ -1093,7 +1101,7 @@
           "lang": "ar"
         },
         {
-          "name": "http://en.wikipedia.org/wiki/Al_Ghiras",
+          "name": "https://en.wikipedia.org/wiki/Al_Ghiras",
           "lang": "link"
         }
       ],
@@ -1754,11 +1762,11 @@
           "lang": "az"
         },
         {
-          "name": "http://en.wikipedia.org/wiki/Aden",
+          "name": "https://en.wikipedia.org/wiki/Aden",
           "lang": "link"
         },
         {
-          "name": "http://ru.wikipedia.org/wiki/%D0%90%D0%B4%D0%B5%D0%BD",
+          "name": "https://ru.wikipedia.org/wiki/%D0%90%D0%B4%D0%B5%D0%BD",
           "lang": "link"
         },
         {
@@ -1933,7 +1941,7 @@
           "lang": "iata"
         },
         {
-          "name": "http://en.wikipedia.org/wiki/Al_Bayda%27%2C_Yemen",
+          "name": "https://en.wikipedia.org/wiki/Al_Bayda%27%2C_Yemen",
           "lang": "link"
         },
         {
@@ -2002,7 +2010,7 @@
           "name": "Ḩazm al Jawf"
         },
         {
-          "name": "http://en.wikipedia.org/wiki/Al_Hazm,_Yemen",
+          "name": "https://en.wikipedia.org/wiki/Al_Hazm,_Yemen",
           "lang": "link"
         },
         {
@@ -2079,11 +2087,11 @@
           "name": "Hodeida"
         },
         {
-          "name": "http://en.wikipedia.org/wiki/Al_Hudaydah",
+          "name": "https://en.wikipedia.org/wiki/Al_Hudaydah",
           "lang": "link"
         },
         {
-          "name": "http://ru.wikipedia.org/wiki/%D0%A5%D0%BE%D0%B4%D0%B5%D0%B9%D0%B4%D0%B0",
+          "name": "https://ru.wikipedia.org/wiki/%D0%A5%D0%BE%D0%B4%D0%B5%D0%B9%D0%B4%D0%B0",
           "lang": "link"
         },
         {
@@ -2091,6 +2099,10 @@
         },
         {
           "name": "Ḩudaydah"
+        },
+        {
+          "name": "Q270041",
+          "lang": "wkdt"
         },
         {
           "name": "YEHOD",
@@ -2258,7 +2270,7 @@
           "lang": "ar"
         },
         {
-          "name": "http://en.wikipedia.org/wiki/%27Amran",
+          "name": "https://en.wikipedia.org/wiki/%27Amran",
           "lang": "link"
         },
         {
@@ -2321,7 +2333,7 @@
           "name": "Barāqish"
         },
         {
-          "name": "http://en.wikipedia.org/wiki/Baraqish",
+          "name": "https://en.wikipedia.org/wiki/Baraqish",
           "lang": "link"
         }
       ],
@@ -2380,8 +2392,12 @@
           "name": "Bayt Būs"
         },
         {
-          "name": "http://en.wikipedia.org/wiki/Bayt_Baws",
+          "name": "https://en.wikipedia.org/wiki/Bayt_Baws",
           "lang": "link"
+        },
+        {
+          "name": "Q4874879",
+          "lang": "wkdt"
         },
         {
           "name": "بيت بوس",
@@ -2520,7 +2536,7 @@
           "lang": "iata"
         },
         {
-          "name": "http://en.wikipedia.org/wiki/Dhamar,_Yemen",
+          "name": "https://en.wikipedia.org/wiki/Dhamar,_Yemen",
           "lang": "link"
         },
         {
@@ -2574,6 +2590,10 @@
       "alternateNames": [
         {
           "name": "Jabal Dahyān"
+        },
+        {
+          "name": "Q29874427",
+          "lang": "wkdt"
         }
       ],
       "adminName2": "Bājil",
@@ -2618,6 +2638,10 @@
       "alternateNames": [
         {
           "name": "Ḩayd al Qarnayn"
+        },
+        {
+          "name": "Q29872854",
+          "lang": "wkdt"
         },
         {
           "name": "حيد القرنين",
@@ -2666,6 +2690,10 @@
       "alternateNames": [
         {
           "name": "Jabal al ‘Adan"
+        },
+        {
+          "name": "Q29874821",
+          "lang": "wkdt"
         }
       ],
       "adminName2": "Nihm",
@@ -2710,6 +2738,10 @@
       "alternateNames": [
         {
           "name": "Jabal al ‘Awd"
+        },
+        {
+          "name": "Q29875038",
+          "lang": "wkdt"
         }
       ],
       "adminName2": "An Nādirah",
@@ -2801,6 +2833,10 @@
       "alternateNames": [
         {
           "name": "Jabal al Balaq al Awsaţ"
+        },
+        {
+          "name": "Q29874979",
+          "lang": "wkdt"
         }
       ],
       "adminName2": "Sirwah",
@@ -2848,6 +2884,10 @@
         },
         {
           "name": "Jabal Kuḩlān"
+        },
+        {
+          "name": "Q29874601",
+          "lang": "wkdt"
         }
       ],
       "adminName2": "Ar Radmah",
@@ -2892,6 +2932,10 @@
       "alternateNames": [
         {
           "name": "Jabal Riyām"
+        },
+        {
+          "name": "Q29875790",
+          "lang": "wkdt"
         }
       ],
       "adminName2": "Radā‘",
@@ -2936,6 +2980,10 @@
       "alternateNames": [
         {
           "name": "Jabal Silyām"
+        },
+        {
+          "name": "Q29874502",
+          "lang": "wkdt"
         }
       ],
       "adminName2": "Yarīm",
@@ -3036,6 +3084,10 @@
           "name": "Maber"
         },
         {
+          "name": "Q6860386",
+          "lang": "wkdt"
+        },
+        {
           "name": "معبر",
           "lang": "ar"
         }
@@ -3089,7 +3141,7 @@
       "adminName3": "",
       "alternateNames": [
         {
-          "name": "http://en.wikipedia.org/wiki/Ma%27rib",
+          "name": "https://en.wikipedia.org/wiki/Ma%27rib",
           "lang": "link"
         },
         {
@@ -3160,7 +3212,7 @@
           "lang": "ar"
         },
         {
-          "name": "http://en.wikipedia.org/wiki/Mocha%2C_Yemen",
+          "name": "https://en.wikipedia.org/wiki/Mocha%2C_Yemen",
           "lang": "link"
         },
         {
@@ -3185,6 +3237,10 @@
         },
         {
           "name": "Mukha"
+        },
+        {
+          "name": "Q339258",
+          "lang": "wkdt"
         },
         {
           "name": "YEMOK",
@@ -3368,7 +3424,7 @@
           "lang": "iata"
         },
         {
-          "name": "http://en.wikipedia.org/wiki/Seiyun",
+          "name": "https://en.wikipedia.org/wiki/Seiyun",
           "lang": "link"
         },
         {
@@ -3463,6 +3519,10 @@
           "name": "Hajar Shabwah"
         },
         {
+          "name": "Q2005211",
+          "lang": "wkdt"
+        },
+        {
           "name": "Shabwa"
         },
         {
@@ -3523,11 +3583,11 @@
       "adminName3": "",
       "alternateNames": [
         {
-          "name": "http://en.wikipedia.org/wiki/Shibam",
+          "name": "https://en.wikipedia.org/wiki/Shibam",
           "lang": "link"
         },
         {
-          "name": "http://ru.wikipedia.org/wiki/%D0%A8%D0%B8%D0%B1%D0%B0%D0%BC",
+          "name": "https://ru.wikipedia.org/wiki/%D0%A8%D0%B8%D0%B1%D0%B0%D0%BC",
           "lang": "link"
         },
         {
@@ -3736,15 +3796,15 @@
           "lang": "ja"
         },
         {
-          "name": "http://en.wikipedia.org/wiki/Sana%27a",
-          "lang": "link"
-        },
-        {
           "name": "http://id.loc.gov/authorities/names/n80086523",
           "lang": "link"
         },
         {
-          "name": "http://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D0%BD%D0%B0",
+          "name": "https://en.wikipedia.org/wiki/Sana%27a",
+          "lang": "link"
+        },
+        {
+          "name": "https://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D0%BD%D0%B0",
           "lang": "link"
         },
         {
@@ -3934,12 +3994,16 @@
       "adminName3": "",
       "alternateNames": [
         {
-          "name": "http://en.wikipedia.org/wiki/Taiz",
+          "name": "https://en.wikipedia.org/wiki/Taiz",
           "lang": "link"
         },
         {
-          "name": "http://ru.wikipedia.org/wiki/%D0%A2%D0%B0%D0%B8%D0%B7",
+          "name": "https://ru.wikipedia.org/wiki/%D0%A2%D0%B0%D0%B8%D0%B7",
           "lang": "link"
+        },
+        {
+          "name": "Q466216",
+          "lang": "wkdt"
         },
         {
           "name": "TAI",
@@ -4018,7 +4082,7 @@
       "adminName3": "",
       "alternateNames": [
         {
-          "name": "http://en.wikipedia.org/wiki/Tarim%2C_Yemen",
+          "name": "https://en.wikipedia.org/wiki/Tarim%2C_Yemen",
           "lang": "link"
         },
         {
@@ -4146,7 +4210,7 @@
           "name": "Az Zanjabār"
         },
         {
-          "name": "http://en.wikipedia.org/wiki/Zinjibar",
+          "name": "https://en.wikipedia.org/wiki/Zinjibar",
           "lang": "link"
         },
         {
@@ -4311,7 +4375,7 @@
           "name": "Het Loo"
         },
         {
-          "name": "http://en.wikipedia.org/wiki/Loo%2C_Duiven",
+          "name": "https://en.wikipedia.org/wiki/Loo%2C_Duiven",
           "lang": "link"
         },
         {
@@ -4320,6 +4384,10 @@
         {
           "name": "NLLOO",
           "lang": "unlc"
+        },
+        {
+          "name": "Q2238333",
+          "lang": "wkdt"
         },
         {
           "name": "'t Loo"
@@ -4378,12 +4446,16 @@
           "lang": "post"
         },
         {
-          "name": "http://en.wikipedia.org/wiki/Chaam",
+          "name": "https://en.wikipedia.org/wiki/Chaam",
           "lang": "link"
         },
         {
           "name": "NLCAA",
           "lang": "unlc"
+        },
+        {
+          "name": "Q2369076",
+          "lang": "wkdt"
         }
       ],
       "adminName2": "Gemeente Alphen-Chaam",
