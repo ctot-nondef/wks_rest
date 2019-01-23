@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const cors = require('cors');
+const asyncHandler = require('express-async-handler');
 
 const USER = require('../lib/auth.js');
 const SCHEMA = require('../lib/schema.js');
@@ -245,19 +246,21 @@ router.get(`/api/v${CONFIG.version}/jsonschema/:name`, function(req, res, next) 
  *       500:
  *         description: Image processing failed
 */
-router.post(`/api/v${CONFIG.version}/upload`, function(req, res, next) {
+router.post(`/api/v${CONFIG.version}/upload`, asyncHandler(async (req, res, next) => {
   console.log(req.body);
   if (req.files && req.files.image) {
     let image = req.files.image;
     let name = `${Date.now().valueOf().toString(36)}_${image.name}`
-    image.mv(`asset/img/${name}`, function(err) {
+    let thumbPath = '';
+    image.mv(`asset/img/${name}`, async function(err) {
       console.log(image.mimetype);
       if(image.mimetype.split('/')[0] == 'image') {
-        ASSETS.makeImgThumb(`asset/img/${name}`, {width: 220, height: 220}, 90, 'thumb');
+        thumbPath = await ASSETS.makeImgThumb(`asset/img/${name}`, {width: 220, height: 220}, 90, 'thumb');
         ASSETS.makeImgThumb(`asset/img/${name}`, {width: 1500, height: 1500}, 90, 'preview');
       }
       else if(image.mimetype == 'application/pdf'){
-        ASSETS.makePDFThumb(`asset/img/${name}`, 0)
+        thumbPath = await ASSETS.makePDFThumb(`asset/img/${name}`, 0, {width: 220, height: 220}, 90, 'thumb');
+        ASSETS.makePDFThumb(`asset/img/${name}`, 0, {width: 1500, height: 1500}, 90, 'preview');
       }
       if (err) return res.status(500).json({error:'Processing failed'});
       SCHEMA.mongooseModelByName('assetref').create({
@@ -273,7 +276,7 @@ router.post(`/api/v${CONFIG.version}/upload`, function(req, res, next) {
   else {
     res.status(400).json({'error':'No Files Uploaded.'});
   }
-});
+}));
 
 /**
  * @swagger

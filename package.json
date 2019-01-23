@@ -17,7 +17,7 @@
     "express-session": "1.15.6",
     "jimp": "0.5.6",
     "method-override": "= 2.3.10",
-    "mongoose": "^5.4.1",
+    "mongoose": "^5.4.5",
     "mongoose-gen": "= 2.1.1",
     "mongoose-schema-jsonschema": "^1.2.1",
     "nodemon": "^1.18.9",
@@ -25,6 +25,7 @@
     "pdf-image": "1.1.0",
     "request": "^2.88.0",
     "swagger-jsdoc": "1.9.7",
-    "swagger-vue": "1.0.3"
+    "swagger-vue": "1.0.3",
+    "express-async-handler":"1.1.4"
   }
 }
