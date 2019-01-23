@@ -250,22 +250,22 @@ router.post(`/api/v${CONFIG.version}/upload`, asyncHandler(async (req, res, next
   console.log(req.body);
   if (req.files && req.files.image) {
     let image = req.files.image;
-    let name = `${Date.now().valueOf().toString(36)}_${image.name}`
+    let name = `${Date.now().valueOf().toString()}_${image.name}`
     let thumbPath = '';
-    image.mv(`asset/img/${name}`, async function(err) {
+    image.mv(`${CONFIG.assets.dir}/${name}`, async function(err) {
       console.log(image.mimetype);
       if(image.mimetype.split('/')[0] == 'image') {
-        thumbPath = await ASSETS.makeImgThumb(`asset/img/${name}`, {width: 220, height: 220}, 90, 'thumb');
-        ASSETS.makeImgThumb(`asset/img/${name}`, {width: 1500, height: 1500}, 90, 'preview');
+        thumbPath = await ASSETS.makeImgThumb(`${name}`, {width: 220, height: 220}, 90, 'thumb');
+        ASSETS.makeImgThumb(`${name}`, {width: 1500, height: 1500}, 90, 'preview');
       }
       else if(image.mimetype == 'application/pdf'){
-        thumbPath = await ASSETS.makePDFThumb(`asset/img/${name}`, 0, {width: 220, height: 220}, 90, 'thumb');
-        ASSETS.makePDFThumb(`asset/img/${name}`, 0, {width: 1500, height: 1500}, 90, 'preview');
+        ASSETS.makePDFThumb(`${name}`, 0, {width: 1500, height: 1500}, 90, 'preview');
+        thumbPath = await ASSETS.makePDFThumb(`${name}`, 0, {width: 220, height: 220}, 90, 'thumb');
       }
       if (err) return res.status(500).json({error:'Processing failed'});
       SCHEMA.mongooseModelByName('assetref').create({
         name: image.name,
-        path: `/img/${name}`,
+        path: `/files/${name}`,
         mimetype: image.mimetype,
       }, (err, doc) => {
         if (err) return res.status(500).json({error: 'Processing failed'});
