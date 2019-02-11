@@ -1,9 +1,13 @@
 {
   "name":{"type": "String", "required": true},
-  "creator":{"type":"ObjectID", "ref":"actor"},
-  "current_owner":{"type":"ObjectID", "ref":"actor"},
+  "identifier":[{"type":"String","match":""}],  
+  "creator":[{
+    "_id":false,
+    "id": { "type":"ObjectID", "ref":"actor"},
+    "role": { "type":"ObjectID", "ref":"descriptor"},
+    "note": { "type":"String"}
+  }],
   "place":{"type": "ObjectID", "ref":"descriptor"},
-  "identifier":[{"type":"String","match":""}],
   "pagecount":{"type": "Number", "min": 0},
   "beginOfExistence":{"type": "Date"},
   "endOfExistence":{"type": "Date"},
