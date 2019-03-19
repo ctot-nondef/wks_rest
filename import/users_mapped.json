@@ -4,7 +4,7 @@
     "lastName": "Telesko",
     "email": "Werner.Telesko@oeaw.ac.at",
     "identifier": "VCHCWEBSITE:26",
-    "password": "$2b$10$VgkUxb4Pd7sh0RXnXhUpbenqKHXfBmXBwxi9SJf9yK8wg03WfCqI.",
+    "password": "$2b$10$r2FvYaX.ab5rEffXjO9gqe9aFUWs0gOJ2dT3KjDYnsHdBbh2fXAmq",
     "username": "wtelesko"
   },
   {
@@ -12,7 +12,7 @@
     "lastName": "Linsboth",
     "email": "Stefanie.Linsboth@oeaw.ac.at",
     "identifier": "VCHCWEBSITE:16",
-    "password": "$2b$10$VgkUxb4Pd7sh0RXnXhUpbenqKHXfBmXBwxi9SJf9yK8wg03WfCqI.",
+    "password": "$2b$10$r2FvYaX.ab5rEffXjO9gqe9aFUWs0gOJ2dT3KjDYnsHdBbh2fXAmq",
     "username": "slinsboth"
   },
   {
@@ -20,7 +20,7 @@
     "lastName": "Schütze",
     "email": "sebastian.schuetze@univie.ac.at",
     "identifier": "VCHCWEBSITE:13",
-    "password": "$2b$10$VgkUxb4Pd7sh0RXnXhUpbenqKHXfBmXBwxi9SJf9yK8wg03WfCqI.",
+    "password": "$2b$10$r2FvYaX.ab5rEffXjO9gqe9aFUWs0gOJ2dT3KjDYnsHdBbh2fXAmq",
     "username": "sschütze"
   },
   {
@@ -28,7 +28,7 @@
     "lastName": "Bodenstein",
     "email": "matthias.bodenstein@univie.ac.at",
     "identifier": "VCHCWEBSITE:51",
-    "password": "$2b$10$VgkUxb4Pd7sh0RXnXhUpbenqKHXfBmXBwxi9SJf9yK8wg03WfCqI.",
+    "password": "$2b$10$r2FvYaX.ab5rEffXjO9gqe9aFUWs0gOJ2dT3KjDYnsHdBbh2fXAmq",
     "username": "mbodenstein"
   },
   {
@@ -36,7 +36,7 @@
     "lastName": "Ručigaj, MA",
     "email": "Luka.Rucigaj@oeaw.ac.at",
     "identifier": "VCHCWEBSITE:58",
-    "password": "$2b$10$VgkUxb4Pd7sh0RXnXhUpbenqKHXfBmXBwxi9SJf9yK8wg03WfCqI.",
+    "password": "$2b$10$r2FvYaX.ab5rEffXjO9gqe9aFUWs0gOJ2dT3KjDYnsHdBbh2fXAmq",
     "username": "lrucigaj"
   },
   {
@@ -44,7 +44,7 @@
     "lastName": "Leithner",
     "email": "katharina_leithner@hotmail.com",
     "identifier": "VCHCWEBSITE:52",
-    "password": "$2b$10$VgkUxb4Pd7sh0RXnXhUpbenqKHXfBmXBwxi9SJf9yK8wg03WfCqI.",
+    "password": "$2b$10$r2FvYaX.ab5rEffXjO9gqe9aFUWs0gOJ2dT3KjDYnsHdBbh2fXAmq",
     "username": "kleithner"
   },
   {
@@ -52,15 +52,15 @@
     "lastName": "Mörth",
     "email": "karlheinz.moerth@oeaw.ac.at",
     "identifier": "VCHCWEBSITE:32",
-    "password": "$2b$10$VgkUxb4Pd7sh0RXnXhUpbenqKHXfBmXBwxi9SJf9yK8wg03WfCqI.",
-    "username": "kmörth"
+    "password": "$2b$10$r2FvYaX.ab5rEffXjO9gqe9aFUWs0gOJ2dT3KjDYnsHdBbh2fXAmq",
+    "username": "kmoerth"
   },
   {
     "firstName": "Mag. Gernot",
     "lastName": "Mayer",
     "email": "gernot.mayer@univie.ac.at",
     "identifier": "VCHCWEBSITE:20",
-    "password": "$2b$10$VgkUxb4Pd7sh0RXnXhUpbenqKHXfBmXBwxi9SJf9yK8wg03WfCqI.",
+    "password": "$2b$10$r2FvYaX.ab5rEffXjO9gqe9aFUWs0gOJ2dT3KjDYnsHdBbh2fXAmq",
     "username": "gmayer"
   },
   {
@@ -68,15 +68,15 @@
     "lastName": "Özel, MA ",
     "email": "cigdem.oezel@univie.ac.at",
     "identifier": "VCHCWEBSITE:24",
-    "password": "$2b$10$VgkUxb4Pd7sh0RXnXhUpbenqKHXfBmXBwxi9SJf9yK8wg03WfCqI.",
-    "username": "cözel"
+    "password": "$2b$10$r2FvYaX.ab5rEffXjO9gqe9aFUWs0gOJ2dT3KjDYnsHdBbh2fXAmq",
+    "username": "coezel"
   },
   {
     "firstName": "Christoph",
     "lastName": "Hoffmann",
     "email": "christoph.hoffmann@oeaw.ac.at",
     "identifier": "VCHCWEBSITE:60",
-    "password": "$2b$10$VgkUxb4Pd7sh0RXnXhUpbenqKHXfBmXBwxi9SJf9yK8wg03WfCqI.",
+    "password": "$2b$10$r2FvYaX.ab5rEffXjO9gqe9aFUWs0gOJ2dT3KjDYnsHdBbh2fXAmq",
     "username": "choffmann"
   },
   {
@@ -84,7 +84,7 @@
     "lastName": "Frasca-Rath",
     "email": "anna.sophie.rath@univie.ac.at",
     "identifier": "VCHCWEBSITE:18",
-    "password": "$2b$10$VgkUxb4Pd7sh0RXnXhUpbenqKHXfBmXBwxi9SJf9yK8wg03WfCqI.",
+    "password": "$2b$10$r2FvYaX.ab5rEffXjO9gqe9aFUWs0gOJ2dT3KjDYnsHdBbh2fXAmq",
     "username": "afrasca"
   }
 ]

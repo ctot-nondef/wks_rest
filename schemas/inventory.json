@@ -1,6 +1,6 @@
 {
   "name":{"type": "String", "required": true},
-  "identifier":[{"type":"String","match":""}],  
+  "identifier":[{"type":"String","match":""}],
   "creator":[{
     "_id":false,
     "id": { "type":"ObjectID", "ref":"actor"},
@@ -21,7 +21,8 @@
   "classification":[{
     "_id":false,
     "aspect": { "type":"ObjectID", "ref": "descriptor" },
-    "descriptor": { "type":"ObjectID", "ref": "descriptor" }
+    "descriptor": { "type":"ObjectID", "ref": "descriptor" },
+    "note": { "type":"String"}
   }],
   "partOf":{"type":"ObjectID", "ref":"collect"},
   "_history":[{"type":"ObjectID", "ref":"_history"}]

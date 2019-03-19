@@ -2,7 +2,7 @@
   {
     "name": "MAKER",
     "description": "Class of Actor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "MAKER"
@@ -40,7 +40,7 @@
   {
     "name": "INST",
     "description": "Class of Actor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "INST"
@@ -78,7 +78,7 @@
   {
     "name": "AUCTIONEER",
     "description": "Class of Actor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "AUCTIONEER"
@@ -116,7 +116,7 @@
   {
     "name": "PERSON",
     "description": "Class of Actor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "PERSON"
@@ -154,7 +154,7 @@
   {
     "name": "FAMILY",
     "description": "Class of Actor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "FAMILY"
@@ -192,7 +192,7 @@
   {
     "name": "AUTHOR",
     "description": "Class of Actor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "AUTHOR"
@@ -230,7 +230,7 @@
   {
     "name": "SERVICE",
     "description": "Class of Actor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "SERVICE"
@@ -268,7 +268,7 @@
   {
     "name": "CORPORATE",
     "description": "Class of Actor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "CORPORATE"
@@ -306,7 +306,7 @@
   {
     "name": "ACQUISITIONSOURCE",
     "description": "Class of Actor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "ACQUISITIONSOURCE"
@@ -340,7 +340,7 @@
   {
     "name": "CONF",
     "description": "Class of Actor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "CONF"
@@ -378,7 +378,7 @@
   {
     "name": "COLLECT",
     "description": "Class of Actor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "COLLECT"
@@ -416,7 +416,7 @@
   {
     "name": "PUBL",
     "description": "Class of Actor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "PUBL"

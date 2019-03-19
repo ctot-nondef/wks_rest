@@ -6,87 +6,6 @@ const axios = require('axios');
 
 const CONFIG =  require('./config.json');
 
-const APICONFIG = {
-  GND: {
-    BASEURL: 'http://lobid.org/gnd/',
-    ENDPOINTS: {
-      BASE: '',
-    },
-    TIMEOUT: 15000,
-    PARAMS: {
-      format: 'json',
-    },
-    HEADERS: {},
-  },
-  GEO: {
-    BASEURL: 'http://api.geonames.org/getJSON',
-    ENDPOINTS: {
-      BASE: '',
-    },
-    TIMEOUT: 15000,
-    PARAMS: {
-      formatted: 'true',
-      username: 'oeaw_adlib'
-    },
-    HEADERS: {},
-  },
-};
-
-
-
-function buildFetchers(extconf) {
-  // this.$info('Helpers', 'buildFetchers(extconf)', extconf);
-  const fetchers = {};
-  // let ep = [];
-  if (extconf) Object.assign(APICONFIG, extconf);
-  const c = Object.keys(APICONFIG);
-  let idx = c.length - 1;
-  while (idx + 1) {
-    const d = Object.keys(APICONFIG[c[idx]].ENDPOINTS);
-    let idy = d.length - 1;
-    fetchers[c[idx]] = {};
-    while (idy + 1) {
-      fetchers[c[idx]][d[idy]] = axios.create({
-        baseURL: APICONFIG[c[idx]].BASEURL + APICONFIG[c[idx]].ENDPOINTS[d[idy]],
-        timeout: APICONFIG[c[idx]].TIMEOUT,
-        params: APICONFIG[c[idx]].PARAMS,
-        headers: APICONFIG[c[idx]].HEADERS,
-      });
-      idy -= 1;
-    }
-    idx -= 1;
-  }
-  return fetchers;
-}
-
-function fetchArray(ids) {
-  if(ids.length > 0) {
-    APIS.GEO.BASE.get(``, {
-      params: {
-        geonameId: `${ids.shift()}`
-      }
-    }).then((response) => {
-          authrecs.push({
-            src: `${response.request.res.responseUrl}`,
-            record: response.data,
-          })
-          console.log("success", response.request.res.responseUrl);
-          fetchArray(ids);
-          return null;
-        }, (error) => {
-          authrecs_fail.push(error.config.url);
-          console.log("failure", error);
-          fetchArray(ids);
-        });
-  }
-  else {
-    fs.writeFileSync('import/thesau_authrecs2.json', JSON.stringify(authrecs, null, 2));
-    fs.writeFileSync('import/thesau_authrecsfail2.json', JSON.stringify(authrecs_fail, null, 2));
-  }
-}
-
-const APIS = buildFetchers();
-
 // loading internal libs
 const SCHEMA = require('./lib/schema.js');
 SCHEMA.initSchemas();
@@ -97,10 +16,6 @@ mongoose.connect(`mongodb://${CONFIG.db.user}:${CONFIG.db.pass}@${CONFIG.db.serv
 });
 var db = mongoose.connection;
 
-// print process.argv
-process.argv.forEach(function (val, index, array) {
-  console.log(index + ': ' + val);
-});
 let objects = SCHEMA.mongooseModelByName('object'); objects.remove({}, (err) => console.log(err));
 let assetrefs = SCHEMA.mongooseModelByName('assetref');
 let hist = SCHEMA.mongooseModelByName('_history');
@@ -141,6 +56,7 @@ for (var i = 0; i < s.length; i++) {
         id: refs[`ADLIBPEOPLE:${s[i]['creator.lref'][q]}`],
         role: refs[`ADLIBTHESAU:${s[i]['creator.role.lref'][q]}`],
         qualifier: s[i]['creator.qualifier'][q],
+        note: `Imported from Adlib with qualifier ${s[i]['creator.qualifier'][q]}`,
       })
     }
   }
@@ -160,7 +76,8 @@ for (var i = 0; i < s.length; i++) {
   if(s[i]['production.period.lref']) {
     for (var q = 0; q < s[i]['production.period.lref'].length; q++) {
       a.classification.push({
-        descriptor: refs[`ADLIBTHESAU:${s[i]['production.period.lref'][q]}`]
+        descriptor: refs[`ADLIBTHESAU:${s[i]['production.period.lref'][q]}`],
+        note: 'Imported from Adlib field phys_characteristic'
       });
     }
   }
@@ -188,14 +105,14 @@ for (var i = 0; i < s.length; i++) {
     "editDate": Date.now(),
     "editUser": refs[`choffmann`],
     "editType": "import",
-    "data": s[i]
+    "data": JSON.stringify(s[i])
   }
   hist_import.push(b);
   b = {
     "editDate": Date.now(),
     "editUser": refs[`choffmann`],
     "editType": "create",
-    "data": a
+    "data": JSON.stringify(a)
   }
   hist_create.push(b);
   if(s[i]['reproduction.reference']) {
@@ -245,43 +162,3 @@ assetrefs.insertMany(assets, function(error, docs) {
     });
   });
 });
-
-
-// let o = s.adlibJSON.recordList.record;
-// fs.writeFileSync('import/entries.json', JSON.stringify(o, null, 2));
-// let ids = [];
-// let list = {};
-// for (var i = 0; i < s.length; i++) {
-//   if(s[i]['term.type'] && !list[s[i]['term.type'][0].value[0]]) {
-//     list[s[i]['term.type'][0].value[0]] = 'done';
-//     let a = {
-//       "name": s[i]['term.type'][0].value[0],
-//       "description": "Class of Descriptor",
-//       "labels": []
-//     }
-//     for(var y = 0; y < s[i]['term.type'][0].value.length; y++) {
-//       a.labels.push({
-//         lang: l[y],
-//         label: s[i]['term.type'][0].value[y]
-//       })
-//     }
-//     ids.push(a)
-//   }
-// }
-
-// let ids = [];
-// for (var i = 0; i < s.length; i++) {
-  // if(s[i].source) {
-  //   for (var y = 0; y < s[i].source.length; y++) {
-  //     console.log(s[i].source[y]);
-  //     if (s[i].source[y] == "Geonames" && s[i]['term.number'][y].split('/')[s[i]['term.number'][y].split('/').length - 1] != "") {
-  //       ids.push(s[i]['term.number'][y].split('/')[s[i]['term.number'][y].split('/').length - 1]);
-  //       //ids.push(s[i]['source.number'][y].split('/')[s[i]['source.number'][y].split('/').length - 1]);
-  //     }
-  //   }
-  // }
-// }
-//fetchArray(ids);
-//console.log(ids);
-
-//fs.writeFileSync('import/actors.json', JSON.stringify(ids, null, 2));

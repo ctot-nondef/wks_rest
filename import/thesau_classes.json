@@ -2,7 +2,7 @@
   {
     "name": "ROLE",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "ROLE"
@@ -40,7 +40,7 @@
   {
     "name": "DIM",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "DIM"
@@ -78,7 +78,7 @@
   {
     "name": "INSCTYPE",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "INSCTYPE"
@@ -116,7 +116,7 @@
   {
     "name": "ASSOC",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "ASSOC"
@@ -154,7 +154,7 @@
   {
     "name": "DOCTYPE",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "DOCTYPE"
@@ -192,7 +192,7 @@
   {
     "name": "REPRO_TYPE",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "REPRO_TYPE"
@@ -230,7 +230,7 @@
   {
     "name": "LANGUAGE",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "LANGUAGE"
@@ -268,7 +268,7 @@
   {
     "name": "GEOKEYW",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "GEOKEYW"
@@ -306,7 +306,7 @@
   {
     "name": "SCRIPT",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "SCRIPT"
@@ -344,7 +344,7 @@
   {
     "name": "EVENT",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "EVENT"
@@ -382,7 +382,7 @@
   {
     "name": "COUNTRY",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "COUNTRY"
@@ -420,7 +420,7 @@
   {
     "name": "SUBJECT",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "SUBJECT"
@@ -458,7 +458,7 @@
   {
     "name": "ACTIV",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "ACTIV"
@@ -496,7 +496,7 @@
   {
     "name": "OBJECT",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "OBJECT"
@@ -534,7 +534,7 @@
   {
     "name": "KEYWORD",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "KEYWORD"
@@ -572,7 +572,7 @@
   {
     "name": "UNIT",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "UNIT"
@@ -610,7 +610,7 @@
   {
     "name": "PERIOD",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "PERIOD"
@@ -648,7 +648,7 @@
   {
     "name": "PLACE",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "PLACE"
@@ -686,7 +686,7 @@
   {
     "name": "OCCUPATION",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "OCCUPATION"
@@ -724,7 +724,7 @@
   {
     "name": "TECHN",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "TECHN"
@@ -762,7 +762,7 @@
   {
     "name": "MOTIF",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "MOTIF"
@@ -800,7 +800,7 @@
   {
     "name": "MATER",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "MATER"
@@ -838,7 +838,7 @@
   {
     "name": "POSITION",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "POSITION"
@@ -876,7 +876,7 @@
   {
     "name": "Geographie",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "Geographie"
@@ -886,7 +886,7 @@
   {
     "name": "RIGHTS",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "RIGHTS"
@@ -916,7 +916,7 @@
   {
     "name": "SCHOOL",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "SCHOOL"
@@ -954,7 +954,7 @@
   {
     "name": "COND",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "COND"
@@ -992,7 +992,7 @@
   {
     "name": "COLL",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "COLL"
@@ -1030,7 +1030,7 @@
   {
     "name": "OBJCAT",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "OBJCAT"
@@ -1068,7 +1068,7 @@
   {
     "name": "NATIONALITY",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "NATIONALITY"
@@ -1094,7 +1094,7 @@
   {
     "name": "ACQMETH",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "ACQMETH"
@@ -1132,7 +1132,7 @@
   {
     "name": "LOANCAT",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "LOANCAT"
@@ -1170,7 +1170,7 @@
   {
     "name": "LOCATION",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "LOCATION"
@@ -1208,7 +1208,7 @@
   {
     "name": "PROPNAME",
     "description": "Class of Descriptor",
-    "labels": [
+    "_labels": [
       {
         "lang": "0",
         "label": "PROPNAME"

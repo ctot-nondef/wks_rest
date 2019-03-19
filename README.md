@@ -24,3 +24,11 @@ tbd
 
 ## Asset Management
 tbd
+
+## Import Scripts
+
+* import_01.js - users, actors, descriptors, authrecs
+* import_02.js - collections, history
+* import_03.js - inventories, history
+* import_04.js - entries, assets
+* import_05.js - objects, assets

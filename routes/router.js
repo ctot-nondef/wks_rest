@@ -9,8 +9,8 @@ const IMPORT = require('../lib/import.js');
 const ASSETS = require('../lib/asset.js');
 const CONFIG =  require('../config.json');
 
-USER.initUser();
 SCHEMA.initSchemas();
+USER.initUser(SCHEMA);
 
 /**
  * @swagger

@@ -23,7 +23,8 @@
   "classification":[{
     "_id":false,
     "aspect": { "type":"ObjectID", "ref": "descriptor" },
-    "descriptor": { "type":"ObjectID", "ref": "descriptor" }
+    "descriptor": { "type":"ObjectID", "ref": "descriptor" },
+    "note": { "type":"String"}
   }],
   "images":[{
     "_id":false,
