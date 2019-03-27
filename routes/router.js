@@ -10,7 +10,7 @@ const ASSETS = require('../lib/asset.js');
 const CONFIG =  require('../config.json');
 
 SCHEMA.initSchemas();
-USER.initUser(SCHEMA);
+USER.initUser(SCHEMA.mongooseModelByName(`${CONFIG.auth.usercol}`));
 
 /**
  * @swagger
