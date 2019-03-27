@@ -65,7 +65,7 @@ app.use((req, res, next) => {
 
 // create API for each schema in schema Folder
 for (i = 0; i < SCHEMA.schemas.length; i ++) {
-  if(!/_.*/.test(SCHEMA.names[i])) {
+  if(SCHEMA.names[i] && !/_.*/.test(SCHEMA.names[i])) {
       restify.serve(ROUTER, SCHEMA.models[i], {
       preCreate: AUTH.chkSession,
       preUpdate: AUTH.chkSession,
