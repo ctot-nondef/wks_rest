@@ -57,6 +57,8 @@ router.get(`/api/v${CONFIG.version}/swagger.json`, function(req, res, next) {
  *         description: Metadata on A
  */
 router.get(`/api/v${CONFIG.version}/`, function (req, res, next) {
+  console.log('Cookies: ', req.cookies);
+  console.log('Session: ', req.session);
   return res.json({
     'data':SCHEMA.getResObject(req),
     'meta':CONFIG.meta,
@@ -95,7 +97,9 @@ router.post(`/api/v${CONFIG.version}/login`, function (req, res, next) {
       if (error || !user) {
         res.status(401).json({'error':'Wrong Username or Password.'});
       } else {
-        req.session.userId = user._id;
+        req.session.user = user;
+        console.log('Cookies: ', req.cookies);
+        console.log('Session: ', req.session);
         return res.json({"user":req.session.userId,"session": req.sessionID});
       }
     });
@@ -122,7 +126,8 @@ router.get(`/api/v${CONFIG.version}/logout`, function (req, res, next) {
       if (err) {
         return next(err);
       } else {
-        res.json({'res':'Logout successfull.'})
+        res.clearCookie('userid');
+        res.json({'res':'Logout successfull.'});
       }
     });
   }

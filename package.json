@@ -11,7 +11,8 @@
     "body-parser": "^1.4.3",
     "connect-mongo": "2.0.1",
     "cors": "2.8.4",
-    "express": "= 4.5.0",
+    "express": "^4.16.4",
+    "express-async-handler": "1.1.4",
     "express-fileupload": "0.2.0",
     "express-restify-mongoose": "^5.0.0",
     "express-session": "1.15.6",
@@ -26,6 +27,6 @@
     "request": "^2.88.0",
     "swagger-jsdoc": "3.2.7",
     "swagger-vue": "1.0.3",
-    "express-async-handler": "1.1.4"
+    "cookie-parser":"1.4.4"
   }
 }

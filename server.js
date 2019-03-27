@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser')
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
 const restify = require('express-restify-mongoose');
@@ -24,6 +25,7 @@ const SCHEMA = require('./lib/schema.js');
 const AUTH = require('./lib/auth.js');
 
 app.use(bodyParser.json());
+app.use(cookieParser());
 app.use(methodOverride());
 app.use(cors({
   credentials: true,
@@ -40,13 +42,26 @@ var db = mongoose.connection;
 
 //use sessions for tracking logins
 app.use(session({
+  key: 'userid',
   secret: CONFIG.auth.secret,
-  resave: true,
+  resave: false,
   saveUninitialized: false,
+  cookie: {
+      expires: 604800000,
+      httpOnly: false,
+  },
   store: new MongoStore({
     mongooseConnection: db
   })
 }));
+
+//clear cookies whose sessionid has disappeared
+app.use((req, res, next) => {
+    if (req.cookies.userid && !req.session.user) {
+        res.clearCookie('userid');
+    }
+    next();
+});
 
 // create API for each schema in schema Folder
 for (i = 0; i < SCHEMA.schemas.length; i ++) {
