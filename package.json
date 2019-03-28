@@ -26,7 +26,6 @@
     "pdf-image": "2.0.0",
     "request": "^2.88.0",
     "swagger-jsdoc": "3.2.7",
-    "swagger-vue": "1.0.3",
     "cookie-parser":"1.4.4"
   }
 }

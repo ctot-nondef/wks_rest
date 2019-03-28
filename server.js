@@ -9,7 +9,6 @@ const http = require('https');
 const cors = require('cors');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
-const swaggerGen = require('swagger-vue');
 const fs = require('fs');
 const path = require('path');
 const fileUpload = require('express-fileupload');
@@ -75,14 +74,6 @@ for (i = 0; i < SCHEMA.schemas.length; i ++) {
   }
 };
 
-// create Frontend Library acc to Swagger Spec
-let opt = {
-  swagger: SCHEMA.swaggerSpec,
-  moduleName: 'api',
-  className: 'api'
-}
-const codeResult = swaggerGen(opt);
-fs.writeFileSync('asset/api.js', codeResult);
 app.use(express.static('asset'));
 
 

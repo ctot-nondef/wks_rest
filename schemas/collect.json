@@ -20,6 +20,7 @@
   "description":{"type": "String"},
   "destitution":{"type": "String"},
   "documents":[{
+    "_id":false,
     "note":{"type": "String"},
     "ref":{"type": "ObjectID", "ref":"assetref"}
   }],
