@@ -3,25 +3,23 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser')
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
-const restify = require('express-restify-mongoose');
-const app = express();
-const http = require('https');
 const cors = require('cors');
 const session = require('express-session');
+
+const restify = require('express-restify-mongoose');
 const MongoStore = require('connect-mongo')(session);
-const fs = require('fs');
-const path = require('path');
 const fileUpload = require('express-fileupload');
 
 // loading config
 const CONFIG =  require('./config.json');
-
 const ROUTER = require('./routes/router.js');
-
 
 // loading internal libs
 const SCHEMA = require('./lib/schema.js');
 const AUTH = require('./lib/auth.js');
+
+//instantiate express
+const app = express();
 
 app.use(bodyParser.json());
 app.use(cookieParser());
@@ -74,11 +72,12 @@ for (i = 0; i < SCHEMA.schemas.length; i ++) {
   }
 };
 
+
 app.use(express.static('asset'));
 
 
 // serve and listen
 app.use(ROUTER);
-app.listen(3001, () => {
-  console.log('Express server listening on port 3001')
+app.listen(CONFIG.env.port, () => {
+  console.log(`Express server listening on port ${CONFIG.env.port}`)
 });
