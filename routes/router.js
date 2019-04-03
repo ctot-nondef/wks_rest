@@ -95,8 +95,9 @@ router.post(`/api/v${CONFIG.version}/login`, function (req, res, next) {
       if (error || !user) {
         res.status(401).json({'error':'Wrong Username or Password.'});
       } else {
-        req.session.user = user;
-        return res.json({"user":req.session.userId,"session": req.sessionID});
+        req.session.user = user._doc;
+        const {password, _history, _id, _v, ...userout} = user._doc;
+        return res.json({"user": userout,"session": req.sessionID});
       }
     });
   } else {
@@ -248,26 +249,24 @@ router.get(`/api/v${CONFIG.version}/jsonschema/:name`, function(req, res, next) 
  *         description: Image processing failed
 */
 router.post(`/api/v${CONFIG.version}/upload`, asyncHandler(async (req, res, next) => {
-  console.log(req.body);
-  if (req.files && req.files.image) {
-    let image = req.files.image;
-    let name = `${Date.now().valueOf().toString()}_${image.name}`
+  if (req.files && req.files.file) {
+    let file = req.files.file;
+    let name = `${Date.now().valueOf().toString()}_${file.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}`
     let thumbPath = '';
-    image.mv(`${CONFIG.assets.dir}/${name}`, async function(err) {
-      console.log(image.mimetype);
-      if(image.mimetype.split('/')[0] == 'image') {
+    file.mv(`${CONFIG.assets.dir}/${name}`, async function(err) {
+      if(file.mimetype.split('/')[0] == 'image') {
         thumbPath = await ASSETS.makeImgThumb(`${name}`, {width: 220, height: 220}, 90, 'thumb');
         ASSETS.makeImgThumb(`${name}`, {width: 1500, height: 1500}, 90, 'preview');
       }
-      else if(image.mimetype == 'application/pdf'){
+      else if(file.mimetype == 'application/pdf'){
         ASSETS.makePDFThumb(`${name}`, 0, {width: 1500, height: 1500}, 90, 'preview');
         thumbPath = await ASSETS.makePDFThumb(`${name}`, 0, {width: 220, height: 220}, 90, 'thumb');
       }
       if (err) return res.status(500).json({error:'Processing failed'});
       SCHEMA.mongooseModelByName('assetref').create({
-        name: image.name,
+        name: name,
         path: `/files/${name}`,
-        mimetype: image.mimetype,
+        mimetype: file.mimetype,
       }, (err, doc) => {
         if (err) return res.status(500).json({error: 'Processing failed'});
         res.json(doc);
