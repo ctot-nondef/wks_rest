@@ -96,7 +96,7 @@ router.post(`/api/v${CONFIG.version}/login`, function (req, res, next) {
         res.status(401).json({'error':'Wrong Username or Password.'});
       } else {
         req.session.user = user._doc;
-        const {password, _history, _id, _v, ...userout} = user._doc;
+        const {password, _history, _id, __v, ...userout} = user._doc;
         return res.json({"user": userout,"session": req.sessionID});
       }
     });

@@ -3,6 +3,6 @@ config.json
 node_modules
 err.txt
 output.txt
-asset/img
+asset/uploads/*
 asset/userimg
 dbops.txt
