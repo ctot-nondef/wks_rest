@@ -73,7 +73,7 @@ for (i = 0; i < SCHEMA.schemas.length; i ++) {
 };
 
 
-app.use(express.static('asset'));
+app.use('/asset', express.static('asset'));
 
 
 // serve and listen

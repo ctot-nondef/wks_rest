@@ -253,19 +253,19 @@ router.post(`/api/v${CONFIG.version}/upload`, asyncHandler(async (req, res, next
     let file = req.files.file;
     let name = `${Date.now().valueOf().toString()}_${file.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}`
     let thumbPath = '';
-    file.mv(`${CONFIG.assets.dir}/${name}`, async function(err) {
+    file.mv(`${CONFIG.assets.dir}/${name}.${file.name.split('.')[1]}`, async function(err) {
       if(file.mimetype.split('/')[0] == 'image') {
-        thumbPath = await ASSETS.makeImgThumb(`${name}`, {width: 220, height: 220}, 90, 'thumb');
-        ASSETS.makeImgThumb(`${name}`, {width: 1500, height: 1500}, 90, 'preview');
+        thumbPath = await ASSETS.makeImgThumb(`${name}.${file.name.split('.')[1]}`, {width: 220, height: 220}, 90, 'thumb');
+        ASSETS.makeImgThumb(`${name}.${file.name.split('.')[1]}`, {width: 1500, height: 1500}, 90, 'preview');
       }
       else if(file.mimetype == 'application/pdf'){
-        ASSETS.makePDFThumb(`${name}`, 0, {width: 1500, height: 1500}, 90, 'preview');
-        thumbPath = await ASSETS.makePDFThumb(`${name}`, 0, {width: 220, height: 220}, 90, 'thumb');
+        ASSETS.makePDFThumb(`${name}.${file.name.split('.')[1]}`, 0, {width: 1500, height: 1500}, 90, 'preview');
+        thumbPath = await ASSETS.makePDFThumb(`${name}.${file.name.split('.')[1]}`, 0, {width: 220, height: 220}, 90, 'thumb');
       }
       if (err) return res.status(500).json({error:'Processing failed'});
       SCHEMA.mongooseModelByName('assetref').create({
-        name: name,
-        path: `/files/${name}`,
+        name: `${name}`,
+        path: `${CONFIG.assets.dir}/${name}.${file.name.split('.')[1]}`,
         mimetype: file.mimetype,
       }, (err, doc) => {
         if (err) return res.status(500).json({error: 'Processing failed'});
