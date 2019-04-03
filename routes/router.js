@@ -1,5 +1,4 @@
 const express = require('express');
-const router = express.Router();
 const cors = require('cors');
 const asyncHandler = require('express-async-handler');
 
@@ -9,8 +8,9 @@ const IMPORT = require('../lib/import.js');
 const ASSETS = require('../lib/asset.js');
 const CONFIG =  require('../config.json');
 
+const router = express.Router();
 SCHEMA.initSchemas();
-USER.initUser(SCHEMA.mongooseModelByName(`${CONFIG.auth.usercol}`));
+USER.initUser();
 
 /**
  * @swagger
@@ -277,20 +277,5 @@ router.post(`/api/v${CONFIG.version}/upload`, asyncHandler(async (req, res, next
     res.status(400).json({'error':'No Files Uploaded.'});
   }
 }));
-
-/**
- * @swagger
- * /import/:
- *   get:
- *     description: Outputs all currently available import Jobs
- *     produces:
- *       - application/json
- *     responses:
- *       200:
- *         An array of available import Jobs
-*/
-router.get(`/api/v${CONFIG.version}/importlist/`, function(req, res, next) {
-  res.json(IMPORT.fetchJobList(SCHEMA.mongooseModelByName(`${CONFIG.import.importcol}`)));
-});
 
 module.exports = router;

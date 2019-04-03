@@ -4,10 +4,8 @@
   "lastName":{"type":"String"},
   "email":{"type":"String"},
   "username":{"type":"String","required": "true"},
-  "password": {
-    "type": "String",
-    "required": "true"
-  },
+  "password": {"type": "String","required": "true"},
+  "admin":{"type": "Boolean"},
   "_history":[{"type":"ObjectID", "ref":"_history"}],
   "images":[{
       "name":{
@@ -17,5 +15,5 @@
         "type":"ObjectID",
         "ref":"assetref"
       }
-  }]  
+  }]
 }

@@ -63,13 +63,21 @@ app.use((req, res, next) => {
 // create API for each schema in schema Folder
 for (i = 0; i < SCHEMA.schemas.length; i ++) {
   if(SCHEMA.names[i] && !/_.*/.test(SCHEMA.names[i])) {
-      restify.serve(ROUTER, SCHEMA.models[i], {
+    restify.serve(ROUTER, SCHEMA.models[i], {
       preCreate: AUTH.chkSession,
       preUpdate: AUTH.chkSession,
       preDelete: AUTH.chkSession,
       totalCountHeader: true,
     });
   }
+  restify.serve(ROUTER, AUTH.User, {
+    preCreate: AUTH.chkUser,
+    preUpdate: AUTH.chkUser,
+    preDelete: AUTH.chkUser,
+    preRead: AUTH.chkSession,
+    totalCountHeader: true,
+  });
+  SCHEMA.addMongooseAPISpec(SCHEMA.swaggerSpec, CONFIG.auth.usercol, AUTH.UserSchema);
 };
 
 
