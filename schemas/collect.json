@@ -21,13 +21,15 @@
   "destitution":{"type": "String"},
   "documents":[{
     "_id":false,
+    "title":{"type":"String"},
     "note":{"type": "String"},
     "ref":{"type": "ObjectID", "ref":"assetref"}
   }],
   "references":[{
     "_id":false,
     "ref":{"type":"String"},
-    "pageno":{"type":"String"}
+    "pageno":{"type":"String"},
+    "note":{"type":"String"}
   }],
   "comments":[{"type":"String"}],
   "_history":[{"type":"ObjectID", "ref":"_history"}]

@@ -76,6 +76,7 @@ for (i = 0; i < SCHEMA.schemas.length; i ++) {
     preDelete: AUTH.chkUser,
     preRead: AUTH.chkSession,
     totalCountHeader: true,
+    findOneAndUpdate: false,
   });
   SCHEMA.addMongooseAPISpec(SCHEMA.swaggerSpec, CONFIG.auth.usercol, AUTH.UserSchema);
 };
