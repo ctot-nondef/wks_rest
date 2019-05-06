@@ -7,7 +7,7 @@
     "id": { "type":"ObjectID", "ref":"actor"},
     "role": { "type":"ObjectID", "ref":"descriptor"},
     "note": { "type":"String"}
-  }],
+  }], 
   "originalTitle":{"type":"String"},
   "transscription":{"type":"String"},
   "material":[{"type":"ObjectID", "ref":"descriptor"}],

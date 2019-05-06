@@ -27,6 +27,7 @@
   }],
   "references":[{
     "_id":false,
+    "name":{"type":"String"},
     "ref":{"type":"String"},
     "pageno":{"type":"String"},
     "note":{"type":"String"}
