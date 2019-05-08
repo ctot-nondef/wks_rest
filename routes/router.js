@@ -254,6 +254,7 @@ router.post(`/api/v${CONFIG.version}/upload`, asyncHandler(async (req, res, next
     let name = `${Date.now().valueOf().toString()}_${file.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}`
     let thumbPath = '';
     file.mv(`${CONFIG.assets.dir}/${name}.${file.name.split('.')[1]}`, async function(err) {
+      console.log(err);
       if(file.mimetype.split('/')[0] == 'image') {
         thumbPath = await ASSETS.makeImgThumb(`${name}.${file.name.split('.')[1]}`, {width: 220, height: 220}, 90, 'thumb');
         ASSETS.makeImgThumb(`${name}.${file.name.split('.')[1]}`, {width: 1500, height: 1500}, 90, 'preview');
