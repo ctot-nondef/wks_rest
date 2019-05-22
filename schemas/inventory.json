@@ -16,7 +16,19 @@
     "name":{"type":"String"},
     "reference":{"type":"ObjectID", "ref":"assetref"}
   }],
-  "references":[{"type":"String"}],
+  "documents":[{
+    "_id":false,
+    "title":{"type":"String"},
+    "note":{"type": "String"},
+    "ref":{"type": "ObjectID", "ref":"assetref"}
+  }],
+  "references":[{
+    "_id":false,
+    "name":{"type":"String"},
+    "ref":{"type":"String"},
+    "pageno":{"type":"String"},
+    "note":{"type":"String"}
+  }],
   "comments":[{"type":"String"}],
   "classification":[{
     "_id":false,

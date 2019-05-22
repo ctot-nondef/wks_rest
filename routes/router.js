@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const uid = require('uniqid');
 const asyncHandler = require('express-async-handler');
 
 const USER = require('../lib/auth.js');
@@ -103,7 +104,7 @@ router.post(`/api/v${CONFIG.version}/login`, function (req, res, next) {
   } else {
     res.status(400).json({'error':'Username and Password required.'});
   }
-})
+});
 
 /**
  * @swagger
@@ -251,7 +252,7 @@ router.get(`/api/v${CONFIG.version}/jsonschema/:name`, function(req, res, next) 
 router.post(`/api/v${CONFIG.version}/upload`, asyncHandler(async (req, res, next) => {
   if (req.files && req.files.file) {
     let file = req.files.file;
-    let name = `${Date.now().valueOf().toString()}_${file.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}`
+    let name = `${uid()}_${file.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}`
     let thumbPath = '';
     file.mv(`${CONFIG.assets.dir}/${name}.${file.name.split('.')[1]}`, async function(err) {
       console.log(err);
