@@ -11,11 +11,6 @@
   "pagecount":{"type": "Number", "min": 0},
   "beginOfExistence":{"type": "Date"},
   "endOfExistence":{"type": "Date"},
-  "images":[{
-    "_id":false,
-    "name":{"type":"String"},
-    "reference":{"type":"ObjectID", "ref":"assetref"}
-  }],
   "documents":[{
     "_id":false,
     "title":{"type":"String"},
