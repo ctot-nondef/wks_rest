@@ -31,6 +31,7 @@
     "descriptor": { "type":"ObjectID", "ref": "descriptor" },
     "note": { "type":"String"}
   }],
+  "transcription":{ "type": "String" },
   "partOf":{"type":"ObjectID", "ref":"collect"},
   "_history":[{"type":"ObjectID", "ref":"_history"}]
 }
