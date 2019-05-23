@@ -2,22 +2,19 @@
   "date": {
     "type": "Date"
   },
-  "instanceOf":{"type":"ObjectID", "ref":"descriptor"},
   "price": [{
       "amount":{
         "type":"Number"
       },
       "currency":{
         "type":"ObjectID",
-        "ref":"unit"
+        "ref":"descriptor"
       }
   }],
-  "vendor":{
-    "type":"ObjectID",
-    "ref":"person"
-  },
-  "buyer":{
-    "type":"ObjectID",
-    "ref":"person"
-  }
+  "actor":[{
+    "_id":false,
+    "id": { "type":"ObjectID", "ref":"actor"},
+    "role": { "type":"ObjectID", "ref":"descriptor"},
+    "note": { "type":"String"}
+  }]
 }

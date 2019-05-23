@@ -7,7 +7,7 @@
     "id": { "type":"ObjectID", "ref":"actor"},
     "role": { "type":"ObjectID", "ref":"descriptor"},
     "note": { "type":"String"}
-  }], 
+  }],
   "originalTitle":{"type":"String"},
   "transscription":{"type":"String"},
   "material":[{"type":"ObjectID", "ref":"descriptor"}],
@@ -25,7 +25,10 @@
     "target":{"type":"ObjectID", "ref":"entry"},
     "kind":{"type":"String", "enum":["related", "identical", "probably identical"]}
   }],
-  "transaction":[{"type":"ObjectID", "ref":"transaction"}],
+  "transaction":{
+    "ref": {"type":"ObjectID", "ref":"transaction"},
+    "type": {"type":"ObjectID", "ref":"descriptor"}
+  },
   "classification":[{
     "_id":false,
     "aspect": { "type":"ObjectID", "ref": "descriptor" },
