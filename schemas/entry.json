@@ -26,6 +26,7 @@
     "kind":{"type":"String", "enum":["related", "identical", "probably identical"]}
   }],
   "transaction":{
+    "_id":false,
     "ref": {"type":"ObjectID", "ref":"transaction"},
     "type": {"type":"ObjectID", "ref":"descriptor"}
   },

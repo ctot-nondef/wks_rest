@@ -3,6 +3,7 @@
     "type": "Date"
   },
   "price": [{
+      "_id":false,
       "amount":{
         "type":"Number"
       },
@@ -18,3 +19,4 @@
     "note": { "type":"String"}
   }]
 }
+

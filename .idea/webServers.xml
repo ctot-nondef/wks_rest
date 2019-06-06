@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="f198db7e-677e-4d5b-9dd5-97a086ce8df2" name="wks_rest" url="http://hephaistos.arz.oeaw.ac.at">
+        <fileTransfer host="hephaistos.arz.oeaw.ac.at" port="22" privateKey="C:\Users\choffmann\Documents\keys\acdh" rootFolder="/home/wks_dev/wks_goose/app" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
