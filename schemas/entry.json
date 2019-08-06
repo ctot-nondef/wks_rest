@@ -25,11 +25,11 @@
     "target":{"type":"ObjectID", "ref":"entry"},
     "kind":{"type":"String", "enum":["related", "identical", "probably identical"]}
   }],
-  "transaction":{
+  "transaction":[{
     "_id":false,
     "ref": {"type":"ObjectID", "ref":"transaction"},
     "type": {"type":"ObjectID", "ref":"descriptor"}
-  },
+  }],
   "classification":[{
     "_id":false,
     "aspect": { "type":"ObjectID", "ref": "descriptor" },

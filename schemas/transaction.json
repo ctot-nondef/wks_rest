@@ -17,6 +17,7 @@
     "id": { "type":"ObjectID", "ref":"actor"},
     "role": { "type":"ObjectID", "ref":"descriptor"},
     "note": { "type":"String"}
-  }]
+  }],
+  "comments":[{"type":"String"}]
 }
 

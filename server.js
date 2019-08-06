@@ -26,7 +26,7 @@ app.use(cookieParser());
 app.use(methodOverride());
 app.use(cors({
   credentials: true,
-  origin: ["http://localhost:8080","https://vchc.univie.ac.at"], 
+  origin: ["http://localhost:8080","https://vchc.univie.ac.at"],
   exposedHeaders: ["X-Total-Count"]
 }));
 app.use(fileUpload());
