@@ -28,6 +28,6 @@
     "request": "^2.88.0",
     "swagger-jsdoc": "3.2.7",
     "uniqid": "5.0.3",
-    "mongoose-history": "0.4.1"
+    "mongoose-history": "0.8.0"
   }
 }

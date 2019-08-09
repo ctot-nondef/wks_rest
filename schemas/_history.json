@@ -1,6 +1,0 @@
-{
-  "editDate": {"type":"Date"},
-  "editUser": {"type":"ObjectID","ref":"_user"},
-  "editType": {"type":"String"},
-  "data": {"type":"String"}
-}

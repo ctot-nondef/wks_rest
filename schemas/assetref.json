@@ -3,5 +3,7 @@
   "identifier":[{"type":"String","match":""}],
   "source":{"type":"string"},
   "path":{"type":"string", "required":true},
-  "mimetype":{"type":"string", "required":true}
+  "mimetype":{"type":"string", "required":true},
+  "__lastAccessedBy":{"type":"String"},
+  "__lastAccessedIn":{"type":"Date"}
 }

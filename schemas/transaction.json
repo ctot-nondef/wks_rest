@@ -18,6 +18,8 @@
     "role": { "type":"ObjectID", "ref":"descriptor"},
     "note": { "type":"String"}
   }],
-  "comments":[{"type":"String"}]
+  "comments":[{"type":"String"}],
+  "__lastAccessedBy":{"type":"String"},
+  "__lastAccessedIn":{"type":"Date"}
 }
 

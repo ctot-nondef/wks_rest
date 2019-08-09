@@ -43,5 +43,6 @@
   }],
   "references":[{"type":"String"}],
   "comments":[{"type":"String"}],
-  "_history":[{"type":"ObjectID", "ref":"_history"}]
+  "__lastAccessedBy":{"type":"String"},
+  "__lastAccessedIn":{"type":"Date"}
 }

@@ -8,5 +8,7 @@
   },
   "retrieved":{
     "type":"Date"
-  }
+  },
+  "__lastAccessedBy":{"type":"String"},
+  "__lastAccessedIn":{"type":"Date"}
 }
