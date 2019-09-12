@@ -25,6 +25,7 @@
     "target":{"type":"ObjectID", "ref":"entry"},
     "kind":{"type":"String", "enum":["related", "identical", "probably identical"]}
   }],
+  "identification":{"type":"ObjectID", "ref":"object"},
   "transaction":[{
     "_id":false,
     "ref": {"type":"ObjectID", "ref":"transaction"},
